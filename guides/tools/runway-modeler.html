@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+  <title>Cash Runway Scenario Modeler | Centripetal Advisors</title>
+  <meta name="description" content="Interactive 18-month cash runway modeler with three scenario projections. Pressure-test your burn rate, hiring plan, and revenue assumptions.">
+  <meta property="og:title" content="Cash Runway Scenario Modeler | Centripetal Advisors">
+  <meta property="og:description" content="Interactive 18-month cash runway modeler with three scenario projections.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #2D2D2D;
+      background-color: #DDD8CD;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #243221;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.25s ease;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Navigation ===== */
+    .nav {
+      background-color: #243221;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo { display:flex; align-items:center; text-decoration:none; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 8px;
+    }
+
+    .nav-links > li {
+      position: relative;
+    }
+
+    .nav-links > li > a {
+      display: block;
+      padding: 8px 16px;
+      color: #DDD8CD;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      border-radius: 6px;
+      transition: color 0.25s ease, background-color 0.25s ease;
+    }
+
+    .nav-links > li > a:hover,
+    .nav-links > li > a.active {
+      color: #F2F2F2;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Resources dropdown */
+    .dropdown-trigger {
+      cursor: default;
+    }
+
+    .dropdown-trigger::after {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid #DDD8CD;
+      border-bottom: 1.5px solid #DDD8CD;
+      transform: rotate(45deg);
+      margin-left: 6px;
+      margin-bottom: 2px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      background-color: #243221;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+      margin-top: 4px;
+    }
+
+    .nav-links > li:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-links > li:hover .dropdown-trigger::after {
+      transform: rotate(-135deg);
+      border-color: #F2F2F2;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      color: #DDD8CD;
+      font-size: 14px;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .dropdown a:hover {
+      color: #F2F2F2;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-cta {
+      background-color: #DDD8CD !important;
+      color: #243221 !important;
+      font-weight: 500 !important;
+      border-radius: 6px !important;
+      padding: 10px 20px !important;
+      font-size: 14px !important;
+      letter-spacing: 0.3px;
+      transition: background-color 0.25s ease, transform 0.15s ease !important;
+    }
+
+    .nav-cta:hover {
+      background-color: #EAE5DA !important;
+      transform: translateY(-1px);
+    }
+
+    /* Mobile hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      width: 32px;
+      height: 32px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: #F2F2F2;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative;
+      background-color: #243221;
+      background-image:
+        radial-gradient(circle at 18% 22%, rgba(221,216,205,0.25) 0%, rgba(221,216,205,0) 55%),
+        radial-gradient(circle at 92% 78%, rgba(75,97,71,0.45) 0%, rgba(75,97,71,0) 60%);
+      color: #DDD8CD;
+      overflow: hidden;
+      padding: 72px 24px 80px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #6E8260;
+      margin: 0 0 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 700;
+      color: #F2F2F2;
+      margin: 0 0 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: clamp(17px, 2vw, 22px);
+      color: #B6C6AD;
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ===== Tool Layout ===== */
+    .tool-section {
+      padding: 48px 0 64px;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ===== Input Column ===== */
+    .input-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .input-card {
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 24px 28px;
+      box-shadow: 0 2px 8px rgba(36, 50, 33, 0.06);
+      border: 1px solid rgba(36, 50, 33, 0.06);
+    }
+
+    .input-card label {
+      display: block;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #4B6147;
+      margin-bottom: 10px;
+    }
+
+    .input-card input[type="number"],
+    .input-card input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #DDD8CD;
+      border-radius: 6px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #243221;
+      background: #FAFAF7;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      -moz-appearance: textfield;
+    }
+
+    .input-card input[type="number"]::-webkit-outer-spin-button,
+    .input-card input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .input-card input:focus {
+      outline: none;
+      border-color: #4B6147;
+      box-shadow: 0 0 0 3px rgba(75, 97, 71, 0.12);
+    }
+
+    .input-prefix {
+      position: relative;
+    }
+
+    .input-prefix::before {
+      content: '$';
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #999;
+      pointer-events: none;
+    }
+
+    .input-prefix input {
+      padding-left: 30px !important;
+    }
+
+    .input-suffix {
+      position: relative;
+    }
+
+    .input-suffix::after {
+      content: attr(data-suffix);
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #999;
+      pointer-events: none;
+    }
+
+    .input-suffix input {
+      padding-right: 60px !important;
+    }
+
+    /* Slider */
+    .slider-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .slider-row input[type="range"] {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      background: #DDD8CD;
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .slider-row input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      background: #4B6147;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(36, 50, 33, 0.2);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .slider-row input[type="range"]::-webkit-slider-thumb:hover {
+      background: #243221;
+      transform: scale(1.1);
+    }
+
+    .slider-row input[type="range"]::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      background: #4B6147;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 6px rgba(36, 50, 33, 0.2);
+    }
+
+    .slider-value {
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #243221;
+      min-width: 52px;
+      text-align: right;
+    }
+
+    /* Radio group */
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1.5px solid #E8E4DA;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .radio-option:hover {
+      border-color: #4B6147;
+      background: rgba(75, 97, 71, 0.03);
+    }
+
+    .radio-option.selected {
+      border-color: #4B6147;
+      background: rgba(75, 97, 71, 0.06);
+    }
+
+    .radio-option input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #DDD8CD;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-option input[type="radio"]:checked {
+      border-color: #4B6147;
+    }
+
+    .radio-option input[type="radio"]:checked::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 8px;
+      height: 8px;
+      background: #4B6147;
+      border-radius: 50%;
+    }
+
+    .radio-label {
+      font-size: 15px;
+      color: #444;
+      font-weight: 400;
+    }
+
+    /* ===== Output Column ===== */
+    .output-column {
+      position: sticky;
+      top: 96px;
+    }
+
+    .chart-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 32px 28px 28px;
+      box-shadow: 0 4px 20px rgba(36, 50, 33, 0.08);
+      border: 1px solid rgba(36, 50, 33, 0.06);
+    }
+
+    .chart-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .chart-title {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #243221;
+    }
+
+    .chart-legend {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #666;
+      letter-spacing: 0.3px;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .legend-dot.base { background: #4B6147; }
+    .legend-dot.delayed { background: #4B6147; }
+    .legend-dot.slower { background: #C0564A; }
+
+    /* SVG Chart */
+    .chart-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .chart-container svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .chart-container svg text {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Tooltip */
+    .chart-tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: #243221;
+      color: #F2F2F2;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      z-index: 10;
+      white-space: nowrap;
+    }
+
+    .chart-tooltip.visible {
+      opacity: 1;
+    }
+
+    .tooltip-month {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #DDD8CD;
+    }
+
+    .tooltip-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tooltip-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .tooltip-label {
+      color: #B6C6AD;
+      margin-right: 4px;
+    }
+
+    .tooltip-value {
+      font-weight: 600;
+      color: #F2F2F2;
+    }
+
+    /* ===== Metrics Row ===== */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .metric-card {
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 20px 18px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(36, 50, 33, 0.06);
+      border: 1px solid rgba(36, 50, 33, 0.06);
+    }
+
+    .metric-label {
+      font-family: 'Roboto', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .metric-value {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #243221;
+      line-height: 1.2;
+    }
+
+    .metric-value.base-color { color: #4B6147; }
+    .metric-value.delayed-color { color: #4B6147; }
+    .metric-value.slower-color { color: #C0564A; }
+    .metric-value.trigger-color { color: #243221; }
+
+    .metric-detail {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* ===== Decision Trigger Explanation ===== */
+    .trigger-explanation {
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 16px;
+      box-shadow: 0 2px 8px rgba(36, 50, 33, 0.06);
+      border-left: 4px solid #4B6147;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .trigger-explanation strong {
+      color: #243221;
+    }
+
+    /* ===== Disclaimer ===== */
+    .disclaimer {
+      margin-top: 24px;
+      padding: 16px 20px;
+      background: rgba(36, 50, 33, 0.04);
+      border-radius: 8px;
+      font-size: 13px;
+      color: #888;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* ===== CTA Section ===== */
+    .tool-cta {
+      text-align: center;
+      margin-top: 40px;
+      padding: 48px 24px;
+      background: #243221;
+      border-radius: 12px;
+    }
+
+    .tool-cta h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(24px, 3vw, 32px);
+      color: #F2F2F2;
+      margin-bottom: 12px;
+    }
+
+    .tool-cta p {
+      font-size: 16px;
+      color: #B6C6AD;
+      margin-bottom: 28px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #DDD8CD;
+      color: #243221;
+      padding: 16px 40px;
+      border-radius: 6px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+
+    .cta-button:hover {
+      background: #EAE5DA;
+      transform: translateY(-1px);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background-color: #243221;
+      padding: 56px 0 32px;
+      margin-top: 64px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(221, 216, 205, 0.12);
+    }
+
+    .footer-brand h3 {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #F2F2F2;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: #9DA898;
+      max-width: 280px;
+      line-height: 1.6;
+    }
+
+    .footer-nav h4 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #DDD8CD;
+      margin-bottom: 16px;
+    }
+
+    .footer-nav ul {
+      list-style: none;
+    }
+
+    .footer-nav li {
+      margin-bottom: 10px;
+    }
+
+    .footer-nav a {
+      font-size: 14px;
+      color: #9DA898;
+      transition: color 0.25s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #4B6147;
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      text-align: center;
+      font-size: 13px;
+      color: #6B7A66;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .tool-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .output-column {
+        position: static;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background-color: #243221;
+        flex-direction: column;
+        padding: 16px 24px 24px;
+        gap: 4px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links > li > a {
+        padding: 12px 16px;
+      }
+
+      .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        margin-top: 0;
+        padding: 0 0 0 16px;
+        background-color: transparent;
+      }
+
+      .hero {
+        padding: 56px 20px 60px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .tool-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .output-column {
+        position: static;
+      }
+
+      .metrics-row {
+        grid-template-columns: 1fr;
+      }
+
+      .chart-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .input-card {
+        padding: 20px;
+      }
+
+      .chart-card {
+        padding: 20px 16px;
+      }
+
+      .metric-card {
+        padding: 16px 12px;
+      }
+
+      .metric-value {
+        font-size: 24px;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="../../assets/site-system.css" data-site-system>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="../../index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="../../index.html">Home</a>
+    <a href="../../services.html">Services</a>
+    <a href="../../contact.html">Contact</a>
+    <a href="../../blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <p class="hero-eyebrow">Interactive Tool</p>
+    <h1>Cash Runway Scenario Modeler</h1>
+    <p class="hero-subtitle">Model 18 months of runway across three scenarios. See where the decision points actually sit.</p>
+  </header>
+
+  <!-- Tool -->
+  <section class="tool-section">
+    <div class="container">
+      <div class="tool-grid">
+
+        <!-- Input Column -->
+        <div class="input-column">
+
+          <div class="input-card">
+            <label for="cashBalance">Current Cash Balance</label>
+            <div class="input-prefix">
+              <input type="number" id="cashBalance" value="2000000" min="0" step="10000" aria-label="Current cash balance in dollars">
+            </div>
+          </div>
+
+          <div class="input-card">
+            <label for="burnRate">Monthly Burn Rate</label>
+            <div class="input-prefix">
+              <input type="number" id="burnRate" value="150000" min="0" step="5000" aria-label="Monthly burn rate in dollars">
+            </div>
+          </div>
+
+          <div class="input-card">
+            <label for="revenue">Monthly Revenue</label>
+            <div class="input-prefix">
+              <input type="number" id="revenue" value="80000" min="0" step="5000" aria-label="Monthly revenue in dollars">
+            </div>
+          </div>
+
+          <div class="input-card">
+            <label for="growthRate">Monthly Revenue Growth Rate</label>
+            <div class="slider-row">
+              <input type="range" id="growthRate" min="0" max="15" step="0.5" value="5" aria-label="Monthly revenue growth rate percentage">
+              <span class="slider-value" id="growthRateDisplay">5.0%</span>
+            </div>
+          </div>
+
+          <div class="input-card">
+            <label for="plannedHires">Planned Hires (Next 6 Months)</label>
+            <div class="input-suffix" data-suffix="people">
+              <input type="number" id="plannedHires" value="3" min="0" max="20" step="1" aria-label="Number of planned hires">
+            </div>
+          </div>
+
+          <div class="input-card">
+            <label for="costPerHire">Average Fully-Loaded Cost Per Hire</label>
+            <div class="input-prefix">
+              <input type="number" id="costPerHire" value="12000" min="0" step="1000" aria-label="Average monthly cost per hire in dollars">
+              <div style="font-size: 12px; color: #999; margin-top: 6px;">per month, fully loaded</div>
+            </div>
+          </div>
+
+          <div class="input-card">
+            <label>Collection Timing</label>
+            <div class="radio-group" id="collectionTiming">
+              <label class="radio-option selected">
+                <input type="radio" name="collectionTiming" value="0" checked>
+                <span class="radio-label">On-time</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="collectionTiming" value="15">
+                <span class="radio-label">15-day delay</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="collectionTiming" value="30">
+                <span class="radio-label">30-day delay</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Output Column -->
+        <div class="output-column">
+
+          <div class="chart-card">
+            <div class="chart-header">
+              <h2 class="chart-title">18-Month Cash Projection</h2>
+              <div class="chart-legend">
+                <div class="legend-item"><span class="legend-dot base"></span> Base Case</div>
+                <div class="legend-item"><span class="legend-dot delayed"></span> Delayed Collections</div>
+                <div class="legend-item"><span class="legend-dot slower"></span> Slower Growth</div>
+              </div>
+            </div>
+            <div class="chart-container" id="chartContainer">
+              <svg id="chart" viewBox="0 0 700 400" preserveAspectRatio="xMidYMid meet"></svg>
+              <div class="chart-tooltip" id="tooltip"></div>
+            </div>
+          </div>
+
+          <!-- Key Metrics -->
+          <div class="metrics-row" id="metricsRow">
+            <div class="metric-card">
+              <div class="metric-label">Base Case Runway</div>
+              <div class="metric-value base-color" id="metricBase">--</div>
+              <div class="metric-detail">months</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Delayed Collections</div>
+              <div class="metric-value delayed-color" id="metricDelayed">--</div>
+              <div class="metric-detail">months</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Slower Growth</div>
+              <div class="metric-value slower-color" id="metricSlower">--</div>
+              <div class="metric-detail">months</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Decision Trigger</div>
+              <div class="metric-value trigger-color" id="metricTrigger">--</div>
+              <div class="metric-detail" id="metricTriggerDetail">month</div>
+            </div>
+          </div>
+
+          <!-- Trigger explanation -->
+          <div class="trigger-explanation" id="triggerExplanation">
+            <strong>Decision trigger:</strong> <span id="triggerText">Adjust inputs to see when the worst-case scenario forces a capital or hiring decision.</span>
+          </div>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            This is a directional planning tool. It does not constitute financial advice.
+          </div>
+
+          <!-- CTA -->
+          <div class="tool-cta">
+            <h2>Pressure-test this model</h2>
+            <p>A Centripetal diagnostic stress-tests these assumptions with your actual data, not estimates.</p>
+            <a href="https://calendly.com/centripetal-advisors/diagnostic" class="cta-button" target="_blank" rel="noopener">Schedule a Diagnostic</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../../index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../../index.html">Home</a>
+        <a href="../../services.html">Services</a>
+        <a href="../../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="../../guides/index.html">Guides</a>
+        <a href="../../blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // --- DOM refs ---
+  const cashBalanceInput = document.getElementById('cashBalance');
+  const burnRateInput = document.getElementById('burnRate');
+  const revenueInput = document.getElementById('revenue');
+  const growthRateInput = document.getElementById('growthRate');
+  const growthRateDisplay = document.getElementById('growthRateDisplay');
+  const plannedHiresInput = document.getElementById('plannedHires');
+  const costPerHireInput = document.getElementById('costPerHire');
+  const collectionGroup = document.getElementById('collectionTiming');
+  const svg = document.getElementById('chart');
+  const tooltipEl = document.getElementById('tooltip');
+  const chartContainer = document.getElementById('chartContainer');
+
+  // Metric elements
+  const metricBase = document.getElementById('metricBase');
+  const metricDelayed = document.getElementById('metricDelayed');
+  const metricSlower = document.getElementById('metricSlower');
+  const metricTrigger = document.getElementById('metricTrigger');
+  const metricTriggerDetail = document.getElementById('metricTriggerDetail');
+  const triggerText = document.getElementById('triggerText');
+
+  // --- Chart dimensions ---
+  const W = 700, H = 400;
+  const margin = { top: 30, right: 24, bottom: 50, left: 72 };
+  const plotW = W - margin.left - margin.right;
+  const plotH = H - margin.top - margin.bottom;
+  const MONTHS = 18;
+
+  // --- Colors ---
+  const COLORS = {
+    base:    '#4B6147',
+    delayed: '#4B6147',
+    slower:  '#C0564A',
+    grid:    '#E8E4DA',
+    axis:    '#999',
+    zero:    '#C0564A',
+    warn:    'rgba(212, 168, 67, 0.08)'
+  };
+
+  // --- State ---
+  let currentData = null;
+  let animFrame = null;
+  let prevPaths = null;
+  let animProgress = 1;
+
+  // --- Helpers ---
+  function getInputs() {
+    const cash = parseFloat(cashBalanceInput.value) || 0;
+    const burn = parseFloat(burnRateInput.value) || 0;
+    const rev = parseFloat(revenueInput.value) || 0;
+    const growth = parseFloat(growthRateInput.value) / 100;
+    const hires = parseInt(plannedHiresInput.value, 10) || 0;
+    const hireCost = parseFloat(costPerHireInput.value) || 0;
+    const collectionDelay = parseInt(document.querySelector('input[name="collectionTiming"]:checked').value, 10);
+    return { cash, burn, rev, growth, hires, hireCost, collectionDelay };
+  }
+
+  function projectScenario(params) {
+    const { cash, burn, rev, growth, hires, hireCost, collectionDelay,
+            growthMultiplier, hireDelayMonths, collectionDelayOverride } = params;
+
+    const effectiveGrowth = growth * (growthMultiplier !== undefined ? growthMultiplier : 1);
+    const hireDelay = hireDelayMonths || 0;
+    const colDelay = collectionDelayOverride !== undefined ? collectionDelayOverride : collectionDelay;
+
+    // Revenue buffer for collection delays
+    const delayMonths = colDelay / 30; // fractional months delay
+
+    const values = [cash];
+    let currentRev = rev;
+    let hiresAdded = 0;
+    const hiresPerMonth = hires > 0 ? hires / 6 : 0;
+
+    for (let m = 1; m <= MONTHS; m++) {
+      currentRev = rev * Math.pow(1 + effectiveGrowth, m);
+
+      // Collection delay: reduce effective revenue received
+      let effectiveRev = currentRev;
+      if (delayMonths > 0 && m <= Math.ceil(delayMonths)) {
+        // During the initial delay period, we receive less revenue
+        const receivedRev = rev * Math.pow(1 + effectiveGrowth, Math.max(0, m - delayMonths));
+        effectiveRev = m <= delayMonths ? rev * 0.5 : receivedRev;
+      } else if (delayMonths > 0) {
+        // After initial delay, revenue is delayed by delayMonths
+        effectiveRev = rev * Math.pow(1 + effectiveGrowth, m - delayMonths);
+      }
+
+      // Hiring costs
+      let hireCostThisMonth = 0;
+      if (hires > 0) {
+        const effectiveMonth = m - hireDelay;
+        if (effectiveMonth > 0 && effectiveMonth <= 6) {
+          const totalHiresThrough = Math.min(hires, Math.floor(hiresPerMonth * effectiveMonth + 0.5));
+          hireCostThisMonth = totalHiresThrough * hireCost;
+        } else if (effectiveMonth > 6) {
+          hireCostThisMonth = hires * hireCost;
+        }
+      }
+
+      const netBurn = burn + hireCostThisMonth - effectiveRev;
+      const prev = values[values.length - 1];
+      values.push(prev - netBurn);
+    }
+
+    return values;
+  }
+
+  function computeScenarios() {
+    const inp = getInputs();
+
+    // Base case: inputs as entered
+    const base = projectScenario({
+      ...inp,
+      growthMultiplier: 1,
+      hireDelayMonths: 0
+    });
+
+    // Delayed collections: collections delayed, revenue growth 50% of base
+    const delayDays = inp.collectionDelay > 0 ? inp.collectionDelay : 15;
+    const delayed = projectScenario({
+      ...inp,
+      growthMultiplier: 0.5,
+      hireDelayMonths: 0,
+      collectionDelayOverride: delayDays
+    });
+
+    // Slower growth: revenue growth at 25% of base, all hires delayed 2 months
+    const slower = projectScenario({
+      ...inp,
+      growthMultiplier: 0.25,
+      hireDelayMonths: 2
+    });
+
+    return { base, delayed, slower, burn: inp.burn };
+  }
+
+  function findRunway(values) {
+    for (let i = 1; i < values.length; i++) {
+      if (values[i] <= 0) {
+        // Interpolate
+        const prev = values[i - 1];
+        const curr = values[i];
+        const frac = prev / (prev - curr);
+        return Math.round((i - 1 + frac) * 10) / 10;
+      }
+    }
+    return MONTHS; // beyond 18 months
+  }
+
+  function findDecisionTrigger(scenarios, monthlyBurn) {
+    const threshold = monthlyBurn * 3;
+    let earliest = MONTHS + 1;
+    let scenarioName = '';
+
+    ['slower', 'delayed', 'base'].forEach(name => {
+      const vals = scenarios[name];
+      for (let i = 0; i < vals.length; i++) {
+        if (vals[i] < threshold && i < earliest) {
+          earliest = i;
+          scenarioName = name;
+          break;
+        }
+      }
+    });
+
+    return earliest <= MONTHS ? { month: earliest, scenario: scenarioName } : null;
+  }
+
+  function formatDollars(v) {
+    if (Math.abs(v) >= 1000000) {
+      return '$' + (v / 1000000).toFixed(1) + 'M';
+    } else if (Math.abs(v) >= 1000) {
+      return '$' + (v / 1000).toFixed(0) + 'K';
+    }
+    return '$' + v.toFixed(0);
+  }
+
+  function formatDollarsLong(v) {
+    const sign = v < 0 ? '-' : '';
+    const abs = Math.abs(v);
+    return sign + '$' + abs.toLocaleString('en-US', { maximumFractionDigits: 0 });
+  }
+
+  // --- SVG Path Generation ---
+  function svgNS() { return 'http://www.w3.org/2000/svg'; }
+
+  function computeYScale(scenarios) {
+    let minVal = Infinity, maxVal = -Infinity;
+    ['base', 'delayed', 'slower'].forEach(name => {
+      scenarios[name].forEach(v => {
+        if (v < minVal) minVal = v;
+        if (v > maxVal) maxVal = v;
+      });
+    });
+
+    // Add padding
+    const range = maxVal - minVal || 1;
+    minVal = Math.min(minVal, 0) - range * 0.08;
+    maxVal = maxVal + range * 0.08;
+
+    return { minVal, maxVal };
+  }
+
+  function yPos(val, minVal, maxVal) {
+    return margin.top + plotH - ((val - minVal) / (maxVal - minVal)) * plotH;
+  }
+
+  function xPos(month) {
+    return margin.left + (month / MONTHS) * plotW;
+  }
+
+  function generateBezierPath(values, minVal, maxVal) {
+    if (values.length < 2) return '';
+
+    const points = values.map((v, i) => ({
+      x: xPos(i),
+      y: yPos(v, minVal, maxVal)
+    }));
+
+    let d = `M ${points[0].x},${points[0].y}`;
+
+    for (let i = 0; i < points.length - 1; i++) {
+      const p0 = points[Math.max(0, i - 1)];
+      const p1 = points[i];
+      const p2 = points[i + 1];
+      const p3 = points[Math.min(points.length - 1, i + 2)];
+
+      const tension = 0.35;
+      const cp1x = p1.x + (p2.x - p0.x) * tension;
+      const cp1y = p1.y + (p2.y - p0.y) * tension;
+      const cp2x = p2.x - (p3.x - p1.x) * tension;
+      const cp2y = p2.y - (p3.y - p1.y) * tension;
+
+      d += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${p2.x},${p2.y}`;
+    }
+
+    return d;
+  }
+
+  function niceScale(minVal, maxVal, numTicks) {
+    const range = maxVal - minVal;
+    const roughStep = range / (numTicks - 1);
+    const magnitude = Math.pow(10, Math.floor(Math.log10(roughStep)));
+    const residual = roughStep / magnitude;
+    let niceStep;
+    if (residual <= 1.5) niceStep = 1 * magnitude;
+    else if (residual <= 3) niceStep = 2 * magnitude;
+    else if (residual <= 7) niceStep = 5 * magnitude;
+    else niceStep = 10 * magnitude;
+
+    const niceMin = Math.floor(minVal / niceStep) * niceStep;
+    const niceMax = Math.ceil(maxVal / niceStep) * niceStep;
+
+    const ticks = [];
+    for (let v = niceMin; v <= niceMax + niceStep * 0.5; v += niceStep) {
+      ticks.push(v);
+    }
+    return { niceMin, niceMax, ticks, niceStep };
+  }
+
+  // --- Render Chart ---
+  function renderChart(scenarios) {
+    const { minVal: rawMin, maxVal: rawMax } = computeYScale(scenarios);
+    const scale = niceScale(rawMin, rawMax, 6);
+    const minVal = scale.niceMin;
+    const maxVal = scale.niceMax;
+
+    // Clear SVG
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    const ns = svgNS();
+
+    // Defs for gradients
+    const defs = document.createElementNS(ns, 'defs');
+
+    // Warning zone gradient (below 3x burn threshold)
+    const warnThreshold = scenarios.burn * 3;
+    if (warnThreshold > minVal && warnThreshold < maxVal) {
+      const warnGrad = document.createElementNS(ns, 'linearGradient');
+      warnGrad.setAttribute('id', 'warnZone');
+      warnGrad.setAttribute('x1', '0');
+      warnGrad.setAttribute('y1', '0');
+      warnGrad.setAttribute('x2', '0');
+      warnGrad.setAttribute('y2', '1');
+      const s1 = document.createElementNS(ns, 'stop');
+      s1.setAttribute('offset', '0%');
+      s1.setAttribute('stop-color', '#4B6147');
+      s1.setAttribute('stop-opacity', '0.06');
+      const s2 = document.createElementNS(ns, 'stop');
+      s2.setAttribute('offset', '100%');
+      s2.setAttribute('stop-color', '#C0564A');
+      s2.setAttribute('stop-opacity', '0.04');
+      warnGrad.appendChild(s1);
+      warnGrad.appendChild(s2);
+      defs.appendChild(warnGrad);
+
+      // Warning zone rect
+      const warnY = yPos(warnThreshold, minVal, maxVal);
+      const warnRect = document.createElementNS(ns, 'rect');
+      warnRect.setAttribute('x', margin.left);
+      warnRect.setAttribute('y', warnY);
+      warnRect.setAttribute('width', plotW);
+      warnRect.setAttribute('height', margin.top + plotH - warnY);
+      warnRect.setAttribute('fill', 'url(#warnZone)');
+      svg.appendChild(defs);
+      svg.appendChild(warnRect);
+
+      // Threshold line (dashed)
+      const threshLine = document.createElementNS(ns, 'line');
+      threshLine.setAttribute('x1', margin.left);
+      threshLine.setAttribute('y1', warnY);
+      threshLine.setAttribute('x2', margin.left + plotW);
+      threshLine.setAttribute('y2', warnY);
+      threshLine.setAttribute('stroke', '#4B6147');
+      threshLine.setAttribute('stroke-width', '1');
+      threshLine.setAttribute('stroke-dasharray', '6,4');
+      threshLine.setAttribute('opacity', '0.5');
+      svg.appendChild(threshLine);
+
+      // Threshold label
+      const threshLabel = document.createElementNS(ns, 'text');
+      threshLabel.setAttribute('x', margin.left + plotW + 4);
+      threshLabel.setAttribute('y', warnY + 4);
+      threshLabel.setAttribute('fill', '#4B6147');
+      threshLabel.setAttribute('font-size', '10');
+      threshLabel.setAttribute('font-weight', '500');
+      threshLabel.textContent = '3mo buffer';
+      svg.appendChild(threshLabel);
+    } else {
+      svg.appendChild(defs);
+    }
+
+    // Grid lines and Y-axis labels
+    scale.ticks.forEach(tick => {
+      const y = yPos(tick, minVal, maxVal);
+      if (y < margin.top - 1 || y > margin.top + plotH + 1) return;
+
+      const line = document.createElementNS(ns, 'line');
+      line.setAttribute('x1', margin.left);
+      line.setAttribute('y1', y);
+      line.setAttribute('x2', margin.left + plotW);
+      line.setAttribute('y2', y);
+      line.setAttribute('stroke', tick === 0 ? COLORS.zero : COLORS.grid);
+      line.setAttribute('stroke-width', tick === 0 ? '2' : '1');
+      line.setAttribute('opacity', tick === 0 ? '0.6' : '1');
+      if (tick === 0) {
+        line.setAttribute('stroke-dasharray', '8,4');
+      }
+      svg.appendChild(line);
+
+      const label = document.createElementNS(ns, 'text');
+      label.setAttribute('x', margin.left - 10);
+      label.setAttribute('y', y + 4);
+      label.setAttribute('text-anchor', 'end');
+      label.setAttribute('fill', COLORS.axis);
+      label.setAttribute('font-size', '11');
+      label.setAttribute('font-weight', '400');
+      label.textContent = formatDollars(tick);
+      svg.appendChild(label);
+    });
+
+    // X-axis labels
+    for (let m = 0; m <= MONTHS; m += 3) {
+      const x = xPos(m);
+      const label = document.createElementNS(ns, 'text');
+      label.setAttribute('x', x);
+      label.setAttribute('y', margin.top + plotH + 28);
+      label.setAttribute('text-anchor', 'middle');
+      label.setAttribute('fill', COLORS.axis);
+      label.setAttribute('font-size', '11');
+      label.setAttribute('font-weight', '400');
+      label.textContent = m === 0 ? 'Now' : 'Mo ' + m;
+      svg.appendChild(label);
+
+      // Tick
+      const tick = document.createElementNS(ns, 'line');
+      tick.setAttribute('x1', x);
+      tick.setAttribute('y1', margin.top + plotH);
+      tick.setAttribute('x2', x);
+      tick.setAttribute('y2', margin.top + plotH + 6);
+      tick.setAttribute('stroke', COLORS.grid);
+      tick.setAttribute('stroke-width', '1');
+      svg.appendChild(tick);
+    }
+
+    // X-axis line
+    const xAxisLine = document.createElementNS(ns, 'line');
+    xAxisLine.setAttribute('x1', margin.left);
+    xAxisLine.setAttribute('y1', margin.top + plotH);
+    xAxisLine.setAttribute('x2', margin.left + plotW);
+    xAxisLine.setAttribute('y2', margin.top + plotH);
+    xAxisLine.setAttribute('stroke', COLORS.grid);
+    xAxisLine.setAttribute('stroke-width', '1.5');
+    svg.appendChild(xAxisLine);
+
+    // Y-axis line
+    const yAxisLine = document.createElementNS(ns, 'line');
+    yAxisLine.setAttribute('x1', margin.left);
+    yAxisLine.setAttribute('y1', margin.top);
+    yAxisLine.setAttribute('x2', margin.left);
+    yAxisLine.setAttribute('y2', margin.top + plotH);
+    yAxisLine.setAttribute('stroke', COLORS.grid);
+    yAxisLine.setAttribute('stroke-width', '1.5');
+    svg.appendChild(yAxisLine);
+
+    // Decision trigger marker
+    const trigger = findDecisionTrigger(scenarios, scenarios.burn);
+    if (trigger) {
+      const triggerX = xPos(trigger.month);
+      const triggerLine = document.createElementNS(ns, 'line');
+      triggerLine.setAttribute('x1', triggerX);
+      triggerLine.setAttribute('y1', margin.top);
+      triggerLine.setAttribute('x2', triggerX);
+      triggerLine.setAttribute('y2', margin.top + plotH);
+      triggerLine.setAttribute('stroke', '#4B6147');
+      triggerLine.setAttribute('stroke-width', '2');
+      triggerLine.setAttribute('stroke-dasharray', '4,4');
+      triggerLine.setAttribute('opacity', '0.7');
+      svg.appendChild(triggerLine);
+
+      // Diamond marker
+      const diamond = document.createElementNS(ns, 'polygon');
+      const dy = margin.top + 12;
+      diamond.setAttribute('points',
+        `${triggerX},${dy - 8} ${triggerX + 7},${dy} ${triggerX},${dy + 8} ${triggerX - 7},${dy}`
+      );
+      diamond.setAttribute('fill', '#4B6147');
+      diamond.setAttribute('opacity', '0.9');
+      svg.appendChild(diamond);
+
+      // Label
+      const trigLabel = document.createElementNS(ns, 'text');
+      trigLabel.setAttribute('x', triggerX);
+      trigLabel.setAttribute('y', margin.top + 34);
+      trigLabel.setAttribute('text-anchor', 'middle');
+      trigLabel.setAttribute('fill', '#4B6147');
+      trigLabel.setAttribute('font-size', '10');
+      trigLabel.setAttribute('font-weight', '600');
+      trigLabel.setAttribute('letter-spacing', '0.5');
+      trigLabel.textContent = 'DECISION';
+      svg.appendChild(trigLabel);
+    }
+
+    // Draw scenario lines (back to front: slower, delayed, base)
+    const lineData = [
+      { key: 'slower',  color: COLORS.slower,  width: 2.5 },
+      { key: 'delayed', color: COLORS.delayed, width: 2.5 },
+      { key: 'base',    color: COLORS.base,    width: 3 }
+    ];
+
+    lineData.forEach(({ key, color, width }) => {
+      const pathD = generateBezierPath(scenarios[key], minVal, maxVal);
+
+      const path = document.createElementNS(ns, 'path');
+      path.setAttribute('d', pathD);
+      path.setAttribute('fill', 'none');
+      path.setAttribute('stroke', color);
+      path.setAttribute('stroke-width', width);
+      path.setAttribute('stroke-linecap', 'round');
+      path.setAttribute('stroke-linejoin', 'round');
+      svg.appendChild(path);
+
+      // Data point dots
+      scenarios[key].forEach((v, i) => {
+        const cx = xPos(i);
+        const cy = yPos(v, minVal, maxVal);
+        const dot = document.createElementNS(ns, 'circle');
+        dot.setAttribute('cx', cx);
+        dot.setAttribute('cy', cy);
+        dot.setAttribute('r', '3');
+        dot.setAttribute('fill', color);
+        dot.setAttribute('stroke', '#FFFFFF');
+        dot.setAttribute('stroke-width', '1.5');
+        dot.setAttribute('opacity', '0');
+        dot.setAttribute('class', 'data-dot');
+        dot.dataset.month = i;
+        svg.appendChild(dot);
+      });
+    });
+
+    // Invisible hover rectangles for each month
+    for (let m = 0; m <= MONTHS; m++) {
+      const x = xPos(m) - (plotW / MONTHS) / 2;
+      const rect = document.createElementNS(ns, 'rect');
+      rect.setAttribute('x', Math.max(margin.left, x));
+      rect.setAttribute('y', margin.top);
+      rect.setAttribute('width', plotW / MONTHS);
+      rect.setAttribute('height', plotH);
+      rect.setAttribute('fill', 'transparent');
+      rect.setAttribute('class', 'hover-zone');
+      rect.dataset.month = m;
+      svg.appendChild(rect);
+    }
+
+    // Hover line (hidden by default)
+    const hoverLine = document.createElementNS(ns, 'line');
+    hoverLine.setAttribute('x1', 0);
+    hoverLine.setAttribute('y1', margin.top);
+    hoverLine.setAttribute('x2', 0);
+    hoverLine.setAttribute('y2', margin.top + plotH);
+    hoverLine.setAttribute('stroke', '#243221');
+    hoverLine.setAttribute('stroke-width', '1');
+    hoverLine.setAttribute('stroke-dasharray', '3,3');
+    hoverLine.setAttribute('opacity', '0');
+    hoverLine.setAttribute('id', 'hoverLine');
+    hoverLine.style.pointerEvents = 'none';
+    svg.appendChild(hoverLine);
+
+    // Store data for hover
+    currentData = { scenarios, minVal, maxVal };
+
+    // Update metrics
+    updateMetrics(scenarios);
+  }
+
+  function updateMetrics(scenarios) {
+    const baseRunway = findRunway(scenarios.base);
+    const delayedRunway = findRunway(scenarios.delayed);
+    const slowerRunway = findRunway(scenarios.slower);
+
+    metricBase.textContent = baseRunway >= MONTHS ? '18+' : Math.floor(baseRunway);
+    metricDelayed.textContent = delayedRunway >= MONTHS ? '18+' : Math.floor(delayedRunway);
+    metricSlower.textContent = slowerRunway >= MONTHS ? '18+' : Math.floor(slowerRunway);
+
+    const trigger = findDecisionTrigger(scenarios, scenarios.burn);
+    if (trigger) {
+      metricTrigger.textContent = 'Mo ' + trigger.month;
+      metricTriggerDetail.textContent = 'decision point';
+
+      const scenarioNames = {
+        slower: 'slower-growth',
+        delayed: 'delayed-collections',
+        base: 'base'
+      };
+      triggerText.innerHTML = '<strong>Month ' + trigger.month + '</strong> — when the ' +
+        scenarioNames[trigger.scenario] + ' case drops below 3 months of burn, forcing a capital or hiring decision.';
+    } else {
+      metricTrigger.textContent = 'None';
+      metricTriggerDetail.textContent = 'within 18 months';
+      triggerText.textContent = 'No scenario drops below the 3-month buffer within 18 months. Strong position.';
+    }
+  }
+
+  // --- Hover / Tooltip ---
+  function setupHoverInteraction() {
+    svg.addEventListener('mousemove', function(e) {
+      if (!currentData) return;
+
+      const rect = svg.getBoundingClientRect();
+      const svgX = (e.clientX - rect.left) / rect.width * W;
+      const svgY = (e.clientY - rect.top) / rect.height * H;
+
+      // Find nearest month
+      const relX = svgX - margin.left;
+      if (relX < -10 || relX > plotW + 10 || svgY < margin.top - 10 || svgY > margin.top + plotH + 10) {
+        hideTooltip();
+        return;
+      }
+
+      const month = Math.round((relX / plotW) * MONTHS);
+      const clampedMonth = Math.max(0, Math.min(MONTHS, month));
+
+      showTooltip(clampedMonth, e);
+    });
+
+    svg.addEventListener('mouseleave', hideTooltip);
+
+    // Touch support
+    svg.addEventListener('touchmove', function(e) {
+      if (!currentData) return;
+      e.preventDefault();
+      const touch = e.touches[0];
+      const rect = svg.getBoundingClientRect();
+      const svgX = (touch.clientX - rect.left) / rect.width * W;
+      const relX = svgX - margin.left;
+      const month = Math.round((relX / plotW) * MONTHS);
+      const clampedMonth = Math.max(0, Math.min(MONTHS, month));
+      showTooltip(clampedMonth, touch);
+    }, { passive: false });
+
+    svg.addEventListener('touchend', hideTooltip);
+  }
+
+  function showTooltip(month, event) {
+    if (!currentData) return;
+    const { scenarios, minVal, maxVal } = currentData;
+
+    // Highlight dots
+    const dots = svg.querySelectorAll('.data-dot');
+    dots.forEach(d => {
+      d.setAttribute('opacity', parseInt(d.dataset.month) === month ? '1' : '0');
+      if (parseInt(d.dataset.month) === month) {
+        d.setAttribute('r', '5');
+      } else {
+        d.setAttribute('r', '3');
+      }
+    });
+
+    // Hover line
+    const hoverLine = document.getElementById('hoverLine');
+    const hx = xPos(month);
+    hoverLine.setAttribute('x1', hx);
+    hoverLine.setAttribute('x2', hx);
+    hoverLine.setAttribute('opacity', '0.3');
+
+    // Tooltip content
+    const baseVal = scenarios.base[month];
+    const delayedVal = scenarios.delayed[month];
+    const slowerVal = scenarios.slower[month];
+
+    tooltipEl.innerHTML = `
+      <div class="tooltip-month">${month === 0 ? 'Current' : 'Month ' + month}</div>
+      <div class="tooltip-row">
+        <span class="tooltip-dot" style="background:${COLORS.base}"></span>
+        <span class="tooltip-label">Base:</span>
+        <span class="tooltip-value">${formatDollarsLong(Math.round(baseVal))}</span>
+      </div>
+      <div class="tooltip-row">
+        <span class="tooltip-dot" style="background:${COLORS.delayed}"></span>
+        <span class="tooltip-label">Delayed:</span>
+        <span class="tooltip-value">${formatDollarsLong(Math.round(delayedVal))}</span>
+      </div>
+      <div class="tooltip-row">
+        <span class="tooltip-dot" style="background:${COLORS.slower}"></span>
+        <span class="tooltip-label">Slower:</span>
+        <span class="tooltip-value">${formatDollarsLong(Math.round(slowerVal))}</span>
+      </div>
+    `;
+
+    tooltipEl.classList.add('visible');
+
+    // Position tooltip
+    const containerRect = chartContainer.getBoundingClientRect();
+    let tx = event.clientX - containerRect.left + 16;
+    let ty = event.clientY - containerRect.top - 20;
+
+    // Keep tooltip within bounds
+    const tooltipW = tooltipEl.offsetWidth;
+    const tooltipH = tooltipEl.offsetHeight;
+    if (tx + tooltipW > containerRect.width - 8) {
+      tx = event.clientX - containerRect.left - tooltipW - 16;
+    }
+    if (ty < 0) ty = 8;
+    if (ty + tooltipH > containerRect.height) {
+      ty = containerRect.height - tooltipH - 8;
+    }
+
+    tooltipEl.style.left = tx + 'px';
+    tooltipEl.style.top = ty + 'px';
+  }
+
+  function hideTooltip() {
+    tooltipEl.classList.remove('visible');
+    const dots = svg.querySelectorAll('.data-dot');
+    dots.forEach(d => {
+      d.setAttribute('opacity', '0');
+      d.setAttribute('r', '3');
+    });
+    const hoverLine = document.getElementById('hoverLine');
+    if (hoverLine) hoverLine.setAttribute('opacity', '0');
+  }
+
+  // --- Input Listeners ---
+  function scheduleUpdate() {
+    if (animFrame) cancelAnimationFrame(animFrame);
+    animFrame = requestAnimationFrame(function() {
+      const scenarios = computeScenarios();
+      renderChart(scenarios);
+    });
+  }
+
+  // Number inputs
+  [cashBalanceInput, burnRateInput, revenueInput, plannedHiresInput, costPerHireInput].forEach(input => {
+    input.addEventListener('input', scheduleUpdate);
+    input.addEventListener('change', scheduleUpdate);
+  });
+
+  // Slider
+  growthRateInput.addEventListener('input', function() {
+    growthRateDisplay.textContent = parseFloat(this.value).toFixed(1) + '%';
+    scheduleUpdate();
+  });
+
+  // Radio buttons
+  collectionGroup.querySelectorAll('input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      // Update selected styling
+      collectionGroup.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('selected'));
+      this.closest('.radio-option').classList.add('selected');
+      scheduleUpdate();
+    });
+  });
+
+  // --- Initialize ---
+  setupHoverInteraction();
+  scheduleUpdate();
+
+})();
+</script>
+
+</body>
+</html>

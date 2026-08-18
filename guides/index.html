@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+<title>Guides & Resources | Centripetal Advisors</title>
+<meta name="description" content="Frameworks, checklists, and tools for SaaS finance leaders. Free guides from Centripetal Advisors.">
+<meta property="og:title" content="Guides & Resources | Centripetal Advisors">
+<meta property="og:description" content="Frameworks, checklists, and tools for SaaS finance leaders.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+/* ── Reset & Base ────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#DDD8CD;color:#444444;font-family:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+a{color:#4B6147;}
+img{max-width:100%;display:block;}
+
+/* ── Navigation ──────────────────────────────────────── */
+.site-nav{background:#243221;padding:18px 24px;position:relative;z-index:10;}
+.site-nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.site-wordmark{display:inline-flex;align-items:center;text-decoration:none;}
+.site-nav-links{display:flex;gap:28px;align-items:center;}
+.site-nav-links > a,
+.site-nav-links .nav-dropdown > a{color:#DDD8CD;text-decoration:none;font-size:15px;font-weight:400;opacity:0.9;transition:opacity 0.15s;}
+.site-nav-links > a:hover,
+.site-nav-links .nav-dropdown > a:hover{opacity:1;}
+.site-nav-cta{background:#DDD8CD;color:#243221;padding:10px 20px;border-radius:4px;font-weight:500;font-size:14px;text-decoration:none;transition:background 0.15s;}
+.site-nav-cta:hover{background:#F2F2F2;}
+
+/* Resources dropdown */
+.nav-dropdown{position:relative;}
+.nav-dropdown > a{cursor:default;}
+.nav-dropdown > a::after{content:'';display:inline-block;width:0;height:0;margin-left:5px;vertical-align:middle;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #DDD8CD;opacity:0.7;}
+.nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:160px;background:#243221;border:1px solid #4B6147;border-radius:6px;padding:8px 0;margin-top:12px;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s,margin-top 0.2s;box-shadow:0 8px 24px rgba(0,0,0,0.25);}
+.nav-dropdown-menu::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #4B6147;}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;margin-top:8px;}
+.nav-dropdown-menu a{display:block;padding:8px 20px;color:#DDD8CD;text-decoration:none;font-size:14px;font-weight:400;opacity:0.85;transition:opacity 0.15s,background 0.15s;}
+.nav-dropdown-menu a:hover{opacity:1;background:rgba(75,97,71,0.3);}
+
+/* ── Hero ────────────────────────────────────────────── */
+.hero{position:relative;background-color:#243221;background-image:radial-gradient(ellipse 80% 60% at 50% 40%,#4B614722,transparent);padding:80px 24px 64px;text-align:center;color:#F2F2F2;}
+.hero h1{font-family:'Lora',Georgia,serif;font-size:clamp(28px,4vw,44px);font-weight:400;margin:0 0 16px;line-height:1.2;}
+.hero p{max-width:640px;margin:8px auto 0;font-size:18px;opacity:0.85;line-height:1.6;}
+
+/* ── Container ───────────────────────────────────────── */
+.container{max-width:1060px;margin:0 auto;padding:48px 24px 64px;}
+
+/* ── Guide Grid ──────────────────────────────────────── */
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px;}
+
+/* ── Guide Cards ─────────────────────────────────────── */
+.guide-card{background:#F2F2F2;border-radius:8px;padding:0;text-decoration:none;color:#444444;display:flex;flex-direction:column;border:1px solid #c8c3b8;transition:box-shadow 0.25s,transform 0.2s;overflow:hidden;}
+.guide-card:hover{box-shadow:0 8px 28px rgba(36,50,33,0.14);transform:translateY(-3px);}
+
+.card-accent{height:4px;width:100%;}
+.card-accent--diagnostic{background:linear-gradient(90deg,#4B6147,#e2c06e);}
+.card-accent--readiness{background:linear-gradient(90deg,#4B6147,#6d8a68);}
+.card-accent--checklist{background:linear-gradient(90deg,#7a6a4f,#a08d6c);}
+.card-accent--playbook{background:linear-gradient(90deg,#243221,#4B6147);}
+.card-accent--decision{background:linear-gradient(90deg,#4B6147,#4B6147);}
+.card-accent--operating{background:linear-gradient(90deg,#4B6147,#4B6147);}
+
+.card-body{padding:28px 28px 24px;display:flex;flex-direction:column;flex:1;}
+
+.card-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:20px;}
+.card-icon--diagnostic{background:rgba(212,168,67,0.12);color:#4B6147;}
+.card-icon--readiness{background:rgba(75,97,71,0.12);color:#4B6147;}
+.card-icon--checklist{background:rgba(122,106,79,0.12);color:#7a6a4f;}
+.card-icon--playbook{background:rgba(36,50,33,0.15);color:#243221;}
+.card-icon--decision{background:rgba(212,168,67,0.12);color:#4B6147;}
+.card-icon--operating{background:rgba(75,97,71,0.12);color:#4B6147;}
+
+.guide-type{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4B6147;margin-bottom:6px;}
+.guide-card h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:400;margin:0 0 12px;color:#243221;line-height:1.3;}
+.guide-card p{font-size:15px;line-height:1.55;flex:1;margin:0 0 20px;}
+.guide-link{font-size:14px;font-weight:500;color:#4B6147;display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s;}
+.guide-card:hover .guide-link{gap:10px;color:#243221;}
+
+/* ── CTA Section ─────────────────────────────────────── */
+.cta-section{background:#243221;padding:64px 24px;text-align:center;}
+.cta-inner{max-width:600px;margin:0 auto;}
+.cta-section h2{font-family:'Lora',Georgia,serif;font-size:clamp(22px,3vw,32px);font-weight:400;color:#F2F2F2;margin:0 0 16px;line-height:1.3;}
+.cta-section p{color:#DDD8CD;opacity:0.8;font-size:16px;margin:0 0 28px;line-height:1.6;}
+.cta-btn{display:inline-block;background:#4B6147;color:#243221;padding:14px 32px;border-radius:4px;font-weight:600;font-size:15px;text-decoration:none;letter-spacing:0.3px;transition:background 0.2s,transform 0.15s;}
+.cta-btn:hover{background:#e2bc5e;transform:translateY(-1px);}
+
+/* ── Footer ──────────────────────────────────────────── */
+.footer{background:#243221;padding:40px 24px;text-align:center;}
+.footer-inner{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:16px;align-items:center;}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;}
+.footer-links a{color:#DDD8CD;text-decoration:none;font-size:14px;opacity:0.6;transition:opacity 0.15s;}
+.footer-links a:hover{opacity:0.9;}
+.footer-copy{color:#DDD8CD;font-size:13px;opacity:0.5;}
+
+/* ── Mobile Nav Toggle ───────────────────────────────── */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-toggle span{display:block;width:22px;height:2px;background:#DDD8CD;margin:5px 0;transition:transform 0.2s;}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media(max-width:900px){
+  .guide-grid{grid-template-columns:repeat(2,1fr);gap:20px;}
+}
+
+@media(max-width:640px){
+  .guide-grid{grid-template-columns:1fr;gap:16px;}
+
+  .nav-toggle{display:block;}
+  .site-nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#243221;flex-direction:column;padding:16px 24px 24px;gap:16px;border-top:1px solid #4B6147;}
+  .site-nav-links.open{display:flex;}
+
+  .nav-dropdown-menu{position:static;transform:none;opacity:1;visibility:visible;margin-top:0;background:transparent;border:none;box-shadow:none;padding:0 0 0 16px;}
+  .nav-dropdown-menu::before{display:none;}
+  .nav-dropdown > a::after{display:none;}
+}
+
+</style>
+<link rel="stylesheet" href="../assets/site-system.css" data-site-system>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="../index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Guides &amp; Resources</h1>
+  <p>Frameworks, checklists, and tools for SaaS finance leaders</p>
+</section>
+
+<!-- Guide Cards -->
+<div class="container">
+  <div class="guide-grid">
+
+    <!-- 1. SaaS Finance Scorecard -->
+    <a href="saas-finance-scorecard.html" class="guide-card">
+      <div class="card-accent card-accent--diagnostic"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--diagnostic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span class="guide-type">Diagnostic</span>
+        <h3>SaaS Finance Scorecard</h3>
+        <p>Interactive self-assessment to benchmark your finance function across key dimensions.</p>
+        <span class="guide-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+    <!-- 2. Series A Diligence Readiness -->
+    <a href="series-a-diligence-readiness.html" class="guide-card">
+      <div class="card-accent card-accent--readiness"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--readiness">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <span class="guide-type">Readiness Guide</span>
+        <h3>Series A Diligence Readiness</h3>
+        <p>14 critical questions and 24 essential documents to prepare before investor conversations begin.</p>
+        <span class="guide-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+    <!-- 3. Venture Debt Readiness -->
+    <a href="venture-debt-readiness.html" class="guide-card">
+      <div class="card-accent card-accent--checklist"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--checklist">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <span class="guide-type">Checklist</span>
+        <h3>Venture Debt Readiness</h3>
+        <p>Pre-diligence checklist to evaluate whether your company is positioned for venture debt.</p>
+        <span class="guide-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+    <!-- 4. Treasury Hygiene -->
+    <a href="treasury-hygiene.html" class="guide-card">
+      <div class="card-accent card-accent--playbook"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--playbook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 10h20"/><path d="M12 4v16"/></svg>
+        </div>
+        <span class="guide-type">Playbook</span>
+        <h3>Treasury Hygiene</h3>
+        <p>A treasury review playbook to optimize your cash management and banking relationships.</p>
+        <span class="guide-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+    <!-- 5. Do I Need a Fractional CFO? -->
+    <a href="do-i-need-a-fractional-cfo.html" class="guide-card">
+      <div class="card-accent card-accent--decision"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--decision">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <span class="guide-type">Decision Guide</span>
+        <h3>Do I Need a Fractional CFO?</h3>
+        <p>Decision framework to determine if fractional CFO services are right for your stage and complexity.</p>
+        <span class="guide-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+    <!-- 6. First 90 Days After Your Raise -->
+    <a href="first-90-days-after-raise.html" class="guide-card">
+      <div class="card-accent card-accent--operating"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--operating">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <span class="guide-type">Playbook</span>
+        <h3>First 90 Days After Your Raise</h3>
+        <p>Post-close operating discipline to deploy capital effectively and build investor confidence.</p>
+        <span class="guide-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Interactive Tools Section -->
+  <h2 style="font-family:'Lora',Georgia,serif;font-size:28px;font-weight:400;color:#243221;margin:64px 0 8px;line-height:1.3;">Interactive Tools</h2>
+  <p style="font-size:16px;color:#555;margin:0 0 28px;max-width:640px;">Self-service diagnostics and calculators built from the same frameworks we use with clients.</p>
+
+  <div class="guide-grid">
+
+    <!-- Tool 1: Finance Diagnostic -->
+    <a href="tools/finance-diagnostic.html" class="guide-card">
+      <div class="card-accent" style="background:linear-gradient(90deg,#4B6147,#4B6147);"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--diagnostic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span class="guide-type">Interactive Diagnostic</span>
+        <h3>SaaS Finance Readiness Diagnostic</h3>
+        <p>Score your finance function across 8 categories with a live radar chart and personalized readiness tier.</p>
+        <span class="guide-link">Launch Tool <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+    <!-- Tool 2: Fundraise Readiness -->
+    <a href="tools/fundraise-readiness.html" class="guide-card">
+      <div class="card-accent" style="background:linear-gradient(90deg,#4B6147,#243221);"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--readiness">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span class="guide-type">Interactive Checklist</span>
+        <h3>Fundraise Readiness Tracker</h3>
+        <p>Track your 24-document data room readiness with progress bars, persistence, and a shareable summary.</p>
+        <span class="guide-link">Launch Tool <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+    <!-- Tool 3: CFO Fit Calculator -->
+    <a href="tools/cfo-fit-calculator.html" class="guide-card">
+      <div class="card-accent" style="background:linear-gradient(90deg,#4B6147,#e2c06e);"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--decision">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+        </div>
+        <span class="guide-type">Interactive Calculator</span>
+        <h3>Fractional CFO Fit Calculator</h3>
+        <p>Answer 4 questions about your stage, complexity, and needs to get a personalized finance hire recommendation.</p>
+        <span class="guide-link">Launch Tool <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+    <!-- Tool 4: Runway Modeler -->
+    <a href="tools/runway-modeler.html" class="guide-card">
+      <div class="card-accent" style="background:linear-gradient(90deg,#7a6a4f,#4B6147);"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--checklist">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        </div>
+        <span class="guide-type">Interactive Modeler</span>
+        <h3>Cash Runway Scenario Modeler</h3>
+        <p>Input your burn, revenue, and hiring plan to see 3-scenario runway projections with decision triggers.</p>
+        <span class="guide-link">Launch Tool <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+    <!-- Tool 5: Board Deck Builder -->
+    <a href="tools/board-deck-builder.html" class="guide-card">
+      <div class="card-accent" style="background:linear-gradient(90deg,#243221,#4B6147);"></div>
+      <div class="card-body">
+        <div class="card-icon card-icon--playbook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <span class="guide-type">Interactive Builder</span>
+        <h3>Board Deck Structure Builder</h3>
+        <p>Select your stage and board composition to get a recommended deck outline with the questions your board will ask.</p>
+        <span class="guide-link">Launch Tool <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Need help with your financial strategy?</h2>
+    <p>Schedule a conversation to discuss how Centripetal can support your finance function.</p>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="cta-btn">Schedule a Call</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../index.html">Home</a>
+        <a href="../services.html">Services</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="../guides/index.html">Guides</a>
+        <a href="../blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

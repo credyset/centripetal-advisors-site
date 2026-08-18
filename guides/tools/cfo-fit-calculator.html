@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+<title>Fractional CFO Fit Calculator | Centripetal Advisors</title>
+<meta name="description" content="Interactive tool to determine whether a fractional CFO, VP Finance, or controller is the right fit for your company's stage and complexity.">
+<meta property="og:title" content="Fractional CFO Fit Calculator | Centripetal Advisors">
+<meta property="og:description" content="Interactive tool to determine whether a fractional CFO, VP Finance, or controller is the right fit for your company's stage and complexity.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ── Reset & Base ────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#DDD8CD;color:#444444;font-family:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+a{color:#4B6147;text-decoration:none;transition:color 0.2s;}
+a:hover{color:#243221;}
+img{max-width:100%;display:block;}
+
+/* ── Navigation ──────────────────────────────────────── */
+.site-nav{background:#243221;padding:18px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.15);}
+.site-nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.site-wordmark{display:inline-flex;align-items:center;text-decoration:none;}
+.site-nav-links{display:flex;gap:28px;align-items:center;}
+.site-nav-links > a,
+.site-nav-links .nav-dropdown > a{color:#DDD8CD;text-decoration:none;font-size:15px;font-weight:400;opacity:0.9;transition:opacity 0.15s;}
+.site-nav-links > a:hover,
+.site-nav-links .nav-dropdown > a:hover{opacity:1;}
+.site-nav-cta{background:#DDD8CD;color:#243221;padding:10px 20px;border-radius:4px;font-weight:500;font-size:14px;text-decoration:none;transition:background 0.15s;}
+.site-nav-cta:hover{background:#F2F2F2;}
+
+.nav-dropdown{position:relative;}
+.nav-dropdown > a{cursor:default;}
+.nav-dropdown > a::after{content:'';display:inline-block;width:0;height:0;margin-left:5px;vertical-align:middle;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #DDD8CD;opacity:0.7;}
+.nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:160px;background:#243221;border:1px solid #4B6147;border-radius:6px;padding:8px 0;margin-top:12px;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s,margin-top 0.2s;box-shadow:0 8px 24px rgba(0,0,0,0.25);}
+.nav-dropdown-menu::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #4B6147;}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;margin-top:8px;}
+.nav-dropdown-menu a{display:block;padding:8px 20px;color:#DDD8CD;text-decoration:none;font-size:14px;font-weight:400;opacity:0.85;transition:opacity 0.15s,background 0.15s;}
+.nav-dropdown-menu a:hover{opacity:1;background:rgba(75,97,71,0.3);}
+
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-toggle span{display:block;width:22px;height:2px;background:#DDD8CD;margin:5px 0;transition:transform 0.2s;}
+
+/* ── Hero ────────────────────────────────────────────── */
+.hero{position:relative;background-color:#243221;background-image:radial-gradient(ellipse 80% 60% at 50% 40%,#4B614722,transparent);padding:72px 24px 56px;text-align:center;color:#F2F2F2;}
+.hero-eyebrow{font-family:'Roboto',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#6E8260;margin:0 0 20px;}
+.hero h1{font-family:'Lora',Georgia,serif;font-size:clamp(30px,4.5vw,48px);font-weight:400;margin:0 0 16px;line-height:1.2;letter-spacing:0.5px;}
+.hero p{max-width:620px;margin:0 auto;font-size:18px;color:#DDD8CD;opacity:0.85;line-height:1.6;font-weight:300;}
+
+/* ── Progress Bar ────────────────────────────────────── */
+.progress-strip{background:#F2F2F2;border-bottom:1px solid #c8c3b8;padding:16px 24px;position:sticky;top:58px;z-index:90;}
+.progress-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:20px;}
+.progress-steps{display:flex;gap:8px;flex:1;}
+.progress-dot{width:100%;height:6px;background:#c8c3b8;border-radius:3px;transition:background 0.4s ease;}
+.progress-dot.complete{background:#4B6147;}
+.progress-dot.active{background:#4B6147;}
+.progress-meta{font-size:13px;font-weight:500;color:#666;letter-spacing:0.5px;text-transform:uppercase;white-space:nowrap;}
+
+/* ── Main Layout ─────────────────────────────────────── */
+.calc-layout{max-width:1180px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:start;}
+
+/* ── Steps Column ────────────────────────────────────── */
+.steps-column{display:flex;flex-direction:column;gap:0;}
+
+.step{background:#F2F2F2;border-radius:12px;border:1px solid #c8c3b8;overflow:hidden;transition:box-shadow 0.3s ease;margin-bottom:20px;}
+.step:hover{box-shadow:0 4px 20px rgba(36,50,33,0.08);}
+
+.step-header{display:flex;align-items:center;gap:16px;padding:20px 28px;cursor:pointer;user-select:none;transition:background 0.2s;}
+.step-header:hover{background:rgba(75,97,71,0.04);}
+
+.step-badge{width:36px;height:36px;border-radius:50%;background:#243221;color:#F2F2F2;font-family:'Lora',Georgia,serif;font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.3s,color 0.3s;}
+.step.completed .step-badge{background:#4B6147;}
+.step.active .step-badge{background:#4B6147;color:#243221;}
+
+.step-header-text{flex:1;}
+.step-header-text h2{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:#243221;margin:0;line-height:1.3;}
+.step-header-text p{font-size:14px;color:#888;margin:4px 0 0;line-height:1.4;}
+
+.step-check{width:24px;height:24px;border-radius:50%;border:2px solid #c8c3b8;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s;}
+.step.completed .step-check{background:#4B6147;border-color:#4B6147;}
+.step.completed .step-check::after{content:'';display:block;width:6px;height:10px;border:solid #F2F2F2;border-width:0 2px 2px 0;transform:rotate(45deg);margin-top:-2px;}
+
+.step-chevron{width:20px;height:20px;flex-shrink:0;transition:transform 0.3s ease;color:#999;}
+.step.open .step-chevron{transform:rotate(180deg);}
+
+.step-body{max-height:0;overflow:hidden;transition:max-height 0.45s cubic-bezier(0.4,0,0.2,1),padding 0.3s ease;}
+.step.open .step-body{max-height:800px;padding:0 28px 28px;}
+.step-body-inner{padding-top:8px;}
+
+/* ── Radio Cards ─────────────────────────────────────── */
+.radio-cards{display:flex;flex-direction:column;gap:10px;}
+.radio-card{position:relative;background:#FFFFFF;border:2px solid #e0dbd2;border-radius:8px;padding:16px 20px;cursor:pointer;transition:border-color 0.2s,background 0.2s,transform 0.15s,box-shadow 0.2s;display:flex;align-items:center;gap:14px;}
+.radio-card:hover{border-color:#4B6147;background:#faf8f4;transform:translateX(2px);}
+.radio-card input{position:absolute;opacity:0;pointer-events:none;}
+.radio-card.selected{border-color:#4B6147;background:#eef2ed;box-shadow:0 2px 12px rgba(75,97,71,0.12);}
+
+.radio-indicator{width:20px;height:20px;border-radius:50%;border:2px solid #c8c3b8;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;}
+.radio-card.selected .radio-indicator{border-color:#4B6147;}
+.radio-card.selected .radio-indicator::after{content:'';display:block;width:10px;height:10px;border-radius:50%;background:#4B6147;}
+
+.radio-card-label{font-size:16px;font-weight:500;color:#243221;line-height:1.4;}
+
+/* ── Checkboxes ──────────────────────────────────────── */
+.checkbox-cards{display:flex;flex-direction:column;gap:10px;}
+.checkbox-card{position:relative;background:#FFFFFF;border:2px solid #e0dbd2;border-radius:8px;padding:16px 20px;cursor:pointer;transition:border-color 0.2s,background 0.2s,transform 0.15s,box-shadow 0.2s;display:flex;align-items:center;gap:14px;}
+.checkbox-card:hover{border-color:#4B6147;background:#faf8f4;transform:translateX(2px);}
+.checkbox-card input{position:absolute;opacity:0;pointer-events:none;}
+.checkbox-card.selected{border-color:#4B6147;background:#eef2ed;box-shadow:0 2px 12px rgba(75,97,71,0.12);}
+
+.checkbox-indicator{width:20px;height:20px;border-radius:4px;border:2px solid #c8c3b8;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:border-color 0.2s,background 0.2s;}
+.checkbox-card.selected .checkbox-indicator{border-color:#4B6147;background:#4B6147;}
+.checkbox-card.selected .checkbox-indicator::after{content:'';display:block;width:6px;height:10px;border:solid #F2F2F2;border-width:0 2px 2px 0;transform:rotate(45deg);margin-top:-2px;}
+
+.checkbox-card-label{font-size:16px;font-weight:500;color:#243221;line-height:1.4;}
+.checkbox-hint{font-size:13px;color:#888;margin:8px 0 0;font-style:italic;}
+
+/* ── Results Panel ───────────────────────────────────── */
+.results-panel{position:sticky;top:100px;background:#F2F2F2;border-radius:12px;border:1px solid #c8c3b8;overflow:hidden;transition:box-shadow 0.3s;}
+
+.results-header{background:#243221;padding:24px 28px;text-align:center;}
+.results-header h3{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;color:#F2F2F2;margin:0 0 4px;}
+.results-header p{font-size:13px;color:#DDD8CD;opacity:0.7;margin:0;}
+
+.results-body{padding:28px;}
+
+/* Recommendation Badge */
+.rec-badge{text-align:center;margin-bottom:24px;}
+.rec-label{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#4B6147;margin-bottom:8px;}
+.rec-value{font-family:'Lora',Georgia,serif;font-size:28px;font-weight:700;color:#243221;line-height:1.2;margin-bottom:12px;}
+.rec-rationale{font-size:14px;line-height:1.6;color:#555;margin:0;}
+
+/* Pending State */
+.results-pending{text-align:center;padding:40px 20px;color:#888;font-style:italic;font-size:15px;line-height:1.6;}
+.results-pending-icon{font-size:48px;margin-bottom:16px;opacity:0.3;display:block;}
+
+/* Complexity Bar */
+.complexity-section{margin:24px 0;padding:20px 0 0;border-top:1px solid #d4d0c7;}
+.complexity-label{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#4B6147;margin-bottom:10px;}
+.complexity-bar-shell{background:#d4d0c7;height:10px;border-radius:5px;overflow:hidden;}
+.complexity-bar{height:100%;background:linear-gradient(90deg,#4B6147,#4B6147);border-radius:5px;transition:width 0.5s cubic-bezier(0.4,0,0.2,1);width:0%;}
+.complexity-score{font-size:13px;color:#666;margin-top:6px;}
+
+/* Cost Table */
+.cost-section{margin:24px 0 0;padding:20px 0 0;border-top:1px solid #d4d0c7;}
+.cost-label{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#4B6147;margin-bottom:12px;}
+.cost-table{width:100%;border-collapse:collapse;}
+.cost-table tr{transition:background 0.2s;}
+.cost-table td{padding:12px 14px;font-size:14px;border-bottom:1px solid #e4e0d8;color:#444;vertical-align:middle;}
+.cost-table td:first-child{font-weight:500;color:#243221;}
+.cost-table td:last-child{text-align:right;font-weight:600;color:#555;white-space:nowrap;}
+.cost-table tr.recommended{background:rgba(212,168,67,0.08);border-left:3px solid #4B6147;border-radius:4px;}
+.cost-table tr.recommended td{border-bottom-color:#4B6147;color:#243221;}
+.cost-table tr.recommended td:first-child{font-weight:700;}
+.rec-tag{display:inline-block;background:#4B6147;color:#243221;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:3px;margin-left:8px;vertical-align:middle;}
+
+/* Results CTA */
+.results-cta{padding:24px 28px;border-top:1px solid #d4d0c7;text-align:center;}
+.results-cta-btn{display:inline-block;width:100%;background:#4B6147;color:#243221;padding:14px 24px;border-radius:6px;font-weight:600;font-size:15px;letter-spacing:0.3px;text-decoration:none;transition:background 0.2s,transform 0.15s,box-shadow 0.2s;box-shadow:0 4px 16px rgba(212,168,67,0.25);text-align:center;}
+.results-cta-btn:hover{background:#c69a38;transform:translateY(-1px);box-shadow:0 6px 24px rgba(212,168,67,0.35);color:#243221;}
+.results-cta-sub{font-size:12px;color:#888;margin:8px 0 0;}
+
+/* ── CTA Section ─────────────────────────────────────── */
+.cta-section{background:#243221;padding:64px 24px;text-align:center;}
+.cta-inner{max-width:600px;margin:0 auto;}
+.cta-section h2{font-family:'Lora',Georgia,serif;font-size:clamp(22px,3vw,32px);font-weight:400;color:#F2F2F2;margin:0 0 16px;line-height:1.3;}
+.cta-section p{color:#DDD8CD;opacity:0.8;font-size:16px;margin:0 0 28px;line-height:1.6;}
+.cta-btn{display:inline-block;background:#4B6147;color:#243221;padding:14px 32px;border-radius:4px;font-weight:600;font-size:15px;text-decoration:none;letter-spacing:0.3px;transition:background 0.2s,transform 0.15s;}
+.cta-btn:hover{background:#e2bc5e;transform:translateY(-1px);}
+
+/* ── Footer ──────────────────────────────────────────── */
+.footer{background:#243221;padding:40px 24px;text-align:center;}
+.footer-inner{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:16px;align-items:center;}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;}
+.footer-links a{color:#DDD8CD;text-decoration:none;font-size:14px;opacity:0.6;transition:opacity 0.15s;}
+.footer-links a:hover{opacity:0.9;}
+.footer-copy{color:#DDD8CD;font-size:13px;opacity:0.5;}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media(max-width:960px){
+  .calc-layout{grid-template-columns:1fr;gap:32px;}
+  .results-panel{position:relative;top:0;order:-1;}
+}
+
+@media(max-width:640px){
+  .nav-toggle{display:block;}
+  .site-nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#243221;flex-direction:column;padding:16px 24px 24px;gap:16px;border-top:1px solid #4B6147;}
+  .site-nav-links.open{display:flex;}
+  .nav-dropdown-menu{position:static;transform:none;opacity:1;visibility:visible;margin-top:0;background:transparent;border:none;box-shadow:none;padding:0 0 0 16px;}
+  .nav-dropdown-menu::before{display:none;}
+  .nav-dropdown > a::after{display:none;}
+
+  .hero{padding:56px 20px 40px;}
+  .progress-inner{flex-direction:column;gap:8px;}
+  .step-header{padding:16px 20px;}
+  .step.open .step-body{padding:0 20px 20px;}
+  .results-body{padding:20px;}
+  .results-cta{padding:20px;}
+  .radio-card,.checkbox-card{padding:14px 16px;}
+}
+
+/* ── Animations ──────────────────────────────────────── */
+@keyframes fadeSlideIn{
+  from{opacity:0;transform:translateY(8px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.results-body.has-rec .rec-badge{animation:fadeSlideIn 0.4s ease both;}
+
+</style>
+<link rel="stylesheet" href="../../assets/site-system.css" data-site-system>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="../../index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="../../index.html">Home</a>
+    <a href="../../services.html">Services</a>
+    <a href="../../contact.html">Contact</a>
+    <a href="../../blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+<!-- Hero -->
+<section class="hero">
+  <p class="hero-eyebrow">Interactive Tool</p>
+  <h1>Fractional CFO Fit Calculator</h1>
+  <p>Answer four questions about your stage, complexity, team, and priorities. Get a clear recommendation on the right finance leadership for your company.</p>
+</section>
+
+<!-- Progress Bar -->
+<div class="progress-strip">
+  <div class="progress-inner">
+    <div class="progress-steps">
+      <div class="progress-dot" id="prog-1"></div>
+      <div class="progress-dot" id="prog-2"></div>
+      <div class="progress-dot" id="prog-3"></div>
+      <div class="progress-dot" id="prog-4"></div>
+    </div>
+    <span class="progress-meta"><span id="step-counter">0</span> / 4 complete</span>
+  </div>
+</div>
+
+<!-- Calculator Layout -->
+<div class="calc-layout">
+
+  <!-- Steps Column -->
+  <div class="steps-column">
+
+    <!-- Step 1: Revenue Stage -->
+    <div class="step open active" id="step-1" data-step="1">
+      <div class="step-header" onclick="toggleStep(1)">
+        <div class="step-badge">1</div>
+        <div class="step-header-text">
+          <h2>Revenue Stage</h2>
+          <p>Where is your company in its growth journey?</p>
+        </div>
+        <div class="step-check"></div>
+        <svg class="step-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="step-body-inner">
+          <div class="radio-cards" data-field="revenue">
+            <label class="radio-card" data-value="pre-revenue">
+              <input type="radio" name="revenue" value="pre-revenue">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">Pre-revenue</span>
+            </label>
+            <label class="radio-card" data-value="0-1m">
+              <input type="radio" name="revenue" value="0-1m">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">$0 -- $1M ARR</span>
+            </label>
+            <label class="radio-card" data-value="1-5m">
+              <input type="radio" name="revenue" value="1-5m">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">$1M -- $5M ARR</span>
+            </label>
+            <label class="radio-card" data-value="5-10m">
+              <input type="radio" name="revenue" value="5-10m">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">$5M -- $10M ARR</span>
+            </label>
+            <label class="radio-card" data-value="10m+">
+              <input type="radio" name="revenue" value="10m+">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">$10M+ ARR</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Finance Complexity Signals -->
+    <div class="step" id="step-2" data-step="2">
+      <div class="step-header" onclick="toggleStep(2)">
+        <div class="step-badge">2</div>
+        <div class="step-header-text">
+          <h2>Finance Complexity Signals</h2>
+          <p>Select all that apply to your business</p>
+        </div>
+        <div class="step-check"></div>
+        <svg class="step-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="step-body-inner">
+          <div class="checkbox-cards" data-field="complexity">
+            <label class="checkbox-card">
+              <input type="checkbox" name="complexity" value="multi-entity">
+              <span class="checkbox-indicator"></span>
+              <span class="checkbox-card-label">Multiple legal entities</span>
+            </label>
+            <label class="checkbox-card">
+              <input type="checkbox" name="complexity" value="covenants">
+              <span class="checkbox-indicator"></span>
+              <span class="checkbox-card-label">Covenant compliance required</span>
+            </label>
+            <label class="checkbox-card">
+              <input type="checkbox" name="complexity" value="board-reporting">
+              <span class="checkbox-indicator"></span>
+              <span class="checkbox-card-label">Board reporting to institutional investors</span>
+            </label>
+            <label class="checkbox-card">
+              <input type="checkbox" name="complexity" value="fundraising">
+              <span class="checkbox-indicator"></span>
+              <span class="checkbox-card-label">Fundraising planned in next 12 months</span>
+            </label>
+            <label class="checkbox-card">
+              <input type="checkbox" name="complexity" value="audit">
+              <span class="checkbox-indicator"></span>
+              <span class="checkbox-card-label">Audit required or approaching</span>
+            </label>
+            <label class="checkbox-card">
+              <input type="checkbox" name="complexity" value="venture-debt">
+              <span class="checkbox-indicator"></span>
+              <span class="checkbox-card-label">Considering venture debt</span>
+            </label>
+            <label class="checkbox-card">
+              <input type="checkbox" name="complexity" value="international">
+              <span class="checkbox-indicator"></span>
+              <span class="checkbox-card-label">International operations or multi-currency</span>
+            </label>
+          </div>
+          <p class="checkbox-hint">Select none if none apply -- that is a valid and useful signal.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Current Finance Capacity -->
+    <div class="step" id="step-3" data-step="3">
+      <div class="step-header" onclick="toggleStep(3)">
+        <div class="step-badge">3</div>
+        <div class="step-header-text">
+          <h2>Current Finance Capacity</h2>
+          <p>Who handles finance today?</p>
+        </div>
+        <div class="step-check"></div>
+        <svg class="step-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="step-body-inner">
+          <div class="radio-cards" data-field="capacity">
+            <label class="radio-card" data-value="founder">
+              <input type="radio" name="capacity" value="founder">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">Founder handles everything</span>
+            </label>
+            <label class="radio-card" data-value="bookkeeper">
+              <input type="radio" name="capacity" value="bookkeeper">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">Bookkeeper only</span>
+            </label>
+            <label class="radio-card" data-value="controller">
+              <input type="radio" name="capacity" value="controller">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">Controller or senior bookkeeper</span>
+            </label>
+            <label class="radio-card" data-value="vp-finance">
+              <input type="radio" name="capacity" value="vp-finance">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">VP Finance on staff</span>
+            </label>
+            <label class="radio-card" data-value="none">
+              <input type="radio" name="capacity" value="none">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">No dedicated finance resource</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4: Highest-Priority Need -->
+    <div class="step" id="step-4" data-step="4">
+      <div class="step-header" onclick="toggleStep(4)">
+        <div class="step-badge">4</div>
+        <div class="step-header-text">
+          <h2>Highest-Priority Need</h2>
+          <p>What keeps you up at night?</p>
+        </div>
+        <div class="step-check"></div>
+        <svg class="step-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="step-body-inner">
+          <div class="radio-cards" data-field="priority">
+            <label class="radio-card" data-value="cash-planning">
+              <input type="radio" name="priority" value="cash-planning">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">Cash planning and runway</span>
+            </label>
+            <label class="radio-card" data-value="board-deck">
+              <input type="radio" name="priority" value="board-deck">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">Board deck and investor reporting</span>
+            </label>
+            <label class="radio-card" data-value="fundraise">
+              <input type="radio" name="priority" value="fundraise">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">Fundraise preparation</span>
+            </label>
+            <label class="radio-card" data-value="ops-reporting">
+              <input type="radio" name="priority" value="ops-reporting">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">Operational reporting and metrics</span>
+            </label>
+            <label class="radio-card" data-value="treasury">
+              <input type="radio" name="priority" value="treasury">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">Treasury and banking</span>
+            </label>
+            <label class="radio-card" data-value="all">
+              <input type="radio" name="priority" value="all">
+              <span class="radio-indicator"></span>
+              <span class="radio-card-label">All of the above</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Results Panel -->
+  <aside class="results-panel" id="results-panel">
+    <div class="results-header">
+      <h3>Your Recommendation</h3>
+      <p>Updates live as you answer</p>
+    </div>
+
+    <div class="results-body" id="results-body">
+      <!-- Pending state -->
+      <div class="results-pending" id="results-pending">
+        <span class="results-pending-icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </span>
+        Complete the steps to see your personalized recommendation.
+      </div>
+
+      <!-- Recommendation (hidden initially) -->
+      <div id="results-content" style="display:none;">
+        <div class="rec-badge">
+          <div class="rec-label">Recommended</div>
+          <div class="rec-value" id="rec-title">--</div>
+          <p class="rec-rationale" id="rec-rationale"></p>
+        </div>
+
+        <div class="complexity-section">
+          <div class="complexity-label">Complexity Score</div>
+          <div class="complexity-bar-shell">
+            <div class="complexity-bar" id="complexity-bar"></div>
+          </div>
+          <div class="complexity-score" id="complexity-text">0 / 7 signals</div>
+        </div>
+
+        <div class="cost-section">
+          <div class="cost-label">Annual Cost Comparison</div>
+          <table class="cost-table">
+            <tr id="cost-fractional">
+              <td>Fractional CFO</td>
+              <td>$95K -- $150K</td>
+            </tr>
+            <tr id="cost-vp">
+              <td>VP Finance</td>
+              <td>$220K -- $320K</td>
+            </tr>
+            <tr id="cost-controller">
+              <td>Controller</td>
+              <td>$100K -- $150K</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-cta" id="results-cta" style="display:none;">
+      <a href="https://calendly.com/charles-centripetaladvisors/30min" class="results-cta-btn" target="_blank" rel="noopener">Discuss Your Situation</a>
+      <p class="results-cta-sub">Free 30-minute conversation with Charles Solomon</p>
+    </div>
+  </aside>
+
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Every company's situation is different.</h2>
+    <p>This calculator gives you a starting point. A 30-minute conversation gives you a plan.</p>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="cta-btn" target="_blank" rel="noopener">Schedule a Call</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../../index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../../index.html">Home</a>
+        <a href="../../services.html">Services</a>
+        <a href="../../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="../../guides/index.html">Guides</a>
+        <a href="../../blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── State ──────────────────────────────────────────
+  const state = {
+    revenue: null,
+    complexity: [],
+    capacity: null,
+    priority: null
+  };
+
+  const stepCompleted = { 1: false, 2: false, 3: false, 4: false };
+
+  // ── DOM refs ───────────────────────────────────────
+  const stepEls = [1,2,3,4].map(n => document.getElementById('step-' + n));
+  const progDots = [1,2,3,4].map(n => document.getElementById('prog-' + n));
+  const stepCounter = document.getElementById('step-counter');
+  const resultsPending = document.getElementById('results-pending');
+  const resultsContent = document.getElementById('results-content');
+  const resultsCta = document.getElementById('results-cta');
+  const resultsBody = document.getElementById('results-body');
+  const recTitle = document.getElementById('rec-title');
+  const recRationale = document.getElementById('rec-rationale');
+  const complexityBar = document.getElementById('complexity-bar');
+  const complexityText = document.getElementById('complexity-text');
+
+  // ── Step toggle ────────────────────────────────────
+  window.toggleStep = function(n) {
+    var el = document.getElementById('step-' + n);
+    if (el.classList.contains('open')) {
+      el.classList.remove('open');
+    } else {
+      // Close others
+      stepEls.forEach(function(s) { s.classList.remove('open'); });
+      el.classList.add('open');
+    }
+  };
+
+  function openNextStep(current) {
+    if (current < 4) {
+      stepEls.forEach(function(s) { s.classList.remove('open', 'active'); });
+      var next = document.getElementById('step-' + (current + 1));
+      next.classList.add('open', 'active');
+    } else {
+      // All done, collapse last step
+      stepEls.forEach(function(s) { s.classList.remove('open', 'active'); });
+    }
+  }
+
+  function markStepComplete(n) {
+    stepCompleted[n] = true;
+    var el = document.getElementById('step-' + n);
+    el.classList.add('completed');
+    updateProgress();
+  }
+
+  function updateProgress() {
+    var count = 0;
+    for (var k in stepCompleted) {
+      if (stepCompleted[k]) count++;
+    }
+    stepCounter.textContent = count;
+    [1,2,3,4].forEach(function(n) {
+      var dot = document.getElementById('prog-' + n);
+      dot.className = 'progress-dot';
+      if (stepCompleted[n]) {
+        dot.classList.add('complete');
+      } else if (document.getElementById('step-' + n).classList.contains('active')) {
+        dot.classList.add('active');
+      }
+    });
+  }
+
+  // ── Radio card handlers ────────────────────────────
+  document.querySelectorAll('.radio-cards input[type="radio"]').forEach(function(input) {
+    input.addEventListener('change', function() {
+      var field = this.name;
+      var value = this.value;
+      state[field] = value;
+
+      // Update card UI
+      var container = this.closest('.radio-cards');
+      container.querySelectorAll('.radio-card').forEach(function(c) { c.classList.remove('selected'); });
+      this.closest('.radio-card').classList.add('selected');
+
+      // Determine step number
+      var step = this.closest('.step');
+      var stepNum = parseInt(step.dataset.step);
+
+      // Mark complete and advance
+      markStepComplete(stepNum);
+      setTimeout(function() { openNextStep(stepNum); }, 350);
+
+      updateRecommendation();
+    });
+  });
+
+  // ── Checkbox handlers ──────────────────────────────
+  var complexityVisited = false;
+  document.querySelectorAll('.checkbox-cards input[type="checkbox"]').forEach(function(input) {
+    input.addEventListener('change', function() {
+      var checked = [];
+      document.querySelectorAll('input[name="complexity"]:checked').forEach(function(cb) {
+        checked.push(cb.value);
+      });
+      state.complexity = checked;
+
+      // Update card UI
+      this.closest('.checkbox-card').classList.toggle('selected', this.checked);
+
+      // Mark step 2 as visited (complete on any interaction)
+      if (!complexityVisited) {
+        complexityVisited = true;
+        markStepComplete(2);
+        // Auto-advance after a brief delay on first interaction
+        setTimeout(function() { openNextStep(2); }, 600);
+      }
+
+      updateRecommendation();
+    });
+  });
+
+  // Also mark step 2 complete if user manually moves past it
+  document.getElementById('step-2').querySelector('.step-header').addEventListener('click', function() {
+    // If step 2 is being closed and hasn't been completed, mark it
+    var step2 = document.getElementById('step-2');
+    if (step2.classList.contains('open') && !stepCompleted[2]) {
+      // Will be toggled closed by toggleStep, mark as complete (0 selections is valid)
+      complexityVisited = true;
+      markStepComplete(2);
+    }
+  });
+
+  // ── Recommendation Engine ──────────────────────────
+  function updateRecommendation() {
+    var rev = state.revenue;
+    var comp = state.complexity.length;
+    var cap = state.capacity;
+    var pri = state.priority;
+
+    // Update complexity bar always
+    var pct = Math.round((comp / 7) * 100);
+    complexityBar.style.width = pct + '%';
+    complexityText.textContent = comp + ' / 7 signals';
+
+    // Need at least step 1 to show anything meaningful
+    if (!rev) return;
+
+    // Show results content
+    resultsPending.style.display = 'none';
+    resultsContent.style.display = 'block';
+    resultsCta.style.display = 'block';
+    resultsBody.classList.add('has-rec');
+
+    // Decision logic
+    var recommendation = computeRecommendation(rev, comp, cap, pri);
+
+    recTitle.textContent = recommendation.title;
+    recRationale.textContent = recommendation.rationale;
+
+    // Update cost table highlighting
+    document.getElementById('cost-fractional').className = '';
+    document.getElementById('cost-vp').className = '';
+    document.getElementById('cost-controller').className = '';
+
+    // Remove any existing rec tags
+    document.querySelectorAll('.rec-tag').forEach(function(t) { t.remove(); });
+
+    var recRow;
+    if (recommendation.type === 'fractional') {
+      recRow = document.getElementById('cost-fractional');
+    } else if (recommendation.type === 'vp') {
+      recRow = document.getElementById('cost-vp');
+    } else if (recommendation.type === 'controller') {
+      recRow = document.getElementById('cost-controller');
+    }
+
+    if (recRow) {
+      recRow.className = 'recommended';
+      var tag = document.createElement('span');
+      tag.className = 'rec-tag';
+      tag.textContent = 'Best Fit';
+      recRow.querySelector('td:first-child').appendChild(tag);
+    }
+  }
+
+  function computeRecommendation(rev, compCount, cap, pri) {
+    // Scoring factors
+    var revenueScore = { 'pre-revenue': 0, '0-1m': 1, '1-5m': 2, '5-10m': 3, '10m+': 4 };
+    var rScore = revenueScore[rev] || 0;
+
+    var strategicPriorities = ['board-deck', 'fundraise', 'all'];
+    var operationalPriorities = ['cash-planning', 'ops-reporting', 'treasury'];
+
+    var isStrategicNeed = pri && strategicPriorities.indexOf(pri) !== -1;
+    var isOperationalNeed = pri && operationalPriorities.indexOf(pri) !== -1;
+
+    var hasExistingLeadership = cap === 'vp-finance';
+    var hasController = cap === 'controller';
+    var isFounderLed = cap === 'founder' || cap === 'none';
+    var hasBookkeeper = cap === 'bookkeeper';
+
+    // ── "Not Yet" conditions ──
+    if (rScore === 0 && compCount === 0 && isFounderLed) {
+      return {
+        type: 'none',
+        title: 'Not Yet',
+        rationale: 'At pre-revenue with low complexity and founder-managed finance, a CFO hire would be premature. Focus on product-market fit first. When you close your first institutional round or cross $500K ARR, revisit this question.'
+      };
+    }
+
+    if (rScore <= 1 && compCount === 0 && !isStrategicNeed) {
+      return {
+        type: 'none',
+        title: 'Not Yet',
+        rationale: 'Your revenue stage and complexity profile suggest you can manage finance effectively without dedicated leadership for now. A good bookkeeper and a clean chart of accounts will serve you well at this stage. Reassess when complexity signals appear or when you begin planning a raise.'
+      };
+    }
+
+    // ── "VP Finance" conditions ──
+    if (rScore >= 3 && compCount >= 4 && !hasExistingLeadership) {
+      return {
+        type: 'vp',
+        title: 'VP Finance',
+        rationale: 'Your revenue scale combined with high operational complexity suggests you need daily finance leadership, not periodic strategic support. A VP Finance can own the operating rhythm, manage the controller function, and represent finance in cross-functional decisions. At your stage, the cost is justified by the operational density.'
+      };
+    }
+
+    if (rScore >= 4 && compCount >= 3) {
+      return {
+        type: 'vp',
+        title: 'VP Finance',
+        rationale: 'At $10M+ ARR with multiple complexity signals, you need someone in the seat daily. A VP Finance provides the continuity and depth that strategic finance demands at this scale -- managing audit, board reporting, treasury, and team leadership simultaneously. A fractional resource would be stretched thin across these demands.'
+      };
+    }
+
+    if (rScore >= 3 && pri === 'all' && compCount >= 3) {
+      return {
+        type: 'vp',
+        title: 'VP Finance',
+        rationale: 'When every finance function needs attention simultaneously at your scale, that signals a full-time leadership need. A VP Finance can prioritize across the full stack of finance demands, build systems, and provide the daily presence your complexity requires.'
+      };
+    }
+
+    // ── "Controller First" conditions ──
+    if (rScore <= 1 && compCount <= 2 && isOperationalNeed && isFounderLed) {
+      return {
+        type: 'controller',
+        title: 'Controller First',
+        rationale: 'Your primary needs are operational -- clean books, reliable reporting, and cash visibility. A controller or senior bookkeeper will give you the foundation you need at a cost that matches your stage. Strategic CFO work becomes valuable once the operational layer is solid.'
+      };
+    }
+
+    if (rScore === 2 && compCount <= 1 && (pri === 'ops-reporting' || pri === 'cash-planning') && isFounderLed) {
+      return {
+        type: 'controller',
+        title: 'Controller First',
+        rationale: 'At $1-5M ARR with low complexity and primarily operational needs, a controller is your highest-leverage hire. They will own the monthly close, build your reporting cadence, and free you from the day-to-day. When strategic needs emerge -- board reporting, fundraising -- that is when a fractional CFO adds value on top of a working controller function.'
+      };
+    }
+
+    if (hasBookkeeper && compCount <= 1 && isOperationalNeed && rScore <= 2) {
+      return {
+        type: 'controller',
+        title: 'Controller First',
+        rationale: 'You have bookkeeping coverage but need more structure and oversight. A controller bridges the gap -- owning the close, building reports the founder can trust, and creating the operational foundation. This is the natural next step before adding strategic finance leadership.'
+      };
+    }
+
+    // ── "Fractional CFO" -- the default for most cases with complexity + strategic need ──
+
+    // Fundraising planned
+    if (pri === 'fundraise' || (state.complexity.indexOf('fundraising') !== -1)) {
+      return {
+        type: 'fractional',
+        title: 'Fractional CFO',
+        rationale: 'Fundraising is a project that requires senior finance judgment -- model construction, data room preparation, investor Q&A, and term sheet negotiation. A fractional CFO brings this expertise on a timeline that matches the raise cycle, without the fixed cost of a full-time hire. Most founders who try to run a raise without CFO support leave money or terms on the table.'
+      };
+    }
+
+    if (isStrategicNeed && compCount >= 2) {
+      return {
+        type: 'fractional',
+        title: 'Fractional CFO',
+        rationale: 'Your combination of strategic priorities and operational complexity is the classic fractional CFO profile. You need senior judgment on board reporting, investor communication, or capital strategy -- but not necessarily 40 hours a week of it. A fractional CFO integrates with your existing team and focuses on the decisions that move the needle.'
+      };
+    }
+
+    if (rScore >= 2 && compCount >= 2 && !hasExistingLeadership) {
+      return {
+        type: 'fractional',
+        title: 'Fractional CFO',
+        rationale: 'At your revenue stage with multiple complexity signals, finance decisions are starting to carry real consequences -- covenant compliance, multi-entity reporting, investor expectations. A fractional CFO provides the strategic layer your bookkeeper or controller cannot, at a fraction of the cost of a full-time VP Finance.'
+      };
+    }
+
+    if (rScore >= 2 && isStrategicNeed) {
+      return {
+        type: 'fractional',
+        title: 'Fractional CFO',
+        rationale: 'Your priority need is strategic -- the kind of work that requires pattern recognition from someone who has done it across multiple companies at your stage. A fractional CFO brings that experience on a flexible engagement, typically 15-25 hours per month, and scales up during critical periods like board meetings or fundraising.'
+      };
+    }
+
+    if (hasController && (isStrategicNeed || compCount >= 2)) {
+      return {
+        type: 'fractional',
+        title: 'Fractional CFO',
+        rationale: 'You already have operational coverage with a controller, which is the right foundation. Adding a fractional CFO on top gives you the strategic layer -- board communication, capital planning, and the investor-facing work that a controller typically is not positioned to own. This is one of the most cost-effective configurations.'
+      };
+    }
+
+    // General catch-all for moderate cases
+    if (rScore >= 1 && (compCount >= 1 || isStrategicNeed)) {
+      return {
+        type: 'fractional',
+        title: 'Fractional CFO',
+        rationale: 'Your profile suggests you are at the stage where finance decisions benefit from experienced guidance, but the workload does not yet justify a full-time hire. A fractional CFO gives you access to senior finance leadership on a flexible basis -- typically saving 40-60% compared to a full-time VP Finance while delivering the same strategic value.'
+      };
+    }
+
+    // True fallback
+    return {
+      type: 'controller',
+      title: 'Controller First',
+      rationale: 'Based on your current stage and needs, start with operational finance coverage. A controller or senior bookkeeper will give you the clean, reliable numbers you need to make good decisions. Strategic finance leadership will become valuable as your complexity grows.'
+    };
+  }
+
+  // ── Initialize ─────────────────────────────────────
+  updateProgress();
+
+})();
+</script>
+
+</body>
+</html>

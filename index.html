@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+  <title>Centripetal Advisors — Strategic CFO Services for Enterprise SaaS</title>
+  <meta name="description" content="Centripetal Advisors provides strategic CFO services for enterprise SaaS companies. Fractional CFO, board reporting, treasury management, and fundraising support.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #2D2D2D;
+      background-color: #DDD8CD;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #243221;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.25s ease;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Navigation ===== */
+    .nav {
+      background-color: #243221;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo { display:flex; align-items:center; text-decoration:none; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 8px;
+    }
+
+    .nav-links > li {
+      position: relative;
+    }
+
+    .nav-links > li > a {
+      display: block;
+      padding: 8px 16px;
+      color: #DDD8CD;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      border-radius: 6px;
+      transition: color 0.25s ease, background-color 0.25s ease;
+    }
+
+    .nav-links > li > a:hover,
+    .nav-links > li > a.active {
+      color: #F2F2F2;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Resources dropdown */
+    .dropdown-trigger {
+      cursor: default;
+    }
+
+    .dropdown-trigger::after {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid #DDD8CD;
+      border-bottom: 1.5px solid #DDD8CD;
+      transform: rotate(45deg);
+      margin-left: 6px;
+      margin-bottom: 2px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      background-color: #243221;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+      margin-top: 4px;
+    }
+
+    .nav-links > li:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-links > li:hover .dropdown-trigger::after {
+      transform: rotate(-135deg);
+      border-color: #F2F2F2;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      color: #DDD8CD;
+      font-size: 14px;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .dropdown a:hover {
+      color: #F2F2F2;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Mobile hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      width: 32px;
+      height: 32px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: #DDD8CD;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      background-color: #243221;
+      padding: 100px 0 110px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(75, 97, 71, 0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      color: #F2F2F2;
+      max-width: 780px;
+      margin: 0 auto 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #DDD8CD;
+      max-width: 620px;
+      margin: 0 auto 40px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: #4B6147;
+      color: #243221;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 36px;
+      border-radius: 8px;
+      letter-spacing: 0.3px;
+      transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 16px rgba(212, 168, 67, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: #c69a38;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(212, 168, 67, 0.35);
+    }
+
+    /* ===== Services Section ===== */
+    .services {
+      padding: 100px 0;
+      background-color: #DDD8CD;
+    }
+
+    .section-label {
+      display: block;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #4B6147;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .section-heading {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 16px;
+      color: #243221;
+    }
+
+    .section-subheading {
+      text-align: center;
+      font-size: 17px;
+      color: #5A5A5A;
+      max-width: 560px;
+      margin: 0 auto 56px;
+      font-weight: 300;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      padding: 36px 28px;
+      box-shadow: 0 2px 12px rgba(36, 50, 33, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(36, 50, 33, 0.1);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background-color: rgba(75, 97, 71, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .service-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: #4B6147;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #243221;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #5A5A5A;
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .service-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4B6147;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.25s ease, gap 0.25s ease;
+    }
+
+    .service-link:hover {
+      color: #4B6147;
+      gap: 10px;
+    }
+
+    .service-link::after {
+      content: '\2192';
+      font-size: 16px;
+    }
+
+    /* ===== Testimonials Section ===== */
+    .testimonials {
+      padding: 100px 0;
+      background-color: #EFEBE2;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .testimonial-card {
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      padding: 40px 36px;
+      box-shadow: 0 2px 12px rgba(36, 50, 33, 0.06);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '\201C';
+      font-family: 'Lora', serif;
+      font-size: 72px;
+      color: #4B6147;
+      opacity: 0.35;
+      position: absolute;
+      top: 16px;
+      left: 28px;
+      line-height: 1;
+    }
+
+    .testimonial-card p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #3D3D3D;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-bar {
+      width: 40px;
+      height: 3px;
+      background-color: #4B6147;
+      border-radius: 2px;
+      margin-top: 24px;
+    }
+
+    /* ===== CTA Section ===== */
+    .cta {
+      padding: 100px 0;
+      background-color: #4B6147;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(36, 50, 33, 0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      color: #F2F2F2;
+      max-width: 600px;
+      margin: 0 auto 16px;
+    }
+
+    .cta p {
+      font-size: 17px;
+      color: #DDD8CD;
+      max-width: 480px;
+      margin: 0 auto 40px;
+      font-weight: 300;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background-color: #243221;
+      padding: 56px 0 32px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(221, 216, 205, 0.12);
+    }
+
+    .footer-brand h3 {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #F2F2F2;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: #9DA898;
+      max-width: 280px;
+      line-height: 1.6;
+    }
+
+    .footer-nav h4 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #DDD8CD;
+      margin-bottom: 16px;
+    }
+
+    .footer-nav ul {
+      list-style: none;
+    }
+
+    .footer-nav li {
+      margin-bottom: 10px;
+    }
+
+    .footer-nav a {
+      font-size: 14px;
+      color: #9DA898;
+      transition: color 0.25s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #4B6147;
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      text-align: center;
+      font-size: 13px;
+      color: #6B7A66;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background-color: #243221;
+        flex-direction: column;
+        padding: 16px 24px 24px;
+        gap: 4px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links > li > a {
+        padding: 12px 16px;
+      }
+
+      /* Mobile dropdown always visible when parent open */
+      .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        margin-top: 0;
+        padding: 0 0 0 16px;
+        background-color: transparent;
+      }
+
+      .hero {
+        padding: 72px 0 80px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-heading {
+        font-size: 32px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .cta h2 {
+        font-size: 32px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .btn-primary {
+        padding: 14px 28px;
+        font-size: 15px;
+      }
+
+      .service-card {
+        padding: 28px 24px;
+      }
+
+      .testimonial-card {
+        padding: 32px 28px;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="assets/site-system.css" data-site-system>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <img class="hero-mark" src="assets/favicon-light.png" alt="" aria-hidden="true">
+      <h1>Strategic CFO Services</h1>
+      <p class="hero-eyebrow">Built for Enterprise SaaS</p>
+      <a href="https://calendly.com/charles-centripetaladvisors/30min" class="btn-primary" target="_blank" rel="noopener">Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <div class="container">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-heading">Our Services</h2>
+      <p class="section-subheading">We partner with SaaS founders and leadership teams to build the financial infrastructure that drives growth.</p>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Fractional CFO</h3>
+          <p>A fully embedded senior finance leader who integrates with your team, providing strategic financial guidance without the full-time overhead.</p>
+          <a href="services.html" class="service-link">Learn more</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Board &amp; Investor Reporting</h3>
+          <p>Institutional-grade board decks, investor updates, and financial reporting packages that build confidence and drive alignment.</p>
+          <a href="services.html" class="service-link">Learn more</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M6 8h.01M6 12h.01M10 8h4M10 12h4"/></svg>
+          </div>
+          <h3>Cash &amp; Treasury Management</h3>
+          <p>Optimize cash positioning, bank relationships, and treasury operations to extend runway and maximize every dollar.</p>
+          <a href="services.html" class="service-link">Learn more</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Fundraising &amp; Capital Strategy</h3>
+          <p>End-to-end fundraising support from financial modeling and data room preparation to investor negotiations and term sheet review.</p>
+          <a href="services.html" class="service-link">Learn more</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <span class="section-label">Client Results</span>
+      <h2 class="section-heading">What Our Clients Say</h2>
+      <p class="section-subheading">Founders and operators trust Centripetal to guide their most critical financial decisions.</p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <p>"We had never dealt with institutional investors before and Centripetal really helped us take a step up to next level...Series A institutionally backed company with a board."</p>
+          <div class="testimonial-bar"></div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>"We raised a $3 million convertible note...Centripetal was certainly heavily involved...lobbying for the best deal."</p>
+          <div class="testimonial-bar"></div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>"Centripetal invests in relationships. They go above and beyond. They care about clients and their client's performance and success."</p>
+          <div class="testimonial-bar"></div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>"Knowing that you have someone who can build you that flexible model is critical to moving fast. Companies at our stage, moving fast is one of the only things that matters."</p>
+          <div class="testimonial-bar"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Transform Your Financial Strategy?</h2>
+      <p>Let's talk about how Centripetal can support your next phase of growth.</p>
+      <a href="https://calendly.com/charles-centripetaladvisors/30min" class="btn-primary" target="_blank" rel="noopener">Schedule a Conversation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="guides/index.html">Guides</a>
+        <a href="blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

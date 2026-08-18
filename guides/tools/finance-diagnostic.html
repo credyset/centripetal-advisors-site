@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+<title>SaaS Finance Readiness Diagnostic | Centripetal Advisors</title>
+<meta name="description" content="Score your SaaS company across 8 finance dimensions. See where you stand on legal, cap table, systems, accounting, and investor readiness.">
+<meta property="og:title" content="SaaS Finance Readiness Diagnostic | Centripetal Advisors">
+<meta property="og:description" content="Score your SaaS company across 8 finance dimensions and get a personalized readiness assessment.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: #DDD8CD;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+.site-nav { background: #243221; padding: 18px 24px; position: relative; z-index: 100; }
+.site-nav-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.site-wordmark { font-family: 'Lora', Georgia, serif; font-size: 22px; color: #DDD8CD; text-decoration: none; font-weight: 400; letter-spacing: 1px; }
+.site-nav-links { display: flex; align-items: center; gap: 28px; }
+.site-nav-links a, .nav-dropdown-trigger {
+  color: #DDD8CD; text-decoration: none; font-size: 15px; opacity: 0.9;
+  transition: opacity 0.2s; cursor: pointer; background: none; border: none;
+  font-family: inherit; padding: 0;
+}
+.site-nav-links a:hover, .nav-dropdown-trigger:hover { opacity: 1; }
+.site-nav-links a.active { opacity: 1; border-bottom: 2px solid #4B6147; padding-bottom: 2px; }
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger::after { content: ' \25BE'; font-size: 11px; opacity: 0.7; }
+.nav-dropdown-menu {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  min-width: 160px; background: #243221; border: 1px solid #4B6147;
+  border-radius: 6px; padding: 8px 0; margin-top: 12px;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s, margin-top 0.2s;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.nav-dropdown-menu::before {
+  content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%);
+  border-left: 6px solid transparent; border-right: 6px solid transparent;
+  border-bottom: 6px solid #4B6147;
+}
+.nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; margin-top: 8px; }
+.nav-dropdown-menu a {
+  display: block; padding: 8px 20px; font-size: 14px; opacity: 0.8;
+}
+.nav-dropdown-menu a:hover { background: rgba(75,97,71,0.3); opacity: 1; }
+.site-nav-cta {
+  background: #DDD8CD !important; color: #243221 !important;
+  padding: 10px 20px !important; border-radius: 4px; font-weight: 500;
+  font-size: 14px !important; opacity: 1 !important;
+  transition: background 0.2s !important;
+}
+.site-nav-cta:hover { background: #F2F2F2 !important; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: #DDD8CD; margin: 5px 0; border-radius: 2px; transition: 0.3s; }
+
+/* ── HERO ── */
+.hero {
+  background-color: #243221;
+  background-image: radial-gradient(ellipse 80% 60% at 50% 40%, #4B614722, transparent);
+  padding: 72px 24px 56px; text-align: center; color: #F2F2F2;
+}
+.hero h1 { font-family: 'Lora', Georgia, serif; font-size: 42px; font-weight: 600; margin-bottom: 16px; line-height: 1.2; }
+.hero p { font-size: 18px; opacity: 0.8; max-width: 640px; margin: 0 auto; line-height: 1.6; }
+
+/* ── MAIN LAYOUT ── */
+.diagnostic-wrap {
+  max-width: 1180px; margin: 0 auto; padding: 48px 24px 80px;
+  display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: start;
+}
+
+/* ── LEFT COLUMN: SCORING ── */
+.scoring-panel h2 {
+  font-family: 'Lora', Georgia, serif; font-size: 26px; color: #243221;
+  margin-bottom: 8px; font-weight: 600;
+}
+.scoring-panel > p { color: #555; margin-bottom: 32px; font-size: 15px; }
+
+.category-block { margin-bottom: 36px; }
+.category-header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+}
+.category-number {
+  width: 30px; height: 30px; border-radius: 50%; background: #243221; color: #DDD8CD;
+  font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.category-title {
+  font-family: 'Lora', Georgia, serif; font-size: 18px; font-weight: 600; color: #243221;
+}
+.category-desc { font-size: 13px; color: #777; margin-bottom: 12px; padding-left: 42px; }
+
+.score-options { display: flex; flex-direction: column; gap: 8px; padding-left: 42px; }
+.score-card {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; cursor: pointer;
+  background: #F2F2F2; border: 2px solid transparent;
+  border-left: 4px solid transparent;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+.score-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.score-card.selected { border-color: #4B6147; background: #fff; box-shadow: 0 2px 12px rgba(36,50,33,0.1); }
+
+.score-card input { display: none; }
+.score-radio {
+  width: 20px; height: 20px; border-radius: 50%; border: 2px solid #bbb;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  transition: border-color 0.2s, background 0.2s;
+}
+.score-card.selected .score-radio { border-color: #4B6147; background: #4B6147; }
+.score-card.selected .score-radio::after {
+  content: ''; width: 8px; height: 8px; border-radius: 50%; background: #fff;
+}
+.score-value {
+  font-weight: 700; font-size: 14px; min-width: 18px; text-align: center;
+}
+.score-label { font-size: 14px; color: #444; }
+
+/* Left-border colors per level */
+.score-card[data-score="1"] { border-left-color: #C0392B; }
+.score-card[data-score="2"] { border-left-color: #E67E22; }
+.score-card[data-score="3"] { border-left-color: #4B6147; }
+.score-card[data-score="4"] { border-left-color: #7FB069; }
+.score-card[data-score="5"] { border-left-color: #27AE60; }
+
+/* ── RIGHT COLUMN: RESULTS ── */
+.results-panel {
+  position: sticky; top: 24px;
+  background: #F2F2F2; border-radius: 12px; padding: 32px 28px;
+  box-shadow: 0 4px 24px rgba(36,50,33,0.08);
+  border: 1px solid rgba(75,97,71,0.12);
+}
+.results-score-row { text-align: center; margin-bottom: 8px; }
+.results-score-number {
+  font-family: 'Lora', Georgia, serif; font-size: 56px; font-weight: 600; color: #243221;
+  line-height: 1;
+}
+.results-score-total { font-family: 'Lora', Georgia, serif; font-size: 28px; color: #999; font-weight: 400; }
+.results-completion {
+  text-align: center; font-size: 13px; color: #888; margin-bottom: 20px;
+}
+
+/* Tier badge */
+.tier-badge {
+  display: inline-block; padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+  transition: background 0.4s, color 0.4s;
+  margin-bottom: 28px;
+}
+.tier-badge-wrap { text-align: center; }
+.tier-red { background: #C0392B; color: #fff; }
+.tier-orange { background: #E67E22; color: #fff; }
+.tier-sage { background: #4B6147; color: #fff; }
+.tier-green { background: #27AE60; color: #fff; }
+
+/* Radar chart */
+.radar-section { margin-bottom: 28px; }
+.radar-section h3 {
+  font-family: 'Lora', Georgia, serif; font-size: 16px; color: #243221;
+  margin-bottom: 16px; font-weight: 600; text-align: center;
+}
+.radar-container { display: flex; justify-content: center; }
+.radar-container svg { max-width: 100%; height: auto; }
+
+/* Category bars */
+.bars-section h3 {
+  font-family: 'Lora', Georgia, serif; font-size: 16px; color: #243221;
+  margin-bottom: 16px; font-weight: 600;
+}
+.bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.bar-label { font-size: 12px; color: #555; min-width: 80px; text-align: right; }
+.bar-track { flex: 1; height: 10px; background: #DDD8CD; border-radius: 5px; overflow: hidden; }
+.bar-fill {
+  height: 100%; border-radius: 5px; background: #4B6147;
+  transition: width 0.4s ease;
+  min-width: 0;
+}
+.bar-value { font-size: 12px; font-weight: 700; color: #243221; min-width: 20px; }
+
+/* CTA block */
+.results-cta { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(75,97,71,0.15); text-align: center; }
+.results-cta p { font-size: 14px; color: #555; margin-bottom: 16px; line-height: 1.5; }
+.results-cta-btn {
+  display: inline-block; background: #4B6147; color: #243221; padding: 14px 32px;
+  border-radius: 4px; font-weight: 700; font-size: 15px; text-decoration: none;
+  transition: background 0.2s;
+}
+.results-cta-btn:hover { background: #c49a38; }
+
+/* ── FOOTER ── */
+.footer { background: #243221; padding: 48px 24px 40px; color: #DDD8CD; }
+.footer-inner {
+  max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap;
+  justify-content: space-between; align-items: flex-start; gap: 32px;
+}
+.footer-left { max-width: 360px; }
+.footer-left .footer-wordmark { font-family: 'Lora', Georgia, serif; font-size: 20px; color: #DDD8CD; margin: 0 0 8px; }
+.footer-left p { font-size: 14px; opacity: 0.6; line-height: 1.5; }
+.footer-links { display: flex; gap: 40px; }
+.footer-links-col h4 {
+  font-size: 13px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #4B6147; margin-bottom: 12px;
+}
+.footer-links-col a { display: block; color: #DDD8CD; font-size: 14px; opacity: 0.7; margin: 0 0 8px; text-decoration: none; transition: opacity 0.2s; }
+.footer-links-col a:hover { opacity: 1; }
+.footer-bottom {
+  width: 100%; border-top: 1px solid rgba(221,216,205,0.15);
+  margin-top: 16px; padding-top: 20px; text-align: center; font-size: 13px; opacity: 0.5;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  .diagnostic-wrap { grid-template-columns: 1fr; }
+  .results-panel { position: static; max-width: 100%; order: -1; }
+}
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .site-nav-links {
+    display: none; flex-direction: column; position: absolute;
+    top: 100%; left: 0; right: 0; background: #243221;
+    padding: 16px 24px; gap: 16px;
+    border-top: 1px solid #4B6147;
+  }
+  .site-nav-links.open { display: flex; }
+  .nav-dropdown-menu {
+    position: static; transform: none; margin-top: 8px !important;
+    opacity: 1 !important; visibility: visible !important;
+    box-shadow: none; border: none; background: transparent; padding: 0 0 0 16px;
+  }
+  .nav-dropdown-menu::before { display: none; }
+  .hero h1 { font-size: 30px; }
+  .hero p { font-size: 16px; }
+  .score-options { padding-left: 0; }
+  .category-desc { padding-left: 0; }
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .score-card { padding: 10px 12px; gap: 8px; }
+  .results-panel { padding: 24px 20px; }
+  .results-score-number { font-size: 44px; }
+}
+</style>
+<link rel="stylesheet" href="../../assets/site-system.css" data-site-system>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="../../index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="../../index.html">Home</a>
+    <a href="../../services.html">Services</a>
+    <a href="../../contact.html">Contact</a>
+    <a href="../../blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <h1>SaaS Finance Readiness Diagnostic</h1>
+  <p>Score your company across 8 critical finance dimensions. See where you stand and what to prioritize before your next raise.</p>
+</section>
+
+<!-- ── DIAGNOSTIC TOOL ── -->
+<div class="diagnostic-wrap">
+
+  <!-- LEFT: SCORING -->
+  <div class="scoring-panel">
+    <h2>Rate Your Readiness</h2>
+    <p>Select the description that best matches your current state in each category.</p>
+
+    <!-- 1. Legal -->
+    <div class="category-block" data-category="legal">
+      <div class="category-header">
+        <span class="category-number">1</span>
+        <span class="category-title">Legal</span>
+      </div>
+      <p class="category-desc">Entity structure, option plan, employee agreements, 83(b) elections, IP assignment</p>
+      <div class="score-options">
+        <label class="score-card" data-score="1">
+          <input type="radio" name="legal" value="1">
+          <span class="score-radio"></span>
+          <span class="score-value">1</span>
+          <span class="score-label">Major Gaps</span>
+        </label>
+        <label class="score-card" data-score="2">
+          <input type="radio" name="legal" value="2">
+          <span class="score-radio"></span>
+          <span class="score-value">2</span>
+          <span class="score-label">Patchy</span>
+        </label>
+        <label class="score-card" data-score="3">
+          <input type="radio" name="legal" value="3">
+          <span class="score-radio"></span>
+          <span class="score-value">3</span>
+          <span class="score-label">Functional</span>
+        </label>
+        <label class="score-card" data-score="4">
+          <input type="radio" name="legal" value="4">
+          <span class="score-radio"></span>
+          <span class="score-value">4</span>
+          <span class="score-label">Investor-Readable</span>
+        </label>
+        <label class="score-card" data-score="5">
+          <input type="radio" name="legal" value="5">
+          <span class="score-radio"></span>
+          <span class="score-value">5</span>
+          <span class="score-label">Diligence-Ready</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 2. Cap Table -->
+    <div class="category-block" data-category="capTable">
+      <div class="category-header">
+        <span class="category-number">2</span>
+        <span class="category-title">Cap Table</span>
+      </div>
+      <p class="category-desc">Current cap table, 409A valuation, SAFE/note tracking, option pool modeling</p>
+      <div class="score-options">
+        <label class="score-card" data-score="1">
+          <input type="radio" name="capTable" value="1">
+          <span class="score-radio"></span>
+          <span class="score-value">1</span>
+          <span class="score-label">Major Gaps</span>
+        </label>
+        <label class="score-card" data-score="2">
+          <input type="radio" name="capTable" value="2">
+          <span class="score-radio"></span>
+          <span class="score-value">2</span>
+          <span class="score-label">Patchy</span>
+        </label>
+        <label class="score-card" data-score="3">
+          <input type="radio" name="capTable" value="3">
+          <span class="score-radio"></span>
+          <span class="score-value">3</span>
+          <span class="score-label">Functional</span>
+        </label>
+        <label class="score-card" data-score="4">
+          <input type="radio" name="capTable" value="4">
+          <span class="score-radio"></span>
+          <span class="score-value">4</span>
+          <span class="score-label">Investor-Readable</span>
+        </label>
+        <label class="score-card" data-score="5">
+          <input type="radio" name="capTable" value="5">
+          <span class="score-radio"></span>
+          <span class="score-value">5</span>
+          <span class="score-label">Diligence-Ready</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 3. Team -->
+    <div class="category-block" data-category="team">
+      <div class="category-header">
+        <span class="category-number">3</span>
+        <span class="category-title">Team</span>
+      </div>
+      <p class="category-desc">Employment agreements, contractor classification, compensation benchmarking</p>
+      <div class="score-options">
+        <label class="score-card" data-score="1">
+          <input type="radio" name="team" value="1">
+          <span class="score-radio"></span>
+          <span class="score-value">1</span>
+          <span class="score-label">Major Gaps</span>
+        </label>
+        <label class="score-card" data-score="2">
+          <input type="radio" name="team" value="2">
+          <span class="score-radio"></span>
+          <span class="score-value">2</span>
+          <span class="score-label">Patchy</span>
+        </label>
+        <label class="score-card" data-score="3">
+          <input type="radio" name="team" value="3">
+          <span class="score-radio"></span>
+          <span class="score-value">3</span>
+          <span class="score-label">Functional</span>
+        </label>
+        <label class="score-card" data-score="4">
+          <input type="radio" name="team" value="4">
+          <span class="score-radio"></span>
+          <span class="score-value">4</span>
+          <span class="score-label">Investor-Readable</span>
+        </label>
+        <label class="score-card" data-score="5">
+          <input type="radio" name="team" value="5">
+          <span class="score-radio"></span>
+          <span class="score-value">5</span>
+          <span class="score-label">Diligence-Ready</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 4. Systems -->
+    <div class="category-block" data-category="systems">
+      <div class="category-header">
+        <span class="category-number">4</span>
+        <span class="category-title">Systems</span>
+      </div>
+      <p class="category-desc">Accounting software, bank feeds, AP/AR automation, integrations</p>
+      <div class="score-options">
+        <label class="score-card" data-score="1">
+          <input type="radio" name="systems" value="1">
+          <span class="score-radio"></span>
+          <span class="score-value">1</span>
+          <span class="score-label">Major Gaps</span>
+        </label>
+        <label class="score-card" data-score="2">
+          <input type="radio" name="systems" value="2">
+          <span class="score-radio"></span>
+          <span class="score-value">2</span>
+          <span class="score-label">Patchy</span>
+        </label>
+        <label class="score-card" data-score="3">
+          <input type="radio" name="systems" value="3">
+          <span class="score-radio"></span>
+          <span class="score-value">3</span>
+          <span class="score-label">Functional</span>
+        </label>
+        <label class="score-card" data-score="4">
+          <input type="radio" name="systems" value="4">
+          <span class="score-radio"></span>
+          <span class="score-value">4</span>
+          <span class="score-label">Investor-Readable</span>
+        </label>
+        <label class="score-card" data-score="5">
+          <input type="radio" name="systems" value="5">
+          <span class="score-radio"></span>
+          <span class="score-value">5</span>
+          <span class="score-label">Diligence-Ready</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 5. Treasury -->
+    <div class="category-block" data-category="treasury">
+      <div class="category-header">
+        <span class="category-number">5</span>
+        <span class="category-title">Treasury</span>
+      </div>
+      <p class="category-desc">Bank structure, FDIC coverage, sweep accounts, signatory controls, fraud prevention</p>
+      <div class="score-options">
+        <label class="score-card" data-score="1">
+          <input type="radio" name="treasury" value="1">
+          <span class="score-radio"></span>
+          <span class="score-value">1</span>
+          <span class="score-label">Major Gaps</span>
+        </label>
+        <label class="score-card" data-score="2">
+          <input type="radio" name="treasury" value="2">
+          <span class="score-radio"></span>
+          <span class="score-value">2</span>
+          <span class="score-label">Patchy</span>
+        </label>
+        <label class="score-card" data-score="3">
+          <input type="radio" name="treasury" value="3">
+          <span class="score-radio"></span>
+          <span class="score-value">3</span>
+          <span class="score-label">Functional</span>
+        </label>
+        <label class="score-card" data-score="4">
+          <input type="radio" name="treasury" value="4">
+          <span class="score-radio"></span>
+          <span class="score-value">4</span>
+          <span class="score-label">Investor-Readable</span>
+        </label>
+        <label class="score-card" data-score="5">
+          <input type="radio" name="treasury" value="5">
+          <span class="score-radio"></span>
+          <span class="score-value">5</span>
+          <span class="score-label">Diligence-Ready</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 6. Accounting -->
+    <div class="category-block" data-category="accounting">
+      <div class="category-header">
+        <span class="category-number">6</span>
+        <span class="category-title">Accounting</span>
+      </div>
+      <p class="category-desc">Monthly close process, revenue recognition, GAAP compliance, audit readiness</p>
+      <div class="score-options">
+        <label class="score-card" data-score="1">
+          <input type="radio" name="accounting" value="1">
+          <span class="score-radio"></span>
+          <span class="score-value">1</span>
+          <span class="score-label">Major Gaps</span>
+        </label>
+        <label class="score-card" data-score="2">
+          <input type="radio" name="accounting" value="2">
+          <span class="score-radio"></span>
+          <span class="score-value">2</span>
+          <span class="score-label">Patchy</span>
+        </label>
+        <label class="score-card" data-score="3">
+          <input type="radio" name="accounting" value="3">
+          <span class="score-radio"></span>
+          <span class="score-value">3</span>
+          <span class="score-label">Functional</span>
+        </label>
+        <label class="score-card" data-score="4">
+          <input type="radio" name="accounting" value="4">
+          <span class="score-radio"></span>
+          <span class="score-value">4</span>
+          <span class="score-label">Investor-Readable</span>
+        </label>
+        <label class="score-card" data-score="5">
+          <input type="radio" name="accounting" value="5">
+          <span class="score-radio"></span>
+          <span class="score-value">5</span>
+          <span class="score-label">Diligence-Ready</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 7. Finance -->
+    <div class="category-block" data-category="finance">
+      <div class="category-header">
+        <span class="category-number">7</span>
+        <span class="category-title">Finance</span>
+      </div>
+      <p class="category-desc">Cash forecasting, scenario modeling, board deck, KPI tracking</p>
+      <div class="score-options">
+        <label class="score-card" data-score="1">
+          <input type="radio" name="finance" value="1">
+          <span class="score-radio"></span>
+          <span class="score-value">1</span>
+          <span class="score-label">Major Gaps</span>
+        </label>
+        <label class="score-card" data-score="2">
+          <input type="radio" name="finance" value="2">
+          <span class="score-radio"></span>
+          <span class="score-value">2</span>
+          <span class="score-label">Patchy</span>
+        </label>
+        <label class="score-card" data-score="3">
+          <input type="radio" name="finance" value="3">
+          <span class="score-radio"></span>
+          <span class="score-value">3</span>
+          <span class="score-label">Functional</span>
+        </label>
+        <label class="score-card" data-score="4">
+          <input type="radio" name="finance" value="4">
+          <span class="score-radio"></span>
+          <span class="score-value">4</span>
+          <span class="score-label">Investor-Readable</span>
+        </label>
+        <label class="score-card" data-score="5">
+          <input type="radio" name="finance" value="5">
+          <span class="score-radio"></span>
+          <span class="score-value">5</span>
+          <span class="score-label">Diligence-Ready</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 8. Investor Readiness -->
+    <div class="category-block" data-category="investorReadiness">
+      <div class="category-header">
+        <span class="category-number">8</span>
+        <span class="category-title">Investor Readiness</span>
+      </div>
+      <p class="category-desc">Data room preparation, metric reconciliation, due diligence documentation</p>
+      <div class="score-options">
+        <label class="score-card" data-score="1">
+          <input type="radio" name="investorReadiness" value="1">
+          <span class="score-radio"></span>
+          <span class="score-value">1</span>
+          <span class="score-label">Major Gaps</span>
+        </label>
+        <label class="score-card" data-score="2">
+          <input type="radio" name="investorReadiness" value="2">
+          <span class="score-radio"></span>
+          <span class="score-value">2</span>
+          <span class="score-label">Patchy</span>
+        </label>
+        <label class="score-card" data-score="3">
+          <input type="radio" name="investorReadiness" value="3">
+          <span class="score-radio"></span>
+          <span class="score-value">3</span>
+          <span class="score-label">Functional</span>
+        </label>
+        <label class="score-card" data-score="4">
+          <input type="radio" name="investorReadiness" value="4">
+          <span class="score-radio"></span>
+          <span class="score-value">4</span>
+          <span class="score-label">Investor-Readable</span>
+        </label>
+        <label class="score-card" data-score="5">
+          <input type="radio" name="investorReadiness" value="5">
+          <span class="score-radio"></span>
+          <span class="score-value">5</span>
+          <span class="score-label">Diligence-Ready</span>
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT: RESULTS PANEL -->
+  <div class="results-panel">
+    <div class="results-score-row">
+      <span class="results-score-number" id="totalScore">0</span>
+      <span class="results-score-total"> / 40</span>
+    </div>
+    <p class="results-completion" id="completionText">0 of 8 categories scored</p>
+    <div class="tier-badge-wrap">
+      <span class="tier-badge tier-red" id="tierBadge">Significant Gaps</span>
+    </div>
+
+    <div class="radar-section">
+      <h3>Readiness Profile</h3>
+      <div class="radar-container">
+        <svg id="radarChart" viewBox="0 0 340 340" width="340" height="340">
+          <!-- Grid rings -->
+          <g id="radarGrid"></g>
+          <!-- Axis lines -->
+          <g id="radarAxes"></g>
+          <!-- Score polygon -->
+          <polygon id="radarPolygon" fill="rgba(75,97,71,0.2)" stroke="#4B6147" stroke-width="2" points="170,170"/>
+          <!-- Score dots -->
+          <g id="radarDots"></g>
+          <!-- Labels -->
+          <g id="radarLabels"></g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="bars-section">
+      <h3>Category Breakdown</h3>
+      <div id="categoryBars"></div>
+    </div>
+
+    <div class="results-cta">
+      <p id="ctaMessage">Your score suggests gaps worth reviewing.</p>
+      <a href="https://calendly.com/charles-centripetaladvisors/30min" class="results-cta-btn">Discuss Your Score</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../../index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../../index.html">Home</a>
+        <a href="../../services.html">Services</a>
+        <a href="../../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="../../guides/index.html">Guides</a>
+        <a href="../../blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── STATE ──
+  var CATEGORIES = [
+    { key: 'legal',             label: 'Legal' },
+    { key: 'capTable',          label: 'Cap Table' },
+    { key: 'team',              label: 'Team' },
+    { key: 'systems',          label: 'Systems' },
+    { key: 'treasury',         label: 'Treasury' },
+    { key: 'accounting',       label: 'Accounting' },
+    { key: 'finance',          label: 'Finance' },
+    { key: 'investorReadiness', label: 'Inv. Ready' }
+  ];
+
+  var state = {
+    scores: {
+      legal: 0, capTable: 0, team: 0, systems: 0,
+      treasury: 0, accounting: 0, finance: 0, investorReadiness: 0
+    }
+  };
+
+  // ── LOAD FROM LOCALSTORAGE ──
+  try {
+    var saved = localStorage.getItem('centripetal_diagnostic');
+    if (saved) {
+      var parsed = JSON.parse(saved);
+      if (parsed && parsed.scores) {
+        for (var k in state.scores) {
+          if (parsed.scores[k] >= 1 && parsed.scores[k] <= 5) {
+            state.scores[k] = parsed.scores[k];
+          }
+        }
+      }
+    }
+  } catch (e) { /* ignore */ }
+
+  // ── SAVE TO LOCALSTORAGE ──
+  function persist() {
+    try { localStorage.setItem('centripetal_diagnostic', JSON.stringify(state)); } catch (e) {}
+  }
+
+  // ── INIT RADAR CHART ──
+  var cx = 170, cy = 170, maxR = 130;
+  var angleStep = (2 * Math.PI) / 8;
+  var startAngle = -Math.PI / 2; // top
+
+  function polarToXY(angle, radius) {
+    return {
+      x: cx + radius * Math.cos(angle),
+      y: cy + radius * Math.sin(angle)
+    };
+  }
+
+  function buildRadarGrid() {
+    var gridEl = document.getElementById('radarGrid');
+    var axesEl = document.getElementById('radarAxes');
+    var labelsEl = document.getElementById('radarLabels');
+    gridEl.innerHTML = '';
+    axesEl.innerHTML = '';
+    labelsEl.innerHTML = '';
+
+    // Concentric pentagons (rings at 1-5)
+    for (var ring = 1; ring <= 5; ring++) {
+      var r = (ring / 5) * maxR;
+      var pts = [];
+      for (var i = 0; i < 8; i++) {
+        var a = startAngle + i * angleStep;
+        var p = polarToXY(a, r);
+        pts.push(p.x.toFixed(1) + ',' + p.y.toFixed(1));
+      }
+      var poly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      poly.setAttribute('points', pts.join(' '));
+      poly.setAttribute('fill', 'none');
+      poly.setAttribute('stroke', ring === 5 ? 'rgba(75,97,71,0.25)' : 'rgba(75,97,71,0.12)');
+      poly.setAttribute('stroke-width', ring === 5 ? '1.5' : '1');
+      gridEl.appendChild(poly);
+    }
+
+    // Axis lines + labels
+    var fullLabels = ['Legal', 'Cap Table', 'Team', 'Systems', 'Treasury', 'Accounting', 'Finance', 'Inv. Ready'];
+    for (var i = 0; i < 8; i++) {
+      var a = startAngle + i * angleStep;
+      var edgeP = polarToXY(a, maxR);
+
+      var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', cx);
+      line.setAttribute('y1', cy);
+      line.setAttribute('x2', edgeP.x.toFixed(1));
+      line.setAttribute('y2', edgeP.y.toFixed(1));
+      line.setAttribute('stroke', 'rgba(75,97,71,0.15)');
+      line.setAttribute('stroke-width', '1');
+      axesEl.appendChild(line);
+
+      var labelP = polarToXY(a, maxR + 18);
+      var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      text.setAttribute('x', labelP.x.toFixed(1));
+      text.setAttribute('y', labelP.y.toFixed(1));
+      text.setAttribute('text-anchor', 'middle');
+      text.setAttribute('dominant-baseline', 'central');
+      text.setAttribute('fill', '#555');
+      text.setAttribute('font-size', '11');
+      text.setAttribute('font-family', 'Roboto, sans-serif');
+      text.textContent = fullLabels[i];
+      labelsEl.appendChild(text);
+    }
+  }
+
+  // ── UPDATE RADAR POLYGON ──
+  function updateRadar() {
+    var pts = [];
+    var dotsEl = document.getElementById('radarDots');
+    dotsEl.innerHTML = '';
+
+    for (var i = 0; i < 8; i++) {
+      var cat = CATEGORIES[i];
+      var val = state.scores[cat.key] || 0;
+      var a = startAngle + i * angleStep;
+      var r = (val / 5) * maxR;
+      if (val === 0) r = 0;
+      var p = polarToXY(a, r);
+      pts.push(p.x.toFixed(1) + ',' + p.y.toFixed(1));
+
+      if (val > 0) {
+        var dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        dot.setAttribute('cx', p.x.toFixed(1));
+        dot.setAttribute('cy', p.y.toFixed(1));
+        dot.setAttribute('r', '4');
+        dot.setAttribute('fill', '#4B6147');
+        dot.setAttribute('stroke', '#fff');
+        dot.setAttribute('stroke-width', '2');
+        dotsEl.appendChild(dot);
+      }
+    }
+
+    document.getElementById('radarPolygon').setAttribute('points', pts.join(' '));
+  }
+
+  // ── INIT CATEGORY BARS ──
+  function buildBars() {
+    var container = document.getElementById('categoryBars');
+    container.innerHTML = '';
+    for (var i = 0; i < 8; i++) {
+      var cat = CATEGORIES[i];
+      var val = state.scores[cat.key] || 0;
+      var pct = (val / 5) * 100;
+      var row = document.createElement('div');
+      row.className = 'bar-row';
+      row.innerHTML =
+        '<span class="bar-label">' + cat.label + '</span>' +
+        '<div class="bar-track"><div class="bar-fill" id="bar-' + cat.key + '" style="width:' + pct + '%"></div></div>' +
+        '<span class="bar-value" id="barval-' + cat.key + '">' + val + '</span>';
+      container.appendChild(row);
+    }
+  }
+
+  // ── UPDATE EVERYTHING ──
+  function updateAll() {
+    var total = 0;
+    var scored = 0;
+    for (var k in state.scores) {
+      if (state.scores[k] > 0) {
+        total += state.scores[k];
+        scored++;
+      }
+    }
+
+    // Score display
+    document.getElementById('totalScore').textContent = total;
+    document.getElementById('completionText').textContent = scored + ' of 8 categories scored';
+
+    // Tier badge
+    var badge = document.getElementById('tierBadge');
+    badge.className = 'tier-badge';
+    if (total <= 16) {
+      badge.textContent = 'Significant Gaps';
+      badge.classList.add('tier-red');
+    } else if (total <= 24) {
+      badge.textContent = 'Foundation Building';
+      badge.classList.add('tier-orange');
+    } else if (total <= 32) {
+      badge.textContent = 'Approaching Ready';
+      badge.classList.add('tier-sage');
+    } else {
+      badge.textContent = 'Diligence Ready';
+      badge.classList.add('tier-green');
+    }
+
+    // CTA message
+    var ctaMsg = document.getElementById('ctaMessage');
+    if (total < 25) {
+      ctaMsg.textContent = 'Your score suggests gaps worth reviewing.';
+    } else {
+      ctaMsg.textContent = 'Your score suggests solid foundations. A diagnostic can identify the gaps that remain.';
+    }
+
+    // Bars
+    for (var i = 0; i < 8; i++) {
+      var cat = CATEGORIES[i];
+      var val = state.scores[cat.key] || 0;
+      var barFill = document.getElementById('bar-' + cat.key);
+      var barVal = document.getElementById('barval-' + cat.key);
+      if (barFill) barFill.style.width = ((val / 5) * 100) + '%';
+      if (barVal) barVal.textContent = val;
+    }
+
+    // Radar
+    updateRadar();
+
+    // Persist
+    persist();
+  }
+
+  // ── RESTORE RADIO SELECTIONS FROM STATE ──
+  function restoreSelections() {
+    for (var k in state.scores) {
+      if (state.scores[k] > 0) {
+        var radio = document.querySelector('input[name="' + k + '"][value="' + state.scores[k] + '"]');
+        if (radio) {
+          radio.checked = true;
+          radio.closest('.score-card').classList.add('selected');
+        }
+      }
+    }
+  }
+
+  // ── EVENT DELEGATION ──
+  document.addEventListener('click', function(e) {
+    var card = e.target.closest('.score-card');
+    if (!card) return;
+
+    var block = card.closest('.category-block');
+    if (!block) return;
+
+    var category = block.dataset.category;
+    var radio = card.querySelector('input[type="radio"]');
+    if (!radio) return;
+
+    // Update visual selection
+    var siblings = block.querySelectorAll('.score-card');
+    for (var i = 0; i < siblings.length; i++) {
+      siblings[i].classList.remove('selected');
+    }
+    card.classList.add('selected');
+    radio.checked = true;
+
+    // Update state
+    state.scores[category] = parseInt(radio.value, 10);
+    updateAll();
+  });
+
+  // ── INIT ──
+  buildRadarGrid();
+  buildBars();
+  restoreSelections();
+  updateAll();
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+  <title>Board Deck Structure Builder | Centripetal Advisors</title>
+  <meta name="description" content="Interactive board deck builder for SaaS founders. Get a recommended slide outline, board questions, and reconciliation checklist tailored to your stage and board composition.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #2D2D2D;
+      background-color: #DDD8CD;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #243221;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.25s ease;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Navigation ===== */
+    .nav {
+      background-color: #243221;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo { display:flex; align-items:center; text-decoration:none; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 8px;
+    }
+
+    .nav-links > li {
+      position: relative;
+    }
+
+    .nav-links > li > a {
+      display: block;
+      padding: 8px 16px;
+      color: #DDD8CD;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      border-radius: 6px;
+      transition: color 0.25s ease, background-color 0.25s ease;
+    }
+
+    .nav-links > li > a:hover,
+    .nav-links > li > a.active {
+      color: #F2F2F2;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .dropdown-trigger {
+      cursor: default;
+    }
+
+    .dropdown-trigger::after {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid #DDD8CD;
+      border-bottom: 1.5px solid #DDD8CD;
+      transform: rotate(45deg);
+      margin-left: 6px;
+      margin-bottom: 2px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      background-color: #243221;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+      margin-top: 4px;
+    }
+
+    .nav-links > li:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-links > li:hover .dropdown-trigger::after {
+      transform: rotate(-135deg);
+      border-color: #F2F2F2;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      color: #DDD8CD;
+      font-size: 14px;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .dropdown a:hover {
+      color: #F2F2F2;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-cta {
+      display: inline-block;
+      background-color: #4B6147;
+      color: #243221 !important;
+      font-weight: 600 !important;
+      padding: 10px 20px !important;
+      border-radius: 6px;
+      font-size: 14px !important;
+      letter-spacing: 0.3px;
+      transition: background-color 0.25s ease, transform 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background-color: #c69a38;
+      transform: translateY(-1px);
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      width: 32px;
+      height: 32px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: #F2F2F2;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      background-color: #243221;
+      padding: 80px 0 88px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(75, 97, 71, 0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #4B6147;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      font-weight: 700;
+      color: #F2F2F2;
+      max-width: 780px;
+      margin: 0 auto 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #DDD8CD;
+      max-width: 620px;
+      margin: 0 auto;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ===== Tool Section ===== */
+    .tool-section {
+      padding: 64px 0 80px;
+    }
+
+    .steps-container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Step Block */
+    .step-block {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 40px 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(36, 50, 33, 0.06);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .step-block:hover {
+      box-shadow: 0 4px 20px rgba(36, 50, 33, 0.1);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background-color: #243221;
+      color: #F2F2F2;
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 50%;
+    }
+
+    .step-title {
+      font-size: 22px;
+      color: #243221;
+    }
+
+    .step-subtitle {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 24px;
+      padding-left: 56px;
+    }
+
+    /* Radio Cards */
+    .radio-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .radio-card {
+      position: relative;
+      cursor: pointer;
+      border: 2px solid #E8E4DA;
+      border-radius: 10px;
+      padding: 24px 20px;
+      transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .radio-card:hover {
+      border-color: #4B6147;
+      background-color: rgba(75, 97, 71, 0.03);
+    }
+
+    .radio-card.selected {
+      border-color: #243221;
+      background-color: rgba(36, 50, 33, 0.04);
+      box-shadow: 0 4px 16px rgba(36, 50, 33, 0.1);
+    }
+
+    .radio-card input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .radio-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      background-color: rgba(75, 97, 71, 0.1);
+      border-radius: 10px;
+      transition: background-color 0.25s ease;
+    }
+
+    .radio-card.selected .radio-card-icon {
+      background-color: #243221;
+    }
+
+    .radio-card-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #4B6147;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.25s ease;
+    }
+
+    .radio-card.selected .radio-card-icon svg {
+      stroke: #F2F2F2;
+    }
+
+    .radio-card-content {
+      flex: 1;
+    }
+
+    .radio-card-label {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #243221;
+      margin-bottom: 4px;
+    }
+
+    .radio-card-desc {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* Checkbox Cards */
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .checkbox-card {
+      position: relative;
+      cursor: pointer;
+      border: 2px solid #E8E4DA;
+      border-radius: 8px;
+      padding: 16px 18px;
+      transition: border-color 0.25s ease, background-color 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .checkbox-card:hover {
+      border-color: #4B6147;
+      background-color: rgba(75, 97, 71, 0.03);
+    }
+
+    .checkbox-card.checked {
+      border-color: #4B6147;
+      background-color: rgba(75, 97, 71, 0.06);
+    }
+
+    .checkbox-card input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .checkbox-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      border: 2px solid #C5C0B5;
+      border-radius: 4px;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .checkbox-card.checked .checkbox-indicator {
+      background-color: #4B6147;
+      border-color: #4B6147;
+    }
+
+    .checkbox-indicator svg {
+      width: 14px;
+      height: 14px;
+      stroke: #FFFFFF;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .checkbox-card.checked .checkbox-indicator svg {
+      opacity: 1;
+    }
+
+    .checkbox-label {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    /* ===== Output Panel ===== */
+    .output-panel {
+      max-width: 960px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      pointer-events: none;
+    }
+
+    .output-panel.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .output-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 48px 0 40px;
+    }
+
+    .output-divider-line {
+      flex: 1;
+      height: 1px;
+      background-color: #C5C0B5;
+    }
+
+    .output-divider-text {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #4B6147;
+    }
+
+    /* Readiness Score */
+    .readiness-bar {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 32px 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(36, 50, 33, 0.06);
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .readiness-score-ring {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      min-width: 80px;
+    }
+
+    .readiness-score-ring svg {
+      width: 80px;
+      height: 80px;
+      transform: rotate(-90deg);
+    }
+
+    .readiness-score-ring .ring-bg {
+      fill: none;
+      stroke: #E8E4DA;
+      stroke-width: 6;
+    }
+
+    .readiness-score-ring .ring-fill {
+      fill: none;
+      stroke: #4B6147;
+      stroke-width: 6;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 0.6s ease;
+    }
+
+    .readiness-score-number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #243221;
+    }
+
+    .readiness-text {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .readiness-text h3 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .readiness-text p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .readiness-text .missing-warning {
+      color: #B5442D;
+      font-weight: 500;
+    }
+
+    /* Deck Outline */
+    .output-block {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(36, 50, 33, 0.06);
+    }
+
+    .output-block-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .output-block-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background-color: rgba(75, 97, 71, 0.1);
+      border-radius: 8px;
+    }
+
+    .output-block-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: #4B6147;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .output-block h2 {
+      font-size: 22px;
+    }
+
+    /* Slide list */
+    .slide-list {
+      list-style: none;
+    }
+
+    .slide-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid #F0ECE3;
+      transition: background-color 0.2s ease;
+    }
+
+    .slide-item:last-child {
+      border-bottom: none;
+    }
+
+    .slide-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 6px;
+      background-color: #F2F2F2;
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #243221;
+    }
+
+    .slide-info {
+      flex: 1;
+    }
+
+    .slide-title {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #243221;
+      margin-bottom: 2px;
+    }
+
+    .slide-desc {
+      font-size: 14px;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    .slide-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .badge-required {
+      background-color: #243221;
+      color: #F2F2F2;
+    }
+
+    .badge-recommended {
+      background-color: rgba(75, 97, 71, 0.12);
+      color: #4B6147;
+    }
+
+    .badge-optional {
+      background-color: #F2F2F2;
+      color: #999;
+    }
+
+    .badge-ready {
+      background-color: rgba(75, 97, 71, 0.12);
+      color: #3D7A3A;
+    }
+
+    .badge-ready svg {
+      width: 12px;
+      height: 12px;
+      stroke: #3D7A3A;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .badge-missing {
+      background-color: rgba(181, 68, 45, 0.1);
+      color: #B5442D;
+      animation: pulse-missing 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-missing {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    /* Questions & Reconciliation */
+    .question-list {
+      list-style: none;
+    }
+
+    .question-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #F0ECE3;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .question-item:last-child {
+      border-bottom: none;
+    }
+
+    .question-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background-color: rgba(212, 168, 67, 0.15);
+      border-radius: 50%;
+      margin-top: 2px;
+    }
+
+    .question-icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: #4B6147;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .question-text {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.55;
+    }
+
+    .reconciliation-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #F0ECE3;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .reconciliation-item:last-child {
+      border-bottom: none;
+    }
+
+    .reconciliation-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background-color: rgba(181, 68, 45, 0.1);
+      border-radius: 50%;
+      margin-top: 2px;
+    }
+
+    .reconciliation-icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: #B5442D;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .reconciliation-text {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.55;
+    }
+
+    /* ===== CTA Section ===== */
+    .cta-section {
+      padding: 80px 0;
+      background-color: #4B6147;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(36, 50, 33, 0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section h2 {
+      font-size: 36px;
+      color: #F2F2F2;
+      max-width: 600px;
+      margin: 0 auto 16px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: #DDD8CD;
+      max-width: 480px;
+      margin: 0 auto 36px;
+      font-weight: 300;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: #4B6147;
+      color: #243221;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 36px;
+      border-radius: 8px;
+      letter-spacing: 0.3px;
+      transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 16px rgba(212, 168, 67, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: #c69a38;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(212, 168, 67, 0.35);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background-color: #243221;
+      padding: 56px 0 32px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(221, 216, 205, 0.12);
+    }
+
+    .footer-brand h3 {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #F2F2F2;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: #9DA898;
+      max-width: 280px;
+      line-height: 1.6;
+    }
+
+    .footer-nav h4 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #DDD8CD;
+      margin-bottom: 16px;
+    }
+
+    .footer-nav ul {
+      list-style: none;
+    }
+
+    .footer-nav li {
+      margin-bottom: 10px;
+    }
+
+    .footer-nav a {
+      font-size: 14px;
+      color: #9DA898;
+      transition: color 0.25s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #4B6147;
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      text-align: center;
+      font-size: 13px;
+      color: #6B7A66;
+    }
+
+    /* ===== Placeholder / Empty State ===== */
+    .output-empty {
+      text-align: center;
+      padding: 48px 24px;
+      color: #999;
+      font-size: 15px;
+    }
+
+    .output-empty svg {
+      width: 48px;
+      height: 48px;
+      stroke: #C5C0B5;
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      margin-bottom: 16px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background-color: #243221;
+        flex-direction: column;
+        padding: 16px 24px 24px;
+        gap: 4px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links > li > a {
+        padding: 12px 16px;
+      }
+
+      .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        margin-top: 0;
+        padding: 0 0 0 16px;
+        background-color: transparent;
+      }
+
+      .hero {
+        padding: 56px 0 64px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .radio-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .checkbox-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step-block {
+        padding: 28px 20px;
+      }
+
+      .step-subtitle {
+        padding-left: 0;
+      }
+
+      .output-block {
+        padding: 28px 20px;
+      }
+
+      .readiness-bar {
+        padding: 24px 20px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .slide-item {
+        flex-wrap: wrap;
+      }
+
+      .slide-badges {
+        margin-left: 48px;
+        margin-top: 4px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .cta-section h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .step-header {
+        gap: 12px;
+      }
+
+      .step-title {
+        font-size: 19px;
+      }
+
+      .radio-card {
+        padding: 18px 16px;
+      }
+
+      .btn-primary {
+        padding: 14px 28px;
+        font-size: 15px;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="../../assets/site-system.css" data-site-system>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="../../index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="../../index.html">Home</a>
+    <a href="../../services.html">Services</a>
+    <a href="../../contact.html">Contact</a>
+    <a href="../../blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Interactive Tool</p>
+      <h1>Board Deck Structure Builder</h1>
+      <p>Answer three questions about your company and get a recommended board deck outline, the questions your board will ask, and a readiness assessment of what you already have.</p>
+    </div>
+  </section>
+
+  <!-- Tool -->
+  <section class="tool-section">
+    <div class="container">
+      <div class="steps-container">
+
+        <!-- STEP 1: Stage -->
+        <div class="step-block">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <h2 class="step-title">Select Your Stage</h2>
+          </div>
+          <p class="step-subtitle">Where is your company in its fundraising journey?</p>
+          <div class="radio-cards" id="stage-cards">
+
+            <label class="radio-card" data-value="seed">
+              <input type="radio" name="stage" value="seed">
+              <div class="radio-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+              </div>
+              <div class="radio-card-content">
+                <div class="radio-card-label">Seed</div>
+                <div class="radio-card-desc">Pre-Series A, less than $5M raised</div>
+              </div>
+            </label>
+
+            <label class="radio-card" data-value="post-seed">
+              <input type="radio" name="stage" value="post-seed">
+              <div class="radio-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="radio-card-content">
+                <div class="radio-card-label">Post-Seed</div>
+                <div class="radio-card-desc">Bridge round, $2-5M total raised</div>
+              </div>
+            </label>
+
+            <label class="radio-card" data-value="series-a">
+              <input type="radio" name="stage" value="series-a">
+              <div class="radio-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+              </div>
+              <div class="radio-card-content">
+                <div class="radio-card-label">Series A</div>
+                <div class="radio-card-desc">$5-15M raised, institutional board</div>
+              </div>
+            </label>
+
+            <label class="radio-card" data-value="growth">
+              <input type="radio" name="stage" value="growth">
+              <div class="radio-card-icon">
+                <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="radio-card-content">
+                <div class="radio-card-label">Growth</div>
+                <div class="radio-card-desc">Series B+, multiple institutional investors</div>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- STEP 2: Board Composition -->
+        <div class="step-block">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <h2 class="step-title">Board Composition</h2>
+          </div>
+          <p class="step-subtitle">Who sits on your board today?</p>
+          <div class="radio-cards" id="composition-cards">
+
+            <label class="radio-card" data-value="founder-only">
+              <input type="radio" name="composition" value="founder-only">
+              <div class="radio-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="radio-card-content">
+                <div class="radio-card-label">Founder-Only</div>
+                <div class="radio-card-desc">No independent directors</div>
+              </div>
+            </label>
+
+            <label class="radio-card" data-value="one-independent">
+              <input type="radio" name="composition" value="one-independent">
+              <div class="radio-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="radio-card-content">
+                <div class="radio-card-label">1 Independent Director</div>
+                <div class="radio-card-desc">One outside board member</div>
+              </div>
+            </label>
+
+            <label class="radio-card" data-value="two-plus-independent">
+              <input type="radio" name="composition" value="two-plus-independent">
+              <div class="radio-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="radio-card-content">
+                <div class="radio-card-label">2+ Independent Directors</div>
+                <div class="radio-card-desc">Multiple outside board members</div>
+              </div>
+            </label>
+
+            <label class="radio-card" data-value="institutional-lead">
+              <input type="radio" name="composition" value="institutional-lead">
+              <div class="radio-card-icon">
+                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div class="radio-card-content">
+                <div class="radio-card-label">Institutional Lead on Board</div>
+                <div class="radio-card-desc">Lead investor has a board seat</div>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- STEP 3: Slides You Have -->
+        <div class="step-block">
+          <div class="step-header">
+            <div class="step-number">3</div>
+            <h2 class="step-title">Slides You Already Have</h2>
+          </div>
+          <p class="step-subtitle">Check everything you can currently present to your board.</p>
+          <div class="checkbox-grid" id="slides-grid">
+
+            <label class="checkbox-card" data-slide="executive-summary">
+              <input type="checkbox" name="slides" value="executive-summary">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">Executive summary / highlights</span>
+            </label>
+
+            <label class="checkbox-card" data-slide="arr-revenue">
+              <input type="checkbox" name="slides" value="arr-revenue">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">ARR and revenue summary</span>
+            </label>
+
+            <label class="checkbox-card" data-slide="customer-cohort">
+              <input type="checkbox" name="slides" value="customer-cohort">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">Customer detail and cohort data</span>
+            </label>
+
+            <label class="checkbox-card" data-slide="cash-runway">
+              <input type="checkbox" name="slides" value="cash-runway">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">Cash position and runway</span>
+            </label>
+
+            <label class="checkbox-card" data-slide="financial-forecast">
+              <input type="checkbox" name="slides" value="financial-forecast">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">Financial forecast / model</span>
+            </label>
+
+            <label class="checkbox-card" data-slide="hiring-team">
+              <input type="checkbox" name="slides" value="hiring-team">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">Hiring plan and team update</span>
+            </label>
+
+            <label class="checkbox-card" data-slide="product-roadmap">
+              <input type="checkbox" name="slides" value="product-roadmap">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">Product roadmap</span>
+            </label>
+
+            <label class="checkbox-card" data-slide="competitive-landscape">
+              <input type="checkbox" name="slides" value="competitive-landscape">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">Competitive landscape</span>
+            </label>
+
+            <label class="checkbox-card" data-slide="pipeline-sales">
+              <input type="checkbox" name="slides" value="pipeline-sales">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">Pipeline and sales metrics</span>
+            </label>
+
+            <label class="checkbox-card" data-slide="cap-table">
+              <input type="checkbox" name="slides" value="cap-table">
+              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="checkbox-label">Cap table and ownership</span>
+            </label>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Output Panel -->
+      <div class="output-panel" id="output-panel">
+        <div class="output-divider">
+          <div class="output-divider-line"></div>
+          <span class="output-divider-text">Your Recommended Deck</span>
+          <div class="output-divider-line"></div>
+        </div>
+
+        <!-- Readiness Score -->
+        <div class="readiness-bar" id="readiness-bar">
+          <div class="readiness-score-ring">
+            <svg viewBox="0 0 80 80">
+              <circle class="ring-bg" cx="40" cy="40" r="34"/>
+              <circle class="ring-fill" id="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+            </svg>
+            <span class="readiness-score-number" id="readiness-number">0</span>
+          </div>
+          <div class="readiness-text">
+            <h3>Readiness Score</h3>
+            <p id="readiness-summary">Select your stage and board composition to see your deck outline.</p>
+          </div>
+        </div>
+
+        <!-- Deck Outline -->
+        <div class="output-block" id="deck-outline-block">
+          <div class="output-block-header">
+            <div class="output-block-icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h2>Recommended Deck Outline</h2>
+          </div>
+          <ul class="slide-list" id="slide-list"></ul>
+        </div>
+
+        <!-- Board Questions -->
+        <div class="output-block" id="questions-block">
+          <div class="output-block-header">
+            <div class="output-block-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h2>Questions Your Board Will Ask</h2>
+          </div>
+          <ul class="question-list" id="question-list"></ul>
+        </div>
+
+        <!-- Reconciliation Points -->
+        <div class="output-block" id="reconciliation-block">
+          <div class="output-block-header">
+            <div class="output-block-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h2>Reconciliation Points</h2>
+          </div>
+          <div id="reconciliation-list"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="cta-section">
+    <div class="container">
+      <h2>Get Your Board Deck Reviewed</h2>
+      <p>We review board decks for SaaS founders every week. Bring what you have and we will tell you what to change.</p>
+      <a href="https://calendly.com/charles-centripetaladvisors/30min" class="btn-primary" target="_blank" rel="noopener">Schedule a Conversation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../../index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../../index.html">Home</a>
+        <a href="../../services.html">Services</a>
+        <a href="../../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="../../guides/index.html">Guides</a>
+        <a href="../../blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+<script>
+(function() {
+  // ===== STATE =====
+  let selectedStage = null;
+  let selectedComposition = null;
+  const checkedSlides = new Set();
+
+  // ===== SLIDE DATA =====
+  // Each slide: { id, title, desc, priority map by stage }
+  // priority: 'required' | 'recommended' | 'optional'
+  // matchSlides: which Step 3 checkboxes map to this slide
+  const SLIDES = [
+    {
+      id: 'title-agenda',
+      title: 'Title Slide & Agenda',
+      desc: 'Company name, board meeting date, attendees, and a concise agenda of topics to be covered.',
+      matchSlides: [],
+      priority: { seed: 'required', 'post-seed': 'required', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'exec-summary',
+      title: 'Executive Summary & Key Highlights',
+      desc: 'Top 3-5 wins, losses, and strategic updates since the last board meeting. One slide, no detail.',
+      matchSlides: ['executive-summary'],
+      priority: { seed: 'required', 'post-seed': 'required', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'kpi-dashboard',
+      title: 'KPI Dashboard',
+      desc: 'ARR/MRR, growth rate, net revenue retention, gross margin, burn rate, and runway in a single view.',
+      matchSlides: ['arr-revenue'],
+      priority: { seed: 'recommended', 'post-seed': 'required', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'revenue-deep-dive',
+      title: 'Revenue & ARR Deep Dive',
+      desc: 'ARR waterfall (beginning ARR + new + expansion - contraction - churn = ending ARR), monthly trends, and revenue mix by product or segment.',
+      matchSlides: ['arr-revenue'],
+      priority: { seed: 'recommended', 'post-seed': 'required', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'customer-cohort',
+      title: 'Customer Detail & Cohort Analysis',
+      desc: 'Customer count, logo retention, GRR and NRR by cohort, top customer concentration, and cohort revenue curves.',
+      matchSlides: ['customer-cohort'],
+      priority: { seed: 'optional', 'post-seed': 'recommended', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'pipeline-sales',
+      title: 'Pipeline & Sales Metrics',
+      desc: 'Qualified pipeline by stage, win rates, sales cycle length, ACV trends, and pipeline coverage ratio.',
+      matchSlides: ['pipeline-sales'],
+      priority: { seed: 'optional', 'post-seed': 'recommended', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'cash-runway',
+      title: 'Cash Position & Runway',
+      desc: 'Current cash balance, gross and net burn, months of runway at current and planned burn, and any upcoming capital needs.',
+      matchSlides: ['cash-runway'],
+      priority: { seed: 'required', 'post-seed': 'required', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'financial-forecast',
+      title: 'Financial Forecast & Budget vs. Actuals',
+      desc: 'P&L summary with budget comparison, variance explanations, and forward-looking projections for the next 2-4 quarters.',
+      matchSlides: ['financial-forecast'],
+      priority: { seed: 'recommended', 'post-seed': 'required', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'product-roadmap',
+      title: 'Product Roadmap & Engineering Update',
+      desc: 'Key releases since last meeting, current sprint priorities, and roadmap for next 1-2 quarters with strategic rationale.',
+      matchSlides: ['product-roadmap'],
+      priority: { seed: 'recommended', 'post-seed': 'recommended', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'hiring-team',
+      title: 'Hiring Plan & Team Update',
+      desc: 'Current headcount by department, open roles, hiring timeline, key hires made, attrition, and org structure changes.',
+      matchSlides: ['hiring-team'],
+      priority: { seed: 'optional', 'post-seed': 'recommended', 'series-a': 'required', growth: 'required' }
+    },
+    {
+      id: 'competitive',
+      title: 'Competitive Landscape',
+      desc: 'Key competitor moves, win/loss analysis, market positioning, and differentiation updates.',
+      matchSlides: ['competitive-landscape'],
+      priority: { seed: 'optional', 'post-seed': 'optional', 'series-a': 'recommended', growth: 'recommended' }
+    },
+    {
+      id: 'cap-table',
+      title: 'Cap Table & Ownership Summary',
+      desc: 'Fully diluted ownership, option pool utilization, recent grants, and any upcoming equity events.',
+      matchSlides: ['cap-table'],
+      priority: { seed: 'optional', 'post-seed': 'recommended', 'series-a': 'recommended', growth: 'recommended' }
+    },
+    {
+      id: 'strategic-asks',
+      title: 'Strategic Discussion & Board Asks',
+      desc: 'Specific decisions or input the CEO needs from the board. Frame as questions, not updates.',
+      matchSlides: [],
+      priority: { seed: 'required', 'post-seed': 'required', 'series-a': 'required', growth: 'required' }
+    }
+  ];
+
+  // Adjust priorities by composition
+  function getEffectivePriority(slide, stage, composition) {
+    let base = slide.priority[stage] || 'optional';
+    // Institutional lead or 2+ independents raises the bar
+    if (composition === 'institutional-lead' || composition === 'two-plus-independent') {
+      if (base === 'optional') base = 'recommended';
+      // Certain slides become required with institutional boards
+      if (['customer-cohort', 'pipeline-sales', 'hiring-team', 'cap-table'].includes(slide.id) && stage !== 'seed') {
+        base = 'required';
+      }
+    }
+    // Founder-only can relax some
+    if (composition === 'founder-only') {
+      if (['competitive', 'cap-table'].includes(slide.id) && base === 'recommended') {
+        base = 'optional';
+      }
+    }
+    return base;
+  }
+
+  // ===== QUESTIONS DATA =====
+  function getQuestions(stage, composition) {
+    const qs = [];
+
+    // Stage-specific
+    if (stage === 'seed') {
+      qs.push('How much runway do you have, and what are you spending it on?');
+      qs.push('What does your path to $1M ARR look like, and what assumptions drive it?');
+      qs.push('Which customer conversations give you the most confidence in product-market fit?');
+    } else if (stage === 'post-seed') {
+      qs.push('What changed since the last raise that justifies the next one?');
+      qs.push('Walk me through your unit economics. What does CAC payback look like?');
+      qs.push('How are you thinking about the bridge-to-A timeline?');
+    } else if (stage === 'series-a') {
+      qs.push('Walk me through the customer cohort data. Why did GRR change quarter over quarter?');
+      qs.push('What does the pipeline coverage ratio look like for next quarter, and how reliable is it?');
+      qs.push('How does your expense growth compare to your revenue growth rate?');
+      qs.push('What is your plan if the fundraise takes 6 months longer than expected?');
+    } else if (stage === 'growth') {
+      qs.push('Show me the net revenue retention by cohort vintage. Where is expansion coming from?');
+      qs.push('What is the marginal cost to acquire the next $1M in ARR?');
+      qs.push('Walk me through the variance between budget and actuals. What drove the miss?');
+      qs.push('How are you thinking about capital allocation between growth and efficiency?');
+      qs.push('What would need to be true for you to be cash-flow positive in 18 months?');
+    }
+
+    // Composition-specific additions
+    if (composition === 'institutional-lead') {
+      if (stage === 'seed' || stage === 'post-seed') {
+        qs.push('How does the ARR in the deck reconcile to what the accounting system shows?');
+      }
+      if (stage === 'series-a' || stage === 'growth') {
+        qs.push('Can you walk me through the cap table and the fully diluted ownership before and after the option pool refresh?');
+      }
+    }
+    if (composition === 'two-plus-independent') {
+      qs.push('What governance items need board approval before the next meeting?');
+    }
+    if (composition === 'founder-only') {
+      if (stage === 'seed') {
+        qs.push('Who are you getting financial advice from, and how often?');
+      }
+    }
+
+    return qs;
+  }
+
+  // ===== RECONCILIATION DATA =====
+  function getReconciliation(stage, composition) {
+    const recs = [];
+
+    recs.push('ARR in the board deck must match the customer schedule and the accounting records. Any delta needs a footnote.');
+
+    if (stage === 'series-a' || stage === 'growth') {
+      recs.push('Cash balance on the runway slide must tie to the bank statement. Investors will ask for the statement.');
+      recs.push('Headcount on the team slide must match the payroll system. Ghost roles or unfilled-but-budgeted positions should be clearly labeled.');
+    } else {
+      recs.push('Cash balance on the runway slide must tie to the bank statement as of a specific date. Say which date.');
+    }
+
+    if (composition === 'institutional-lead' || composition === 'two-plus-independent') {
+      recs.push('Revenue recognition methodology (point-in-time vs. over time) must be consistent between the deck metrics and the financial statements.');
+    }
+
+    if (stage === 'growth') {
+      recs.push('Pipeline numbers should reconcile to CRM as of a stated date. Investors will cross-reference with their own notes from customer calls.');
+    }
+
+    return recs;
+  }
+
+  // ===== DOM REFERENCES =====
+  const outputPanel = document.getElementById('output-panel');
+  const slideListEl = document.getElementById('slide-list');
+  const questionListEl = document.getElementById('question-list');
+  const reconciliationListEl = document.getElementById('reconciliation-list');
+  const readinessNumber = document.getElementById('readiness-number');
+  const readinessSummary = document.getElementById('readiness-summary');
+  const ringFill = document.getElementById('ring-fill');
+
+  // ===== EVENT HANDLERS =====
+
+  // Radio cards for stage
+  document.querySelectorAll('#stage-cards .radio-card').forEach(card => {
+    card.addEventListener('click', function() {
+      document.querySelectorAll('#stage-cards .radio-card').forEach(c => c.classList.remove('selected'));
+      this.classList.add('selected');
+      this.querySelector('input').checked = true;
+      selectedStage = this.dataset.value;
+      updateOutput();
+    });
+  });
+
+  // Radio cards for composition
+  document.querySelectorAll('#composition-cards .radio-card').forEach(card => {
+    card.addEventListener('click', function() {
+      document.querySelectorAll('#composition-cards .radio-card').forEach(c => c.classList.remove('selected'));
+      this.classList.add('selected');
+      this.querySelector('input').checked = true;
+      selectedComposition = this.dataset.value;
+      updateOutput();
+    });
+  });
+
+  // Checkbox cards for slides
+  document.querySelectorAll('#slides-grid .checkbox-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      e.preventDefault();
+      const input = this.querySelector('input');
+      const slideId = this.dataset.slide;
+      if (checkedSlides.has(slideId)) {
+        checkedSlides.delete(slideId);
+        this.classList.remove('checked');
+        input.checked = false;
+      } else {
+        checkedSlides.add(slideId);
+        this.classList.add('checked');
+        input.checked = true;
+      }
+      updateOutput();
+    });
+  });
+
+  // ===== RENDER =====
+  function updateOutput() {
+    if (!selectedStage || !selectedComposition) {
+      outputPanel.classList.remove('visible');
+      return;
+    }
+
+    outputPanel.classList.add('visible');
+
+    // Build slide list
+    const slides = SLIDES.map(slide => {
+      const priority = getEffectivePriority(slide, selectedStage, selectedComposition);
+      const hasSlide = slide.matchSlides.length === 0
+        ? false // title/agenda and strategic asks can't be "checked"
+        : slide.matchSlides.some(ms => checkedSlides.has(ms));
+      return { ...slide, effectivePriority: priority, ready: hasSlide };
+    });
+
+    // Sort: required first, then recommended, then optional
+    const priorityOrder = { required: 0, recommended: 1, optional: 2 };
+    slides.sort((a, b) => priorityOrder[a.effectivePriority] - priorityOrder[b.effectivePriority]);
+
+    // Render slides
+    let slideHTML = '';
+    slides.forEach((slide, idx) => {
+      const num = idx + 1;
+      const checkSvg = '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>';
+
+      let statusBadge = '';
+      if (slide.matchSlides.length === 0) {
+        // No matching checkbox (title/strategic asks) - just show priority
+        statusBadge = '';
+      } else if (slide.ready) {
+        statusBadge = '<span class="badge badge-ready">' + checkSvg + ' Ready</span>';
+      } else if (slide.effectivePriority === 'required') {
+        statusBadge = '<span class="badge badge-missing">Missing</span>';
+      }
+
+      let priorityBadge = '';
+      if (slide.effectivePriority === 'required') {
+        priorityBadge = '<span class="badge badge-required">Required</span>';
+      } else if (slide.effectivePriority === 'recommended') {
+        priorityBadge = '<span class="badge badge-recommended">Recommended</span>';
+      } else {
+        priorityBadge = '<span class="badge badge-optional">Optional</span>';
+      }
+
+      slideHTML += '<li class="slide-item">' +
+        '<div class="slide-num">' + num + '</div>' +
+        '<div class="slide-info">' +
+          '<div class="slide-title">' + slide.title + '</div>' +
+          '<div class="slide-desc">' + slide.desc + '</div>' +
+        '</div>' +
+        '<div class="slide-badges">' +
+          priorityBadge + statusBadge +
+        '</div>' +
+      '</li>';
+    });
+    slideListEl.innerHTML = slideHTML;
+
+    // Readiness calculation
+    const matchableSlides = slides.filter(s => s.matchSlides.length > 0);
+    const totalMatchable = matchableSlides.length;
+    const readyCount = matchableSlides.filter(s => s.ready).length;
+    const requiredSlides = matchableSlides.filter(s => s.effectivePriority === 'required');
+    const missingRequired = requiredSlides.filter(s => !s.ready).length;
+
+    readinessNumber.textContent = readyCount + '/' + totalMatchable;
+
+    const circumference = 2 * Math.PI * 34; // ~213.6
+    const pct = totalMatchable > 0 ? readyCount / totalMatchable : 0;
+    ringFill.style.strokeDashoffset = circumference * (1 - pct);
+
+    let summaryText = 'You have ' + readyCount + ' of ' + totalMatchable + ' slides ready.';
+    if (missingRequired > 0) {
+      summaryText += ' <span class="missing-warning">' + missingRequired + ' required slide' + (missingRequired > 1 ? 's are' : ' is') + ' missing.</span>';
+    } else if (readyCount === totalMatchable) {
+      summaryText = 'All matchable slides are accounted for. Review the outline to ensure depth and quality.';
+    } else {
+      summaryText += ' No required slides are missing.';
+    }
+    readinessSummary.innerHTML = summaryText;
+
+    // Questions
+    const questions = getQuestions(selectedStage, selectedComposition);
+    let qHTML = '';
+    questions.forEach(q => {
+      qHTML += '<li class="question-item">' +
+        '<div class="question-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>' +
+        '<span class="question-text">' + q + '</span>' +
+      '</li>';
+    });
+    questionListEl.innerHTML = qHTML;
+
+    // Reconciliation
+    const recs = getReconciliation(selectedStage, selectedComposition);
+    let rHTML = '';
+    recs.forEach(r => {
+      rHTML += '<div class="reconciliation-item">' +
+        '<div class="reconciliation-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>' +
+        '<span class="reconciliation-text">' + r + '</span>' +
+      '</div>';
+    });
+    reconciliationListEl.innerHTML = rHTML;
+  }
+
+})();
+</script>
+
+</body>
+</html>

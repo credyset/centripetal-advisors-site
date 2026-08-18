@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+<title>Contact | Centripetal Advisors</title>
+<meta name="description" content="Schedule a conversation with Centripetal Advisors to discuss how we can support your financial strategy.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#DDD8CD;color:#444444;font-family:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+a{color:#4B6147;}
+
+/* ── Navigation ── */
+.site-nav{background:#243221;padding:18px 24px;position:relative;z-index:10;}
+.site-nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.site-wordmark{display:inline-flex;align-items:center;text-decoration:none;}
+.site-nav-links{display:flex;gap:28px;align-items:center;}
+.site-nav-links>a{color:#DDD8CD;text-decoration:none;font-size:15px;font-weight:400;opacity:0.9;transition:opacity 0.2s;}
+.site-nav-links>a:hover{opacity:1;}
+.site-nav-links>a.active{opacity:1;border-bottom:2px solid #4B6147;padding-bottom:2px;}
+
+/* Resources dropdown */
+.nav-dropdown{position:relative;}
+.nav-dropdown>span{color:#DDD8CD;font-size:15px;font-weight:400;opacity:0.9;cursor:default;user-select:none;transition:opacity 0.2s;}
+.nav-dropdown:hover>span{opacity:1;}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:0;margin-top:10px;background:#243221;border:1px solid #4B6147;border-radius:6px;min-width:160px;padding:8px 0;box-shadow:0 8px 24px rgba(0,0,0,0.25);}
+.nav-dropdown:hover .nav-dropdown-menu{display:block;}
+.nav-dropdown-menu a{display:block;padding:8px 20px;color:#DDD8CD;text-decoration:none;font-size:14px;opacity:0.9;white-space:nowrap;transition:background 0.15s,opacity 0.15s;}
+.nav-dropdown-menu a:hover{background:#4B6147;opacity:1;}
+
+/* Mobile nav toggle */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-toggle svg{width:28px;height:28px;}
+
+/* ── Hero ── */
+.hero{position:relative;background-color:#243221;background-image:radial-gradient(ellipse 80% 60% at 50% 40%,#4B614722,transparent);padding:80px 24px 48px;text-align:center;color:#F2F2F2;}
+.hero h1{font-family:'Lora',Georgia,serif;font-size:clamp(28px,4vw,44px);font-weight:400;margin:0 0 16px;line-height:1.2;}
+.hero p{max-width:640px;margin:8px auto 0;font-size:18px;opacity:0.85;line-height:1.6;}
+
+/* ── Calendly Section ── */
+.calendly-section{max-width:900px;margin:0 auto;padding:48px 24px 32px;}
+.calendly-embed{background:#F2F2F2;border-radius:8px;border:1px solid #c8c3b8;overflow:hidden;box-shadow:0 4px 16px rgba(36,50,33,0.08);}
+.calendly-embed iframe{display:block;width:100%;height:700px;border:none;}
+
+/* ── Contact Info Card ── */
+.contact-info-section{max-width:640px;margin:0 auto;padding:16px 24px 64px;}
+.contact-card{background:#F2F2F2;border-radius:8px;border:1px solid #c8c3b8;padding:32px 36px;text-align:center;}
+.contact-card h2{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:400;color:#243221;margin:0 0 20px;}
+.contact-items{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:20px;}
+.contact-item{text-align:center;}
+.contact-item .label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#4B6147;margin-bottom:4px;}
+.contact-item .value{font-size:16px;color:#333;}
+.contact-item a{color:#4B6147;text-decoration:none;}
+.contact-item a:hover{text-decoration:underline;color:#243221;}
+.contact-note{font-size:14px;color:#777;font-style:italic;margin:0;}
+
+/* ── Footer ── */
+.footer{background:#243221;padding:40px 24px;color:#DDD8CD;text-align:center;font-size:14px;opacity:0.7;}
+
+/* ── Mobile ── */
+@media(max-width:768px){
+  .site-nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#243221;padding:16px 24px 20px;gap:16px;border-top:1px solid #4B6147;}
+  .site-nav-links.open{display:flex;}
+  .nav-toggle{display:block;}
+  .nav-dropdown-menu{position:static;margin-top:4px;border:none;box-shadow:none;padding:0 0 0 16px;display:none;}
+  .nav-dropdown.open .nav-dropdown-menu{display:block;}
+  .calendly-embed iframe{height:500px;}
+  .contact-items{flex-direction:column;gap:20px;}
+  .contact-card{padding:24px 20px;}
+}
+</style>
+<link rel="stylesheet" href="assets/site-system.css" data-site-system>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+<section class="hero">
+<h1>Let's Talk</h1>
+<p>Schedule a 30-minute conversation to discuss how Centripetal can support your financial strategy.</p>
+</section>
+
+<div class="calendly-section">
+<div class="calendly-embed">
+<iframe src="https://calendly.com/charles-centripetaladvisors/30min" width="100%" height="700" frameborder="0"></iframe>
+</div>
+</div>
+
+<div class="contact-info-section">
+<div class="contact-card">
+<h2>Get in Touch</h2>
+<div class="contact-items">
+  <div class="contact-item">
+    <div class="label">Email</div>
+    <div class="value"><a href="mailto:charles@centripetaladvisors.com">charles@centripetaladvisors.com</a></div>
+  </div>
+  <div class="contact-item">
+    <div class="label">Location</div>
+    <div class="value">New York, NY</div>
+  </div>
+</div>
+<p class="contact-note">Serving SaaS companies nationwide</p>
+</div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="guides/index.html">Guides</a>
+        <a href="blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

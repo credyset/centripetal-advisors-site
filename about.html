@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+<title>About | Centripetal Advisors</title>
+<meta name="description" content="Meet the Centripetal Advisors team. Fractional CFO services for high-growth B2B SaaS companies, founded by Charles Solomon.">
+<meta property="og:title" content="About | Centripetal Advisors">
+<meta property="og:description" content="Meet the Centripetal Advisors team. Fractional CFO services for high-growth B2B SaaS companies.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#DDD8CD;color:#444444;font-family:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+a{color:#4B6147;}
+
+/* ── Nav ── */
+.site-nav{background:#243221;padding:18px 24px;position:relative;z-index:100;}
+.site-nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.site-wordmark{display:inline-flex;align-items:center;text-decoration:none;}
+.site-nav-links{display:flex;gap:28px;align-items:center;}
+.site-nav-links>a,.site-nav-links .nav-dropdown>a{color:#DDD8CD;text-decoration:none;font-size:15px;font-weight:400;opacity:0.9;transition:opacity 0.15s;}
+.site-nav-links>a:hover,.site-nav-links .nav-dropdown>a:hover{opacity:1;}
+.site-nav-links>a.active{opacity:1;border-bottom:2px solid #4B6147;padding-bottom:2px;}
+.site-nav-cta{background:#DDD8CD;color:#243221;padding:10px 20px;border-radius:4px;font-weight:500;font-size:14px;text-decoration:none;transition:background 0.15s;}
+.site-nav-cta:hover{background:#F2F2F2;}
+
+/* Resources dropdown */
+.nav-dropdown{position:relative;}
+.nav-dropdown>a{cursor:default;}
+.nav-dropdown>a::after{content:' \25BE';font-size:11px;opacity:0.7;}
+.nav-dropdown-menu{position:absolute;top:100%;left:0;margin-top:8px;background:#243221;border:1px solid #4B6147;border-radius:6px;min-width:160px;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity 0.15s,transform 0.15s,visibility 0.15s;box-shadow:0 8px 24px rgba(0,0,0,0.25);}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-dropdown-menu a{display:block;padding:8px 20px;color:#DDD8CD;text-decoration:none;font-size:14px;opacity:0.85;transition:opacity 0.1s,background 0.1s;}
+.nav-dropdown-menu a:hover{opacity:1;background:rgba(75,97,71,0.3);}
+
+/* Mobile nav toggle */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-toggle span{display:block;width:22px;height:2px;background:#DDD8CD;margin:5px 0;transition:0.2s;}
+
+/* ── Hero ── */
+.hero{position:relative;background-color:#243221;background-image:radial-gradient(ellipse 80% 60% at 50% 40%,#4B614722,transparent);padding:80px 24px 64px;text-align:center;color:#F2F2F2;}
+.hero h1{font-family:'Lora',Georgia,serif;font-size:clamp(28px,4vw,44px);font-weight:400;margin:0 0 16px;line-height:1.2;}
+.hero p{max-width:640px;margin:8px auto 0;font-size:18px;opacity:0.85;line-height:1.6;}
+
+/* ── Sections ── */
+.section{padding:72px 24px;}
+.section:nth-child(even){background:#F2F2F2;}
+.section-inner{max-width:900px;margin:0 auto;}
+.section-label{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4B6147;margin-bottom:12px;}
+.section h2{font-family:'Lora',Georgia,serif;font-size:clamp(24px,3.5vw,36px);font-weight:400;color:#243221;margin:0 0 24px;line-height:1.25;}
+.section p{font-size:17px;line-height:1.7;margin:0 0 16px;color:#444444;}
+
+/* ── Our Story ── */
+.story-content{max-width:720px;}
+
+/* ── Team ── */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px;margin-top:40px;}
+.team-card{background:#F2F2F2;border-radius:10px;padding:36px 32px 32px;border:1px solid #c8c3b8;transition:box-shadow 0.2s;}
+.team-card:hover{box-shadow:0 6px 24px rgba(36,50,33,0.10);}
+.section:nth-child(even) .team-card{background:#DDD8CD;}
+.team-photo{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Lora',Georgia,serif;font-size:28px;font-weight:400;color:#F2F2F2;margin-bottom:20px;}
+.team-photo.cs{background:#243221;}
+.team-photo.as{background:#4B6147;}
+.team-card h3{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:400;color:#243221;margin:0 0 4px;}
+.team-card .team-title{font-size:14px;font-weight:500;color:#4B6147;margin-bottom:16px;display:block;}
+.team-card .team-education{font-size:14px;color:#4B6147;font-weight:500;margin-bottom:12px;line-height:1.5;}
+.team-card p{font-size:15px;line-height:1.6;color:#555;margin:0;}
+
+/* ── Track Record ── */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;}
+.stat-card{background:#243221;border-radius:10px;padding:36px 24px;text-align:center;color:#F2F2F2;transition:transform 0.2s;}
+.stat-card:hover{transform:translateY(-3px);}
+.stat-number{font-family:'Lora',Georgia,serif;font-size:clamp(32px,4.5vw,48px);font-weight:600;color:#4B6147;display:block;line-height:1.1;margin-bottom:8px;}
+.stat-label{font-size:14px;font-weight:400;opacity:0.85;line-height:1.4;}
+
+/* ── Engagement Model ── */
+.engagement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px;}
+.engagement-card{background:#F2F2F2;border-radius:10px;padding:28px 24px;border:1px solid #c8c3b8;}
+.section:nth-child(even) .engagement-card{background:#DDD8CD;}
+.engagement-card .eng-label{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#4B6147;margin-bottom:8px;}
+.engagement-card .eng-value{font-family:'Lora',Georgia,serif;font-size:26px;font-weight:400;color:#243221;margin-bottom:8px;line-height:1.2;}
+.engagement-card p{font-size:15px;line-height:1.55;color:#555;margin:0;}
+
+.vs-comparison{background:#243221;border-radius:10px;padding:32px;margin-top:24px;display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;}
+.vs-side{text-align:center;color:#F2F2F2;}
+.vs-side .vs-label{font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:1px;opacity:0.7;margin-bottom:8px;}
+.vs-side .vs-amount{font-family:'Lora',Georgia,serif;font-size:clamp(22px,3vw,32px);font-weight:400;color:#4B6147;line-height:1.2;}
+.vs-side .vs-detail{font-size:14px;opacity:0.7;margin-top:4px;}
+.vs-divider{color:#4B6147;font-family:'Lora',Georgia,serif;font-size:20px;font-weight:400;opacity:0.6;}
+
+.engagement-note{margin-top:28px;padding:20px 24px;background:#243221;border-radius:8px;color:#F2F2F2;font-size:16px;line-height:1.6;text-align:center;border-left:4px solid #4B6147;}
+
+/* ── CTA ── */
+.cta-section{background:#243221;padding:80px 24px;text-align:center;color:#F2F2F2;}
+.cta-section h2{font-family:'Lora',Georgia,serif;font-size:clamp(24px,3.5vw,36px);font-weight:400;margin:0 0 16px;line-height:1.25;}
+.cta-section p{font-size:18px;opacity:0.8;max-width:560px;margin:0 auto 32px;line-height:1.6;}
+.cta-button{display:inline-block;background:#4B6147;color:#243221;padding:16px 36px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;transition:background 0.15s,transform 0.15s;}
+.cta-button:hover{background:#e0b854;transform:translateY(-1px);}
+
+/* ── Footer ── */
+.footer{background:#243221;padding:40px 24px;color:#DDD8CD;text-align:center;font-size:14px;opacity:0.7;}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .vs-comparison{grid-template-columns:1fr;gap:16px;text-align:center;}
+  .vs-divider{display:block;}
+}
+@media(max-width:680px){
+  .nav-toggle{display:block;}
+  .site-nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#243221;padding:16px 24px 24px;gap:16px;border-top:1px solid #4B6147;box-shadow:0 8px 24px rgba(0,0,0,0.25);}
+  .site-nav-links.open{display:flex;}
+  .nav-dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;margin-top:4px;padding:0 0 0 16px;background:transparent;}
+  .nav-dropdown>a::after{content:'';}
+  .team-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .engagement-grid{grid-template-columns:1fr;}
+  .hero{padding:60px 24px 48px;}
+  .section{padding:48px 24px;}
+}
+@media(max-width:400px){
+  .stats-grid{grid-template-columns:1fr;}
+}
+
+</style>
+<link rel="stylesheet" href="assets/site-system.css" data-site-system>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <h1>About Centripetal Advisors</h1>
+  <p>Embedded financial leadership for high-growth SaaS companies. Not outside consultants. Your CFO.</p>
+</section>
+
+<!-- ── Our Story ── -->
+<section class="section">
+  <div class="section-inner">
+    <span class="section-label">Our Story</span>
+    <h2>Built for SaaS Companies That Outgrow Their Financial Infrastructure</h2>
+    <div class="story-content">
+      <p>Centripetal Advisors was founded in 2018 by Charles Solomon on a straightforward belief: high-growth SaaS companies deserve the same caliber of financial leadership as public companies, without the overhead of a full-time executive hire.</p>
+      <p>Too many SaaS founders hit an inflection point where the complexity of their financial operations outpaces their existing resources. Fundraising, board reporting, cash management, capital structure decisions, revenue recognition -- these demands land on founders who should be focused on product and customers.</p>
+      <p>We built Centripetal to solve that problem. We embed into your organization as your CFO, not as outside consultants delivering slide decks. We attend your board meetings, manage your investor relationships, own your financial model, and operate as a member of your leadership team.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Team ── -->
+<section class="section">
+  <div class="section-inner">
+    <span class="section-label">Leadership</span>
+    <h2>The Team</h2>
+    <div class="team-grid">
+
+      <div class="team-card">
+        <div class="team-photo cs">CS</div>
+        <h3>Charles Solomon</h3>
+        <span class="team-title">Founder &amp; Managing Partner</span>
+        <div class="team-education">Columbia Business School, MBA<br>Tufts University, BA Economics</div>
+        <p>Techstars mentor with a background in investment banking and corporate finance. Charles founded Centripetal to bring institutional-grade financial leadership to high-growth SaaS companies. He leads client engagements and firm strategy.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo as">AS</div>
+        <h3>Alex Schifter</h3>
+        <span class="team-title">Fractional CFO</span>
+        <div class="team-education">Investment Banking &amp; Growth Equity Background<br>Previously at Numeta Capital</div>
+        <p>Alex brings deep financial modeling and capital markets expertise to client engagements. His investment banking and growth equity background gives him a sharp understanding of how investors evaluate SaaS businesses.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Track Record ── -->
+<section class="section">
+  <div class="section-inner">
+    <span class="section-label">Track Record</span>
+    <h2>Results That Compound</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number">6+</span>
+        <span class="stat-label">Years serving<br>SaaS companies</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">$115M+</span>
+        <span class="stat-label">Capital raised<br>for clients</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">22+</span>
+        <span class="stat-label">Transactions<br>completed</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">3:1</span>
+        <span class="stat-label">Maximum client-to-<br>CFO ratio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Engagement Model ── -->
+<section class="section">
+  <div class="section-inner">
+    <span class="section-label">How We Work</span>
+    <h2>Engagement Model</h2>
+    <div class="engagement-grid">
+      <div class="engagement-card">
+        <div class="eng-label">Average Engagement</div>
+        <div class="eng-value">2.5 Years</div>
+        <p>Long-term partnerships, not project-based work. We stay through fundraises, board transitions, and growth inflections.</p>
+      </div>
+      <div class="engagement-card">
+        <div class="eng-label">Client-to-CFO Ratio</div>
+        <div class="eng-value">2-4 Clients</div>
+        <p>We limit each CFO to a maximum of four clients to ensure deep, embedded engagement -- not surface-level advisory.</p>
+      </div>
+    </div>
+
+    <div class="vs-comparison">
+      <div class="vs-side">
+        <div class="vs-label">Centripetal Fractional CFO</div>
+        <div class="vs-amount">$95K - $150K</div>
+        <div class="vs-detail">per year, fully loaded</div>
+      </div>
+      <div class="vs-divider">vs.</div>
+      <div class="vs-side">
+        <div class="vs-label">Full-Time CFO Hire</div>
+        <div class="vs-amount">$370K - $575K</div>
+        <div class="vs-detail">per year, fully loaded</div>
+      </div>
+    </div>
+
+    <div class="engagement-note">
+      We limit each CFO to 2-4 clients to ensure deep, embedded engagement. This is not a consulting firm model -- it is a leadership model.
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <h2>Ready to Talk?</h2>
+  <p>Schedule a 30-minute introductory call. No pitch deck. We will listen to where you are and tell you honestly whether we can help.</p>
+  <a href="https://calendly.com/charles-centripetaladvisors/30min" class="cta-button">Schedule a Call</a>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="guides/index.html">Guides</a>
+        <a href="blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

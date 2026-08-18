@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+<title>After the Raise, Capital Structure Becomes an Operating Decision | Centripetal Advisors</title>
+<meta name="description" content="After an equity raise, venture debt is not a default next step. It is a capital structure decision with operating implications for cash visibility, covenants, and sequencing.">
+<meta property="og:title" content="After the Raise, Capital Structure Becomes an Operating Decision | Centripetal Advisors">
+<meta property="og:description" content="After an equity raise, venture debt is not a default next step. It is a capital structure decision with operating implications for cash visibility, covenants, and sequencing.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "After the Raise, Capital Structure Becomes an Operating Decision",
+  "description": "After an equity raise, venture debt is not a default next step. It is a capital structure decision with operating implications for cash visibility, covenants, and sequencing.",
+  "author": {
+    "@type": "Organization",
+    "name": "Centripetal Advisors"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Centripetal Advisors"
+  },
+  "datePublished": "2024-05-15"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should a Seed or Series A SaaS company add venture debt after raising equity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if the use of proceeds is clear, the cash-flow visibility supports covenant compliance, and the debt does not create an obligation the company cannot service in a downside case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should founders evaluate before taking venture debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cash runway with and without the debt, covenant mechanics, reporting obligations, the lender's track record with early-stage companies, and whether the capital accelerates a specific operating milestone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does capital structure affect the next fundraise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Existing debt, warrant coverage, and covenant obligations are part of the investor's diligence. Clean capital structure with clear use-of-proceeds history is more fundable than maximum leverage with unclear deployment."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #DDD8CD;
+  color: #444444;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #4B6147; }
+
+/* ── Nav ── */
+.site-nav {
+  background: #243221;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-nav-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 64px;
+}
+.site-wordmark {
+  color: #DDD8CD;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.site-nav-links {
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+.site-nav-links > a,
+.nav-dropdown > .nav-dropdown-label {
+  color: #DDD8CD;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.9;
+  padding: 20px 16px;
+  display: inline-block;
+  transition: opacity 0.15s;
+}
+.site-nav-links > a:hover,
+.nav-dropdown:hover > .nav-dropdown-label {
+  opacity: 1;
+}
+
+/* Resources dropdown */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-label {
+  cursor: default;
+}
+.nav-dropdown-label::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #DDD8CD;
+  margin-left: 6px;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #F2F2F2;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 8px 24px rgba(36, 50, 33, 0.18);
+  min-width: 180px;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #243221;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+.nav-dropdown-menu a:hover {
+  background: #DDD8CD;
+}
+
+.site-nav-cta {
+  background: #DDD8CD;
+  color: #243221;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 8px;
+  transition: opacity 0.15s;
+}
+.site-nav-cta:hover { opacity: 0.88; }
+
+/* ── Article ── */
+.article-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+}
+.article-container h1 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: clamp(26px, 3.8vw, 40px);
+  font-weight: 400;
+  color: #243221;
+  line-height: 1.22;
+  margin: 0 0 24px;
+}
+.article-container h2 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 23px;
+  font-weight: 400;
+  color: #243221;
+  margin: 40px 0 14px;
+  line-height: 1.3;
+}
+.article-container p {
+  margin: 0 0 18px;
+}
+.article-meta {
+  font-size: 14px;
+  color: #4B6147;
+  margin-bottom: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+.article-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.intro-lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ── FAQ ── */
+.faq-section {
+  margin-top: 52px;
+  border-top: 1px solid #c8c3b8;
+  padding-top: 36px;
+}
+.faq-section h2 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #243221;
+  margin: 0 0 20px;
+}
+.faq-item {
+  border: 1px solid #c8c3b8;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: #F2F2F2;
+  transition: box-shadow 0.2s;
+}
+.faq-item:hover {
+  box-shadow: 0 2px 8px rgba(36, 50, 33, 0.08);
+}
+.faq-item summary {
+  padding: 18px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #243221;
+  transition: background 0.15s;
+}
+.faq-item summary:hover {
+  background: rgba(75, 97, 71, 0.06);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: 300;
+  color: #4B6147;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item[open] summary::after {
+  content: '\2212';
+  transform: rotate(180deg);
+}
+.faq-answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.faq-item[open] .faq-answer-wrapper {
+  grid-template-rows: 1fr;
+}
+.faq-answer {
+  overflow: hidden;
+  padding: 0 22px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #444444;
+}
+.faq-answer p {
+  margin: 0;
+  padding-bottom: 18px;
+}
+
+/* ── CTA Block ── */
+.cta-block {
+  margin-top: 52px;
+  background: #243221;
+  border-radius: 8px;
+  padding: 40px 32px;
+  text-align: center;
+  color: #F2F2F2;
+}
+.cta-block p {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 24px;
+  line-height: 1.45;
+}
+.cta-block a {
+  background: #4B6147;
+  color: #243221;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.15s;
+}
+.cta-block a:hover { opacity: 0.9; }
+
+/* ── Footer ── */
+.site-footer {
+  background: #243221;
+  color: #DDD8CD;
+  padding: 48px 24px 36px;
+}
+.footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+.footer-brand {
+  max-width: 300px;
+}
+.footer-brand .site-wordmark {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.footer-brand p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 0;
+  line-height: 1.6;
+}
+.footer-links {
+  display: flex;
+  gap: 48px;
+}
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 0 0 12px;
+  opacity: 0.6;
+}
+.footer-col a {
+  display: block;
+  color: #DDD8CD;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  transition: opacity 0.15s;
+}
+.footer-col a:hover { opacity: 1; }
+.footer-bottom {
+  max-width: 1180px;
+  margin: 32px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(221, 216, 205, 0.15);
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .site-nav-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 14px 0;
+  }
+  .site-nav-links {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .site-nav-links > a,
+  .nav-dropdown > .nav-dropdown-label {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .nav-dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    background: rgba(245, 240, 232, 0.1);
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+  }
+  .nav-dropdown-menu a {
+    color: #DDD8CD;
+    padding: 8px 24px;
+  }
+  .nav-dropdown-menu a:hover {
+    background: rgba(245, 240, 232, 0.1);
+  }
+  .article-container {
+    padding: 36px 20px 56px;
+  }
+  .article-container h2 {
+    font-size: 20px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .cta-block {
+    padding: 32px 24px;
+  }
+  .cta-block p {
+    font-size: 18px;
+  }
+}
+</style>
+<link rel="stylesheet" href="../assets/site-system.css" data-site-system>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="../index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+<!-- Article -->
+<article class="article-container">
+
+  <div class="article-meta">
+    <span>Centripetal Advisors</span>
+    <span>May 15, 2024</span>
+  </div>
+
+  <h1>After the Raise, Capital Structure Becomes an Operating Decision</h1>
+
+  <p class="intro-lead">After an equity raise, venture debt is not a default next step. It is a capital structure decision with operating implications. The check has cleared, the press release is out, and the team is ready to deploy. At this point, founders often hear from lenders. The pitch is compelling: extend your runway, reduce dilution, accelerate growth. But venture debt is not free money. It comes with covenants, reporting obligations, and repayment mechanics that interact with the company's operations in ways that are not always obvious from the term sheet.</p>
+
+  <h2>Cash Visibility</h2>
+  <p>The first question is whether the company has the cash-flow visibility to support a debt obligation. Equity has no repayment schedule. Debt does. If the company's cash forecasting is not reliable enough to project debt service alongside operating expenses, the debt creates risk that outweighs the benefit.</p>
+  <p>Strong cash visibility means knowing, with reasonable precision, what the cash balance will be 6-12 months from now under multiple scenarios.</p>
+
+  <h2>Covenant Mechanics</h2>
+  <p>Venture debt typically comes with covenants: minimum cash balances, revenue milestones, reporting requirements. These are not decorative. A covenant breach triggers consequences that can range from increased reporting to acceleration of the loan.</p>
+  <p>Before signing, the company should model each covenant against its operating plan and downside scenarios. If a reasonable downside case triggers a breach, the terms need to be renegotiated or the debt should not be taken.</p>
+
+  <h2>Sequencing</h2>
+  <p>The timing of debt relative to equity matters. Debt taken immediately after an equity raise, when the balance sheet is strongest, typically gets better terms. Debt taken when the company is running low on cash and needs to bridge to the next round gets worse terms and signals distress.</p>
+  <p>The best time to negotiate debt is when you do not need it urgently.</p>
+
+  <h2>Operating Needs vs. Headline Dilution</h2>
+  <p>The decision to use debt should be driven by a specific operating need: a piece of equipment, an inventory purchase, a bridge to a known revenue milestone. "Reducing dilution" is not an operating need.</p>
+  <p>If the use of proceeds is vague, the debt is likely to create more problems than the dilution it avoids.</p>
+
+  <p>Capital structure is not a one-time decision made at closing. It is an ongoing operating decision that affects the company's flexibility, risk profile, and fundability. Treat it with the same rigor as any other strategic choice.</p>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <details class="faq-item">
+      <summary>Should a Seed or Series A SaaS company add venture debt after raising equity?</summary>
+      <div class="faq-answer-wrapper">
+        <div class="faq-answer">
+          <p>Only if the use of proceeds is clear, the cash-flow visibility supports covenant compliance, and the debt does not create an obligation the company cannot service in a downside case.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What should founders evaluate before taking venture debt?</summary>
+      <div class="faq-answer-wrapper">
+        <div class="faq-answer">
+          <p>Cash runway with and without the debt, covenant mechanics, reporting obligations, the lender's track record with early-stage companies, and whether the capital accelerates a specific operating milestone.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How does capital structure affect the next fundraise?</summary>
+      <div class="faq-answer-wrapper">
+        <div class="faq-answer">
+          <p>Existing debt, warrant coverage, and covenant obligations are part of the investor's diligence. Clean capital structure with clear use-of-proceeds history is more fundable than maximum leverage with unclear deployment.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <p>Evaluating your capital structure?</p>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min">Schedule a Conversation</a>
+  </div>
+
+</article>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../index.html">Home</a>
+        <a href="../services.html">Services</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="../guides/index.html">Guides</a>
+        <a href="../blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

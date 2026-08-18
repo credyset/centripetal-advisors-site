@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
+<title>Fundraise Readiness Checklist | Centripetal Advisors</title>
+<meta name="description" content="Interactive 24-document fundraise readiness checklist. Track your data room preparation across three tiers of investor diligence.">
+<meta property="og:title" content="Fundraise Readiness Checklist | Centripetal Advisors">
+<meta property="og:description" content="Interactive 24-document fundraise readiness checklist for SaaS founders preparing to raise.">
+<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+/* ── Reset & Base ────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#DDD8CD;color:#444444;font-family:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+a{color:#4B6147;}
+img{max-width:100%;display:block;}
+
+/* ── Navigation ──────────────────────────────────────── */
+.site-nav{background:#243221;padding:18px 24px;position:relative;z-index:100;}
+.site-nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.site-wordmark{display:inline-flex;align-items:center;text-decoration:none;}
+.site-nav-links{display:flex;gap:28px;align-items:center;}
+.site-nav-links > a,
+.site-nav-links .nav-dropdown > a{color:#DDD8CD;text-decoration:none;font-size:15px;font-weight:400;opacity:0.9;transition:opacity 0.15s;}
+.site-nav-links > a:hover,
+.site-nav-links .nav-dropdown > a:hover{opacity:1;}
+.site-nav-cta{background:#DDD8CD;color:#243221;padding:10px 20px;border-radius:4px;font-weight:500;font-size:14px;text-decoration:none;transition:background 0.15s;}
+.site-nav-cta:hover{background:#F2F2F2;}
+
+/* Resources dropdown */
+.nav-dropdown{position:relative;}
+.nav-dropdown > a{cursor:default;}
+.nav-dropdown > a::after{content:'';display:inline-block;width:0;height:0;margin-left:5px;vertical-align:middle;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #DDD8CD;opacity:0.7;}
+.nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:160px;background:#243221;border:1px solid #4B6147;border-radius:6px;padding:8px 0;margin-top:12px;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s,margin-top 0.2s;box-shadow:0 8px 24px rgba(0,0,0,0.25);}
+.nav-dropdown-menu::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #4B6147;}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;margin-top:8px;}
+.nav-dropdown-menu a{display:block;padding:8px 20px;color:#DDD8CD;text-decoration:none;font-size:14px;font-weight:400;opacity:0.85;transition:opacity 0.15s,background 0.15s;}
+.nav-dropdown-menu a:hover{opacity:1;background:rgba(75,97,71,0.3);}
+
+/* Mobile nav toggle */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-toggle span{display:block;width:22px;height:2px;background:#DDD8CD;margin:5px 0;transition:transform 0.2s;}
+
+/* ── Sticky Progress Bar ─────────────────────────────── */
+.sticky-progress{position:sticky;top:0;z-index:50;background:#243221;padding:14px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.2);transition:box-shadow 0.3s;}
+.sticky-progress-inner{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:20px;}
+.sticky-progress-label{color:#DDD8CD;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;white-space:nowrap;min-width:240px;}
+.sticky-progress-label strong{color:#4B6147;font-weight:700;}
+.sticky-progress-bar{flex:1;height:8px;background:rgba(221,216,205,0.15);border-radius:4px;overflow:hidden;}
+.sticky-progress-fill{height:100%;background:linear-gradient(90deg,#4B6147,#4B6147);border-radius:4px;transition:width 0.5s cubic-bezier(0.4,0,0.2,1);width:0%;}
+.sticky-progress-pct{color:#4B6147;font-family:'Roboto',sans-serif;font-size:14px;font-weight:700;min-width:42px;text-align:right;}
+
+/* ── Hero ────────────────────────────────────────────── */
+.hero{position:relative;background-color:#243221;color:#DDD8CD;background-image:radial-gradient(circle at 18% 22%,rgba(221,216,205,0.30) 0%,rgba(221,216,205,0) 50%),radial-gradient(circle at 92% 78%,rgba(75,97,71,0.55) 0%,rgba(75,97,71,0) 55%);padding:100px 24px 80px;overflow:hidden;}
+.hero-inner{position:relative;max-width:880px;margin:0 auto;}
+.hero-eyebrow{font-family:'Roboto',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.8px;text-transform:uppercase;color:#6E8260;margin:0 0 28px;}
+.hero-headline{font-family:'Lora',Georgia,serif;font-size:clamp(36px,6vw,64px);line-height:1.15;font-weight:400;color:#DDD8CD;margin:0 0 20px;letter-spacing:1px;max-width:16ch;}
+.hero-subtitle{font-family:'Lora',Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(18px,2.2vw,24px);line-height:1.45;color:#B6C6AD;margin:0 0 40px;max-width:42ch;}
+.hero-divider{width:110px;height:4px;background:#6E8260;border:0;margin:0 0 32px;}
+.hero-intro{font-family:'Roboto',sans-serif;font-size:16px;line-height:1.65;color:#DDD8CD;margin:0;max-width:56ch;opacity:0.9;}
+
+/* ── Main Content ────────────────────────────────────── */
+.main-content{padding:48px 24px 64px;}
+.main-inner{max-width:880px;margin:0 auto;}
+
+/* ── Tier Section ────────────────────────────────────── */
+.tier-section{margin:0 0 56px;}
+.tier-header{margin:0 0 28px;}
+.tier-eyebrow{font-family:'Roboto',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:#4B6147;margin:0 0 8px;}
+.tier-title{font-family:'Lora',Georgia,serif;font-size:clamp(26px,3.5vw,36px);font-weight:400;color:#243221;margin:0 0 8px;letter-spacing:0.5px;line-height:1.2;}
+.tier-subtitle{font-family:'Lora',Georgia,serif;font-size:17px;font-style:italic;color:#4B6147;margin:0 0 20px;line-height:1.5;}
+.tier-rule{border:0;border-top:1px solid #c8c3b8;margin:0 0 4px;}
+
+/* Tier progress */
+.tier-progress{display:flex;align-items:center;gap:14px;margin:0 0 28px;}
+.tier-progress-bar{flex:1;height:6px;background:rgba(75,97,71,0.12);border-radius:3px;overflow:hidden;}
+.tier-progress-fill{height:100%;border-radius:3px;transition:width 0.5s cubic-bezier(0.4,0,0.2,1);width:0%;}
+.tier-progress-fill--t1{background:linear-gradient(90deg,#4B6147,#6E8260);}
+.tier-progress-fill--t2{background:linear-gradient(90deg,#7a6a4f,#a08d6c);}
+.tier-progress-fill--t3{background:linear-gradient(90deg,#4B6147,#e2c06e);}
+.tier-progress-label{font-family:'Roboto',sans-serif;font-size:13px;font-weight:700;color:#243221;white-space:nowrap;min-width:52px;}
+
+/* ── Checklist Card ──────────────────────────────────── */
+.checklist-card{background:#F2F2F2;border:1px solid #c8c3b8;border-radius:8px;padding:20px 24px;margin:0 0 12px;display:flex;align-items:flex-start;gap:16px;transition:border-color 0.25s,box-shadow 0.25s,background 0.25s;cursor:pointer;position:relative;}
+.checklist-card:hover{border-color:#4B6147;box-shadow:0 4px 16px rgba(36,50,33,0.08);}
+.checklist-card.is-checked{background:#eceae3;border-color:#b8c4b4;}
+.checklist-card.is-checked .card-title{color:#6E8260;text-decoration:line-through;text-decoration-color:rgba(110,130,96,0.4);}
+.checklist-card.is-checked .card-number{color:#6E8260;opacity:0.6;}
+
+/* Custom checkbox */
+.card-checkbox{position:relative;flex-shrink:0;margin-top:2px;}
+.card-checkbox input{position:absolute;opacity:0;width:0;height:0;pointer-events:none;}
+.card-checkbox .check-box{display:block;width:24px;height:24px;border:2px solid #4B6147;border-radius:5px;background:#FFFFFF;transition:background 0.2s ease,border-color 0.2s ease,transform 0.15s ease;position:relative;}
+.card-checkbox input:checked + .check-box{background:#4B6147;border-color:#4B6147;transform:scale(1.05);}
+.card-checkbox input:checked + .check-box::after{content:'';position:absolute;left:6px;top:2px;width:7px;height:13px;border:solid #F2F2F2;border-width:0 2.5px 2.5px 0;transform:rotate(45deg);animation:checkPop 0.25s ease-out;}
+.card-checkbox .check-box:hover{border-color:#243221;transform:scale(1.08);}
+
+@keyframes checkPop{
+  0%{opacity:0;transform:rotate(45deg) scale(0.5);}
+  50%{transform:rotate(45deg) scale(1.15);}
+  100%{opacity:1;transform:rotate(45deg) scale(1);}
+}
+
+/* Card content */
+.card-content{flex:1;min-width:0;}
+.card-top{display:flex;align-items:baseline;gap:12px;}
+.card-number{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:400;color:#4B6147;letter-spacing:0.5px;flex-shrink:0;transition:color 0.25s,opacity 0.25s;}
+.card-title{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:400;color:#243221;margin:0;line-height:1.3;letter-spacing:0.3px;transition:color 0.3s,text-decoration-color 0.3s;}
+.card-description{font-size:14px;line-height:1.55;color:#666666;margin:6px 0 0;max-height:0;overflow:hidden;opacity:0;transition:max-height 0.35s ease,opacity 0.3s ease,margin 0.3s ease;}
+.checklist-card:hover .card-description,
+.checklist-card:focus-within .card-description{max-height:120px;opacity:1;margin:10px 0 0;}
+
+/* ── Tier 1 Congratulations ──────────────────────────── */
+.tier1-congrats{background:linear-gradient(135deg,#243221,#3a5235);border:2px solid #4B6147;border-radius:10px;padding:28px 32px;margin:8px 0 40px;display:none;animation:fadeSlideIn 0.5s ease-out;}
+.tier1-congrats.is-visible{display:block;}
+.tier1-congrats-icon{font-size:28px;margin:0 0 8px;}
+.tier1-congrats h3{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:400;color:#4B6147;margin:0 0 8px;letter-spacing:0.5px;}
+.tier1-congrats p{font-size:15px;line-height:1.6;color:#DDD8CD;margin:0;opacity:0.9;}
+
+@keyframes fadeSlideIn{
+  0%{opacity:0;transform:translateY(-12px);}
+  100%{opacity:1;transform:translateY(0);}
+}
+
+/* ── Share Button ────────────────────────────────────── */
+.share-section{text-align:center;padding:40px 0 16px;border-top:1px solid #c8c3b8;margin-top:32px;}
+.share-section p{font-size:15px;color:#666666;margin:0 0 20px;}
+.share-btn{display:inline-flex;align-items:center;gap:10px;background:#243221;color:#DDD8CD;padding:14px 32px;border:none;border-radius:6px;font-family:'Roboto',sans-serif;font-size:15px;font-weight:500;cursor:pointer;transition:background 0.2s,transform 0.15s;letter-spacing:0.3px;}
+.share-btn:hover{background:#4B6147;transform:translateY(-1px);}
+.share-btn:active{transform:translateY(0);}
+.share-btn svg{flex-shrink:0;}
+.share-btn.is-copied{background:#4B6147;}
+
+/* ── Reset link ──────────────────────────────────────── */
+.reset-section{text-align:center;padding:8px 0 0;}
+.reset-btn{background:none;border:none;color:#999;font-size:13px;cursor:pointer;text-decoration:underline;font-family:'Roboto',sans-serif;transition:color 0.2s;}
+.reset-btn:hover{color:#666;}
+
+/* ── CTA Section ─────────────────────────────────────── */
+.cta-section{background:#243221;padding:64px 24px;text-align:center;}
+.cta-inner{max-width:600px;margin:0 auto;}
+.cta-section h2{font-family:'Lora',Georgia,serif;font-size:clamp(22px,3vw,32px);font-weight:400;color:#F2F2F2;margin:0 0 16px;line-height:1.3;}
+.cta-section p{color:#DDD8CD;opacity:0.8;font-size:16px;margin:0 0 28px;line-height:1.6;}
+.cta-btn{display:inline-block;background:#4B6147;color:#243221;padding:14px 32px;border-radius:4px;font-weight:600;font-size:15px;text-decoration:none;letter-spacing:0.3px;transition:background 0.2s,transform 0.15s;}
+.cta-btn:hover{background:#e2bc5e;transform:translateY(-1px);}
+
+/* ── Footer ──────────────────────────────────────────── */
+.footer{background:#243221;padding:40px 24px;text-align:center;}
+.footer-inner{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:16px;align-items:center;}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;}
+.footer-links a{color:#DDD8CD;text-decoration:none;font-size:14px;opacity:0.6;transition:opacity 0.15s;}
+.footer-links a:hover{opacity:0.9;}
+.footer-copy{color:#DDD8CD;font-size:13px;opacity:0.5;}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media(max-width:640px){
+  .nav-toggle{display:block;}
+  .site-nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#243221;flex-direction:column;padding:16px 24px 24px;gap:16px;border-top:1px solid #4B6147;}
+  .site-nav-links.open{display:flex;}
+  .nav-dropdown-menu{position:static;transform:none;opacity:1;visibility:visible;margin-top:0;background:transparent;border:none;box-shadow:none;padding:0 0 0 16px;}
+  .nav-dropdown-menu::before{display:none;}
+  .nav-dropdown > a::after{display:none;}
+
+  .hero{padding:72px 20px 56px;}
+  .sticky-progress-inner{flex-wrap:wrap;gap:10px;}
+  .sticky-progress-label{min-width:auto;font-size:13px;}
+  .sticky-progress-pct{min-width:36px;font-size:13px;}
+  .checklist-card{padding:16px 18px;gap:12px;}
+  .card-title{font-size:17px;}
+  .card-number{font-size:16px;}
+  .card-description{max-height:none;opacity:1;margin:6px 0 0;}
+}
+
+</style>
+<link rel="stylesheet" href="../../assets/site-system.css" data-site-system>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
+  <a href="../../index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+  <div class="site-nav-links">
+    <a href="../../index.html">Home</a>
+    <a href="../../services.html">Services</a>
+    <a href="../../contact.html">Contact</a>
+    <a href="../../blog/index.html">Blogs</a>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+  </div>
+</div></nav>
+
+<!-- Sticky Progress Bar -->
+<div class="sticky-progress" id="stickyProgress">
+  <div class="sticky-progress-inner">
+    <span class="sticky-progress-label" id="progressLabel"><strong>0</strong> of 24 documents ready</span>
+    <div class="sticky-progress-bar">
+      <div class="sticky-progress-fill" id="progressFill"></div>
+    </div>
+    <span class="sticky-progress-pct" id="progressPct">0%</span>
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">INTERACTIVE TOOL &middot; FUNDRAISE READINESS</p>
+    <h1 class="hero-headline">Fundraise Readiness Checklist.</h1>
+    <p class="hero-subtitle">24 documents. 3 tiers. Track what you have and what you need.</p>
+    <hr class="hero-divider">
+    <p class="hero-intro">Investors stage their diligence. Tier 1 documents open (or kill) the conversation. Tier 2 documents build credibility through weeks two and three. Tier 3 documents close the deal. Check off what you have today. The running counter tells you where you stand.</p>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="main-content">
+  <div class="main-inner">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- TIER 1 -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="tier-section" id="tier1">
+      <div class="tier-header">
+        <span class="tier-eyebrow">TIER 1</span>
+        <h2 class="tier-title">Must-Have Before Partner Meeting</h2>
+        <p class="tier-subtitle">Eight documents that either confirm the deal or kill it.</p>
+        <hr class="tier-rule">
+      </div>
+      <div class="tier-progress">
+        <div class="tier-progress-bar">
+          <div class="tier-progress-fill tier-progress-fill--t1" id="tier1Fill"></div>
+        </div>
+        <span class="tier-progress-label" id="tier1Label">0 / 8</span>
+      </div>
+
+      <label class="checklist-card" data-tier="1" data-idx="1">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">01</span>
+            <h3 class="card-title">Monthly P&amp;L (past 24 months)</h3>
+          </div>
+          <p class="card-description">Accrual-basis profit-and-loss structured with SaaS expense categories (S&amp;M, R&amp;D, G&amp;A). Recurring vs. non-recurring revenue separated. This is the single most-read document in any data room.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="1" data-idx="2">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">02</span>
+            <h3 class="card-title">Monthly cash flow (past 24 months)</h3>
+          </div>
+          <p class="card-description">Monthly cash flow statement showing operating, investing, and financing activities. P&amp;L can be shaped by accruals; cash flow cannot. Investors compare the two to find discrepancies.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="1" data-idx="3">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">03</span>
+            <h3 class="card-title">Monthly balance sheet (past 24 months)</h3>
+          </div>
+          <p class="card-description">Assets, liabilities, and equity reconciled monthly. AR trends signal collection health. AP trends reveal whether the company is stretching vendors to mask burn.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="1" data-idx="4">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">04</span>
+            <h3 class="card-title">Customer-level revenue by month</h3>
+          </div>
+          <p class="card-description">Grid of customers by months showing recurring and non-recurring revenue per customer. Lets investors run their own cohort retention analysis to verify your NRR and GRR claims.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="1" data-idx="5">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">05</span>
+            <h3 class="card-title">Current cap table</h3>
+          </div>
+          <p class="card-description">Fully-diluted view including SAFEs, convertible notes, option pool, and side agreements. Modeled forward to the target round. Messy cap tables kill more conviction than founders realize.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="1" data-idx="6">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">06</span>
+            <h3 class="card-title">12&ndash;24 month P&amp;L forecast</h3>
+          </div>
+          <p class="card-description">Forward-looking projection that reconciles to the historical P&amp;L. Three scenarios: base, upside, downside. Assumptions documented and defensible against the pipeline.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="1" data-idx="7">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">07</span>
+            <h3 class="card-title">Top 10 customer contracts</h3>
+          </div>
+          <p class="card-description">Signed contracts and recent invoices for your ten largest customers. Contract terms reveal what you actually sold. Invoices reveal whether you are getting paid.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="1" data-idx="8">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">08</span>
+            <h3 class="card-title">ARR reconciliation bridge</h3>
+          </div>
+          <p class="card-description">Waterfall showing beginning ARR, new logos, expansion, contraction, churn, and ending ARR. The bridge must reconcile to the P&amp;L and the customer-level revenue data.</p>
+        </div>
+      </label>
+
+      <!-- Tier 1 Congratulations -->
+      <div class="tier1-congrats" id="tier1Congrats">
+        <div class="tier1-congrats-icon" aria-hidden="true">&#9733;</div>
+        <h3>Tier 1 complete. You are partner-meeting ready.</h3>
+        <p>Every document an investor opens in the first 48 hours is accounted for. This is the threshold where diligence conversations begin instead of ending.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- TIER 2 -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="tier-section" id="tier2">
+      <div class="tier-header">
+        <span class="tier-eyebrow">TIER 2</span>
+        <h2 class="tier-title">Needed During Diligence</h2>
+        <p class="tier-subtitle">Ten documents that build (or break) the credibility layer through weeks two and three.</p>
+        <hr class="tier-rule">
+      </div>
+      <div class="tier-progress">
+        <div class="tier-progress-bar">
+          <div class="tier-progress-fill tier-progress-fill--t2" id="tier2Fill"></div>
+        </div>
+        <span class="tier-progress-label" id="tier2Label">0 / 10</span>
+      </div>
+
+      <label class="checklist-card" data-tier="2" data-idx="9">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">09</span>
+            <h3 class="card-title">AR aging (past 13 months)</h3>
+          </div>
+          <p class="card-description">Aged receivables grouped by 0-30, 31-60, 61-90, and 90+ days, by customer, every month. A growing 60+ bucket signals collection problems or aggressive revenue recognition.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="2" data-idx="10">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">10</span>
+            <h3 class="card-title">AP aging (past 13 months)</h3>
+          </div>
+          <p class="card-description">Same view for payables. Companies running low on cash quietly stretch AP to 60+ days while reporting unchanged burn. Investors check this to detect cash stretch.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="2" data-idx="11">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">11</span>
+            <h3 class="card-title">Bank statements (past 12 months)</h3>
+          </div>
+          <p class="card-description">Every monthly statement from every account at every bank the company uses. Bank statements are the source of truth that verifies the cash balance the model rests on.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="2" data-idx="12">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">12</span>
+            <h3 class="card-title">Schedule of liabilities</h3>
+          </div>
+          <p class="card-description">Everything the company owes to vendors, employees, lenders, and tax authorities as of today. Detects off-balance-sheet liabilities and unpaid obligations.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="2" data-idx="13">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">13</span>
+            <h3 class="card-title">409A valuation</h3>
+          </div>
+          <p class="card-description">Independent valuation of common stock for option pricing. Must be current (less than 12 months old, updated after material events). A stale 409A signals legal hygiene problems.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="2" data-idx="14">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">14</span>
+            <h3 class="card-title">Employee list with comp detail</h3>
+          </div>
+          <p class="card-description">Complete roster: name, title, location, start date, salary, bonus, equity. Investors benchmark your comp structure and identify single-points-of-failure in the team.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="2" data-idx="15">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">15</span>
+            <h3 class="card-title">Employment agreements</h3>
+          </div>
+          <p class="card-description">Signed employment agreements for every employee, including PIIA/CIIA for IP assignment. No IP assignment means no investable company. This is a deal-blocker.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="2" data-idx="16">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">16</span>
+            <h3 class="card-title">IP assignments</h3>
+          </div>
+          <p class="card-description">Documented assignment of all intellectual property to the company, including work by contractors and founders. Unassigned IP is the most common legal gap at Series A.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="2" data-idx="17">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">17</span>
+            <h3 class="card-title">Articles of incorporation</h3>
+          </div>
+          <p class="card-description">Foundational corporate document filed with the Secretary of State. Verifies entity type, jurisdiction (most rounds require Delaware C-Corp), and share class structure.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="2" data-idx="18">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">18</span>
+            <h3 class="card-title">Board minutes</h3>
+          </div>
+          <p class="card-description">Minutes from every board meeting, documenting key decisions, approvals, and any related-party transactions. Gaps in board minutes signal governance immaturity.</p>
+        </div>
+      </label>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- TIER 3 -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="tier-section" id="tier3">
+      <div class="tier-header">
+        <span class="tier-eyebrow">TIER 3</span>
+        <h2 class="tier-title">Supporting Documents</h2>
+        <p class="tier-subtitle">Six documents that close the deal. Their absence kills conviction even if everything else is clean.</p>
+        <hr class="tier-rule">
+      </div>
+      <div class="tier-progress">
+        <div class="tier-progress-bar">
+          <div class="tier-progress-fill tier-progress-fill--t3" id="tier3Fill"></div>
+        </div>
+        <span class="tier-progress-label" id="tier3Label">0 / 6</span>
+      </div>
+
+      <label class="checklist-card" data-tier="3" data-idx="19">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">19</span>
+            <h3 class="card-title">Customer concentration summary</h3>
+          </div>
+          <p class="card-description">Top 1, top 5, and top 10 customer revenue percentages with 12-24 month trends. At Series A, top customer under 20% and top 5 under 50% is the bar.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="3" data-idx="20">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">20</span>
+            <h3 class="card-title">Gross margin by revenue type</h3>
+          </div>
+          <p class="card-description">Margin analysis separating subscription, services, and implementation revenue. Blended margins mask a services drag that investors will find and question.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="3" data-idx="21">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">21</span>
+            <h3 class="card-title">CARR to ARR bridge</h3>
+          </div>
+          <p class="card-description">Waterfall from contracted ARR (signed) through implementation timing to live ARR. Shows what percentage of CARR converts, and reveals onboarding churn hidden from the headline number.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="3" data-idx="22">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">22</span>
+            <h3 class="card-title">Major vendor agreements</h3>
+          </div>
+          <p class="card-description">Signed contracts with material vendors: cloud infrastructure, key software, legal, accounting. Investors look for auto-renew clauses that lock in spending they do not want to inherit.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="3" data-idx="23">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">23</span>
+            <h3 class="card-title">Equity agreements</h3>
+          </div>
+          <p class="card-description">All SAFEs, convertible notes, stock purchase agreements, and option grants. Every instrument documented with terms modeled into the cap table at the target valuation.</p>
+        </div>
+      </label>
+
+      <label class="checklist-card" data-tier="3" data-idx="24">
+        <span class="card-checkbox">
+          <input type="checkbox">
+          <span class="check-box"></span>
+        </span>
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-number">24</span>
+            <h3 class="card-title">Debt documentation</h3>
+          </div>
+          <p class="card-description">Term sheets, promissory notes, and security agreements for every form of debt. Includes subordination capacity analysis. SBA debt often cannot be subordinated, blocking rounds.</p>
+        </div>
+      </label>
+    </section>
+
+    <!-- Share Section -->
+    <div class="share-section">
+      <p>Share your readiness status with your team or advisor.</p>
+      <button class="share-btn" id="shareBtn" onclick="shareReadiness()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span id="shareBtnText">Share Your Readiness</span>
+      </button>
+    </div>
+
+    <div class="reset-section">
+      <button class="reset-btn" onclick="resetChecklist()">Reset all checkboxes</button>
+    </div>
+
+  </div>
+</main>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Need help getting your data room ready?</h2>
+    <p>Centripetal builds the financial infrastructure founders need before the partner meeting. Schedule a conversation to see where you stand.</p>
+    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="cta-btn">Schedule a Call</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../../index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
+      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../../index.html">Home</a>
+        <a href="../../services.html">Services</a>
+        <a href="../../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="../../guides/index.html">Guides</a>
+        <a href="../../blog/index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  var STORAGE_KEY = 'centripetal_fundraise_readiness';
+  var TOTAL = 24;
+  var TIER_COUNTS = { '1': 8, '2': 10, '3': 6 };
+
+  var cards = document.querySelectorAll('.checklist-card');
+  var checkboxes = document.querySelectorAll('.checklist-card input[type="checkbox"]');
+
+  // Document titles for the share summary
+  var docTitles = [
+    'Monthly P&L (past 24 months)',
+    'Monthly cash flow (past 24 months)',
+    'Monthly balance sheet (past 24 months)',
+    'Customer-level revenue by month',
+    'Current cap table',
+    '12-24 month P&L forecast',
+    'Top 10 customer contracts',
+    'ARR reconciliation bridge',
+    'AR aging (past 13 months)',
+    'AP aging (past 13 months)',
+    'Bank statements (past 12 months)',
+    'Schedule of liabilities',
+    '409A valuation',
+    'Employee list with comp detail',
+    'Employment agreements',
+    'IP assignments',
+    'Articles of incorporation',
+    'Board minutes',
+    'Customer concentration summary',
+    'Gross margin by revenue type',
+    'CARR to ARR bridge',
+    'Major vendor agreements',
+    'Equity agreements',
+    'Debt documentation'
+  ];
+
+  // Load state from localStorage
+  function loadState() {
+    try {
+      var data = localStorage.getItem(STORAGE_KEY);
+      if (data) return JSON.parse(data);
+    } catch(e) {}
+    return {};
+  }
+
+  // Save state to localStorage
+  function saveState(state) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch(e) {}
+  }
+
+  // Initialize checkboxes from saved state
+  function init() {
+    var state = loadState();
+    checkboxes.forEach(function(cb) {
+      var card = cb.closest('.checklist-card');
+      var idx = card.getAttribute('data-idx');
+      if (state[idx]) {
+        cb.checked = true;
+        card.classList.add('is-checked');
+      }
+    });
+    updateProgress();
+  }
+
+  // Attach change listeners
+  checkboxes.forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      var card = cb.closest('.checklist-card');
+      var idx = card.getAttribute('data-idx');
+      var state = loadState();
+
+      if (cb.checked) {
+        state[idx] = true;
+        card.classList.add('is-checked');
+      } else {
+        delete state[idx];
+        card.classList.remove('is-checked');
+      }
+
+      saveState(state);
+      updateProgress();
+    });
+  });
+
+  function updateProgress() {
+    var state = loadState();
+    var totalChecked = 0;
+    var tierChecked = { '1': 0, '2': 0, '3': 0 };
+
+    checkboxes.forEach(function(cb) {
+      var card = cb.closest('.checklist-card');
+      var tier = card.getAttribute('data-tier');
+      var idx = card.getAttribute('data-idx');
+      if (state[idx]) {
+        totalChecked++;
+        tierChecked[tier]++;
+      }
+    });
+
+    var pct = Math.round((totalChecked / TOTAL) * 100);
+
+    // Update sticky progress
+    document.getElementById('progressLabel').innerHTML = '<strong>' + totalChecked + '</strong> of ' + TOTAL + ' documents ready';
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressPct').textContent = pct + '%';
+
+    // Update tier progress bars
+    for (var t = 1; t <= 3; t++) {
+      var tierPct = Math.round((tierChecked[t] / TIER_COUNTS[t]) * 100);
+      document.getElementById('tier' + t + 'Fill').style.width = tierPct + '%';
+      document.getElementById('tier' + t + 'Label').textContent = tierChecked[t] + ' / ' + TIER_COUNTS[t];
+    }
+
+    // Tier 1 congratulations
+    var congrats = document.getElementById('tier1Congrats');
+    if (tierChecked['1'] === TIER_COUNTS['1']) {
+      congrats.classList.add('is-visible');
+    } else {
+      congrats.classList.remove('is-visible');
+    }
+  }
+
+  // Share readiness
+  window.shareReadiness = function() {
+    var state = loadState();
+    var totalChecked = 0;
+    var tierChecked = { '1': 0, '2': 0, '3': 0 };
+    var tierMissing = { '1': [], '2': [], '3': [] };
+
+    // Tier ranges
+    var tierRanges = {
+      '1': [1, 8],
+      '2': [9, 18],
+      '3': [19, 24]
+    };
+
+    for (var t = 1; t <= 3; t++) {
+      for (var i = tierRanges[t][0]; i <= tierRanges[t][1]; i++) {
+        if (state[i]) {
+          totalChecked++;
+          tierChecked[t]++;
+        } else {
+          tierMissing[t].push(docTitles[i - 1]);
+        }
+      }
+    }
+
+    var pct = Math.round((totalChecked / TOTAL) * 100);
+
+    var lines = [
+      'FUNDRAISE READINESS REPORT',
+      '=' .repeat(40),
+      '',
+      'Overall: ' + totalChecked + ' of ' + TOTAL + ' documents ready (' + pct + '%)',
+      ''
+    ];
+
+    var tierNames = {
+      '1': 'Tier 1 - Must-Have Before Partner Meeting',
+      '2': 'Tier 2 - Needed During Diligence',
+      '3': 'Tier 3 - Supporting Documents'
+    };
+
+    for (var t = 1; t <= 3; t++) {
+      lines.push(tierNames[t] + ': ' + tierChecked[t] + '/' + TIER_COUNTS[t]);
+      if (tierMissing[t].length > 0) {
+        lines.push('  Missing:');
+        tierMissing[t].forEach(function(doc) {
+          lines.push('    - ' + doc);
+        });
+      } else {
+        lines.push('  Complete.');
+      }
+      lines.push('');
+    }
+
+    lines.push('---');
+    lines.push('Generated at centripetaladvisors.com');
+
+    var text = lines.join('\n');
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function() {
+        showCopied();
+      }).catch(function() {
+        fallbackCopy(text);
+      });
+    } else {
+      fallbackCopy(text);
+    }
+  };
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showCopied();
+    } catch(e) {
+      alert(text);
+    }
+    document.body.removeChild(ta);
+  }
+
+  function showCopied() {
+    var btn = document.getElementById('shareBtn');
+    var btnText = document.getElementById('shareBtnText');
+    btn.classList.add('is-copied');
+    btnText.textContent = 'Copied to clipboard';
+    setTimeout(function() {
+      btn.classList.remove('is-copied');
+      btnText.textContent = 'Share Your Readiness';
+    }, 2500);
+  }
+
+  // Reset
+  window.resetChecklist = function() {
+    if (!confirm('Reset all checkboxes? This cannot be undone.')) return;
+    try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+    checkboxes.forEach(function(cb) {
+      cb.checked = false;
+      cb.closest('.checklist-card').classList.remove('is-checked');
+    });
+    updateProgress();
+  };
+
+  // Initialize
+  init();
+})();
+</script>
+
+</body>
+</html>
