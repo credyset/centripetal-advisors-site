@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-09",
+  "scorecardWidths": [
+    {
+      "menu": "none",
+      "optionHeight": 60,
+      "overflow": false,
+      "toggle": "flex",
+      "width": 320
+    },
+    {
+      "menu": "none",
+      "optionHeight": 60,
+      "overflow": false,
+      "toggle": "flex",
+      "width": 390
+    },
+    {
+      "menu": "none",
+      "optionHeight": 90,
+      "overflow": false,
+      "toggle": "flex",
+      "width": 768
+    },
+    {
+      "menu": "none",
+      "optionHeight": 92,
+      "overflow": false,
+      "toggle": "flex",
+      "width": 1024
+    },
+    {
+      "menu": "none",
+      "optionHeight": 74,
+      "overflow": false,
+      "toggle": "flex",
+      "width": 1100
+    },
+    {
+      "menu": "flex",
+      "optionHeight": 74,
+      "overflow": false,
+      "toggle": "none",
+      "width": 1280
+    },
+    {
+      "menu": "flex",
+      "optionHeight": 74,
+      "overflow": false,
+      "toggle": "none",
+      "width": 1440
+    }
+  ],
+  "representativePages": [
+    {
+      "contents": 3,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/series-a-diligence-readiness.html",
+      "width": 320
+    },
+    {
+      "contents": 3,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/series-a-diligence-readiness.html",
+      "width": 1024
+    },
+    {
+      "contents": 3,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/venture-debt-readiness.html",
+      "width": 320
+    },
+    {
+      "contents": 3,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/venture-debt-readiness.html",
+      "width": 1024
+    },
+    {
+      "contents": 3,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/treasury-hygiene.html",
+      "width": 320
+    },
+    {
+      "contents": 3,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/treasury-hygiene.html",
+      "width": 1024
+    },
+    {
+      "contents": 2,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/do-i-need-a-fractional-cfo.html",
+      "width": 320
+    },
+    {
+      "contents": 2,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/do-i-need-a-fractional-cfo.html",
+      "width": 1024
+    },
+    {
+      "contents": 2,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/first-90-days-after-raise.html",
+      "width": 320
+    },
+    {
+      "contents": 2,
+      "h1": 1,
+      "overflow": false,
+      "path": "/guides/first-90-days-after-raise.html",
+      "width": 1024
+    },
+    {
+      "contents": 5,
+      "h1": 1,
+      "overflow": false,
+      "path": "/services/fundraising-readiness.html",
+      "width": 320
+    },
+    {
+      "contents": 5,
+      "h1": 1,
+      "overflow": false,
+      "path": "/services/fundraising-readiness.html",
+      "width": 1024
+    },
+    {
+      "contents": 5,
+      "h1": 1,
+      "overflow": false,
+      "path": "/services/cash-flow-runway-planning.html",
+      "width": 320
+    },
+    {
+      "contents": 5,
+      "h1": 1,
+      "overflow": false,
+      "path": "/services/cash-flow-runway-planning.html",
+      "width": 1024
+    }
+  ],
+  "boundaries": [
+    {
+      "band": [
+        "FOUNDATION GAPS · 8–15 OF 40"
+      ],
+      "priorities": 3,
+      "total": "8"
+    },
+    {
+      "band": [
+        "FOUNDATION GAPS · 8–15 OF 40"
+      ],
+      "priorities": 3,
+      "total": "15"
+    },
+    {
+      "band": [
+        "BUILDING · 16–23 OF 40"
+      ],
+      "priorities": 3,
+      "total": "16"
+    },
+    {
+      "band": [
+        "BUILDING · 16–23 OF 40"
+      ],
+      "priorities": 3,
+      "total": "23"
+    },
+    {
+      "band": [
+        "SOLID · 24–31 OF 40"
+      ],
+      "priorities": 3,
+      "total": "24"
+    },
+    {
+      "band": [
+        "SOLID · 24–31 OF 40"
+      ],
+      "priorities": 3,
+      "total": "31"
+    },
+    {
+      "band": [
+        "INVESTOR-READY · 32–40 OF 40"
+      ],
+      "priorities": 3,
+      "total": "32"
+    },
+    {
+      "band": [
+        "INVESTOR-READY · 32–40 OF 40"
+      ],
+      "priorities": 3,
+      "total": "40"
+    }
+  ],
+  "mixedScore": {
+    "values": [
+      3,
+      4,
+      1,
+      2,
+      1,
+      5,
+      2,
+      4
+    ],
+    "total": 22,
+    "priorities": [
+      "Team",
+      "Treasury & Banking",
+      "Systems"
+    ],
+    "rows": 8
+  },
+  "keyboard": {
+    "arrowRightSelected": 2,
+    "resultAnchorFocus": "result",
+    "guideAnchorFocus": "read-2",
+    "escapeClosedMenu": true
+  },
+  "reset": {
+    "checked": 0,
+    "selected": 0,
+    "summaryHidden": true,
+    "progress": 0
+  },
+  "print": {
+    "actionInitiated": true,
+    "paginationVerified": false
+  },
+  "contrast": {
+    "sageOnWhite": 6.77,
+    "stoneOnPine": 9.51,
+    "roleTextOnPine": 7.97
+  },
+  "limitations": [
+    "Real screen-reader testing not performed",
+    "Browser PDF pagination not verified",
+    "No measured traffic, lead, Core Web Vitals, or AI-citation change"
+  ]
+}

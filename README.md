@@ -37,3 +37,26 @@ Static validation covers 40 pages, 1,392 URLs, unique metadata, local anchors/as
 For local review, serve this directory on port 8765. Do not rerun `capture_live_baseline.py` or `freeze_render_modules.py` in this working copy: the capture scripts intentionally overwrite core HTML and would remove the foundation changes. Refresh a public baseline in a separate checkout and compare it explicitly.
 
 Retrospective: preserved source geometry before editing; used the existing Scorecard rather than inventing a scoring model; caught a checklist initialization selector and phone flex-order issue during final interaction checks. Performance and citation outcomes still require measurement on the eventual production implementation.
+
+## October 9, 2026 reader refinement
+
+Six curated guides and six service pages now include static, crawlable contents links. Heading targets accept keyboard focus and allow clearance for sticky navigation. Service sidebars identify their related service by name, and duplicate contact links were removed from the final CTA.
+
+The Scorecard retains the original 8–40 total and four bands. On completing all categories, it lists the three lowest scores in stable category order, links to relevant existing resources, and shows all eight scores in a table. Equal scores are not independently ranked; the visible explanation makes the tie behavior explicit. Reset clears scores, commentary, progress, results, and priorities. Keyboard radio controls and completion announcements remain available. Phone choices are 60-pixel rows rather than cramped five-column labels.
+
+Series A and venture-debt checklists now both have live counts and reset. Guides and service pages have print controls and print styles; disclosures open for printing and restore afterward. A browser print request opened a modal that paused embedded-browser automation; navigation canceled it. Browser-specific PDF pagination and real assistive-technology testing remain unverified. No downloadable PDF, tracking, submission, or persistent storage is added.
+
+The native navigation conflict between 1001 and 1100 pixels is fixed. Dark-page eyebrow and role text use higher-contrast existing palette colors. Measured static color ratios: sage on white 6.77:1; stone on pine 9.51:1; light role text on pine 7.97:1. Focus outlines measure 4.07:1 against pine and 3.32:1 against white. This is a focused review, not a full WCAG conformance claim.
+
+Native pages request one shared font stylesheet directly from the document, with preconnect hints; the redundant stylesheet import and overlapping font links were removed. This reduces duplicate declarations and the nested stylesheet request, without asserting a measured Core Web Vitals improvement. Captured Home typography, rendering modules, original sections, and layout are unchanged by this pass.
+
+Verification: eight scoring boundaries, partial-result suppression, deterministic priority ties, complete reset, keyboard arrow/Space input, Escape menu dismissal, keyboard anchor focus, checklist count/reset, seven Scorecard widths from 320 to 1440 pixels, and representative guide/service layouts at 320 and 1024 pixels. Browser measurements are recorded in `tools/reader-paths-qa.json`; static validation checks all local anchors, metadata, and assets.
+
+### Batched human review queue
+
+- Confirm current proof figures and reconcile the preserved responsive network-count variants before a production migration.
+- Review the financial wording and Scorecard category interpretations with the firm; no Charles review or approval is represented.
+- Identify client evidence that can support more distinctive service explanations, with permitted wording and attribution.
+- Use the audit supplement and Search Console/lead data to refine priorities; historical articles and experimental calculators still need their separate factual/model review.
+
+Implementation references: [MDN printing documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Printing) and the design plugin accessibility-review skill. The current concept remains noindex and the live Framer project is untouched.

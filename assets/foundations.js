@@ -14,12 +14,28 @@ document.querySelectorAll('.nav-toggle').forEach(button=>{
 // No JavaScript? Keep navigation available using the same links and layout.
 document.documentElement.classList.add('ca-js');
 const checklist=document.querySelectorAll('input[type=checkbox]');
-if(checklist.length===24 && location.pathname.endsWith('series-a-diligence-readiness.html')){
+const checklists={'series-a-diligence-readiness.html':24,'venture-debt-readiness.html':17};
+const expected=checklists[location.pathname.split('/').pop()];
+if(expected && checklist.length===expected){
   const bar=document.createElement('div');bar.className='ca-check-progress';
   const status=document.createElement('span');status.setAttribute('role','status');
   const reset=document.createElement('button');reset.type='button';reset.textContent='Reset checklist';
-  const update=()=>{status.textContent=`${[...checklist].filter(input=>input.checked).length} of 24 diligence items checked · selections are not saved or submitted`;};
+  const update=()=>{status.textContent=`${[...checklist].filter(input=>input.checked).length} of ${expected} diligence items checked · selections are not saved or submitted`;};
   reset.addEventListener('click',()=>{checklist.forEach(input=>input.checked=false);update();});
   checklist.forEach(input=>input.addEventListener('change',update));
   bar.append(status,reset);document.querySelector('header.concept-hero').after(bar);update();
 }
+document.querySelectorAll('.ca-print-button').forEach(button=>{
+  button.hidden=false;
+  button.addEventListener('click',()=>window.print());
+});
+// Printing disclosures should include their answers, then restore the reader's state.
+let printDisclosures=[];
+window.addEventListener('beforeprint',()=>{
+  printDisclosures=[...document.querySelectorAll('details')].map(detail=>[detail,detail.open]);
+  printDisclosures.forEach(([detail])=>{detail.open=true;});
+});
+window.addEventListener('afterprint',()=>{
+  printDisclosures.forEach(([detail,open])=>{detail.open=open;});
+  printDisclosures=[];
+});
