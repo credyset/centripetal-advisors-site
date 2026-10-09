@@ -32,8 +32,9 @@ def shell(path, title, description, body, graph, canonical=None):
             parsed = urlsplit(value)
             target = (TEMPLATE.parent / parsed.path).resolve()
             node[attr] = os.path.relpath(target, (ROOT / path).parent) + ('?' + parsed.query if parsed.query else '') + ('#' + parsed.fragment if parsed.fragment else '')
-    for node in soup.select('script[src*="cash-review"],.guide-editorial'):
+    for node in soup.select('script[src*="cash-review"],link[href*="cash-guide-reference"],.guide-editorial'):
         node.decompose()
+    soup.body['class'] = ['ca-native']
     soup.title.string = title
     for attr, key, value in [('name','description',description),('property','og:title',title),('property','og:description',description),('name','twitter:title',title),('name','twitter:description',description),('property','og:type','website'),('property','og:url',canonical or BASE + path)]:
         node = soup.find('meta', attrs={attr:key})
@@ -51,7 +52,7 @@ def shell(path, title, description, body, graph, canonical=None):
             item['aria-current'] = 'page'
     footer = soup.select_one('.footer-col:nth-of-type(2)')
     footer.clear()
-    footer.append(BeautifulSoup('<h4>Explore</h4>' + ''.join(anchor(dest,label,path) for dest,label in [('blogs.html','Blog'),('resources/index.html','Resources'),('guides/index.html','Guides'),('resources/tools.html','Tools & Assessments'),('resources/linkedin-posts.html','LinkedIn Posts'),('resources/media.html','Media')]), 'html.parser'))
+    footer.append(BeautifulSoup('<h4>Explore</h4>' + ''.join(anchor(dest,label,path) for dest,label in [('blogs.html','Blog'),('resources/index.html','Resources'),('guides/index.html','Guides & Tools'),('resources/linkedin-posts.html','LinkedIn Posts'),('resources/media.html','Media')]), 'html.parser'))
     (ROOT / path).write_text(str(soup).rstrip() + '\n')
 
 def identity():

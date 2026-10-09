@@ -4,15 +4,15 @@ Updated October 9, 2026. GitHub concept only. No live Framer changes.
 
 ## Agreed structure and page roles
 
-Blog remains a separate top-level section, as requested. Resources contains Guides, Tools & Assessments, LinkedIn Posts, and Media. About and Contact are distinct destinations. Their placement alone is not a measured search or AI-citation benefit.
+Blog remains a separate top-level section, as requested. The agreed Resources structure is Guides & Tools, LinkedIn Posts, and Media. The combined library is implemented at `guides/index.html`; the old tools entry links to it without repeating the catalog. The table records current routes and their roles. About and Contact are distinct destinations. Their placement alone is not a measured search or AI-citation benefit.
 
 | Section | Job | Concept destination |
 |---|---|---|
 | Home | Position the firm and direct the next step | `index.html` |
 | Services | Explain responsibilities, scope, possible outputs, and relevant situations | `services.html` and six service pages |
 | Resources | Connect founder questions to resources and formats | `resources/index.html` |
-| Guides | Substantial frameworks with evidence, decisions, and next steps | `guides/index.html` and seven existing guide URLs |
-| Tools & Assessments | Interactive work within reviewed guide concepts | `resources/tools.html`; original exercises retain their URLs |
+| Guides & Tools | Eight distinct frameworks, embedded reviews, assessments, and a builder, with format labels | `guides/index.html`; original detail URLs remain stable |
+| Legacy tools entry | Direct existing links to the combined library | `resources/tools.html`; no second resource catalog |
 | LinkedIn Posts | A feed-style selection of Charles's published public posts | `resources/linkedin-posts.html` |
 | Media | Charles's confirmed podcast appearances | `resources/media.html` |
 | Blog | Focused explanatory articles supporting related guides/services | `blogs.html`; six topics and fifteen existing article concepts |
@@ -41,15 +41,15 @@ A typical path is article or public post → relevant guide/exercise → specifi
 `tools/content-architecture.csv` inventories the 45 current HTML pages by section, topic, role, and review state. It is a routing/content inventory, not a factual sign-off on legacy drafts.
 
 - Seven curated guides retain their original destinations and distinct framework roles.
-- The tool collection links to five experiences: Board Deck Structure Builder, Scorecard, Series A checklist, venture-debt checklist, and cash-review worksheet. Four older calculator/tool prototypes remain unpromoted.
+- The combined library lists eight resources once, distinguishing guides, embedded checklists/worksheets, assessment, and builder. Four older calculator/tool prototypes remain unpromoted.
 - The Finance Diagnostic overlaps the Scorecard; Fundraise Readiness overlaps Series A diligence; CFO Fit Calculator overlaps the CFO decision guide. Decide whether each has a distinct job before promoting it.
 - Runway Modeler requires assumption, formula, boundary, and interpretation review. Board Deck Builder now has a distinct board-meeting preparation role: decision, recommendation, evidence, assumptions, ownership, and follow-up. Its wording remains a concept for firm review.
 - Fifteen existing article concepts now have one catalog at `blogs.html`, grouped under the same six topics as Resources. The Scorecard is represented as a guide/tool rather than a Blog listing. `blog/index.html` is a legacy entry path linking to the canonical catalog, without a second article list. All existing detail URLs remain stable.
 - CFO timing, CFO-versus-VP, and bookkeeper/controller/CFO articles overlap the decision guide. Assign a narrow question to each or consolidate. Cash forecast articles overlap the cash guide; separate explanation from the working review. The board-reporting article links to the refined Board Deck Builder; the investor-pitch article continues to link to Series A diligence.
 
-## Proposed resource page standard — awaiting discussion
+## Agreed library direction and reference-page plan
 
-The user has asked to settle guide/tool distinctions, consolidation, and page standards before further builder refinements. [RESOURCE_PAGE_STANDARD.md](RESOURCE_PAGE_STANDARD.md) proposes one Guides & Tools library, format labels, one primary destination per resource, and a shared brand shell with guide and tool variants. This is a proposal; the current collection navigation has not been consolidated. The Board Builder’s narrow sections now share the outer grid’s left edge; other resource layouts remain for the subsequent standardization pass.
+The user agrees to one Guides & Tools subsection within Resources. Its navigation is implemented. The first guide and tool reference designs are ready for human review: Cash-Flow Mistakes & Forecast Review and Board Deck Builder. [RESOURCE_PAGE_STANDARD.md](RESOURCE_PAGE_STANDARD.md) now maps audit recommendations to both pages and separates content/SEO requirements, brand/layout foundations, component/interaction patterns, and page composition. Template sequences and visual rules remain provisional until these examples are refined and reviewed. The cash guide now has a direct answer, reading index, continuous framework and example, then optional worksheet. The builder places the working outline first, with optional review and a compact supporting method. Desktop interaction checks pass; actual narrow-width verification remains open because browser viewport requests do not change the rendered 1280px width. Broad page migration waits for that verification and batched human review.
 
 ## Tool role decisions
 
@@ -59,9 +59,9 @@ The user has asked to settle guide/tool distinctions, consolidation, and page st
 | Fundraise Readiness Checklist | Consolidate into Series A Diligence Readiness | Same evidence/readiness task; refine one checklist rather than introduce competing readiness labels |
 | CFO Fit Calculator | Consolidate into the CFO decision guide | Staffing fit depends on work and ownership; an unverified score would duplicate or oversimplify that decision |
 | Cash Runway Scenario Modeler | Keep as a distinct unpromoted model concept | A calculation/scenario model has a different job from the cash evidence-review worksheet; formulas, assumptions and boundaries need review before use |
-| Board Deck Structure Builder | Expose as a distinct preparation concept in Tools & Assessments | Meeting focus and request type shape an outline; six evidence areas track follow-ups. No stage mandates, readiness rating, or automatic slide creation. Distinct from fundraising diligence |
+| Board Deck Structure Builder | Expose as a distinct preparation concept in Guides & Tools | Meeting focus and request type shape an outline; six evidence areas track follow-ups. No stage mandates, readiness rating, or automatic slide creation. Distinct from fundraising diligence |
 
-The refined Board Deck Builder is now exposed through Tools & Assessments and the Board topic in Resources. Four remaining prototype URLs remain available for reference; consolidation describes the future editorial/product direction. The builder retains its stable URL, uses the shared Home-derived shell, and links to board-reporting support and a topic-aware conversation. Only the fixed topic/source identifiers reach Contact; selections remain in memory.
+The refined Board Deck Builder is now exposed through Guides & Tools and the Board topic in Resources. Four remaining prototype URLs remain available for reference; consolidation describes the future editorial/product direction. The builder retains its stable URL, uses the shared Home-derived shell, and links to board-reporting support and a topic-aware conversation. Only the fixed topic/source identifiers reach Contact; selections remain in memory.
 
 `tools/board-builder-content.json` holds six core evidence sections and five focus modules (operating plan, cash commitment, revenue/customer dependence, financing, material miss). `tools/build_board_builder.py` builds static readable content, metadata, and the default outline; `assets/board-builder.js` changes the outline and transient follow-up list. Input versus decision-request framing does not determine governance approvals. Completing the review does not certify readiness. Stripe’s linked recurring-revenue explanation supports the metric distinctions; the preparation sequence is concept editorial judgment, not a validated board prediction. The local operator-reality guidance informed the focus on concise reporting, company-level evidence, and leader ownership. No fabricated client results, service delivery promises, or personal Charles authorship is included.
 
@@ -107,7 +107,7 @@ No automatic scraping, third-party feed subscription, embedded trackers, player 
 
 ## Route and template rules
 
-- Resources has its own hub; `guides/index.html` now means the guide collection.
+- Resources has its own hub; `guides/index.html` is the combined Guides & Tools library; `resources/tools.html` links to it without a second catalog.
 - Guide and article detail URLs are preserved. Blog is not moved under Resources.
 - Resource navigation, descriptive links, CollectionPage/ItemList data, and breadcrumbs connect the collections.
 - Native global Resources links, captured-page enhancement links, and Resources breadcrumbs point to the new hub. Original frozen capture modules stay unchanged.
@@ -116,13 +116,14 @@ No automatic scraping, third-party feed subscription, embedded trackers, player 
 
 ## Next manageable portions
 
-Work in the user’s agreed sequence:
+The user has refined the next sequence: develop and review one guide and one tool before extracting standards to apply across the library.
 
-1. **Architecture and strategy:** live-only Media, the separate Blog catalog, article/guide roles, topic relationships, and prototype consolidation decisions are now recorded. The Board Deck Builder’s question/evidence structure is now refined; the remaining tool overlaps and navigation prominence stay on the architecture backlog.
-2. **Content, copy, and messaging:** review legacy article evidence, refine guide drafts and service language, complete missing appearance URLs, and gather firm feedback on the Board Deck Builder’s meeting scope, evidence prompts, and ownership language.
-3. **Further visual design and interactivity:** assess navigation prominence, feed updates, filtering, search, and tool presentation after the structure and content are settled. Preserve live Home-derived Lora/Roboto typography and pine/stone/sage branding throughout. Add topic landing pages only when enough distinct resources justify useful synthesis.
+1. **Reference guide:** Cash-Flow Mistakes & Forecast Review. Refine the founder prompt and direct answer, content/evidence, worked example, reading layout, and optional worksheet together.
+2. **Reference tool:** Board Deck Builder. Refine the task, useful output, input/result relationship, supporting method, visual hierarchy, and core interaction states together.
+3. **Review and extract:** batch human feedback on the two complete pages, then document demonstrated shared foundations and guide/tool differences. The agreed combined library is implemented; actual narrow-width verification remains required before page-template migration.
+4. **Apply and extend:** adapt the reference patterns to the remaining resources according to their jobs and review each page’s copy/evidence. Revisit legacy articles, service wording, navigation prominence, and unpromoted model assumptions in manageable portions. Advanced filtering, feed automation, decorative motion, and new exports remain later product decisions.
 
-The live-only Media cleanup, Blog structure repair, and initial Board Deck Builder refinement are complete. Further visual design and interactivity remain deferred.
+The live-only Media cleanup, Blog structure repair, and initial Board Deck Builder refinement are complete. Useful visual hierarchy and core interaction design are part of the two reference-page exercises, while Home-derived branding and all live Framer boundaries remain intact. See the audit-to-page mapping, design layers, and completion criteria in RESOURCE_PAGE_STANDARD.md.
 
 ## Basis and measurement
 

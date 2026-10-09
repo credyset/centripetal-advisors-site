@@ -1,0 +1,79 @@
+/* Guide reference: existing Home type and palette, with a reading-first composition. */
+.ca-cash-guide-reference{--guide-gap:72px}
+.ca-cash-guide-reference .concept-hero{padding-block:72px}
+.ca-cash-guide-reference .ca-guide-opening{padding-top:30px;padding-bottom:64px}
+.ca-guide-breadcrumb{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13px;margin-bottom:48px;color:var(--sage)}
+.ca-guide-breadcrumb a{text-decoration:underline;text-underline-offset:4px;min-height:24px}
+.ca-guide-opening-grid{display:grid;grid-template-columns:minmax(0,760px) minmax(0,1fr);gap:var(--guide-gap);align-items:start}
+.ca-guide-opening-grid h2{font-size:40px;line-height:1.3;max-width:760px}
+.ca-guide-opening-grid .ca-guide-lead{font-size:20px;line-height:1.7;color:var(--pine)}
+.ca-guide-actions{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;margin-top:30px}
+.ca-guide-actions .ca-link{display:inline-flex;align-items:center;min-height:44px}
+.ca-guide-intro-note{border-left:1px solid #bac2b6;padding-left:28px}
+.ca-guide-intro-note ul{padding-left:18px;margin-top:0}
+.ca-guide-intro-note li{font-size:16px;margin-bottom:16px}
+.ca-guide-intro-note>p:last-child{font-size:14px;margin-top:28px;color:var(--muted)}
+.ca-cash-guide-reference .ca-guide-review-note{font-size:13px;color:var(--muted);margin:36px 0 0}
+.ca-guide-review-note a{text-decoration:underline;text-underline-offset:4px}
+.ca-cash-guide-reference .ca-guide-reading{padding-top:0;padding-bottom:40px}
+.ca-guide-reading-layout{display:grid;grid-template-columns:minmax(0,760px) minmax(0,1fr);gap:var(--guide-gap);align-items:start}
+.ca-guide-contents{grid-column:2;grid-row:1;position:sticky;top:120px;max-height:calc(100vh - 144px);overflow:auto}
+.ca-guide-contents nav{padding:24px 0;border-top:1px solid #bac2b6}
+.ca-guide-contents ol{list-style:decimal-leading-zero;padding-left:25px;margin:18px 0 28px}
+.ca-guide-contents li{font-size:15px;line-height:1.45;color:var(--sage);margin:0 0 4px}
+.ca-guide-contents a{color:var(--sage);display:block;padding:10px 0;text-decoration:underline;text-underline-offset:4px;font-size:15px;line-height:1.5}
+.ca-guide-contents .ca-print-button{margin-top:24px}
+.ca-guide-main{grid-column:1;grid-row:1;min-width:0}
+.ca-guide-chapter{padding:44px 0;border-top:1px solid #bac2b6;scroll-margin-top:110px}
+.ca-guide-chapter h2{font-size:34px;line-height:1.3}
+.ca-guide-chapter h3{font-size:24px;line-height:1.4;margin:28px 0 14px}
+.ca-guide-chapter .ca-guide-evidence{border-top:0;border-left:2px solid var(--sage);padding:20px 24px;background:var(--paper);margin-top:28px}
+.ca-guide-chapter .ca-guide-evidence p{font-size:16px}
+.ca-guide-chapter .ca-guide-evidence p:last-child{margin-bottom:0}
+.ca-guide-timing{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:28px 0}
+.ca-guide-timing>div{background:var(--stone);padding:24px}
+.ca-guide-timing h3{margin-top:0}
+.ca-guide-timing p:last-child{margin-bottom:0;font-size:16px}
+.ca-cash-guide-reference .ca-guide-worksheet{background:var(--paper);padding-block:64px}
+.ca-guide-worksheet .ca-review-options label{background:white}
+.ca-guide-worksheet .ca-review-options label:has(input:checked){border-color:var(--pine);background:var(--stone)}
+.ca-guide-worksheet .ca-review-field{margin-bottom:16px;padding-bottom:20px}
+.ca-guide-worksheet .ca-review-field legend{font-size:24px}
+.ca-guide-worksheet .ca-review-reference{display:inline-block;font-size:14px;margin-top:16px;min-height:28px}
+.ca-guide-worksheet .ca-guide-review-jump{font-size:15px;margin:0 0 32px}
+.ca-guide-section-label{grid-column:2;grid-row:1;border-top:1px solid #bac2b6;padding-top:24px;font-size:15px;color:var(--muted)}
+.ca-guide-questions h2{font-size:34px}
+.ca-guide-questions .ca-guide-sources{margin-top:40px}
+.ca-guide-related{font-size:15px;margin-top:36px!important}
+@media(max-width:1100px){.ca-cash-guide-reference{--guide-gap:40px}.ca-guide-opening-grid,.ca-guide-reading-layout{grid-template-columns:minmax(0,2.5fr) minmax(190px,1fr)}}
+@media(max-width:900px){
+ .ca-guide-opening-grid,.ca-guide-reading-layout{display:block}
+ .ca-guide-intro-note{margin-top:36px;max-width:760px}
+ .ca-guide-contents{position:static;max-height:none;margin-bottom:24px}
+ .ca-guide-contents nav{padding:20px 0}
+ .ca-guide-contents ol{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+ .ca-guide-section-label{display:none}
+ .ca-guide-main{max-width:760px}
+ .ca-guide-worksheet .ca-split{gap:32px}
+}
+@media(max-width:600px){
+ .ca-cash-guide-reference .concept-hero{padding-block:48px}
+ .ca-cash-guide-reference .ca-section{padding-inline:24px}
+ .ca-guide-breadcrumb{margin-bottom:32px;font-size:12px}
+ .ca-guide-opening-grid h2{font-size:30px}
+ .ca-guide-opening-grid .ca-guide-lead{font-size:18px}
+ .ca-guide-chapter{padding:32px 0}
+ .ca-guide-chapter h2,.ca-guide-questions h2{font-size:28px}
+ .ca-guide-chapter h3{font-size:22px}
+ .ca-guide-chapter .ca-guide-evidence{padding:18px}
+ .ca-guide-contents ol{display:block}
+ .ca-guide-timing{grid-template-columns:1fr;gap:16px}
+ .ca-guide-actions{align-items:flex-start;flex-direction:column;gap:14px}
+}
+@media print{
+ .ca-guide-opening-grid,.ca-guide-reading-layout{display:block}
+ .ca-guide-contents,.ca-guide-intro-note,.ca-guide-breadcrumb,.ca-guide-review-jump,.ca-guide-section-label{display:none}
+ .ca-guide-main{max-width:none}
+ .ca-guide-chapter{padding:18px 0}
+ .ca-guide-timing>div{background:white;border:1px solid #777}
+}

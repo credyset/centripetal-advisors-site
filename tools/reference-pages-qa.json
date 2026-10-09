@@ -1,0 +1,82 @@
+{
+  "recorded": "2026-10-09",
+  "scope": "GitHub concept reference pages and combined library; live Framer unchanged",
+  "audit_basis": [
+    "May 19 technical audit and action plan",
+    "August SEO/AI surfaceability overview",
+    "local seomachine AEO/GEO editorial patterns"
+  ],
+  "rendered_viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "guide": {
+    "mixed_status": "1 reviewed · 1 for follow-up · 3 not reviewed",
+    "followup_order": "Marked follow-up first; reviewed excluded; pending follows",
+    "all_reviewed": "5 reviewed; explicit completion is not verification",
+    "reset": "All five pending",
+    "keyboard": "ArrowRight selected follow-up and updated status",
+    "desktop_overflow": false,
+    "source_and_example": "Primary financial references retained; illustration labeled; no client outcomes"
+  },
+  "tool": {
+    "focuses_verified": [
+      "operating",
+      "cash",
+      "revenue",
+      "financing",
+      "miss"
+    ],
+    "outline": "Six core links preserved; focus-specific link/result changes",
+    "request_types": [
+      "input",
+      "decision"
+    ],
+    "mixed_status": "1 reviewed · 1 for follow-up · 4 not reviewed",
+    "followup_order": "Marked follow-up first; reviewed excluded; pending follows",
+    "all_reviewed": "Six reviewed; explicit no readiness verdict",
+    "reset": "Operating focus, input request, six pending",
+    "keyboard": "ArrowDown changed discussion to cash; Enter collapsed native review disclosure",
+    "desktop_overflow": false
+  },
+  "library": {
+    "unique_resources": 8,
+    "formats": [
+      "Guide",
+      "Guide with checklist",
+      "Guide with worksheet",
+      "Assessment",
+      "Builder"
+    ],
+    "legacy_tools": "Entry to combined library, no duplicated catalog",
+    "blog": "Separate top-level destination",
+    "desktop_overflow": false
+  },
+  "static_checks": {
+    "html_pages": 45,
+    "local_urls": 1961,
+    "sitemap_entries": 24,
+    "site_hygiene": "passed",
+    "home_baseline": "passed; original frozen modules unchanged",
+    "foundations": "passed; historical Home widths and Scorecard boundaries, not new reference-page mobile proof",
+    "javascript_syntax": "passed",
+    "rebuild_stability": "passed",
+    "reference_style_isolation": "passed"
+  },
+  "static_bytes": {
+    "guides/saas-cash-flow-mistakes.html": 26969,
+    "guides/tools/board-deck-builder.html": 35142,
+    "assets/cash-guide-reference.css": 5416,
+    "assets/cash-review.js": 1594,
+    "assets/board-builder.css": 4363,
+    "assets/board-builder.js": 3141
+  },
+  "limits": [
+    "390×844 viewport request accepted by browser but actual page remained 1280×720; no actual mobile pass claimed",
+    "CSS narrow-width treatment implemented but rendered mobile verification remains outstanding",
+    "Static payload sizes are not measured LCP, CLS, INP, Lighthouse, or full-network performance",
+    "Print dialog/output not verified in this batch",
+    "Search, conversion, and AI-citation outcomes not measured; staging remains noindex",
+    "Framework and wording remain concept content for firm review; standards remain provisional"
+  ]
+}

@@ -8,3 +8,42 @@
 
 /* Narrow prose shares the outer page grid rather than centering independently. */
 .ca-board-reading{margin-left:0;margin-right:0}
+/* Tool reference: the working area precedes supporting reading. */
+.ca-board-tool-reference .concept-hero{padding-block:64px}
+.ca-board-tool-reference main>.ca-section:first-of-type{padding-top:28px;padding-bottom:40px}
+.ca-board-breadcrumb{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13px;color:var(--sage);margin-bottom:36px}
+.ca-board-breadcrumb a{text-decoration:underline;text-underline-offset:4px}
+.ca-board-purpose-grid{display:grid;grid-template-columns:minmax(0,760px) minmax(0,1fr);gap:64px}
+.ca-board-purpose-grid h2{font-size:36px}
+.ca-board-purpose-grid aside{border-left:1px solid #bac2b6;padding-left:28px;font-size:15px}
+.ca-board-scope{font-size:15px;color:var(--muted)}
+.ca-board-utility{display:flex;align-items:center;flex-wrap:wrap;gap:16px 28px;border-top:1px solid #bac2b6;padding-top:20px;margin-top:28px}
+.ca-board-utility a{font-size:14px;color:var(--sage);text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+.ca-board-tool-reference .ca-board-builder{background:var(--paper);padding-block:56px}
+.ca-board-tool-reference .ca-board-builder h2{font-size:40px}
+.ca-board-tool-reference .ca-board-builder .ca-split{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px}
+.ca-board-tool-reference .ca-board-builder .ca-review-options{display:grid;grid-template-columns:1fr}
+.ca-board-tool-reference .ca-board-builder .ca-review-options label{background:white}
+.ca-board-tool-reference .ca-board-builder .ca-review-options label:has(input:checked){background:var(--stone);border-color:var(--pine)}
+.ca-board-tool-reference .ca-review-field legend{font-size:24px}
+.ca-board-outline{list-style:decimal-leading-zero;margin-block:20px}
+.ca-board-outline li{border:0;margin:0;padding:0}
+.ca-board-outline a{padding:8px 0;font-size:17px}
+.ca-board-checklist{margin-top:28px}
+.ca-board-checklist>summary{font-size:17px}
+.ca-board-checklist>.ca-review-field:first-of-type{margin-top:32px}
+.ca-board-tool-reference .ca-review-panel{padding:32px}
+.ca-board-tool-reference .ca-review-panel [role=status]{font-size:14px}
+.ca-board-tool-reference .ca-review-panel h3{font-size:27px}
+.ca-board-tool-reference .ca-review-panel details{border-color:#78956e;padding-block:16px}
+.ca-board-tool-reference .ca-review-panel summary{color:var(--stone);font-size:15px}
+.ca-board-tool-reference .ca-review-panel [data-board-reset]{margin-top:20px}
+.ca-board-evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 64px}
+.ca-board-evidence-item{border-top:1px solid #bac2b6;padding-top:24px;min-width:0}
+.ca-board-evidence-item h3{font-size:25px;line-height:1.4}
+.ca-board-evidence-item p{font-size:16px}
+.ca-board-evidence-item details{padding:0;border:0;border-top:1px solid #bac2b6;border-radius:0;margin-top:24px}
+.ca-board-evidence-item summary{font-size:15px;padding-block:16px}
+@media(max-width:900px){.ca-board-purpose-grid{grid-template-columns:1fr;gap:28px}.ca-board-purpose-grid aside{max-width:760px}.ca-board-tool-reference .ca-board-builder .ca-split{grid-template-columns:1fr;gap:32px}.ca-board-evidence-grid{grid-template-columns:1fr;gap:32px}}
+@media(max-width:600px){.ca-board-tool-reference .concept-hero{padding-block:48px}.ca-board-tool-reference .ca-section{padding-inline:24px}.ca-board-purpose-grid h2{font-size:30px}.ca-board-tool-reference .ca-board-builder h2{font-size:30px}.ca-board-tool-reference .ca-review-panel{padding:24px}.ca-board-evidence-item h3{font-size:23px}.ca-board-utility{gap:4px 20px}}
+@media print{.ca-board-utility,.ca-board-breadcrumb{display:none}.ca-board-purpose-grid,.ca-board-evidence-grid,.ca-board-tool-reference .ca-board-builder .ca-split{display:block}.ca-board-tool-reference .ca-review-panel summary{color:#111}.ca-board-evidence-item{break-inside:avoid}}

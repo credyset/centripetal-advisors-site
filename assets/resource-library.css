@@ -15,5 +15,5 @@
 .ca-section .ca-media-item h3{font-size:32px}
 @media(max-width:800px){.ca-resource-nav{padding:16px 24px}.ca-resource-nav .ca-inner{gap:4px 18px}.ca-media-item{grid-template-columns:1fr;gap:24px}.ca-media-show{min-height:180px;max-width:400px}.ca-section .ca-media-item h3,.ca-section .ca-feed-item h3{font-size:28px}}
 
-.ca-resource-formats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ca-resource-formats{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:800px){.ca-resource-formats{grid-template-columns:1fr}}
