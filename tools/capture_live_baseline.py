@@ -24,7 +24,7 @@ def clean(source,filename):
     source=re.sub(r'<link\s+rel="canonical"\s+href="[^"]*"[^>]*>',f'<link rel="canonical" href="{canonical}">',source)
     source=re.sub(r'(<meta\s+property="og:url"\s+content=")[^"]*',r'\g<1>'+canonical,source)
     # Run the preview boundary early, before the published rendering bundle loads.
-    source=source.replace('</head>','<meta name="robots" content="noindex, follow">\n<script src="assets/home-baseline.js"></script>\n</head>',1)
+    source=source.replace('</head>','<meta name="robots" content="noindex, follow">\n<script src="assets/home-baseline.v2.js"></script>\n</head>',1)
     return '\n'.join(line.rstrip() for line in source.splitlines())+'\n'
 manifest={'source':'https://centripetaladvisors.com','captured':datetime.now().astimezone().isoformat(timespec='seconds'),'scope':'Published visual baseline; production analytics/editor bootstrap omitted; preview forms do not submit.','pages':[]}
 for route,filename in PAGES.items():

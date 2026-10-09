@@ -29,7 +29,7 @@ The existing published responsive behavior, heading duplication, proof figures, 
 
 ```sh
 python3 -m http.server 8765 --bind 127.0.0.1
-node --check assets/home-baseline.js
+node --check assets/home-baseline.v2.js
 python3 tools/check_baseline.py
 ```
 

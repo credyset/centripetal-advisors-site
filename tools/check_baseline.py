@@ -16,7 +16,7 @@ class Inspect(HTMLParser):
 for item in manifest['pages']:
     p=ROOT/item['file'];s=p.read_text();ins=Inspect();ins.feed(s)
     assert ins.robot==['noindex, follow'],p
-    assert 'assets/home-baseline.js' in ins.local,p
+    assert 'assets/home-baseline.v2.js' in ins.local,p
     for src in ins.local:assert (p.parent/src).exists(),(p,src)
     assert 'googletagmanager.com' not in s,p
     assert 'events.framer.com/script' not in s,p
