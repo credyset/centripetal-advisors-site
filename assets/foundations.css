@@ -84,7 +84,7 @@
 .ca-score-summary tbody th{font-weight:400}
 .ca-score-summary .ca-print-button{color:#ddd8cd;border-color:#a3b39a}
 .ca-native .site-nav-links a{min-height:44px;display:inline-flex!important;align-items:center}
-.ca-native .site-nav-links a.site-nav-cta{background:#ddd8cd;color:#243221!important}
+.ca-native .site-nav-links a.site-nav-cta{background:#ddd8cd;color:#243221!important;padding:12px 20px;justify-content:center}
 .ca-native .cta-eyebrow,.ca-native .about-eyebrow,.ca-native .testimonials-eyebrow{color:#ddd8cd}
 .ca-native .portrait-title,.ca-native .testimonial-brand,.ca-native .cta-url{color:#bdcbb5}
 .ca-native .site-footer .footer-tagline{color:#ddd8cd}
