@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-09",
+  "scope": "One-guide batch: Cash-Flow Mistakes & Forecast Review",
+  "browser": "Codex in-app browser",
+  "confirmed_viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "checks": {
+    "default": "0 reviewed, 0 follow-up, 5 pending",
+    "complete": "5 reviewed, no open list, explicit self-reported review message",
+    "reset": "All five inputs return to pending; list restored",
+    "mixed": "1 reviewed, 1 follow-up, 3 pending; follow-up first, reviewed omitted",
+    "keyboard": "ArrowLeft changes pending to follow-up; Space selects Reviewed",
+    "anchor": "Review list Collection dates link changes hash and focuses collections heading",
+    "faq": "Runway question opens; explains worksheet does not calculate runway or readiness",
+    "overflow": "No horizontal overflow at confirmed 1280 width",
+    "contact": "Cash-runway topic, one exposed H1, correct source return link, no worksheet values in URL",
+    "preview": "Add prompts works; Preview message displays explicit not-sent/not-saved notice",
+    "reload": "Fresh page restores defaults; current versioned guide assets loaded",
+    "sidebar": "Static position; avoids pinning a tall review list beyond the viewport"
+  },
+  "limitations": [
+    "Viewport override returned without effect. All attempted sizes remained 1280x720; those attempts are not responsive evidence.",
+    "Phone/tablet visual layout and mobile-menu checks for this new guide remain unverified. CSS inherits shared responsive navigation and includes single-column worksheet breakpoints.",
+    "Printed PDF pagination, real assistive technology, measured search/conversion/AI-citation effects, and firm factual approval remain unverified."
+  ]
+}

@@ -26,7 +26,8 @@
     'guide-venture-debt-readiness':['Venture Debt Readiness Checklist','guides/venture-debt-readiness.html'],
     'guide-treasury-hygiene':['Treasury Hygiene','guides/treasury-hygiene.html'],
     'guide-do-i-need-a-fractional-cfo':['Do I Need a Fractional CFO?','guides/do-i-need-a-fractional-cfo.html'],
-    'guide-first-90-days-after-raise':['First 90 Days After Your Raise','guides/first-90-days-after-raise.html']
+    'guide-first-90-days-after-raise':['First 90 Days After Your Raise','guides/first-90-days-after-raise.html'],
+    'guide-saas-cash-flow-mistakes':['Cash-Flow Mistakes & Forecast Review','guides/saas-cash-flow-mistakes.html']
   };
   const params=new URLSearchParams(location.search);
   const has=(object,key)=>Object.prototype.hasOwnProperty.call(object,key);

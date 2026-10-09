@@ -1,0 +1,42 @@
+/* Guide treatment derived from the current Home-led concept palette and type. */
+.ca-guide-article{max-width:760px;margin:auto}
+.ca-guide-article h3{font-size:25px;margin:32px 0 14px}
+.ca-guide-article p{max-width:none}
+.ca-guide-answer{border-left:3px solid #4b6147;padding:8px 0 8px 28px;margin:36px 0}
+.ca-guide-answer p:last-child{margin-bottom:0}
+.ca-guide-evidence{padding-top:20px;border-top:1px solid #bac2b6;margin-top:28px}
+.ca-guide-example{padding:32px;background:#ddd8cd;margin:40px 0}
+.ca-guide-example h3{margin-top:0}
+.ca-guide-example dl>div{padding:18px 0;border-top:1px solid #a5ac9f}
+.ca-guide-example dt{font-weight:500;color:#243221;margin-bottom:8px}
+.ca-guide-example dd{margin:0}
+.ca-cash-review .ca-split{grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:48px;align-items:start}
+.ca-review-field{min-width:0;margin:0 0 28px;padding:24px 0;border:0;border-top:1px solid #a5ac9f}
+.ca-review-field legend{font:400 26px/1.35 Lora,Georgia,serif;color:#243221;padding:0 0 12px}
+.ca-review-field p{font-size:16px;margin:8px 0 18px}
+.ca-review-options{display:flex;gap:8px;flex-wrap:wrap}
+.ca-review-options label{display:flex;align-items:center;gap:10px;padding:12px;min-height:56px;cursor:pointer;background:#f2f2f2;border:1px solid #7c8b75;border-radius:4px;font-size:15px;line-height:1.5}
+.ca-review-options label:has(input:checked){background:#fff;border-color:#243221}
+.ca-review-options input{accent-color:#4b6147;width:18px;height:18px;flex:none;margin:0}
+.ca-review-panel{padding:32px;background:#243221;color:#ddd8cd}
+.ca-section .ca-review-panel h3{color:#ddd8cd;font-size:30px}
+.ca-review-panel p{font-size:15px;line-height:1.7}
+.ca-review-panel [role=status]{padding:18px 0;border-block:1px solid #78956e;margin-bottom:24px}
+.ca-review-panel ul{padding:0;list-style:none}
+.ca-review-panel li{border-bottom:1px solid #78956e;padding:0 0 18px;margin:0 0 18px}
+.ca-review-panel a{display:flex;align-items:center;min-height:44px;color:#ddd8cd;text-decoration:underline;text-underline-offset:4px}
+.ca-review-panel li span{display:block;font-size:13px;color:#bdcbb5}
+.ca-review-panel button{min-height:48px;padding:12px 18px;background:#ddd8cd;color:#243221;border:0;border-radius:6px;font:500 15px Roboto,Arial,sans-serif;cursor:pointer}
+.ca-cash-review [hidden]{display:none!important}
+.ca-guide-sources{font-size:15px;border-top:1px solid #bac2b6;margin-top:40px;padding-top:28px}
+.ca-guide-sources a{color:#4b6147;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.ca-cash-review .ca-split{grid-template-columns:1fr}.ca-review-panel{position:static}}
+@media(max-width:480px){.ca-guide-answer{padding-left:20px}.ca-guide-example,.ca-review-panel{padding:24px}.ca-review-options{display:grid;grid-template-columns:1fr}.ca-review-field legend{font-size:23px}}
+@media print{
+  .ca-review-panel{position:static;background:#fff;color:#111;border:1px solid #777}
+  .ca-review-panel button{display:none}
+  .ca-review-options label{background:#fff!important;border:1px solid #777;color:#111}
+  .ca-review-options label:has(input:checked){border:3px solid #111}
+  .ca-review-options label:has(input:checked)::after{content:'Selected';font-size:10px}
+  .ca-guide-answer,.ca-guide-example,.ca-review-field{break-inside:avoid}
+}
