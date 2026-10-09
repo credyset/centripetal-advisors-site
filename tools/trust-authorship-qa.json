@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-09",
+  "about": [
+    {
+      "contentsTargets": true,
+      "h1": 1,
+      "menuVisible": false,
+      "overflow": false,
+      "page": "/about.html",
+      "width": 320
+    },
+    {
+      "contentsTargets": true,
+      "h1": 1,
+      "menuVisible": false,
+      "overflow": false,
+      "page": "/about.html",
+      "width": 390
+    },
+    {
+      "contentsTargets": true,
+      "h1": 1,
+      "menuVisible": false,
+      "overflow": false,
+      "page": "/about.html",
+      "width": 768
+    },
+    {
+      "contentsTargets": true,
+      "h1": 1,
+      "menuVisible": false,
+      "overflow": false,
+      "page": "/about.html",
+      "width": 1024
+    },
+    {
+      "contentsTargets": true,
+      "h1": 1,
+      "menuVisible": true,
+      "overflow": false,
+      "page": "/about.html",
+      "width": 1440
+    }
+  ],
+  "guides": [
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/saas-finance-scorecard.html",
+      "width": 320
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/saas-finance-scorecard.html",
+      "width": 1024
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/series-a-diligence-readiness.html",
+      "width": 320
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/series-a-diligence-readiness.html",
+      "width": 1024
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/venture-debt-readiness.html",
+      "width": 320
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/venture-debt-readiness.html",
+      "width": 1024
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/treasury-hygiene.html",
+      "width": 320
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/treasury-hygiene.html",
+      "width": 1024
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/do-i-need-a-fractional-cfo.html",
+      "width": 320
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/do-i-need-a-fractional-cfo.html",
+      "width": 1024
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/first-90-days-after-raise.html",
+      "width": 320
+    },
+    {
+      "authorHref": "../about.html",
+      "byline": "By Centripetal AdvisorsConcept updated October 9, 2026",
+      "h1": 1,
+      "overflow": false,
+      "page": "/guides/first-90-days-after-raise.html",
+      "width": 1024
+    }
+  ],
+  "checks": {
+    "authorLinkNavigates": true,
+    "founderAnchorFocus": true,
+    "founderImageLoaded": true,
+    "mobileMenuEscape": true
+  }
+}
