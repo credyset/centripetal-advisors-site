@@ -1,6 +1,6 @@
 {
   "recorded": "2026-10-09",
-  "scope": "Hybrid LinkedIn feed; GitHub concept only",
+  "scope": "Hybrid LinkedIn feed with always-visible, unboxed previews; GitHub concept only",
   "recent_posts": 7,
   "earlier_selections": 3,
   "order": "User-supplied sequence; no inferred absolute publication dates",
@@ -19,15 +19,19 @@
     "height": 720
   },
   "interaction_checks": {
-    "initial_iframes": 0,
-    "keyboard": "Enter opens and closes native summary",
-    "reopen": "First preview reused its one existing iframe",
+    "initial_iframes": 7,
+    "disclosure_controls": 0,
+    "outer_card_border": "0px on all seven entries",
+    "outer_card_padding": "0px on all seven entries",
+    "outer_card_background": "Transparent on all seven entries",
+    "native_previews": "All seven rendered without expanding a disclosure; Charles visible in each, Chris Ellis attribution retained in the seventh",
+    "loading": "Browser-native lazy loading on all seven static iframes",
     "titles": "All seven iframe titles unique and descriptive",
-    "fallback": "Original post remains linked in each card and expanded panel",
+    "fallback": "Verified original post remains linked above each preview",
     "no_horizontal_overflow": true,
     "console_errors": 0
   },
   "mobile_limit": "390×844 requested; actual browser remained 1280×720. Responsive CSS implemented, rendered mobile verification outstanding.",
   "measurement_limits": "No Lighthouse, Web Vitals, search, or AI-citation gains claimed",
-  "privacy_and_update": "No personal inputs, automatic ingestion, account access, or publishing to LinkedIn. Native frames load after expansion; reopening reuses the existing frame."
+  "privacy_and_update": "No personal inputs, automatic ingestion, account access, or publishing to LinkedIn. Seven always-visible static frames use browser-native lazy loading; requests no longer depend on a disclosure interaction."
 }

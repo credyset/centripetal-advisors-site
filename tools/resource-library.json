@@ -1,6 +1,6 @@
 {
   "reviewed": "2026-10-09",
-  "linkedin_mode": "Hybrid curated feed; branded summaries with on-demand user-supplied LinkedIn embeds. No automatic ingestion.",
+  "linkedin_mode": "Hybrid curated feed; branded summaries with always-visible user-supplied LinkedIn embeds, loaded lazily by the browser. No automatic ingestion.",
   "linkedin_profile": "https://www.linkedin.com/in/solomoncharles/",
   "posts": [
     {
