@@ -73,6 +73,9 @@
 .ca-contact-context .ca-context-status:empty{display:none}
 #main form:has(#conversation-context) label .framer-text{color:#444!important}
 #conversation-form{scroll-margin-top:110px}
+/* The captured Contact frames used fixed heights for the shorter original form.
+   Let only the contextual Contact branch grow with prompts and draft fields. */
+#main :is(form,div):has(#conversation-context){height:auto!important;min-height:0!important;flex-shrink:0!important}
 #main form [data-preview-notice]{color:#243221;font:400 15px/1.6 Roboto,Arial,sans-serif;background:#f2f2f2;padding:16px;border:1px solid #bac2b6;border-radius:6px}
 @media(max-width:480px){.ca-working-decision{padding:24px}.ca-contact-context{padding:20px}.ca-contact-context button{width:100%}}
 @media(max-width:800px){.ca-founder{grid-template-columns:1fr;gap:32px}.ca-founder-photo{max-width:180px}.ca-resource-byline span{width:100%;margin-left:0}}

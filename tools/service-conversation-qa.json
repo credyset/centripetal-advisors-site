@@ -313,11 +313,63 @@
     "unknownTopicFallsBackToGeneral": true,
     "unknownSourceHidden": true,
     "previewNoticeVisible": true,
-    "latestRuntimeWarnings": []
+    "latestRuntimeWarnings": [],
+    "expandedFormRemainsInsideAllClippingAncestors": true
   },
   "limitations": [
     "No production form endpoint or analytics enabled.",
     "No measured search-ranking, conversion, field-performance, or AI-citation outcomes.",
     "Original baseline geometry checks are historical; fresh checks here target service/contact layouts."
+  ],
+  "expandedContactContainment": [
+    {
+      "clippingAncestors": [],
+      "formContainsButton": true,
+      "open": true,
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "clippingAncestors": [],
+      "formContainsButton": true,
+      "open": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "clippingAncestors": [],
+      "formContainsButton": true,
+      "open": true,
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "clippingAncestors": [],
+      "formContainsButton": true,
+      "open": true,
+      "overflow": false,
+      "width": 900
+    },
+    {
+      "clippingAncestors": [],
+      "formContainsButton": true,
+      "open": true,
+      "overflow": false,
+      "width": 1024
+    },
+    {
+      "clippingAncestors": [],
+      "formContainsButton": true,
+      "open": true,
+      "overflow": false,
+      "width": 1280
+    },
+    {
+      "clippingAncestors": [],
+      "formContainsButton": true,
+      "open": true,
+      "overflow": false,
+      "width": 1440
+    }
   ]
 }
