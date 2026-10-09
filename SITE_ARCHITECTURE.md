@@ -47,6 +47,10 @@ A typical path is article or public post → relevant guide/exercise → specifi
 - Fifteen existing article concepts now have one catalog at `blogs.html`, grouped under the same six topics as Resources. The Scorecard is represented as a guide/tool rather than a Blog listing. `blog/index.html` is a legacy entry path linking to the canonical catalog, without a second article list. All existing detail URLs remain stable.
 - CFO timing, CFO-versus-VP, and bookkeeper/controller/CFO articles overlap the decision guide. Assign a narrow question to each or consolidate. Cash forecast articles overlap the cash guide; separate explanation from the working review. The board-reporting article links to the refined Board Deck Builder; the investor-pitch article continues to link to Series A diligence.
 
+## Proposed resource page standard — awaiting discussion
+
+The user has asked to settle guide/tool distinctions, consolidation, and page standards before further builder refinements. [RESOURCE_PAGE_STANDARD.md](RESOURCE_PAGE_STANDARD.md) proposes one Guides & Tools library, format labels, one primary destination per resource, and a shared brand shell with guide and tool variants. This is a proposal; the current collection navigation has not been consolidated. The Board Builder’s narrow sections now share the outer grid’s left edge; other resource layouts remain for the subsequent standardization pass.
+
 ## Tool role decisions
 
 | Existing prototype | Architecture decision | Reason / remaining review |

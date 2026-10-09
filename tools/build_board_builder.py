@@ -32,7 +32,7 @@ for a in soup.select('.site-nav a'):
  if a.get_text(strip=True) in ['Blogs','Blog']:a.string='Blog'
  if a.get_text(strip=True)=='Resources':a['aria-current']='page'
 def section(content,stone=False,wide=False):
- return '<section class="ca-section'+(' ca-stone' if stone else '')+'"><div class="'+('ca-inner' if wide else 'ca-guide-article')+'">'+content+'</div></section>'
+ return '<section class="ca-section'+(' ca-stone' if stone else '')+'"><div class="ca-inner">'+('' if wide else '<div class="ca-guide-article ca-board-reading">')+content+('' if wide else '</div>')+'</div></section>'
 body='<header class="concept-hero"><div class="concept-hero-inner"><p class="eyebrow">Board &amp; investor reporting · Preparation tool</p><h1>Board Deck Structure Builder</h1><p>Build the meeting around the decision, not the slide count.</p></div></header>'
 body+='<nav class="ca-reader-nav" aria-label="On this page"><div class="ca-reader-inner"><p class="ca-reader-label">On this page</p><ul><li><a href="#purpose">Purpose</a></li><li><a href="#builder">Build your outline</a></li><li><a href="#decision">Evidence framework</a></li><li><a href="#questions">Questions &amp; sources</a></li></ul><button class="ca-print-button" hidden type="button">Print this page</button></div></nav>'
 body+='<div class="ca-resource-byline"><div class="ca-reader-inner">Working concept · Framework and wording for firm review.</div></div>'
@@ -59,5 +59,5 @@ body+=section('<p class="ca-eyebrow">Connect the preparation to your company</p>
 soup.main.clear();soup.main.append(BeautifulSoup(body,'html.parser'))
 node=soup.new_tag('script',type='application/json',id='board-builder-data');node.string=json.dumps(DATA,ensure_ascii=False).replace('<','\\u003c');soup.body.append(node)
 script=soup.new_tag('script',src='../../assets/board-builder.js?v=20261009-1',defer='');soup.body.append(script)
-css=soup.new_tag('link',href='../../assets/board-builder.css?v=20261009-1',rel='stylesheet');soup.head.append(css)
+css=soup.new_tag('link',href='../../assets/board-builder.css?v=20261009-2',rel='stylesheet');soup.head.append(css)
 (ROOT/PATH).write_text(str(soup).rstrip()+'\n')

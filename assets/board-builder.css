@@ -5,3 +5,6 @@
 .ca-board-builder [data-board-focus-result]{border-top:1px solid #78956e;padding-top:16px}
 .ca-board-builder [data-board-review-result]{border-top:1px solid #78956e;margin-top:28px;padding-top:16px}
 .ca-board-builder [data-board-review-result] h3{margin-top:0}
+
+/* Narrow prose shares the outer page grid rather than centering independently. */
+.ca-board-reading{margin-left:0;margin-right:0}

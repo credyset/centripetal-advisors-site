@@ -9,7 +9,13 @@
     "body_font": "Roboto, Arial, sans-serif",
     "primary_navigation_precedes_main": true,
     "unresolved_local_anchors": [],
-    "focus_paths": ["Operating plan & priorities", "Cash & a spending commitment", "Revenue & customer dependence", "Financing & the capital plan", "A material miss or emerging issue"],
+    "focus_paths": [
+      "Operating plan & priorities",
+      "Cash & a spending commitment",
+      "Revenue & customer dependence",
+      "Financing & the capital plan",
+      "A material miss or emerging issue"
+    ],
     "focus_paths_verified": "Each changes the focus module and outline entry; all six core sections and review states remain intact",
     "request_type_verified": "Decision request changes opener; formal approval requirements are not inferred",
     "mixed_review_verified": "1 reviewed, 1 follow-up, 4 pending; follow-up row first",
@@ -19,5 +25,21 @@
     "responsive_preview_limitation": "Requests for 320, 768 and 1440 widths did not change the actual 1280px browser viewport. Narrow-width visual validation remains outstanding; no responsive pass claimed."
   },
   "static_checks": "45 pages, 1980 URLs, 24 sitemap entries pass site validation. Frozen Home modules and historical baseline checks pass; these are not fresh Home visual checks.",
-  "remaining_review": ["Firm wording and operating fit", "Whether a later downloadable deck or worksheet adds value", "Narrow-width visual validation", "No measured SEO, conversion or AI-citation outcome"]
+  "remaining_review": [
+    "Firm wording and operating fit",
+    "Whether a later downloadable deck or worksheet adds value",
+    "Narrow-width visual validation",
+    "No measured SEO, conversion or AI-citation outcome"
+  ],
+  "alignment_correction": {
+    "date": "2026-10-09",
+    "actual_viewport_width": 1280,
+    "hero_left": 60,
+    "purpose_left": 60,
+    "builder_left": 60,
+    "framework_left": 60,
+    "prose_width": 760,
+    "horizontal_overflow": false,
+    "scope": "Board Builder reading sections nested in shared outer grid; other resource templates unchanged"
+  }
 }
