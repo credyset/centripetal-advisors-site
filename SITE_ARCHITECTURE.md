@@ -30,7 +30,7 @@ Topics describe the founder's question; formats describe the experience. The hub
 | Finance leadership | Finance Scorecard; Do I Need a Fractional CFO? | Fractional CFO for SaaS |
 | Fundraising readiness | Series A diligence; First 90 Days | Fundraising readiness |
 | Cash & runway | Cash-Flow Mistakes review; First 90 Days | Cash-flow & runway planning |
-| Board & investor reporting | Existing article/tool drafts require review; hub currently links to service | Board & investor reporting |
+| Board & investor reporting | Board Deck Structure Builder; related article concept remains pending content review | Board & investor reporting |
 | Venture debt | Venture Debt Readiness checklist | Venture debt readiness |
 | Treasury & finance operations | Treasury Hygiene; related cash review | Treasury & finance operations |
 
@@ -41,11 +41,11 @@ A typical path is article or public post → relevant guide/exercise → specifi
 `tools/content-architecture.csv` inventories the 45 current HTML pages by section, topic, role, and review state. It is a routing/content inventory, not a factual sign-off on legacy drafts.
 
 - Seven curated guides retain their original destinations and distinct framework roles.
-- The tool collection links to four existing experiences: Scorecard, Series A checklist, venture-debt checklist, and cash-review worksheet. It does not promote five older calculator/tool prototypes.
+- The tool collection links to five experiences: Board Deck Structure Builder, Scorecard, Series A checklist, venture-debt checklist, and cash-review worksheet. Four older calculator/tool prototypes remain unpromoted.
 - The Finance Diagnostic overlaps the Scorecard; Fundraise Readiness overlaps Series A diligence; CFO Fit Calculator overlaps the CFO decision guide. Decide whether each has a distinct job before promoting it.
-- Runway Modeler requires assumption, formula, boundary, and interpretation review. Board Deck Builder requires its sharper investor-question angle and content review.
+- Runway Modeler requires assumption, formula, boundary, and interpretation review. Board Deck Builder now has a distinct board-meeting preparation role: decision, recommendation, evidence, assumptions, ownership, and follow-up. Its wording remains a concept for firm review.
 - Fifteen existing article concepts now have one catalog at `blogs.html`, grouped under the same six topics as Resources. The Scorecard is represented as a guide/tool rather than a Blog listing. `blog/index.html` is a legacy entry path linking to the canonical catalog, without a second article list. All existing detail URLs remain stable.
-- CFO timing, CFO-versus-VP, and bookkeeper/controller/CFO articles overlap the decision guide. Assign a narrow question to each or consolidate. Cash forecast articles overlap the cash guide; separate explanation from the working review. Board articles should support the future Board Deck Builder, rather than duplicate it.
+- CFO timing, CFO-versus-VP, and bookkeeper/controller/CFO articles overlap the decision guide. Assign a narrow question to each or consolidate. Cash forecast articles overlap the cash guide; separate explanation from the working review. The board-reporting article links to the refined Board Deck Builder; the investor-pitch article continues to link to Series A diligence.
 
 ## Tool role decisions
 
@@ -55,9 +55,11 @@ A typical path is article or public post → relevant guide/exercise → specifi
 | Fundraise Readiness Checklist | Consolidate into Series A Diligence Readiness | Same evidence/readiness task; refine one checklist rather than introduce competing readiness labels |
 | CFO Fit Calculator | Consolidate into the CFO decision guide | Staffing fit depends on work and ownership; an unverified score would duplicate or oversimplify that decision |
 | Cash Runway Scenario Modeler | Keep as a distinct unpromoted model concept | A calculation/scenario model has a different job from the cash evidence-review worksheet; formulas, assumptions and boundaries need review before use |
-| Board Deck Structure Builder | Keep as a distinct unpromoted preparation concept | Organize evidence around board decisions and anticipated questions; distinguish recurring board reporting from a fundraising pitch and its diligence |
+| Board Deck Structure Builder | Expose as a distinct preparation concept in Tools & Assessments | Meeting focus and request type shape an outline; six evidence areas track follow-ups. No stage mandates, readiness rating, or automatic slide creation. Distinct from fundraising diligence |
 
-No prototype is newly exposed through Tools & Assessments in this portion. Existing prototype URLs remain available for reference; consolidation describes the future editorial/product direction and does not delete source material. The Board Deck Builder is the next guide/tool architecture review.
+The refined Board Deck Builder is now exposed through Tools & Assessments and the Board topic in Resources. Four remaining prototype URLs remain available for reference; consolidation describes the future editorial/product direction. The builder retains its stable URL, uses the shared Home-derived shell, and links to board-reporting support and a topic-aware conversation. Only the fixed topic/source identifiers reach Contact; selections remain in memory.
+
+`tools/board-builder-content.json` holds six core evidence sections and five focus modules (operating plan, cash commitment, revenue/customer dependence, financing, material miss). `tools/build_board_builder.py` builds static readable content, metadata, and the default outline; `assets/board-builder.js` changes the outline and transient follow-up list. Input versus decision-request framing does not determine governance approvals. Completing the review does not certify readiness. Stripe’s linked recurring-revenue explanation supports the metric distinctions; the preparation sequence is concept editorial judgment, not a validated board prediction. The local operator-reality guidance informed the focus on concise reporting, company-level evidence, and leader ownership. No fabricated client results, service delivery promises, or personal Charles authorship is included.
 
 ## Article-versus-guide contract
 
@@ -76,7 +78,7 @@ The fifteen entries below are existing **concept drafts**, visibly marked as pen
 | After the Raise, Capital Structure Becomes an Operating Decision | How would another financing obligation change the post-raise operating plan? | `guides/first-90-days-after-raise.html` | `services/venture-debt-readiness.html` |
 | The 13-Week Cash Flow Forecast: What It Shows and What It Hides | What can a weekly cash view answer, and what depends on the longer-range plan? | `guides/saas-cash-flow-mistakes.html` | `services/cash-flow-runway-planning.html` |
 | Why Investors Don't Trust Your Forecast | Can a reader follow an assumption change through the forecast to a decision? | `guides/saas-cash-flow-mistakes.html` | `services/cash-flow-runway-planning.html` |
-| Board Reporting for Seed and Series A Companies | Which decision should the board package support at this meeting? | `guides/saas-finance-scorecard.html` | `services/board-investor-reporting.html` |
+| Board Reporting for Seed and Series A Companies | Which decision should the board package support at this meeting? | `guides/tools/board-deck-builder.html` | `services/board-investor-reporting.html` |
 | The Cash-Flow Signals Lenders Probe That a 13-Week Model Can Hide | Which obligations and receipt assumptions should accompany a lender cash model? | `guides/venture-debt-readiness.html` | `services/venture-debt-readiness.html` |
 | Treasury Controls Every SaaS Founder Should Have Before the Next Board Meeting | Can the team demonstrate who can move cash and how exceptions are checked? | `guides/treasury-hygiene.html` | `services/treasury-finance-operations.html` |
 | CARR vs ARR: When the Definition Matters | Which definition and contract timing explain the gap between contracted and live recurring revenue? | `guides/series-a-diligence-readiness.html` | `services/fundraising-readiness.html` |
@@ -112,11 +114,11 @@ No automatic scraping, third-party feed subscription, embedded trackers, player 
 
 Work in the user’s agreed sequence:
 
-1. **Architecture and strategy:** live-only Media, the separate Blog catalog, article/guide roles, topic relationships, and prototype consolidation decisions are now recorded. Next, review the Board Deck Builder’s question/evidence structure without launching a new calculator or changing the visual system.
-2. **Content, copy, and messaging:** review legacy article evidence, refine guide drafts and service language, complete missing appearance URLs, and review the Board Deck Builder’s content and assumptions.
+1. **Architecture and strategy:** live-only Media, the separate Blog catalog, article/guide roles, topic relationships, and prototype consolidation decisions are now recorded. The Board Deck Builder’s question/evidence structure is now refined; the remaining tool overlaps and navigation prominence stay on the architecture backlog.
+2. **Content, copy, and messaging:** review legacy article evidence, refine guide drafts and service language, complete missing appearance URLs, and gather firm feedback on the Board Deck Builder’s meeting scope, evidence prompts, and ownership language.
 3. **Further visual design and interactivity:** assess navigation prominence, feed updates, filtering, search, and tool presentation after the structure and content are settled. Preserve live Home-derived Lora/Roboto typography and pine/stone/sage branding throughout. Add topic landing pages only when enough distinct resources justify useful synthesis.
 
-The live-only Media cleanup and Blog structure repair are complete for this portion. Further visual design and interactivity remain deferred.
+The live-only Media cleanup, Blog structure repair, and initial Board Deck Builder refinement are complete. Further visual design and interactivity remain deferred.
 
 ## Basis and measurement
 

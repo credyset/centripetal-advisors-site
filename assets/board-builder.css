@@ -1,0 +1,7 @@
+/* Reuse the Home-derived guide worksheet treatment. */
+.ca-board-outline{padding-left:24px;margin:24px 0}
+.ca-board-outline li{padding:4px 0}
+.ca-board-outline a{display:block}
+.ca-board-builder [data-board-focus-result]{border-top:1px solid #78956e;padding-top:16px}
+.ca-board-builder [data-board-review-result]{border-top:1px solid #78956e;margin-top:28px;padding-top:16px}
+.ca-board-builder [data-board-review-result] h3{margin-top:0}

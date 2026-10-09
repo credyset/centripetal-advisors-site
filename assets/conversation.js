@@ -21,6 +21,7 @@
     'service-board-investor-reporting':['Board & Investor Reporting','services/board-investor-reporting.html'],
     'service-venture-debt-readiness':['Venture Debt Readiness','services/venture-debt-readiness.html'],
     'service-treasury-finance-operations':['Treasury & Finance Operations','services/treasury-finance-operations.html'],
+    'tool-board-deck-builder':['Board Deck Structure Builder','guides/tools/board-deck-builder.html'],
     'guide-saas-finance-scorecard':['SaaS Finance Scorecard','guides/saas-finance-scorecard.html'],
     'guide-series-a-diligence-readiness':['Series A Diligence Readiness','guides/series-a-diligence-readiness.html'],
     'guide-venture-debt-readiness':['Venture Debt Readiness Checklist','guides/venture-debt-readiness.html'],

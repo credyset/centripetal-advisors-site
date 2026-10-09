@@ -114,7 +114,7 @@
       "title": "Board Reporting for Seed and Series A Companies",
       "topic": "Board & investor reporting",
       "question": "Which decision should the board package support at this meeting?",
-      "guide": "guides/saas-finance-scorecard.html",
+      "guide": "guides/tools/board-deck-builder.html",
       "service": "services/board-investor-reporting.html",
       "role": "Recurring board decision support; supporting resource is the broader Scorecard until the Board Deck Builder is reviewed.",
       "editorial_state": "Concept draft; content and factual review pending",

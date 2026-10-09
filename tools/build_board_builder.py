@@ -1,0 +1,63 @@
+"""Build a board-meeting preparation concept using the existing native brand shell."""
+from pathlib import Path
+from urllib.parse import urlsplit
+from bs4 import BeautifulSoup
+import html, json, os
+ROOT=Path(__file__).resolve().parents[1]
+PATH='guides/tools/board-deck-builder.html'
+BASE='https://credyset.github.io/centripetal-advisors-site/'
+DATA=json.loads((ROOT/'tools/board-builder-content.json').read_text())
+e=lambda s:html.escape(s,quote=True)
+soup=BeautifulSoup((ROOT/'guides/saas-cash-flow-mistakes.html').read_text(),'html.parser')
+for node in soup.select('[href],[src]'):
+ for attr in ('href','src'):
+  value=node.get(attr)
+  if not value or value.startswith(('#','//')) or urlsplit(value).scheme:continue
+  p=urlsplit(value)
+  node[attr]=os.path.relpath((ROOT/'guides'/p.path).resolve(),(ROOT/PATH).parent)+('?' +p.query if p.query else '')+('#'+p.fragment if p.fragment else '')
+for node in soup.select('script[src*="cash-review"],.guide-editorial'):node.decompose()
+title='Board Deck Structure Builder | Centripetal Advisors'
+desc='Build a board-meeting outline around the decision, evidence, assumptions, and owners. Use the review list to organize follow-ups with your team.'
+soup.title.string=title
+for attr,key,value in [('name','description',desc),('property','og:title',title),('property','og:description',desc),('name','twitter:title',title),('name','twitter:description',desc),('property','og:url',BASE+PATH)]:
+ node=soup.find('meta',attrs={attr:key})
+ if node:node['content']=value
+soup.find('link',rel='canonical')['href']=BASE+PATH
+schema=json.loads(soup.find('script',type='application/ld+json').string)
+graph=[x for x in schema['@graph'] if x['@type'] in ['Organization','WebSite']]
+graph+=[{'@type':'WebPage','@id':BASE+PATH+'#page','name':title,'url':BASE+PATH,'description':desc,'isPartOf':{'@id':BASE+'#website'}},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':label,'item':BASE+dest} for i,(label,dest) in enumerate([('Home',''),('Resources','resources/index.html'),('Tools & Assessments','resources/tools.html'),('Board Deck Structure Builder',PATH)])]}]
+soup.find('script',type='application/ld+json').string=json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False)
+for a in soup.select('.site-nav a'):
+ a.attrs.pop('aria-current',None)
+ if a.get_text(strip=True) in ['Blogs','Blog']:a.string='Blog'
+ if a.get_text(strip=True)=='Resources':a['aria-current']='page'
+def section(content,stone=False,wide=False):
+ return '<section class="ca-section'+(' ca-stone' if stone else '')+'"><div class="'+('ca-inner' if wide else 'ca-guide-article')+'">'+content+'</div></section>'
+body='<header class="concept-hero"><div class="concept-hero-inner"><p class="eyebrow">Board &amp; investor reporting · Preparation tool</p><h1>Board Deck Structure Builder</h1><p>Build the meeting around the decision, not the slide count.</p></div></header>'
+body+='<nav class="ca-reader-nav" aria-label="On this page"><div class="ca-reader-inner"><p class="ca-reader-label">On this page</p><ul><li><a href="#purpose">Purpose</a></li><li><a href="#builder">Build your outline</a></li><li><a href="#decision">Evidence framework</a></li><li><a href="#questions">Questions &amp; sources</a></li></ul><button class="ca-print-button" hidden type="button">Print this page</button></div></nav>'
+body+='<div class="ca-resource-byline"><div class="ca-reader-inner">Working concept · Framework and wording for firm review.</div></div>'
+body+=section('<h2 id="purpose" tabindex="-1">A complete deck can still leave the decision unclear.</h2><p>Use this preparation framework to connect management’s recommendation to the evidence, the assumption that could change it, and the people who own the response. It is intended for a board meeting or operating update; a fundraising pitch and its diligence have a different job.</p><div class="ca-guide-answer"><p><strong>What you get:</strong> a working outline, discussion prompts, and a review list. Choose the main discussion and track what needs follow-up. Adapt the outline to your agenda and agreed reporting cadence.</p><p>Your selections stay on this page. Nothing is saved or submitted. The tool organizes preparation; it does not create presentation slides or assign a readiness score.</p></div><p><a class="ca-link" href="../../resources/tools.html">← Tools &amp; Assessments</a></p>')
+focus=DATA['focuses'][0]
+options=''.join(f'<label><input type="radio" name="board-focus" value="{f["id"]}"'+(' checked' if i==0 else '')+f'><span>{e(f["label"])}</span></label>' for i,f in enumerate(DATA['focuses']))
+fields='<fieldset class="ca-review-field"><legend>Main discussion</legend><p>Choose the focus to add to the outline. Every focus keeps the same core evidence framework.</p><div class="ca-review-options">'+options+'</div></fieldset>'
+fields+='<fieldset class="ca-review-field"><legend>What do you need from the board?</legend><p>Choose how to frame the opening request. This does not determine formal approval requirements.</p><div class="ca-review-options"><label><input type="radio" name="board-request" value="input" checked><span>Input on a recommendation</span></label><label><input type="radio" name="board-request" value="decision"><span>A decision on a proposal</span></label></div></fieldset>'
+fields+='<p><a class="ca-link" href="#board-outline">View working outline →</a></p><h3>Track the evidence review</h3><p>“Reviewed” records your check; it does not verify the evidence. Follow-ups remain visible even when the outline is complete.</p>'
+for s in DATA['sections']:
+ fields+=f'<fieldset class="ca-review-field" data-board-area="{s["id"]}" data-title="{e(s["title"])}"><legend>{e(s["title"])}</legend><p>{e(s["evidence"])}</p><div class="ca-review-options">'+''.join(f'<label><input type="radio" name="board-review-{s["id"]}" value="{value}"'+(' checked' if value=='pending' else '')+f'><span>{label}</span></label>' for value,label in [('reviewed','Reviewed'),('followup','Follow-up needed'),('pending','Not reviewed')])+'</div></fieldset>'
+outline=''
+for i,s in enumerate(DATA['sections']):
+ if i==2:outline+=f'<li data-board-focus-outline><a href="#focus-evidence">{e(focus["title"])}</a></li>'
+ outline+=f'<li><a href="#{s["id"]}">{e(s["title"])}</a></li>'
+result='<aside class="ca-review-panel" id="board-outline" tabindex="-1" aria-label="Your board meeting preparation"><h3>Your working outline</h3><p data-board-opening>Open with the recommendation, the alternatives, and the input you want from the board.</p><ol class="ca-board-outline">'+outline+'</ol><div data-board-focus-result><h3>'+e(focus['title'])+'</h3><p>'+e(focus['body'])+'</p><p><strong>Evidence to bring:</strong> '+e(focus['evidence'])+'</p><p><strong>Discussion prompt:</strong> '+e(focus['question'])+'</p></div><div data-board-review-result hidden><h3>Your follow-up list</h3><p role="status" aria-live="polite" data-board-status></p><ul data-board-followups></ul><p data-board-empty hidden>All six areas are marked reviewed. Keep the evidence, owners, and next review dates alongside the deck; completing this list is not a readiness verdict.</p><button type="button" data-board-reset>Reset outline &amp; review</button></div></aside>'
+body+='<section class="ca-section ca-cash-review ca-board-builder" data-board-builder><div class="ca-inner"><h2 id="builder" tabindex="-1">Organize the conversation and its evidence.</h2><p class="ca-intro">Start with the main discussion, then review the six core areas. The outline is a starting structure, not a required slide count.</p><div class="ca-split"><div>'+fields+'</div>'+result+'</div><noscript><p>The operating-plan outline is shown above. All focus prompts and evidence sections are readable below. Live outline changes, follow-ups, and reset require JavaScript.</p></noscript></div></section>'
+for i,s in enumerate(DATA['sections']):
+ body+=section(f'<p class="ca-eyebrow">{i+1:02d} · Core evidence</p><h2 id="{s["id"]}" tabindex="-1">{e(s["title"])}</h2><p>{e(s["body"])}</p><div class="ca-guide-evidence"><p><strong>Evidence to bring:</strong> {e(s["evidence"])}</p><p><strong>Discussion prompt:</strong> {e(s["question"])}</p></div>',i%2==0)
+body+=section('<div class="ca-guide-example"><p class="ca-eyebrow">Illustrative preparation · no client results</p><h2>A signed contract supports a hire. Implementation moves.</h2><p>Suppose a new subscription is signed, but its start date moves and the expected receipt depends on an implementation milestone. The deck shows contracted growth; the hiring recommendation depends on the timing behind it.</p><dl><div><dt>The request</dt><dd>Ask for input on starting the hire now or waiting for the milestone. Show management’s recommendation and the consequence of each choice.</dd></div><div><dt>The evidence bridge</dt><dd>Keep contracted and live recurring revenue distinct. Connect the customer’s start and payment assumptions to the hiring commitment in the cash plan, with the reporting cutoff stated.</dd></div><div><dt>The owner and next review</dt><dd>Name who confirms the implementation milestone and who refreshes the cash assumption. Set the condition and review date that would reopen the hiring decision.</dd></div></dl><p>The board conversation is about the commitment and its dependency. More revenue slides alone would not resolve that question.</p></div>')
+body+=section('<h2 id="focus-evidence" tabindex="-1">Add the evidence for the main discussion.</h2><p>Use the relevant focus alongside the core outline. A financing conversation in a board meeting still needs an operating recommendation; use the separate diligence framework for an investor evidence process.</p>'+''.join(f'<details><summary>{e(f["label"])}</summary><h3>{e(f["title"])}</h3><p>{e(f["body"])}</p><p><strong>Evidence to bring:</strong> {e(f["evidence"])}</p><p><strong>Discussion prompt:</strong> {e(f["question"])}</p></details>' for f in DATA['focuses']))
+body+=section('<h2 id="questions" tabindex="-1">Questions before you build the slides.</h2><details><summary>Does the outline replace the existing board agenda?</summary><p>No. Adapt it to the meeting’s purpose and the board’s agreed agenda. Use the preparation list to find missing evidence, owners, or questions, rather than adding every possible metric to the deck.</p></details><details><summary>Who should own each section?</summary><p>Assign the relevant operating leader to the result and proposed response. Agree who checks the numbers, integrates the narrative, and maintains the action log. The tool does not allocate those responsibilities for your company.</p></details><details><summary>What changes for an investor update or fundraising pitch?</summary><p>An investor update may communicate progress and requests without a formal board decision. A fundraising pitch connects the capital ask to the operating story and supporting diligence. Use the <a class="ca-link" href="../series-a-diligence-readiness.html">Series A diligence guide</a> for that evidence review.</p></details><div class="ca-guide-sources"><h3>Source and related frameworks</h3><p><a href="https://stripe.com/resources/more/committed-annual-recurring-revenue-explained">Stripe · Contracted recurring revenue, ARR, and recognized revenue</a> supports the metric distinctions. The outline and discussion prompts are an editorial preparation framework for firm review; they do not predict what a particular board will ask.</p><p><a class="ca-link" href="../saas-cash-flow-mistakes.html">Review cash assumptions →</a></p><p><a class="ca-link" href="../../services/board-investor-reporting.html">Explore board &amp; investor reporting support →</a></p></div>',True)
+body+=section('<p class="ca-eyebrow">Connect the preparation to your company</p><h2>What does the next board conversation need to resolve?</h2><p class="ca-intro">Start with the decision, meeting timing, and evidence that needs attention. Your tool selections are not included in the conversation link.</p><a class="pill-button" href="../../contact.html?topic=board-reporting&amp;from=tool-board-deck-builder#conversation-form">Discuss your board reporting →</a>',wide=True)
+soup.main.clear();soup.main.append(BeautifulSoup(body,'html.parser'))
+node=soup.new_tag('script',type='application/json',id='board-builder-data');node.string=json.dumps(DATA,ensure_ascii=False).replace('<','\\u003c');soup.body.append(node)
+script=soup.new_tag('script',src='../../assets/board-builder.js?v=20261009-1',defer='');soup.body.append(script)
+css=soup.new_tag('link',href='../../assets/board-builder.css?v=20261009-1',rel='stylesheet');soup.head.append(css)
+(ROOT/PATH).write_text(str(soup).rstrip()+'\n')
