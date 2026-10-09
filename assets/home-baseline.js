@@ -37,8 +37,17 @@
     if(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button!==0) return;
     event.preventDefault();event.stopImmediatePropagation();location.assign(destination);
   },true);
+  const keepPreviewMetadata = () => {
+    const robots=[...document.querySelectorAll('meta[name="robots"]')];
+    if(!robots.length) {const meta=document.createElement('meta');meta.name='robots';meta.content='noindex, follow';document.head.appendChild(meta);}
+    robots.forEach(meta=>{if(meta.content!=='noindex, follow') meta.content='noindex, follow';});
+    const canonical=document.querySelector('link[rel="canonical"]');
+    const destination=location.pathname===root.pathname || location.pathname===new URL('index.html',root).pathname ? root.href : location.href;
+    if(canonical && canonical.href!==destination) canonical.href=destination;
+  };
   document.addEventListener('DOMContentLoaded',()=>{
-    rewrite();
+    rewrite();keepPreviewMetadata();
+    new MutationObserver(keepPreviewMetadata).observe(document.head,{childList:true,subtree:true,attributes:true,attributeFilter:['content','href']});
     new MutationObserver(rewrite).observe(document.getElementById('main'),{childList:true,subtree:true,attributes:true,attributeFilter:['href']});
   });
 })();
