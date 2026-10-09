@@ -1,0 +1,37 @@
+{
+  "reviewed": "2026-10-09",
+  "source": "User-supplied Recorded Podcasts CSV; sanitized fields only",
+  "linked_episodes": 6,
+  "new_linked_episodes": 4,
+  "alternate_link_added": "Bee Formless YouTube",
+  "duplicates_merged": [
+    "Unstuck/Jamie Schneiderman",
+    "Bee Formless/Belinda Murray"
+  ],
+  "awaiting_episode_urls": [
+    "Stratum Path Podcast",
+    "Beyond the Agency Podcast",
+    "Business Journey Unlocked",
+    "Finance Forward"
+  ],
+  "excluded_unrecorded": "What We Need to Grow",
+  "static_checks": "45 pages, 1741 URLs, 24 sitemap entries; baseline and foundations checks pass",
+  "browser": {
+    "actual_viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "horizontal_overflow": false,
+    "one_h1": true,
+    "heading_font": "Lora, Georgia, serif",
+    "body_font": "Roboto, sans-serif",
+    "hero_background": "rgb(36, 50, 33)",
+    "full_page_visual_review": "passed; existing stylesheet unchanged",
+    "responsive_limitation": "Requested widths 320, 768 and 1440 remained 1280 in browser. Not counted as new responsive checks. Existing shared layout has prior responsive evidence in resource-layout-qa.json."
+  },
+  "limitations": [
+    "Podcast playback not tested",
+    "Four URL-less supplied entries lack independently verified episode publication metadata",
+    "Concept remains noindex; no measured SEO or citation gain"
+  ]
+}

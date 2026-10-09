@@ -88,9 +88,17 @@ body+=section('Go deeper on the finance question.','Connect the perspectives to 
 build('resources/linkedin-posts.html','Charles Solomon’s LinkedIn Posts','A perspective from inside the work.','Selected LinkedIn posts from Charles Solomon on planning, founder partnerships, and Centripetal Advisors.',body,'LinkedIn Posts',[(p['title'],p['url']) for p in data['posts']])
 media=''
 for m in data['media']:
- listen=link(m['url'],'Listen on '+m['platform']+' ↗',True)
- media+=f'<article class="ca-media-item"><div class="ca-media-show"><span>Podcast appearance</span><p>{e(m["show"])}</p></div><div><p class="ca-eyebrow"><time datetime="{m["date"]}">{m["date_label"]}</time> · {m["duration"]}</p><h3>{e(m["title"])}</h3><p>{e(m["summary"])}</p>{listen}</div></article>'
-body=section('Charles in conversation.','Listen to conversations about finance, founder decisions, and building companies.',media)
+ metadata=[]
+ if m.get('date'):metadata.append(f'<time datetime="{e(m["date"])}">{e(m["date_label"])}</time>')
+ if m.get('duration'):metadata.append(e(m['duration']))
+ metadata=f'<p class="ca-eyebrow">{" · ".join(metadata)}</p>' if metadata else ''
+ destinations=[{'url':m['url'],'platform':m['platform']}]+m.get('alternate_links',[])
+ actions=''.join('<p>'+link(x['url'],('Watch on ' if x['platform']=='YouTube' else 'Listen on ')+x['platform']+' ↗',True)+'</p>' for x in destinations)
+ media+=f'<article class="ca-media-item"><div class="ca-media-show"><span>Podcast appearance</span><p>{e(m["show"])}</p></div><div>{metadata}<h3>{e(m["title"])}</h3><p>{e(m["summary"])}</p>{actions}</div></article>'
+body=section('Charles in conversation.','Watch or listen to conversations about finance, founder decisions, and building companies.',media)
+if data.get('media_awaiting_links'):
+ pending=grid([f'<article class="ca-card"><p class="ca-eyebrow">Episode link forthcoming</p><h3>{e(m["show"])}</h3><p>With {e(m["host"])}.</p></article>' for m in data['media_awaiting_links']])
+ body+=section('More conversations.','Additional appearances from Charles’ podcast list. Episode links will be added as they become available.',pending)
 body+=section('Bring the conversation back to your company.','Explore the firm’s operating approach or the resources connected to your next decision.',link('../about.html','About Centripetal →')+'<p class="ca-footer">'+link('../guides/index.html','Explore practical guides →')+'</p>',True)
 build('resources/media.html','Charles Solomon’s Podcast Appearances','Finance and company building, in conversation.','Podcast appearances featuring Charles Solomon of Centripetal Advisors.',body,'Media',[(m['title'],m['url']) for m in data['media']])
 

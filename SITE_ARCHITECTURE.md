@@ -51,7 +51,11 @@ A typical path is article or public post → relevant guide/exercise → specifi
 
 The initial LinkedIn subsection is a curated feed with three independently verified public post URLs, editorial summaries identified as summaries, and links to the originals. It is not an automatically synchronized feed. Exact publication dates are omitted where the retrieved public page did not establish them. No private call transcripts, unpublished drafts, comments, contact exports, or engagement counts are republished. The local post corpus informed discovery; the private draft content library was excluded.
 
-Media starts with two public episode listings: Unstuck Pod (September 17, 2026, 20 minutes) and Bee Formless (May 20, 2026, 31 minutes). Dates, durations, titles, and descriptions come from publisher-supplied platform listings. The Bee Formless Apple page was directly readable; the Unstuck Amazon episode was available through public search but its direct fetch failed. Player functionality was not tested. The podcast-target/transcript prospect corpus is not an appearances list and was excluded.
+Media initially contained two public episode listings: Unstuck Pod (September 17, 2026, 20 minutes) and Bee Formless (May 20, 2026, 31 minutes). Dates, durations, titles, and descriptions come from publisher-supplied platform listings. The Bee Formless Apple page was directly readable; the Unstuck Amazon episode was available through public search but its direct fetch failed. Player functionality was not tested. The podcast-target/transcript prospect corpus is not an appearances list and was excluded.
+
+The supplied Recorded Podcasts CSV adds four linked appearances: Insure the Horizon, The Capital Multiplier, Founder Wisdom Podcast (called VC Wisdom in the supplied list), and Analytics and Automation Solutions. Publisher titles and publication dates were checked directly in YouTube/Spotify browser pages; appointment dates from the CSV are not used as release dates. Public summaries paraphrase publisher descriptions. Belinda Murray’s YouTube link was matched to Bee Formless using the publisher’s public post and added to the existing episode. Jamie Schneiderman’s appearance matches the existing Unstuck entry and is not duplicated.
+
+Six linked appearances are now available. Stratum Path, Beyond the Agency, Business Journey Unlocked, and Finance Forward are shown separately with links forthcoming; no release dates, durations, invented episode titles, or playable controls are asserted for these four. Their URLs remain a batched feedback item. What We Need to Grow sits beneath “To Be Recorded” in the source list and is held out of completed appearances until confirmed. Private contact details and tracking notes are excluded from the repository and public page.
 
 No automatic scraping, third-party feed subscription, embedded trackers, player requests, or authentication was added. Source records and summaries live in `tools/resource-library.json`; `tools/build_resources.py` rebuilds the collections. The update method for the eventual LinkedIn feed remains a human preference to resolve; the curated concept is independently usable.
 
@@ -66,10 +70,13 @@ No automatic scraping, third-party feed subscription, embedded trackers, player 
 
 ## Next manageable portions
 
-1. Repair the separate Blog catalog and resolve article/guide overlap before promoting old drafts.
-2. Expand/refresh the selected LinkedIn feed and Media inventory using public sources or supplied appearance/post links; decide on eventual automatic updates.
-3. Review the Board Deck Builder and its supporting articles together.
-4. Evaluate primary-navigation prominence, topic landing pages, filtering, and search as the reviewed library grows. Add a topic page only when it offers useful synthesis and sufficient distinct resources.
+Work in the user’s agreed sequence:
+
+1. **Architecture and strategy:** complete the supplied podcast append first, then repair the separate Blog catalog, clarify article-versus-guide roles and topic relationships, and decide whether overlapping tools have distinct jobs.
+2. **Content, copy, and messaging:** review legacy article evidence, refine guide drafts and service language, complete missing appearance URLs, and review the Board Deck Builder’s content and assumptions.
+3. **Further visual design and interactivity:** assess navigation prominence, feed updates, filtering, search, and tool presentation after the structure and content are settled. Preserve live Home-derived Lora/Roboto typography and pine/stone/sage branding throughout. Add topic landing pages only when enough distinct resources justify useful synthesis.
+
+This podcast append does not start the Blog repair or introduce a new visual system.
 
 ## Basis and measurement
 

@@ -3,12 +3,118 @@
   "linkedin_mode": "Curated public posts; no automatic ingestion",
   "linkedin_profile": "https://www.linkedin.com/in/solomoncharles/",
   "posts": [
-    {"title":"Growth reflects earlier investment", "summary":"Charles connects expansion, product development, and sales capacity to the investments made before the results appear.", "topic":"Planning & growth", "url":"https://www.linkedin.com/posts/solomoncharles_saas-fractionalcfo-startupfinance-activity-7496236064139800576-Orj4", "date":null},
-    {"title":"Welcoming Scott Xu to Centripetal", "summary":"Charles introduces Scott and the combination of finance, startup, and programming experience he brings to the team.", "topic":"Inside the firm", "url":"https://www.linkedin.com/posts/solomoncharles_he-was-quick-to-post-about-joining-our-team-activity-7452427255722672128-CEI7", "date":null},
-    {"title":"Four years alongside Adventr", "summary":"Charles reflects on the partnership with Adventr, including capital preparation, finance operations, forecasting, and board reporting.", "topic":"Founder partnerships", "url":"https://www.linkedin.com/posts/solomoncharles_startups-financeops-fractionalcfo-activity-7434602260699090945-2rtx", "date":null}
+    {
+      "title": "Growth reflects earlier investment",
+      "summary": "Charles connects expansion, product development, and sales capacity to the investments made before the results appear.",
+      "topic": "Planning & growth",
+      "url": "https://www.linkedin.com/posts/solomoncharles_saas-fractionalcfo-startupfinance-activity-7496236064139800576-Orj4",
+      "date": null
+    },
+    {
+      "title": "Welcoming Scott Xu to Centripetal",
+      "summary": "Charles introduces Scott and the combination of finance, startup, and programming experience he brings to the team.",
+      "topic": "Inside the firm",
+      "url": "https://www.linkedin.com/posts/solomoncharles_he-was-quick-to-post-about-joining-our-team-activity-7452427255722672128-CEI7",
+      "date": null
+    },
+    {
+      "title": "Four years alongside Adventr",
+      "summary": "Charles reflects on the partnership with Adventr, including capital preparation, finance operations, forecasting, and board reporting.",
+      "topic": "Founder partnerships",
+      "url": "https://www.linkedin.com/posts/solomoncharles_startups-financeops-fractionalcfo-activity-7434602260699090945-2rtx",
+      "date": null
+    }
   ],
   "media": [
-    {"show":"Unstuck Pod", "title":"AI First Finance Firm (Charles Solomon and Jamie Schneiderman)", "date":"2026-09-17", "date_label":"September 17, 2026", "duration":"20 minutes", "summary":"Charles joins Jamie Schneiderman to discuss the evolution of Centripetal and the role of technology in startup finance.", "url":"https://music.amazon.co.uk/podcasts/7ae57f5a-0404-40f7-a82d-2cd65c556850/episodes/7015d23a-6c25-4e56-93f3-d011783f4dc7/unstuck-pod-ai-first-finance-firm-charles-solomon-and-jamie-schneiderman", "platform":"Amazon Music", "source_note":"Publisher-supplied episode description available in public Amazon Music search result; direct page fetch unavailable."},
-    {"show":"Bee Formless™ Flow Driven CEO", "title":"Narrative, numbers, scaling & staying calm through complexity | Charles Solomon", "date":"2026-05-20", "date_label":"May 20, 2026", "duration":"31 minutes", "summary":"A conversation about founder psychology, the cost of complexity, and the relationship between narrative and numbers.", "url":"https://podcasts.apple.com/ca/podcast/narrative-numbers-scaling-staying-calm-through-complexity/id1872247807?i=1000768680927", "platform":"Apple Podcasts", "source_note":"Verified against publisher-supplied Apple Podcasts episode page and local B Formless brief."}
-  ]
+    {
+      "show": "Unstuck Pod",
+      "title": "AI First Finance Firm (Charles Solomon and Jamie Schneiderman)",
+      "date": "2026-09-17",
+      "date_label": "September 17, 2026",
+      "duration": "20 minutes",
+      "summary": "Charles joins Jamie Schneiderman to discuss the evolution of Centripetal and the role of technology in startup finance.",
+      "url": "https://music.amazon.co.uk/podcasts/7ae57f5a-0404-40f7-a82d-2cd65c556850/episodes/7015d23a-6c25-4e56-93f3-d011783f4dc7/unstuck-pod-ai-first-finance-firm-charles-solomon-and-jamie-schneiderman",
+      "platform": "Amazon Music",
+      "source_note": "Publisher-supplied episode description available in public Amazon Music search result; direct page fetch unavailable."
+    },
+    {
+      "show": "Bee Formless™ Flow Driven CEO",
+      "title": "Narrative, numbers, scaling & staying calm through complexity | Charles Solomon",
+      "date": "2026-05-20",
+      "date_label": "May 20, 2026",
+      "duration": "31 minutes",
+      "summary": "A conversation about founder psychology, the cost of complexity, and the relationship between narrative and numbers.",
+      "url": "https://podcasts.apple.com/ca/podcast/narrative-numbers-scaling-staying-calm-through-complexity/id1872247807?i=1000768680927",
+      "platform": "Apple Podcasts",
+      "source_note": "Verified against publisher-supplied Apple Podcasts episode page and local B Formless brief. Supplied Belinda Murray video matches the episode, confirmed by Bee Formless and Belinda publisher posts linking both platforms; merged into one listing.",
+      "alternate_links": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=qeRhoaw1p5g"
+        }
+      ]
+    },
+    {
+      "show": "Insure the Horizon",
+      "title": "Podcast #3: Charles Solomon, Founder and CEO from Centripetal Advisors",
+      "date": "2025-11-04",
+      "date_label": "November 4, 2025",
+      "duration": "20 minutes",
+      "summary": "Charles joins Karolyn Boyd to discuss fractional CFO support, long-term client partnerships, and technology in finance operations.",
+      "url": "https://www.youtube.com/watch?v=53B_82PcOW4",
+      "platform": "YouTube",
+      "source_note": "YouTube title, channel, expanded description and November 4, 2025 publication date verified in browser. CSV topic differs from published title; scheduling date not used as publication date."
+    },
+    {
+      "show": "The Capital Multiplier",
+      "title": "Venture Fundraising and the Role of a Fractional CFO",
+      "date": "2025-10-22",
+      "date_label": "October 22, 2025",
+      "duration": "20 minutes",
+      "summary": "A conversation with Alex Jaso about venture debt, founder finance mistakes, and the role of a fractional CFO in capital planning.",
+      "url": "https://open.spotify.com/episode/7HzUVdoZd4QfwQTHULc4p3",
+      "platform": "Spotify",
+      "source_note": "Spotify episode title, show, October 22, 2025 date, 20 min 27 sec duration and description verified in browser. Duration displayed rounded to whole minutes."
+    },
+    {
+      "show": "Founder Wisdom Podcast",
+      "title": "Charles Solomon — CFO, Board Member, Investor",
+      "date": "2026-07-31",
+      "date_label": "July 31, 2026",
+      "summary": "Charles Solomon in conversation with podcast host Charles Cormier.",
+      "url": "https://www.youtube.com/watch?v=CNyPe0BuyiY",
+      "platform": "YouTube",
+      "source_note": "CSV calls show VC Wisdom Podcast. Current YouTube channel is Charles Cormier - Founder Wisdom Podcast. Episode title and streamed-live date verified in expanded description; duration not established (player showed an advertisement). No inferred topic summary."
+    },
+    {
+      "show": "Analytics and Automation Solutions",
+      "title": "Building an AI-Native CFO Firm: Valuations, Delegation, and Startup Metrics with Charles Solomon",
+      "date": "2026-09-07",
+      "date_label": "September 7, 2026",
+      "duration": "28 minutes",
+      "summary": "Charles joins Neil to discuss delegation, AI in finance workflows, startup metrics, and preparing for investor conversations.",
+      "url": "https://www.youtube.com/watch?v=C4qU68AyovY",
+      "platform": "YouTube",
+      "source_note": "YouTube title, channel, September 7, 2026 publication date, 28 min 1 sec player duration and expanded description verified in browser. CSV June appointment date not used as publication date."
+    }
+  ],
+  "media_awaiting_links": [
+    {
+      "show": "Stratum Path Podcast",
+      "host": "Jarrett Sorensen"
+    },
+    {
+      "show": "Beyond the Agency Podcast",
+      "host": "Ashley Jung"
+    },
+    {
+      "show": "Business Journey Unlocked",
+      "host": "Kevin Anderson"
+    },
+    {
+      "show": "Finance Forward",
+      "host": "Tridib Chakrabarti"
+    }
+  ],
+  "media_import_note": "2026-10-09: sanitized podcast titles, public professional host names and episode URLs from user-supplied Recorded Podcasts CSV. Contact details and tracking notes excluded. Unstuck/Jamie matched existing published entry; Bee Formless/Belinda video added as alternate. Four missing URLs displayed separately, without publication dates or episode claims. What We Need to Grow/Caleb Pedosiuk appears under To Be Recorded and is excluded from public completed appearances pending recording/publication confirmation."
 }
