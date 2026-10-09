@@ -130,6 +130,7 @@
 .ca-native .portrait-title,.ca-native .testimonial-brand,.ca-native .cta-url{color:#bdcbb5}
 .ca-native .site-footer .footer-tagline{color:#ddd8cd}
 .ca-native .nav-toggle{min-width:44px;min-height:44px}
+.ca-native .nav-toggle span{flex-shrink:0;margin:0}
 .ca-native .score-grid{min-width:0;grid-template-columns:repeat(5,minmax(0,1fr))}
 .ca-native .score-option{min-width:0}
 @media(max-width:1100px){

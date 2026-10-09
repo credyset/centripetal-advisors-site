@@ -2,7 +2,7 @@
 (() => {
   const metadata={"index.html": ["Fractional CFO Services for SaaS | Centripetal Advisors", "Embedded strategic CFO services for Seed and Series A SaaS founders. Connect capital strategy, cash planning, board reporting, and finance operations."], "services.html": ["Strategic CFO Services for SaaS | Centripetal Advisors", "Explore fractional CFO support, fundraising readiness, cash planning, board reporting, venture debt, and treasury operations for early-stage SaaS."], "contact.html": ["Contact Centripetal Advisors | SaaS Finance Leadership", "Talk with Centripetal Advisors about embedded finance leadership, capital strategy, and the financial decisions facing your SaaS company."], "blogs.html": ["SaaS Finance Insights | Centripetal Advisors", "Read Centripetal Advisors insights on SaaS finance, financial strategy, fundraising, and the operating decisions facing founders."], "privacy-policy.html": ["Privacy Policy | Centripetal Advisors", "Read the Centripetal Advisors privacy policy covering information collection, use, and contact details."]};
   const root = new URL('../', document.currentScript.src);
-  const routes = {'/':'index.html','/services':'services.html','/contact':'contact.html','/blogs':'blogs.html','/guides':'guides/index.html','/resources':'guides/index.html','/google-sheets---html/saas-finance-scorecard':'guides/saas-finance-scorecard.html','/privacy-policy':'privacy-policy.html'};
+  const routes = {'/':'index.html','/services':'services.html','/contact':'contact.html','/blogs':'blogs.html','/guides':'guides/index.html','/resources':'resources/index.html','/google-sheets---html/saas-finance-scorecard':'guides/saas-finance-scorecard.html','/privacy-policy':'privacy-policy.html'};
   const routeFor = anchor => {
     const raw=anchor.getAttribute('href');
     if(!raw || raw.startsWith('#')) return null;
@@ -74,7 +74,7 @@
     if(location.pathname.endsWith('/contact.html'))document.dispatchEvent(new Event('ca:contact-ready'));
     main.querySelectorAll('.framer-18nscdd').forEach(blog=>{
       if(!blog.parentElement.querySelector('.ca-nav-resource')){
-        const link=document.createElement('a');link.className='ca-nav-resource';link.href=new URL('guides/index.html',root).href;link.textContent='Resources';blog.after(link);
+        const link=document.createElement('a');link.className='ca-nav-resource';link.href=new URL('resources/index.html',root).href;link.textContent='Resources';blog.after(link);
       }
     });
     main.querySelectorAll('nav.framer-xzdiZ').forEach(nav=>{

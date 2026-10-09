@@ -24,5 +24,19 @@
     "Viewport override returned without effect. All attempted sizes remained 1280x720; those attempts are not responsive evidence.",
     "Phone/tablet visual layout and mobile-menu checks for this new guide remain unverified. CSS inherits shared responsive navigation and includes single-column worksheet breakpoints.",
     "Printed PDF pagination, real assistive technology, measured search/conversion/AI-citation effects, and firm factual approval remain unverified."
-  ]
+  ],
+  "responsive_followup": {
+    "date": "2026-10-09",
+    "status": "Resolved in resource architecture batch",
+    "widths": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "result": "Actual viewport dimensions confirmed; one exposed H1; no horizontal overflow; worksheet single column at phone/tablet and two columns on desktop",
+    "phone_interactions": "Follow-up/reset and mobile menu/Escape verified at 390; choice rows 342x56 pixels",
+    "record": "tools/resource-layout-qa.json"
+  }
 }

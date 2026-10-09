@@ -1,0 +1,849 @@
+{
+  "date": "2026-10-09",
+  "layouts": [
+    {
+      "route": "resources/index.html",
+      "requested": 320,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 320
+    },
+    {
+      "route": "resources/index.html",
+      "requested": 390,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 390
+    },
+    {
+      "route": "resources/index.html",
+      "requested": 768,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 768
+    },
+    {
+      "route": "resources/index.html",
+      "requested": 1024,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "route": "resources/index.html",
+      "requested": 1440,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "route": "guides/index.html",
+      "requested": 320,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 320
+    },
+    {
+      "route": "guides/index.html",
+      "requested": 390,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 390
+    },
+    {
+      "route": "guides/index.html",
+      "requested": 768,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 768
+    },
+    {
+      "route": "guides/index.html",
+      "requested": 1024,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "route": "guides/index.html",
+      "requested": 1440,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "route": "resources/tools.html",
+      "requested": 320,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 320
+    },
+    {
+      "route": "resources/tools.html",
+      "requested": 390,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 390
+    },
+    {
+      "route": "resources/tools.html",
+      "requested": 768,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 768
+    },
+    {
+      "route": "resources/tools.html",
+      "requested": 1024,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "route": "resources/tools.html",
+      "requested": 1440,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "route": "resources/linkedin-posts.html",
+      "requested": 320,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 320
+    },
+    {
+      "route": "resources/linkedin-posts.html",
+      "requested": 390,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 390
+    },
+    {
+      "route": "resources/linkedin-posts.html",
+      "requested": 768,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 768
+    },
+    {
+      "route": "resources/linkedin-posts.html",
+      "requested": 1024,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "route": "resources/linkedin-posts.html",
+      "requested": 1440,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "route": "resources/media.html",
+      "requested": 320,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 320
+    },
+    {
+      "route": "resources/media.html",
+      "requested": 390,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 390
+    },
+    {
+      "route": "resources/media.html",
+      "requested": 768,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 768
+    },
+    {
+      "route": "resources/media.html",
+      "requested": 1024,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "route": "resources/media.html",
+      "requested": 1440,
+      "columns": null,
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [
+        {
+          "text": "Overview",
+          "width": 61.5859375
+        },
+        {
+          "text": "Guides",
+          "width": 46.59375
+        },
+        {
+          "text": "Tools & Assessments",
+          "width": 144.8046875
+        },
+        {
+          "text": "LinkedIn Posts",
+          "width": 99.1953125
+        },
+        {
+          "text": "Media",
+          "width": 41.515625
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "route": "guides/saas-cash-flow-mistakes.html",
+      "requested": 320,
+      "columns": "272px",
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [],
+      "width": 320
+    },
+    {
+      "route": "guides/saas-cash-flow-mistakes.html",
+      "requested": 390,
+      "columns": "342px",
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [],
+      "width": 390
+    },
+    {
+      "route": "guides/saas-cash-flow-mistakes.html",
+      "requested": 768,
+      "columns": "720px",
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [],
+      "width": 768
+    },
+    {
+      "route": "guides/saas-cash-flow-mistakes.html",
+      "requested": 1024,
+      "columns": "597.328px 298.664px",
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [],
+      "width": 1024
+    },
+    {
+      "route": "guides/saas-cash-flow-mistakes.html",
+      "requested": 1440,
+      "columns": "741.328px 370.664px",
+      "h1": 1,
+      "height": 900,
+      "overflow": false,
+      "subnav": [],
+      "width": 1440
+    }
+  ],
+  "cash_guide_followup": {
+    "viewport": 390,
+    "menu_open_and_escape": true,
+    "worksheet_followup_and_reset": true,
+    "choices": {
+      "width": 342,
+      "height": 56
+    },
+    "mobile_menu_icon_fixed": "Three spans now retain 2px height instead of flex shrinking to zero"
+  },
+  "limitations": [
+    "Not a full accessibility or performance audit",
+    "Podcast playback and automatic feed updates not implemented/tested"
+  ],
+  "paths": [
+    "Home phone menu \u2192 Resources hub",
+    "Resources \u2192 Guides \u2192 Tools & Assessments",
+    "Tools cash review link \u2192 #review with heading focus and default state"
+  ]
+}
