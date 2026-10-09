@@ -22,14 +22,14 @@
     const form=event.target.closest('form');
     let notice=form.querySelector('[data-preview-notice]');
     if(!notice) {notice=document.createElement('p');notice.dataset.previewNotice='';notice.setAttribute('role','alert');form.appendChild(notice);}
-    notice.textContent='Your message has not been sent. This is the concept preview. Please use Centripetal’s live contact page to send a message.';
+    notice.textContent='Your message has not been sent or saved. This is the concept preview of the conversation path.';
   };
   // Capture before the copied renderer can dispatch a production form request.
   window.addEventListener('submit',stopForm,true);
   window.addEventListener('click',event => {
     const target=event.target instanceof Element ? event.target : event.target.parentElement;
     const button=target?.closest('button');
-    if(button?.closest('form') && (!button.type || button.type==='submit')) {stopForm(event);return;}
+    if(button?.closest('form') && (!button.type || button.type==='submit' || button.matches('[data-reset="button"], [data-preview-submit]'))) {stopForm(event);return;}
     const anchor=target?.closest('a[href]');
     if(!anchor) return;
     const destination=routeFor(anchor) || (anchor.origin===location.origin && Object.values(routes).some(file=>anchor.pathname===new URL(file,root).pathname) ? anchor.href : null);
@@ -52,7 +52,8 @@
     if(!robots.length) {const meta=document.createElement('meta');meta.name='robots';meta.content='noindex, follow';document.head.appendChild(meta);}
     robots.forEach(meta=>{if(meta.content!=='noindex, follow') meta.content='noindex, follow';});
     const canonical=document.querySelector('link[rel="canonical"]');
-    const destination=location.pathname===root.pathname || location.pathname===new URL('index.html',root).pathname ? root.href : location.href;
+    // Preview topic/source/revision parameters must not create canonical variants.
+    const destination='https://credyset.github.io/centripetal-advisors-site/'+(file==='index.html'?'':file);
     if(canonical && canonical.href!==destination) canonical.href=destination;
   };
   // The native additions are authored outside the copied React root, then placed
@@ -70,6 +71,7 @@
       detail.style.order=getComputedStyle(contact).order;
       if(detail.nextElementSibling!==contact) contact.before(detail);
     }
+    if(location.pathname.endsWith('/contact.html'))document.dispatchEvent(new Event('ca:contact-ready'));
     main.querySelectorAll('.framer-18nscdd').forEach(blog=>{
       if(!blog.parentElement.querySelector('.ca-nav-resource')){
         const link=document.createElement('a');link.className='ca-nav-resource';link.href=new URL('guides/index.html',root).href;link.textContent='Resources';blog.after(link);
@@ -100,7 +102,7 @@
     if(!ready || scheduled)return;scheduled=true;
     requestAnimationFrame(()=>{scheduled=false;enhance();});
   };
-  document.addEventListener('ca:render-ready',()=>{ready=true;scheduleEnhance();});
+  document.addEventListener('ca:render-ready',()=>{ready=true;document.documentElement.dataset.caRendered='true';scheduleEnhance();});
   window.addEventListener('resize',scheduleEnhance);
   document.addEventListener('DOMContentLoaded',()=>{
     rewrite();keepPreviewMetadata();

@@ -1,0 +1,164 @@
+{
+  "fractional-cfo-for-saas": {
+    "topic": "finance-leadership",
+    "intro": "Embedded finance leadership for founder-led B2B SaaS companies. Centripetal connects the operating model, cash plan, board reporting, and back-office responsibilities so someone owns both the numbers and the decisions they support.",
+    "trigger": "When financial complexity outgrows the team",
+    "situation": ["A founder can have a bookkeeper, a budget, and monthly reports while still carrying every financial decision personally. The gap becomes visible when a board asks for a revised plan, hiring changes the cash outlook, or an investor needs evidence the team cannot assemble quickly.", "The fit is about the work and its ownership. Centripetal focuses on Seed through Series A B2B SaaS companies, with priorities agreed around the company’s stage, existing team, and upcoming decisions."],
+    "scope": [
+      ["Connect strategy to the operating plan", "Maintain the model behind revenue, spending, hiring, and capital needs. Work with the leadership team to explain assumptions and compare choices before they become commitments."],
+      ["Coordinate the finance function", "Clarify ownership across bookkeeping, close, billing, collections, payroll, and specialist tax work. Review the accounting setup and handoffs so reporting is supported by reliable records."],
+      ["Own the reporting conversation", "Connect management reporting, board materials, and investor updates to the same underlying information. Explain variances and the decisions that need attention."],
+      ["Support capital and transitions", "Coordinate financing preparation and capital decisions, then maintain the operating cadence after the transaction. Support a documented transition when the company hires an internal finance leader."]
+    ],
+    "outputs": [
+      ["Finance responsibility map", "Named owners, recurring deadlines, open issues, and the priorities to address first."],
+      ["Connected operating and cash models", "A maintained plan with explicit assumptions and scenarios tied to hiring, spending, and capital decisions."],
+      ["Management and board review package", "Financial reporting, operating metrics, variance explanations, and a record of the decisions made."]
+    ],
+    "decision": ["Who owns the revised hiring plan?", "Current cash, expected collections, start dates, payroll costs, and the existing budget.", "Compare hiring sequences and identify which assumptions change the cash path.", "An agreed plan, named decision owners, and conditions for revisiting commitments."],
+    "begin": ["Map the work your founder and team currently own, including the decisions or deadlines that are creating pressure.", "Review the books, operating model, cash view, and reporting handoffs to identify where information or ownership breaks down.", "Agree the engagement scope, priorities, review cadence, and responsibilities with your existing team."],
+    "faqs": [
+      ["How do you work with an existing bookkeeper or controller?", "Bookkeeping and controllership provide the transaction records and close process. Centripetal coordinates that work with forecasting, capital decisions, board reporting, and the broader finance function. The engagement should make ownership clearer for everyone involved."],
+      ["Can we bring you in before a fundraise?", "Yes. An approaching raise can make the gaps urgent, but the model, financial schedules, and operating responsibilities need to work before investor requests accelerate. Preparation can be part of an ongoing CFO engagement."],
+      ["What changes when we hire an internal finance leader?", "We can help define the responsibilities and handoff, with documented processes and a maintained model. For many early-stage companies the next internal hire is a VP Finance or finance leader; the right role depends on the work the company needs."],
+      ["Are these separate service packages?", "The service areas describe connected responsibilities within the finance function. We agree which work belongs in your engagement rather than assuming every company needs the same package."]
+    ],
+    "cta": "Discuss the finance leadership you need",
+    "ctaDetail": "Start with the financial decisions you still own, the people supporting you, and the next deadline."
+  },
+  "fundraising-readiness": {
+    "topic": "fundraising",
+    "intro": "Connect the capital plan to the evidence behind it. Centripetal helps SaaS founders prepare financial schedules, model the use of proceeds, organize diligence, and support investor conversations as part of the wider finance function.",
+    "trigger": "Before a raise becomes a deadline",
+    "situation": ["The challenge is often explaining what the next round will fund and how the business will reach those milestones under different operating assumptions. A coherent model needs supporting records, a clear customer picture, and people accountable for answering diligence questions.", "Preparation supports a financing process. Customer traction, the team, investor fit, and the financing terms still shape the decision. We connect the financial work to those conversations rather than treating a completed data room as the finish line."],
+    "scope": [
+      ["Model the use of proceeds", "Connect hiring dates, sales capacity, collections, and spending to the milestones behind the proposed raise. Compare the plan with a slower-growth or later-close scenario."],
+      ["Prepare the financial evidence", "Organize historical financial statements, revenue by customer by month, cap table records, and supporting schedules. Identify gaps, document explanations, and assign owners to unresolved requests."],
+      ["Support the capital process", "Help assess investor fit, prepare financial materials, coordinate questions, and examine financing scenarios. Investor introductions and process support follow the agreed scope and company context."],
+      ["Carry the plan into operations", "Use the same assumptions in the post-raise budget, cash forecast, and board reporting. Keep the use-of-proceeds plan connected to hiring and spending decisions after the round."]
+    ],
+    "outputs": [
+      ["Capital and operating scenarios", "A model connecting the proposed raise to milestones, spending, cash needs, and alternative timing assumptions."],
+      ["Financial diligence package", "Financial statements, customer revenue schedules, ownership information, and an inventory of supporting evidence."],
+      ["Diligence issue and request tracker", "Open questions, responsible owners, required explanations, and the status of requested materials."]
+    ],
+    "decision": ["What changes if the round closes later than planned?", "Current cash, hiring commitments, collection timing, intended raise, and milestone dates.", "Compare the timing of the financing with the spending required to reach the next milestone.", "A revised use-of-proceeds plan and the operating choices that need discussion before commitments are made."],
+    "begin": ["Clarify the financing objective, intended milestones, timing, and current investor conversations.", "Review the operating model, historical financials, customer schedules, and cap table for the questions likely to require follow-up.", "Prioritize the preparation work and agree how finance, leadership, counsel, and other specialists will handle requests."],
+    "faqs": [
+      ["Do we need an investor request list before starting?", "No. We can begin with the existing financials, customer schedules, cap table, and capital plan. The requested diligence scope will evolve with the investor and transaction; starting early helps the team identify missing records and ownership."],
+      ["Do you help with investor conversations as well as the model?", "The role can include financial materials, investor questions, fit screening, and capital-process support. We agree that scope around the company’s needs; it is broader than delivering a spreadsheet alone."],
+      ["Does a complete data room make us investor-ready?", "A complete folder is useful, but investors still need to understand the business and the evidence behind the assumptions. Preparation means being able to explain unresolved issues and capital needs, as well as producing documents."],
+      ["Who handles the legal financing documents?", "Your counsel handles legal review and documentation. Centripetal supports the financial analysis, modeling, and coordination around financing decisions, with responsibilities agreed among the team and specialists."]
+    ],
+    "cta": "Discuss the finance work behind your raise",
+    "ctaDetail": "Start with your intended milestones, financing timeline, and the evidence that still needs work."
+  },
+  "cash-flow-runway-planning": {
+    "topic": "cash-runway",
+    "intro": "See how collection timing, hiring, and payment commitments change the cash path. Centripetal connects a rolling near-term cash forecast to the longer-range operating plan, with scenarios that support actual decisions.",
+    "trigger": "When the hiring plan and cash forecast tell different stories",
+    "situation": ["A headline runway number can conceal delayed receipts, annual billing patterns, one-time commitments, or a hiring plan that has moved ahead of the model. A business can be tracking its budget while facing a different near-term cash position.", "The useful question is which assumptions would change a decision. We connect cash movement to the operating plan, explain deviations from the prior forecast, and identify when a commitment or scenario needs to be revisited."],
+    "scope": [
+      ["Build the rolling cash view", "Use a 13-week view to connect expected receipts with payroll, vendor payments, taxes, debt obligations, and other commitments. Tie opening balances to the company’s cash records."],
+      ["Connect the longer-range plan", "Link hiring dates, sales expectations, collections, and delivery costs to the operating forecast. Explain the differences between planned performance and actual cash timing."],
+      ["Test decisions under different assumptions", "Compare hiring sequences, collection delays, spending changes, and financing timing. Show which assumptions move the cash path and which commitments limit flexibility."],
+      ["Maintain the review cadence", "Refresh the forecast against actual receipts and payments. Explain timing and assumption variances, name the owner of each update, and record the decisions that follow."]
+    ],
+    "outputs": [
+      ["Rolling 13-week cash forecast", "A weekly view of expected receipts, payments, balances, and assumptions, maintained in Sheets or Excel."],
+      ["Operating scenario comparison", "A longer-range model connecting alternative hiring, revenue, spending, and capital timing assumptions."],
+      ["Cash review and decision log", "Changes since the prior forecast, accountable owners, and the conditions for revisiting planned commitments."]
+    ],
+    "decision": ["Can the next hire start before a large customer pays?", "Cash balances, invoice collection assumptions, start dates, payroll, and committed vendor payments.", "Compare the planned receipt date with a delayed-collection scenario and alternative hiring dates.", "A cash view that makes the timing trade-off explicit and identifies the decision to revisit."],
+    "begin": ["Start with the hiring, spending, or financing decision that needs a clearer cash view.", "Reconcile balances and gather the receipt assumptions, payroll dates, payment commitments, and existing operating model.", "Agree the forecast owners, update cadence, and scenarios to use in the first review."],
+    "faqs": [
+      ["Why use a 13-week cash view alongside the budget?", "The budget describes planned operating performance. The weekly cash view focuses on when money arrives and leaves. Connecting them helps explain how a change in collection timing or a payment commitment affects decisions without confusing it with a change in revenue performance."],
+      ["What information is needed to begin?", "Current balances, customer invoices and collection assumptions, payroll dates, committed payments, and the existing model are useful starting points. The first review identifies missing inputs and who will maintain them."],
+      ["Do you refresh the forecast after building it?", "A useful forecast needs an owner and a review cadence. Ongoing updates, variance explanations, and scenario reviews can be part of the engagement; the scope is agreed around the team and decisions."],
+      ["Can the same model support a fundraising or debt discussion?", "Yes. The operating assumptions should connect across the cash forecast, capital plan, and financing materials. We adapt the supporting schedules and scenarios to the questions being considered."]
+    ],
+    "cta": "Pressure-test your cash plan",
+    "ctaDetail": "Start with the commitment or assumption that could change your next hiring, spending, or financing decision."
+  },
+  "board-investor-reporting": {
+    "topic": "board-reporting",
+    "intro": "Prepare accurate, succinct financial materials that explain what changed and what needs a decision. Centripetal connects board reporting and investor updates to the operating model, customer data, and cash plan behind them.",
+    "trigger": "When reporting needs to support a sharper board conversation",
+    "situation": ["A board package can contain the right metrics and still leave the difficult questions unanswered: why spending moved, whether booked revenue is live, how customer concentration affects the interpretation, or what a revised hiring plan means for cash.", "The work is to make those questions discussable. We organize the evidence, explain variances and assumptions, and distinguish a reporting update from a decision the leadership team needs the board to consider."],
+    "scope": [
+      ["Build a consistent financial package", "Connect financial statements, budget-to-actual analysis, forecast updates, and the cash view. Use reporting periods and definitions that the team can explain."],
+      ["Make operating metrics interpretable", "Work with the available customer and sales data. Clarify booked versus live revenue where relevant, disclose customer concentration, and document definitions and limitations."],
+      ["Prepare the decision discussion", "Identify the variances and assumptions that deserve attention. Organize the options, supporting evidence, and the question the leadership team needs to resolve."],
+      ["Maintain investor communication", "Coordinate reporting dates, investor updates, requests, and follow-up responsibilities. Keep the operating model and recurring communication aligned."]
+    ],
+    "outputs": [
+      ["Board financial package", "Financial statements, relevant operating metrics, budget-to-actual explanations, and an updated cash outlook."],
+      ["Decision and assumption notes", "The options under consideration, the evidence behind them, and the assumptions that would change the recommendation."],
+      ["Reporting calendar and definitions", "Agreed dates, source systems, metric definitions, owners, and follow-up responsibilities."]
+    ],
+    "decision": ["What should the board discuss after a budget variance?", "Actual results, the previous forecast, hiring changes, collection assumptions, and customer data.", "Separate timing differences from changed assumptions, then compare the operating responses available.", "A succinct explanation of the variance and a clearly framed decision with supporting evidence."],
+    "begin": ["Review the next board date, recurring investor requests, and the decisions the leadership team needs to discuss.", "Compare the current package with the books, operating model, customer schedules, and cash forecast.", "Agree the reporting scope, definitions, preparation calendar, and owners of follow-up questions."],
+    "faqs": [
+      ["Do you help with the discussion as well as the deck?", "Yes. The financial work includes identifying the assumptions, variances, and decisions that deserve discussion, and helping the leadership team explain the supporting evidence. The materials should support a conversation rather than merely fill a template."],
+      ["Which SaaS metrics belong in the package?", "Use metrics the company can define and support with available data, tied to the decisions at its stage. Customer concentration and data limitations affect interpretation; a longer list of metrics is not necessarily a more useful package."],
+      ["Can board reporting and investor updates use the same inputs?", "They should connect to the same underlying records, model, and definitions. The level of detail and requested information may differ, but the team should be able to explain those differences."],
+      ["What if our close and model are not ready on time?", "We first identify the dependency and ownership gaps across bookkeeping, close, model updates, and reporting. Establishing a workable preparation calendar can be part of the broader finance engagement."]
+    ],
+    "cta": "Discuss your next board conversation",
+    "ctaDetail": "Start with the board date, the decision you need to discuss, and the evidence your current materials do not yet explain."
+  },
+  "venture-debt-readiness": {
+    "topic": "venture-debt",
+    "intro": "Evaluate a debt facility within the full capital plan. Centripetal supports lender preparation and financing-process work, connecting proposed terms, repayment, and draw timing to the company’s operating and cash scenarios.",
+    "trigger": "Before additional capital becomes an additional obligation",
+    "situation": ["Available capital is only one part of the decision. Draw timing, fees, repayment, contractual conditions, and the company’s downside cash path can change how useful a facility is for the intended plan.", "We start with the use of capital and the operating assumptions. The work connects lender questions to financial records and compares the proposed obligations with the company’s funding path, alongside counsel’s review of the agreement."],
+    "scope": [
+      ["Examine the financing fit", "Connect the facility to specific uses of capital and milestones. Compare the expected funding path with slower collections, delayed financing, or changes in the operating plan."],
+      ["Prepare the lender information", "Organize financial statements, customer revenue schedules, forecasts, and the supporting evidence behind lender questions. Track open items and responsible owners."],
+      ["Model the proposed terms", "Connect draw dates, interest, fees, repayment, and relevant contractual conditions to the cash forecast. Compare alternatives using explicit assumptions."],
+      ["Support the process and follow-through", "Coordinate financial requests and questions through the debt process. Connect agreed reporting and repayment responsibilities to the ongoing finance cadence."]
+    ],
+    "outputs": [
+      ["Lender information package", "Financials, revenue and customer schedules, forecasts, and a tracker of open lender questions."],
+      ["Financing and repayment comparison", "Cash scenarios reflecting the proposed draw schedule, payments, fees, and relevant conditions."],
+      ["Obligation and reporting calendar", "Named owners and dates for the financial reporting, cash review, and follow-up work within the agreed scope."]
+    ],
+    "decision": ["Does the facility still fit if the next raise is delayed?", "Proposed terms, draw timing, repayment, current cash, and the operating funding plan.", "Compare the expected case with a delayed-financing cash scenario and identify the conditions needing further review.", "A financing comparison and a specific question list for management, the lender, and counsel."],
+    "begin": ["Clarify why debt is being considered, how the capital would be used, and whether lender discussions or proposed terms already exist.", "Review the cash forecast, capital plan, financial records, and customer schedules against the likely lender questions.", "Agree the preparation and process scope, including financial modeling, specialist review, and responsibility for follow-up requests."],
+    "faqs": [
+      ["Can we start before receiving a term sheet?", "Yes. The first step can be clarifying the use of capital and organizing the information behind lender questions. Specific financing comparisons become more useful once proposed terms and conditions are available."],
+      ["Does your role stop at a lender introduction?", "The engagement can include financial preparation, lender questions, financing scenarios, and process coordination. Responsibilities are agreed around the company and transaction, including the work after a facility is put in place."],
+      ["Can debt replace an equity raise?", "That depends on the operating plan and proposed terms. Debt introduces repayment and contractual obligations; the comparison should account for those obligations and the company’s capital needs rather than treating the two sources as interchangeable."],
+      ["Who reviews the covenants and financing agreement?", "Counsel reviews the legal agreement. Centripetal models the financial implications and scenarios, and coordinates the questions requiring management, lender, or specialist input."]
+    ],
+    "cta": "Discuss the financing decision before lender conversations",
+    "ctaDetail": "Start with the intended use of capital, proposed terms if available, and the assumptions behind your repayment plan."
+  },
+  "treasury-finance-operations": {
+    "topic": "finance-operations",
+    "intro": "Make cash controls, close responsibilities, and recurring finance work dependable. Centripetal coordinates the accounting foundation, banking processes, back-office owners, and specialist handoffs that support a growing SaaS company.",
+    "trigger": "When growth makes informal processes fragile",
+    "situation": ["A payment process can work until the approver is unavailable. A close can finish until a missing handoff delays the model and board package. The issue is often unclear ownership across banking, billing, collections, payroll, bookkeeping, and specialist work.", "We connect these responsibilities to the decisions they support. The goal is a finance process the team can maintain, with documented approvals, useful records, and a clear path for resolving exceptions."],
+    "scope": [
+      ["Clarify cash access and approvals", "Review banking access, payment approval roles, changes to payment details, and independent review. Connect treasury decisions and liquidity needs to the cash forecast."],
+      ["Build a reliable accounting foundation", "Review the SaaS chart of accounts, reconciliations, close responsibilities, and reporting inputs in QuickBooks or Xero. Prioritize improvements that fit the company’s stage."],
+      ["Coordinate the back office", "Make the handoffs across billing, collections, payroll, bookkeeping, tax preparation, and tax-credit specialists explicit. Help assess vendors and define who owns recurring deadlines."],
+      ["Document the review process", "Establish a close calendar, exception handling, and review responsibilities. Keep source records and the operating model connected as the team changes."]
+    ],
+    "outputs": [
+      ["Responsibility and close calendar", "Named owners, recurring deadlines, dependencies, and review steps across finance and specialist work."],
+      ["Treasury and approval workflow", "Documented access and payment responsibilities, exception handling, and a review cadence."],
+      ["Accounting and systems priority plan", "Stage-appropriate improvements to the chart of accounts, records, tools, vendor handoffs, and reporting inputs."]
+    ],
+    "decision": ["What happens when the usual payment approver is away?", "Banking permissions, payment steps, approval roles, and the process for changing vendor details.", "Review who can initiate, approve, and reconcile the payment, including the exception path.", "A documented approval and escalation workflow with named owners and an independent review step."],
+    "begin": ["Identify the cash-control, close, or back-office handoff creating the most pressure today.", "Map the accounts, accounting system, vendors, recurring deadlines, and approval responsibilities behind that issue.", "Agree the priority changes and which work belongs to your team, Centripetal, and specialist providers."],
+    "faqs": [
+      ["Do you replace our bookkeeper or tax advisor?", "We can work with existing specialists and clarify how their responsibilities connect to reporting and financial strategy. Vendor selection and handoff support can be included when the current setup needs to change."],
+      ["Does improving finance require a new ERP?", "The first step is to review the work, chart of accounts, source records, and ownership. Centripetal works with QuickBooks and Xero for companies at this stage; a software migration is not assumed to be the answer."],
+      ["Can you coordinate tax and tax-credit work?", "Coordination with the relevant specialists can be part of the finance function, including deadlines, records, and responsibilities. The scope and specialist roles should be clear; the service does not promise a particular tax-credit outcome."],
+      ["How do treasury controls relate to runway planning?", "Cash placement, liquidity, access, and payment timing affect the cash view the team uses. The processes should connect to the forecast and operating commitments rather than being reviewed in isolation."]
+    ],
+    "cta": "Review your treasury and finance setup",
+    "ctaDetail": "Start with the approval, close, or handoff that becomes difficult when the company grows."
+  }
+}

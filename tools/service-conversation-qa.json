@@ -1,0 +1,323 @@
+{
+  "date": "2026-10-09",
+  "services": [
+    {
+      "cta": "../contact.html?topic=finance-leadership&from=service-fractional-cfo-for-saas#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/fractional-cfo-for-saas.html",
+      "width": 320
+    },
+    {
+      "cta": "../contact.html?topic=finance-leadership&from=service-fractional-cfo-for-saas#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/fractional-cfo-for-saas.html",
+      "width": 1024
+    },
+    {
+      "cta": "../contact.html?topic=fundraising&from=service-fundraising-readiness#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/fundraising-readiness.html",
+      "width": 320
+    },
+    {
+      "cta": "../contact.html?topic=fundraising&from=service-fundraising-readiness#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/fundraising-readiness.html",
+      "width": 1024
+    },
+    {
+      "cta": "../contact.html?topic=cash-runway&from=service-cash-flow-runway-planning#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/cash-flow-runway-planning.html",
+      "width": 320
+    },
+    {
+      "cta": "../contact.html?topic=cash-runway&from=service-cash-flow-runway-planning#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/cash-flow-runway-planning.html",
+      "width": 1024
+    },
+    {
+      "cta": "../contact.html?topic=board-reporting&from=service-board-investor-reporting#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/board-investor-reporting.html",
+      "width": 320
+    },
+    {
+      "cta": "../contact.html?topic=board-reporting&from=service-board-investor-reporting#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/board-investor-reporting.html",
+      "width": 1024
+    },
+    {
+      "cta": "../contact.html?topic=venture-debt&from=service-venture-debt-readiness#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/venture-debt-readiness.html",
+      "width": 320
+    },
+    {
+      "cta": "../contact.html?topic=venture-debt&from=service-venture-debt-readiness#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/venture-debt-readiness.html",
+      "width": 1024
+    },
+    {
+      "cta": "../contact.html?topic=finance-operations&from=service-treasury-finance-operations#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/treasury-finance-operations.html",
+      "width": 320
+    },
+    {
+      "cta": "../contact.html?topic=finance-operations&from=service-treasury-finance-operations#conversation-form",
+      "decision": true,
+      "faqs": 4,
+      "h1": 1,
+      "outputs": 3,
+      "overflow": false,
+      "path": "/services/treasury-finance-operations.html",
+      "width": 1024
+    }
+  ],
+  "guides": [
+    {
+      "ctas": 1,
+      "href": "../contact.html?topic=finance-foundation&from=guide-saas-finance-scorecard#conversation-form",
+      "overflow": false,
+      "path": "/guides/saas-finance-scorecard.html",
+      "width": 1024
+    },
+    {
+      "ctas": 1,
+      "href": "../contact.html?topic=fundraising&from=guide-series-a-diligence-readiness#conversation-form",
+      "overflow": false,
+      "path": "/guides/series-a-diligence-readiness.html",
+      "width": 1024
+    },
+    {
+      "ctas": 1,
+      "href": "../contact.html?topic=venture-debt&from=guide-venture-debt-readiness#conversation-form",
+      "overflow": false,
+      "path": "/guides/venture-debt-readiness.html",
+      "width": 1024
+    },
+    {
+      "ctas": 1,
+      "href": "../contact.html?topic=finance-operations&from=guide-treasury-hygiene#conversation-form",
+      "overflow": false,
+      "path": "/guides/treasury-hygiene.html",
+      "width": 1024
+    },
+    {
+      "ctas": 1,
+      "href": "../contact.html?topic=finance-leadership&from=guide-do-i-need-a-fractional-cfo#conversation-form",
+      "overflow": false,
+      "path": "/guides/do-i-need-a-fractional-cfo.html",
+      "width": 1024
+    },
+    {
+      "ctas": 1,
+      "href": "../contact.html?topic=cash-runway&from=guide-first-90-days-after-raise#conversation-form",
+      "overflow": false,
+      "path": "/guides/first-90-days-after-raise.html",
+      "width": 1024
+    }
+  ],
+  "contactPaths": [
+    {
+      "back": "http://127.0.0.1:8765/services/fractional-cfo-for-saas.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "finance-leadership"
+    },
+    {
+      "back": "http://127.0.0.1:8765/services/fundraising-readiness.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "fundraising"
+    },
+    {
+      "back": "http://127.0.0.1:8765/services/cash-flow-runway-planning.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "cash-runway"
+    },
+    {
+      "back": "http://127.0.0.1:8765/services/board-investor-reporting.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "board-reporting"
+    },
+    {
+      "back": "http://127.0.0.1:8765/services/venture-debt-readiness.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "venture-debt"
+    },
+    {
+      "back": "http://127.0.0.1:8765/services/treasury-finance-operations.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "finance-operations"
+    },
+    {
+      "back": "http://127.0.0.1:8765/guides/saas-finance-scorecard.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "finance-foundation"
+    },
+    {
+      "back": "http://127.0.0.1:8765/guides/series-a-diligence-readiness.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "fundraising"
+    },
+    {
+      "back": "http://127.0.0.1:8765/guides/venture-debt-readiness.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "venture-debt"
+    },
+    {
+      "back": "http://127.0.0.1:8765/guides/treasury-hygiene.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "finance-operations"
+    },
+    {
+      "back": "http://127.0.0.1:8765/guides/do-i-need-a-fractional-cfo.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "finance-leadership"
+    },
+    {
+      "back": "http://127.0.0.1:8765/guides/first-90-days-after-raise.html",
+      "canonical": "https://credyset.github.io/centripetal-advisors-site/contact.html",
+      "panels": 1,
+      "topic": "cash-runway"
+    }
+  ],
+  "contactWidths": [
+    {
+      "formids": 1,
+      "h1": [
+        "Pressure-test your cash plan"
+      ],
+      "overflow": false,
+      "panels": 1,
+      "width": 320
+    },
+    {
+      "formids": 1,
+      "h1": [
+        "Pressure-test your cash plan"
+      ],
+      "overflow": false,
+      "panels": 1,
+      "width": 390
+    },
+    {
+      "formids": 1,
+      "h1": [
+        "Pressure-test your cash plan"
+      ],
+      "overflow": false,
+      "panels": 1,
+      "width": 768
+    },
+    {
+      "formids": 1,
+      "h1": [
+        "Pressure-test your cash plan"
+      ],
+      "overflow": false,
+      "panels": 1,
+      "width": 900
+    },
+    {
+      "formids": 1,
+      "h1": [
+        "Pressure-test your cash plan"
+      ],
+      "overflow": false,
+      "panels": 1,
+      "width": 1024
+    },
+    {
+      "formids": 1,
+      "h1": [
+        "Contact Us"
+      ],
+      "overflow": false,
+      "panels": 1,
+      "width": 1280
+    },
+    {
+      "formids": 1,
+      "h1": [
+        "Contact Us"
+      ],
+      "overflow": false,
+      "panels": 1,
+      "width": 1440
+    }
+  ],
+  "interactionChecks": {
+    "draftPreservedOnTopicChange": true,
+    "draftPreservedAcrossResize": true,
+    "clearedDraftStaysEmpty": true,
+    "promptsNotDuplicated": true,
+    "unknownTopicFallsBackToGeneral": true,
+    "unknownSourceHidden": true,
+    "previewNoticeVisible": true,
+    "latestRuntimeWarnings": []
+  },
+  "limitations": [
+    "No production form endpoint or analytics enabled.",
+    "No measured search-ranking, conversion, field-performance, or AI-citation outcomes.",
+    "Original baseline geometry checks are historical; fresh checks here target service/contact layouts."
+  ]
+}
