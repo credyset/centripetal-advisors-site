@@ -1,43 +1,39 @@
-# Centripetal Advisors — Published Site Baseline
+# Centripetal Advisors concept — audit foundations
 
-This repository now establishes the published Home page as the visual baseline for the concept. It is served separately at [the GitHub concept site](https://credyset.github.io/centripetal-advisors-site/). Framer is unchanged.
+The concept is published only at https://credyset.github.io/centripetal-advisors-site/. The live Framer project is unchanged.
 
-## Baseline scope
+## October 8, 2026 pass
 
-Captured from `https://centripetaladvisors.com/` on October 8, 2026. The Home markup, styles, responsive variants, public media references, and original rendering behavior are retained. This is a capture of the public published output, not an export of the editable Framer project.
+This iteration applies the May SEO/AI surfaceability audit’s high-confidence recommendations while keeping the restored public Home design. It adds a founder-resource section before Why Centripetal, a curated resource hub, six focused service pages, and expanded Services explanations and visible FAQs. The original eight-category SaaS Finance Scorecard remains the lead interactive resource. Series A readiness adds 14 questions, 24 diligence items, a progress count, and reset. Four further guides cover CFO fit, venture debt, treasury, and the first 90 days after a raise.
 
-Home includes the original navigation; animated hero; statistics; complete financial co-pilot section and diagram; Clients and Trusted By logo bands; original About Us section; video/quote testimonial carousel; Why Centripetal; Charlie Munger quote and contact form; and original footer.
+The six promoted guides were reviewed for unsupported benchmarks, stale figures, legal assumptions, and claims that exceed the available evidence. Authorship is corporate; no expert review or endorsement is fabricated. Historical articles and five experimental tools remain available on disk but are not newly promoted from the Home, Services, or curated hub. Their full factual review remains outside this pass.
 
-The public Services, Contact, Blogs, and Privacy Policy pages are captured too so the Home navigation has matching core destinations. Older guides and articles remain on disk for later iteration. The previous SEO enhancement proposal is preserved on `concept/home-and-seo-foundations` and draft PR #1; it is not the starting Home baseline.
+Page-specific titles/descriptions, concept canonicals, structured data, internal paths, image dimensions, meaningful alt text, and heading semantics are implemented. Home Vimeo players initialize only near their viewport; the production editor iframe is disabled. These are implementation changes, not measured ranking or AI-citation gains. Field performance, search-demand evidence, attribution, proof-figure reconciliation, and the completed AI-citation baseline remain future work.
 
-Public generated rendering modules are frozen locally under `assets/baseline/runtime/`. Original fonts, images, and Vimeo media remain referenced at their public URLs. Module and source hashes are recorded in `assets/baseline/source-manifest.json`.
+## Preserved baseline and architecture
+
+The published public output was captured on October 8, 2026, not exported from the editable Framer project. Home retains the original navigation, hero animation, statistics, complete co-pilot section and diagram, logo bands, About section, four-video testimonial carousel, Why Centripetal, Munger quote, form, and footer. Baseline commit: `fc6b82f`. The earlier redesigned proposal on `concept/home-and-seo-foundations` / draft PR #1 is not this Home.
+
+`assets/baseline/runtime/`, its source manifest, and historical six-viewport geometry remain immutable. Current pages use a separate `assets/runtime-foundations/` copy. Seven modules differ: Home and core page heading semantics; primary navigation accessibility and a post-commit signal; deferred Vimeo setup; Contact heading variants; and disabled editor bootstrap. Fonts, public images, and Vimeo media still depend on their original public hosts.
+
+`assets/home-baseline.v3.js` preserves preview metadata/routes/forms and places native additions after the copied renderer commits, avoiding hydration conflicts. Home and Services additions are static siblings outside the React root before enhancement, so they remain readable without JavaScript. The `.inc` snippets are authoring references; updating them alone does not rebuild page HTML. Native pages use `assets/foundations.js` and scoped styles; no tool selections are submitted or saved.
 
 ## Preview boundaries
 
-The visual content and behavior are preserved. Only nonvisual preview boundaries differ:
-
-- Navigation between the captured core pages stays in this GitHub concept.
-- Contact forms cannot send a production message. Selecting Submit explains that no message was sent.
-- Production Google/LinkedIn analytics, the Framer events script, and the editor bootstrap are omitted.
-- Captured pages use concept canonical URLs and `noindex, follow`.
-
-The existing published responsive behavior, heading duplication, proof figures, and presentation are intentionally retained for this baseline. SEO and experience changes come after visual parity, in separately reviewable iterations.
+All 40 HTML pages remain `noindex, follow` with concept canonicals. The sitemap inventories 18 promoted pages; it is not evidence of indexing. A future production migration must replace staging canonicals and intentionally remove noindex. Production Google/LinkedIn analytics and Framer events are absent. Preview contact forms stop before the copied form handler sends any request and show an inline explanation. External Calendly and LinkedIn links remain the original destinations.
 
 ## Verification
 
-`assets/baseline/layout-comparison.json` records matching Home section geometry and overall page heights at 390, 900, 1024, 1280, 1440, and 1920 pixels. The Home sections were also reviewed visually after their reveal animations. Animated logo orientation, ticker position, count-up progress, and carousel state can differ between two pages opened at different times.
-
 ```sh
-python3 -m http.server 8765 --bind 127.0.0.1
-node --check assets/home-baseline.v2.js
+python3 tools/check_site.py
 python3 tools/check_baseline.py
+python3 tools/check_foundations.py
+node --check assets/home-baseline.v3.js
+node --check assets/foundations.js
 ```
 
-To intentionally refresh the public-source baseline later:
+Static validation covers 40 pages, 1,392 URLs, unique metadata, local anchors/assets, explicit image dimensions, JSON-LD, and staging noindex. Captured source includes hidden responsive variants; exposed Home H1 and overflow were separately checked at 390, 900, 1024, 1280, 1440, and 1920 pixels. Recorded measurements in `tools/foundations-layout-qa.json` show unchanged original section geometry before the added resource section, and the expected height shift afterward. Eight Scorecard boundary cases pass; partial completion does not show a final band. Browser checks also cover both mobile menus and Escape, Series A count/reset, Services ordering/FAQ, contact isolation, and deferred video/carousel loading.
 
-```sh
-python3 tools/capture_live_baseline.py
-python3 tools/freeze_render_modules.py
-```
+For local review, serve this directory on port 8765. Do not rerun `capture_live_baseline.py` or `freeze_render_modules.py` in this working copy: the capture scripts intentionally overwrite core HTML and would remove the foundation changes. Refresh a public baseline in a separate checkout and compare it explicitly.
 
-These read public published URLs. They do not access a Framer account or publish to Framer. Preserve this baseline commit and compare each later section revision against it.
+Retrospective: preserved source geometry before editing; used the existing Scorecard rather than inventing a scoring model; caught a checklist initialization selector and phone flex-order issue during final interaction checks. Performance and citation outcomes still require measurement on the eventual production implementation.

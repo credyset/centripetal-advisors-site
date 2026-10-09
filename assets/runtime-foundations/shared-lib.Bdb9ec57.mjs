@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime.Dh6celcD.mjs";function t(e,t){return{description:`Strategic CFO Services for Enterprise SaaS`,favicon:`https://framerusercontent.com/assets/ryECaiXMrn5YGwr85yBCtbETsk.png`,robots:`max-image-preview:large`,socialImage:`https://framerusercontent.com/assets/JWEUlEq2XOr4tCkVruKBQMVr84.png`,title:`Centripetal Advisors`}}var n=e((()=>{}));export{t as n,n as t};
+//# sourceMappingURL=shared-lib.Bdb9ec57.mjs.map

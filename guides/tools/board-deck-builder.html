@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" rel="icon" media="(prefers-color-scheme: light)">
-<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" rel="icon" media="(prefers-color-scheme: dark)">
-  <title>Board Deck Structure Builder | Centripetal Advisors</title>
-  <meta name="description" content="Interactive board deck builder for SaaS founders. Get a recommended slide outline, board questions, and reconciliation checklist tailored to your stage and board composition.">
-<meta property="og:image" content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://framerusercontent.com/images/ryECaiXMrn5YGwr85yBCtbETsk.png" media="(prefers-color-scheme: light)" rel="icon"/>
+<link href="https://framerusercontent.com/images/1mLvI1XRHseJp0bHOryNl9W20.png" media="(prefers-color-scheme: dark)" rel="icon"/>
+<title>Board Deck Structure Builder | Centripetal Advisors</title>
+<meta content="Interactive board deck builder for SaaS founders. Get a recommended slide outline, board questions, and reconciliation checklist tailored to your stage and board composition." name="description"/>
+<meta content="https://framerusercontent.com/images/JWEUlEq2XOr4tCkVruKBQMVr84.png" property="og:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
     /* ===== Reset & Base ===== */
     *, *::before, *::after {
       margin: 0;
@@ -1072,320 +1073,270 @@
       }
     }
   </style>
-<link rel="stylesheet" href="../../assets/site-system.css" data-site-system>
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="site-nav" aria-label="Primary navigation"><div class="site-nav-inner">
-  <a href="../../index.html" class="site-wordmark"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="nav-logo-img"></a>
-  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=this.nextElementSibling;n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
-  <div class="site-nav-links">
-    <a href="../../index.html">Home</a>
-    <a href="../../services.html">Services</a>
-    <a href="../../contact.html">Contact</a>
-    <a href="../../blog/index.html">Blogs</a>
-    <a href="https://calendly.com/charles-centripetaladvisors/30min" class="site-nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
-  </div>
-</div></nav>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <p class="hero-eyebrow">Interactive Tool</p>
-      <h1>Board Deck Structure Builder</h1>
-      <p>Answer three questions about your company and get a recommended board deck outline, the questions your board will ask, and a readiness assessment of what you already have.</p>
-    </div>
-  </section>
-
-  <!-- Tool -->
-  <section class="tool-section">
-    <div class="container">
-      <div class="steps-container">
-
-        <!-- STEP 1: Stage -->
-        <div class="step-block">
-          <div class="step-header">
-            <div class="step-number">1</div>
-            <h2 class="step-title">Select Your Stage</h2>
-          </div>
-          <p class="step-subtitle">Where is your company in its fundraising journey?</p>
-          <div class="radio-cards" id="stage-cards">
-
-            <label class="radio-card" data-value="seed">
-              <input type="radio" name="stage" value="seed">
-              <div class="radio-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
-              </div>
-              <div class="radio-card-content">
-                <div class="radio-card-label">Seed</div>
-                <div class="radio-card-desc">Pre-Series A, less than $5M raised</div>
-              </div>
-            </label>
-
-            <label class="radio-card" data-value="post-seed">
-              <input type="radio" name="stage" value="post-seed">
-              <div class="radio-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              </div>
-              <div class="radio-card-content">
-                <div class="radio-card-label">Post-Seed</div>
-                <div class="radio-card-desc">Bridge round, $2-5M total raised</div>
-              </div>
-            </label>
-
-            <label class="radio-card" data-value="series-a">
-              <input type="radio" name="stage" value="series-a">
-              <div class="radio-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-              </div>
-              <div class="radio-card-content">
-                <div class="radio-card-label">Series A</div>
-                <div class="radio-card-desc">$5-15M raised, institutional board</div>
-              </div>
-            </label>
-
-            <label class="radio-card" data-value="growth">
-              <input type="radio" name="stage" value="growth">
-              <div class="radio-card-icon">
-                <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              </div>
-              <div class="radio-card-content">
-                <div class="radio-card-label">Growth</div>
-                <div class="radio-card-desc">Series B+, multiple institutional investors</div>
-              </div>
-            </label>
-
-          </div>
-        </div>
-
-        <!-- STEP 2: Board Composition -->
-        <div class="step-block">
-          <div class="step-header">
-            <div class="step-number">2</div>
-            <h2 class="step-title">Board Composition</h2>
-          </div>
-          <p class="step-subtitle">Who sits on your board today?</p>
-          <div class="radio-cards" id="composition-cards">
-
-            <label class="radio-card" data-value="founder-only">
-              <input type="radio" name="composition" value="founder-only">
-              <div class="radio-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              </div>
-              <div class="radio-card-content">
-                <div class="radio-card-label">Founder-Only</div>
-                <div class="radio-card-desc">No independent directors</div>
-              </div>
-            </label>
-
-            <label class="radio-card" data-value="one-independent">
-              <input type="radio" name="composition" value="one-independent">
-              <div class="radio-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <div class="radio-card-content">
-                <div class="radio-card-label">1 Independent Director</div>
-                <div class="radio-card-desc">One outside board member</div>
-              </div>
-            </label>
-
-            <label class="radio-card" data-value="two-plus-independent">
-              <input type="radio" name="composition" value="two-plus-independent">
-              <div class="radio-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <div class="radio-card-content">
-                <div class="radio-card-label">2+ Independent Directors</div>
-                <div class="radio-card-desc">Multiple outside board members</div>
-              </div>
-            </label>
-
-            <label class="radio-card" data-value="institutional-lead">
-              <input type="radio" name="composition" value="institutional-lead">
-              <div class="radio-card-icon">
-                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-              </div>
-              <div class="radio-card-content">
-                <div class="radio-card-label">Institutional Lead on Board</div>
-                <div class="radio-card-desc">Lead investor has a board seat</div>
-              </div>
-            </label>
-
-          </div>
-        </div>
-
-        <!-- STEP 3: Slides You Have -->
-        <div class="step-block">
-          <div class="step-header">
-            <div class="step-number">3</div>
-            <h2 class="step-title">Slides You Already Have</h2>
-          </div>
-          <p class="step-subtitle">Check everything you can currently present to your board.</p>
-          <div class="checkbox-grid" id="slides-grid">
-
-            <label class="checkbox-card" data-slide="executive-summary">
-              <input type="checkbox" name="slides" value="executive-summary">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">Executive summary / highlights</span>
-            </label>
-
-            <label class="checkbox-card" data-slide="arr-revenue">
-              <input type="checkbox" name="slides" value="arr-revenue">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">ARR and revenue summary</span>
-            </label>
-
-            <label class="checkbox-card" data-slide="customer-cohort">
-              <input type="checkbox" name="slides" value="customer-cohort">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">Customer detail and cohort data</span>
-            </label>
-
-            <label class="checkbox-card" data-slide="cash-runway">
-              <input type="checkbox" name="slides" value="cash-runway">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">Cash position and runway</span>
-            </label>
-
-            <label class="checkbox-card" data-slide="financial-forecast">
-              <input type="checkbox" name="slides" value="financial-forecast">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">Financial forecast / model</span>
-            </label>
-
-            <label class="checkbox-card" data-slide="hiring-team">
-              <input type="checkbox" name="slides" value="hiring-team">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">Hiring plan and team update</span>
-            </label>
-
-            <label class="checkbox-card" data-slide="product-roadmap">
-              <input type="checkbox" name="slides" value="product-roadmap">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">Product roadmap</span>
-            </label>
-
-            <label class="checkbox-card" data-slide="competitive-landscape">
-              <input type="checkbox" name="slides" value="competitive-landscape">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">Competitive landscape</span>
-            </label>
-
-            <label class="checkbox-card" data-slide="pipeline-sales">
-              <input type="checkbox" name="slides" value="pipeline-sales">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">Pipeline and sales metrics</span>
-            </label>
-
-            <label class="checkbox-card" data-slide="cap-table">
-              <input type="checkbox" name="slides" value="cap-table">
-              <div class="checkbox-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <span class="checkbox-label">Cap table and ownership</span>
-            </label>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Output Panel -->
-      <div class="output-panel" id="output-panel">
-        <div class="output-divider">
-          <div class="output-divider-line"></div>
-          <span class="output-divider-text">Your Recommended Deck</span>
-          <div class="output-divider-line"></div>
-        </div>
-
-        <!-- Readiness Score -->
-        <div class="readiness-bar" id="readiness-bar">
-          <div class="readiness-score-ring">
-            <svg viewBox="0 0 80 80">
-              <circle class="ring-bg" cx="40" cy="40" r="34"/>
-              <circle class="ring-fill" id="ring-fill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
-            </svg>
-            <span class="readiness-score-number" id="readiness-number">0</span>
-          </div>
-          <div class="readiness-text">
-            <h3>Readiness Score</h3>
-            <p id="readiness-summary">Select your stage and board composition to see your deck outline.</p>
-          </div>
-        </div>
-
-        <!-- Deck Outline -->
-        <div class="output-block" id="deck-outline-block">
-          <div class="output-block-header">
-            <div class="output-block-icon">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <h2>Recommended Deck Outline</h2>
-          </div>
-          <ul class="slide-list" id="slide-list"></ul>
-        </div>
-
-        <!-- Board Questions -->
-        <div class="output-block" id="questions-block">
-          <div class="output-block-header">
-            <div class="output-block-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
-            <h2>Questions Your Board Will Ask</h2>
-          </div>
-          <ul class="question-list" id="question-list"></ul>
-        </div>
-
-        <!-- Reconciliation Points -->
-        <div class="output-block" id="reconciliation-block">
-          <div class="output-block-header">
-            <div class="output-block-icon">
-              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h2>Reconciliation Points</h2>
-          </div>
-          <div id="reconciliation-list"></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section" id="cta-section">
-    <div class="container">
-      <h2>Get Your Board Deck Reviewed</h2>
-      <p>We review board decks for SaaS founders every week. Bring what you have and we will tell you what to change.</p>
-      <a href="https://calendly.com/charles-centripetaladvisors/30min" class="btn-primary" target="_blank" rel="noopener">Schedule a Conversation</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="../../index.html"><img src="https://framerusercontent.com/images/3pjhfd8MVgoYtbZakmULrzqk.png?scale-down-to=512" alt="Centripetal Advisors" class="footer-logo-img"></a>
-      <p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
-    </div>
-    <div class="footer-links">
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="../../index.html">Home</a>
-        <a href="../../services.html">Services</a>
-        <a href="../../contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <a href="../../guides/index.html">Guides</a>
-        <a href="../../blog/index.html">Blog</a>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <a href="https://calendly.com/charles-centripetaladvisors/30min" target="_blank" rel="noopener">Book a Free Call</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">&copy; 2026 Centripetal Advisors LLC. All rights reserved.</div>
+<link data-site-system="" href="../../assets/site-system.css" rel="stylesheet"/>
+<meta content="noindex, follow" name="robots"/><meta content="Board Deck Structure Builder | Centripetal Advisors" property="og:title"/><meta content="Interactive board deck builder for SaaS founders. Get a recommended slide outline, board questions, and reconciliation checklist tailored to your stage and board composition." property="og:description"/><meta content="website" property="og:type"/><meta content="https://credyset.github.io/centripetal-advisors-site/guides/tools/board-deck-builder.html" property="og:url"/><meta content="Board Deck Structure Builder | Centripetal Advisors" name="twitter:title"/><meta content="Interactive board deck builder for SaaS founders. Get a recommended slide outline, board questions, and reconciliation checklist tailored to your stage and board composition." name="twitter:description"/><meta content="summary_large_image" name="twitter:card"/><link href="https://credyset.github.io/centripetal-advisors-site/guides/tools/board-deck-builder.html" rel="canonical"/><link href="../../assets/foundations.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://credyset.github.io/centripetal-advisors-site/#organization", "name": "Centripetal Advisors", "url": "https://centripetaladvisors.com/", "logo": "https://credyset.github.io/centripetal-advisors-site/assets/logo-light.png"}, {"@type": "WebSite", "@id": "https://credyset.github.io/centripetal-advisors-site/#website", "name": "Centripetal Advisors \u2014 Website Concept", "url": "https://credyset.github.io/centripetal-advisors-site/", "publisher": {"@id": "https://credyset.github.io/centripetal-advisors-site/#organization"}}, {"@type": "WebPage", "@id": "https://credyset.github.io/centripetal-advisors-site/guides/tools/board-deck-builder.html#page", "name": "Board Deck Structure Builder | Centripetal Advisors", "url": "https://credyset.github.io/centripetal-advisors-site/guides/tools/board-deck-builder.html", "description": "Interactive board deck builder for SaaS founders. Get a recommended slide outline, board questions, and reconciliation checklist tailored to your stage and board composition.", "isPartOf": {"@id": "https://credyset.github.io/centripetal-advisors-site/#website"}, "about": {"@id": "https://credyset.github.io/centripetal-advisors-site/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://credyset.github.io/centripetal-advisors-site/"}, {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://credyset.github.io/centripetal-advisors-site/guides/index.html"}, {"@type": "ListItem", "position": 3, "name": "Board Deck Structure Builder", "item": "https://credyset.github.io/centripetal-advisors-site/guides/tools/board-deck-builder.html"}]}]}</script></head>
+<body class="ca-native"><a class="skip-link" href="#main-content">Skip to content</a>
+<main id="main-content"><section class="hero">
+<div class="container">
+<p class="hero-eyebrow">Interactive Tool</p>
+<h1>Board Deck Structure Builder</h1>
+<p>Answer three questions about your company and get a recommended board deck outline, the questions your board will ask, and a readiness assessment of what you already have.</p>
+</div>
+</section><section class="tool-section">
+<div class="container">
+<div class="steps-container">
+<!-- STEP 1: Stage -->
+<div class="step-block">
+<div class="step-header">
+<div class="step-number">1</div>
+<h2 class="step-title">Select Your Stage</h2>
+</div>
+<p class="step-subtitle">Where is your company in its fundraising journey?</p>
+<div class="radio-cards" id="stage-cards">
+<label class="radio-card" data-value="seed">
+<input name="stage" type="radio" value="seed"/>
+<div class="radio-card-icon">
+<svg viewbox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
+</div>
+<div class="radio-card-content">
+<div class="radio-card-label">Seed</div>
+<div class="radio-card-desc">Pre-Series A, less than $5M raised</div>
+</div>
+</label>
+<label class="radio-card" data-value="post-seed">
+<input name="stage" type="radio" value="post-seed"/>
+<div class="radio-card-icon">
+<svg viewbox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+</div>
+<div class="radio-card-content">
+<div class="radio-card-label">Post-Seed</div>
+<div class="radio-card-desc">Bridge round, $2-5M total raised</div>
+</div>
+</label>
+<label class="radio-card" data-value="series-a">
+<input name="stage" type="radio" value="series-a"/>
+<div class="radio-card-icon">
+<svg viewbox="0 0 24 24"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+</div>
+<div class="radio-card-content">
+<div class="radio-card-label">Series A</div>
+<div class="radio-card-desc">$5-15M raised, institutional board</div>
+</div>
+</label>
+<label class="radio-card" data-value="growth">
+<input name="stage" type="radio" value="growth"/>
+<div class="radio-card-icon">
+<svg viewbox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+</div>
+<div class="radio-card-content">
+<div class="radio-card-label">Growth</div>
+<div class="radio-card-desc">Series B+, multiple institutional investors</div>
+</div>
+</label>
+</div>
+</div>
+<!-- STEP 2: Board Composition -->
+<div class="step-block">
+<div class="step-header">
+<div class="step-number">2</div>
+<h2 class="step-title">Board Composition</h2>
+</div>
+<p class="step-subtitle">Who sits on your board today?</p>
+<div class="radio-cards" id="composition-cards">
+<label class="radio-card" data-value="founder-only">
+<input name="composition" type="radio" value="founder-only"/>
+<div class="radio-card-icon">
+<svg viewbox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+</div>
+<div class="radio-card-content">
+<div class="radio-card-label">Founder-Only</div>
+<div class="radio-card-desc">No independent directors</div>
+</div>
+</label>
+<label class="radio-card" data-value="one-independent">
+<input name="composition" type="radio" value="one-independent"/>
+<div class="radio-card-icon">
+<svg viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+</div>
+<div class="radio-card-content">
+<div class="radio-card-label">1 Independent Director</div>
+<div class="radio-card-desc">One outside board member</div>
+</div>
+</label>
+<label class="radio-card" data-value="two-plus-independent">
+<input name="composition" type="radio" value="two-plus-independent"/>
+<div class="radio-card-icon">
+<svg viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+</div>
+<div class="radio-card-content">
+<div class="radio-card-label">2+ Independent Directors</div>
+<div class="radio-card-desc">Multiple outside board members</div>
+</div>
+</label>
+<label class="radio-card" data-value="institutional-lead">
+<input name="composition" type="radio" value="institutional-lead"/>
+<div class="radio-card-icon">
+<svg viewbox="0 0 24 24"><rect height="14" rx="2" ry="2" width="20" x="2" y="7"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+</div>
+<div class="radio-card-content">
+<div class="radio-card-label">Institutional Lead on Board</div>
+<div class="radio-card-desc">Lead investor has a board seat</div>
+</div>
+</label>
+</div>
+</div>
+<!-- STEP 3: Slides You Have -->
+<div class="step-block">
+<div class="step-header">
+<div class="step-number">3</div>
+<h2 class="step-title">Slides You Already Have</h2>
+</div>
+<p class="step-subtitle">Check everything you can currently present to your board.</p>
+<div class="checkbox-grid" id="slides-grid">
+<label class="checkbox-card" data-slide="executive-summary">
+<input name="slides" type="checkbox" value="executive-summary"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">Executive summary / highlights</span>
+</label>
+<label class="checkbox-card" data-slide="arr-revenue">
+<input name="slides" type="checkbox" value="arr-revenue"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">ARR and revenue summary</span>
+</label>
+<label class="checkbox-card" data-slide="customer-cohort">
+<input name="slides" type="checkbox" value="customer-cohort"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">Customer detail and cohort data</span>
+</label>
+<label class="checkbox-card" data-slide="cash-runway">
+<input name="slides" type="checkbox" value="cash-runway"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">Cash position and runway</span>
+</label>
+<label class="checkbox-card" data-slide="financial-forecast">
+<input name="slides" type="checkbox" value="financial-forecast"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">Financial forecast / model</span>
+</label>
+<label class="checkbox-card" data-slide="hiring-team">
+<input name="slides" type="checkbox" value="hiring-team"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">Hiring plan and team update</span>
+</label>
+<label class="checkbox-card" data-slide="product-roadmap">
+<input name="slides" type="checkbox" value="product-roadmap"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">Product roadmap</span>
+</label>
+<label class="checkbox-card" data-slide="competitive-landscape">
+<input name="slides" type="checkbox" value="competitive-landscape"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">Competitive landscape</span>
+</label>
+<label class="checkbox-card" data-slide="pipeline-sales">
+<input name="slides" type="checkbox" value="pipeline-sales"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">Pipeline and sales metrics</span>
+</label>
+<label class="checkbox-card" data-slide="cap-table">
+<input name="slides" type="checkbox" value="cap-table"/>
+<div class="checkbox-indicator"><svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<span class="checkbox-label">Cap table and ownership</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Output Panel -->
+<div class="output-panel" id="output-panel">
+<div class="output-divider">
+<div class="output-divider-line"></div>
+<span class="output-divider-text">Your Recommended Deck</span>
+<div class="output-divider-line"></div>
+</div>
+<!-- Readiness Score -->
+<div class="readiness-bar" id="readiness-bar">
+<div class="readiness-score-ring">
+<svg viewbox="0 0 80 80">
+<circle class="ring-bg" cx="40" cy="40" r="34"></circle>
+<circle class="ring-fill" cx="40" cy="40" id="ring-fill" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"></circle>
+</svg>
+<span class="readiness-score-number" id="readiness-number">0</span>
+</div>
+<div class="readiness-text">
+<h3>Readiness Score</h3>
+<p id="readiness-summary">Select your stage and board composition to see your deck outline.</p>
+</div>
+</div>
+<!-- Deck Outline -->
+<div class="output-block" id="deck-outline-block">
+<div class="output-block-header">
+<div class="output-block-icon">
+<svg viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+</div>
+<h2>Recommended Deck Outline</h2>
+</div>
+<ul class="slide-list" id="slide-list"></ul>
+</div>
+<!-- Board Questions -->
+<div class="output-block" id="questions-block">
+<div class="output-block-header">
+<div class="output-block-icon">
+<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" x2="12.01" y1="17" y2="17"></line></svg>
+</div>
+<h2>Questions Your Board Will Ask</h2>
+</div>
+<ul class="question-list" id="question-list"></ul>
+</div>
+<!-- Reconciliation Points -->
+<div class="output-block" id="reconciliation-block">
+<div class="output-block-header">
+<div class="output-block-icon">
+<svg viewbox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+</div>
+<h2>Reconciliation Points</h2>
+</div>
+<div id="reconciliation-list"></div>
+</div>
+</div>
+</div>
+</section><section class="cta-section" id="cta-section">
+<div class="container">
+<h2>Get Your Board Deck Reviewed</h2>
+<p>We review board decks for SaaS founders every week. Bring what you have and we will tell you what to change.</p>
+<a class="btn-primary" href="../../contact.html" rel="noopener">Schedule a Conversation</a>
+</div>
+</section></main><!-- Navigation -->
+<nav aria-label="Primary navigation" class="site-nav"><div class="site-nav-inner"><a class="site-wordmark" href="../../index.html"><img alt="Centripetal Advisors home" class="nav-logo-img" decoding="async" height="309" src="../../assets/logo-light.png" width="1270"/></a><button aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle" type="button"><span></span><span></span><span></span></button><div class="site-nav-links" id="primary-menu"><a href="../../index.html">Home</a><a href="../../services.html">Services</a><a href="../../contact.html">Contact</a><a href="../../blogs.html">Blogs</a><a href="../../guides/index.html">Resources</a><a class="site-nav-cta" href="../../contact.html">Book a Free Call</a></div></div></nav>
+<!-- Hero -->
+<!-- Tool -->
+<!-- CTA -->
+<!-- Footer -->
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-brand">
+<a href="../../index.html"><img alt="Centripetal Advisors" class="footer-logo-img" decoding="async" height="309" src="../../assets/logo-light.png" width="1270"/></a>
+<p class="footer-tagline">Strategic CFO Services for Enterprise SaaS</p>
+</div>
+<div class="footer-links">
+<div class="footer-col">
+<h4>Company</h4>
+<a href="../../index.html">Home</a>
+<a href="../../services.html">Services</a>
+<a href="../../contact.html">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Resources</h4>
+<a href="../../guides/index.html">Guides</a>
+<a href="../../blogs.html">Blog</a>
+</div>
+<div class="footer-col">
+<h4>Connect</h4>
+<a href="../../contact.html" rel="noopener">Book a Free Call</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 Centripetal Advisors LLC. All rights reserved.</div>
 </footer>
-
 <script>
 (function() {
   // ===== STATE =====
@@ -1742,6 +1693,5 @@
 
 })();
 </script>
-
-</body>
+<script defer="" src="../../assets/foundations.js?v=20261008-1"></script></body>
 </html>

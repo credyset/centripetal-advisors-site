@@ -2,6 +2,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 import json,hashlib,re
+from urllib.parse import urlsplit
 ROOT=Path(__file__).resolve().parents[1]
 manifest=json.loads((ROOT/'assets/baseline/source-manifest.json').read_text())
 class Inspect(HTMLParser):
@@ -16,8 +17,8 @@ class Inspect(HTMLParser):
 for item in manifest['pages']:
     p=ROOT/item['file'];s=p.read_text();ins=Inspect();ins.feed(s)
     assert ins.robot==['noindex, follow'],p
-    assert 'assets/home-baseline.v2.js' in ins.local,p
-    for src in ins.local:assert (p.parent/src).exists(),(p,src)
+    assert any(urlsplit(src).path=='assets/home-baseline.v3.js' for src in ins.local),p
+    for src in ins.local:assert (p.parent/urlsplit(src).path).exists(),(p,src)
     assert 'googletagmanager.com' not in s,p
     assert 'events.framer.com/script' not in s,p
     assert 'snap.licdn.com' not in s,p
@@ -35,4 +36,4 @@ for module in manifest.get('frozen_modules',[]):
 comparisons=json.loads((ROOT/'assets/baseline/layout-comparison.json').read_text())
 assert {e['viewport'] for e in comparisons}=={390,900,1024,1280,1440,1920}
 assert all(e['equal'] and e['live']['width']==e['viewport'] and e['live']==e['concept'] for e in comparisons)
-print('PASS: captured core pages, all Home sections, preview safeguards, frozen modules, and six viewport geometry comparisons.')
+print('PASS: core pages retain all original Home sections and preview safeguards; original frozen modules and historical six-viewport baseline remain intact. Current additions are checked separately.')
