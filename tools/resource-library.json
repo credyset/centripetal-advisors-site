@@ -1,28 +1,125 @@
 {
   "reviewed": "2026-10-09",
-  "linkedin_mode": "Curated public posts; no automatic ingestion",
+  "linkedin_mode": "Hybrid curated feed; branded summaries with on-demand user-supplied LinkedIn embeds. No automatic ingestion.",
   "linkedin_profile": "https://www.linkedin.com/in/solomoncharles/",
   "posts": [
+    {
+      "id": "7514431254625337344",
+      "title": "Why the same quarter produces different Magic Numbers.",
+      "summary": "Charles compares different versions of the Magic Number for the same company and quarter, and explains why disagreement between them calls for closer operating judgment.",
+      "topic": "SaaS metrics",
+      "format": "Article share · Magic Number, Part 5",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514431255338283008",
+      "embed_url": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7514431254625337344?collapsed=1",
+      "embed_height": 618,
+      "date": null,
+      "selection": "recent",
+      "source_note": "User-supplied embed inspected in browser on October 9, 2026. Author, visible post text, article relationship, and original activity URL verified. Absolute publication date not established; relative ages are not persisted.",
+      "article_url": "https://www.linkedin.com/pulse/magic-number-part-5-same-company-quarter-very-charles-solomon-blt6c"
+    },
+    {
+      "id": "7514045524531064832",
+      "title": "Does a lower Magic Number mean go-to-market failed?",
+      "summary": "Charles separates new-customer sales, expansion, and customer losses to examine what a blended metric can—and cannot—tell the board.",
+      "topic": "SaaS metrics",
+      "format": "Commentary",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514059607670108160",
+      "embed_url": "https://www.linkedin.com/embed/feed/update/urn:li:share:7514045524531064832?collapsed=1",
+      "embed_height": 628,
+      "date": null,
+      "selection": "recent",
+      "source_note": "User-supplied embed inspected in browser on October 9, 2026. Author, visible post text, article relationship, and original activity URL verified. Absolute publication date not established; relative ages are not persisted."
+    },
+    {
+      "id": "7514044653751472129",
+      "title": "Look beneath a strong Magic Number.",
+      "summary": "Charles makes the case for showing new business and upsell separately, so strong expansion does not conceal the work of building the sales engine.",
+      "topic": "SaaS metrics",
+      "format": "Article share · Magic Number, Part 4",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514044654971969536",
+      "embed_url": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7514044653751472129?collapsed=1",
+      "embed_height": 618,
+      "date": null,
+      "selection": "recent",
+      "source_note": "User-supplied embed inspected in browser on October 9, 2026. Author, visible post text, article relationship, and original activity URL verified. Absolute publication date not established; relative ages are not persisted.",
+      "article_url": "https://www.linkedin.com/pulse/magic-number-part-4-whose-new-logos-expansion-churn-charles-solomon-fvc6c"
+    },
+    {
+      "id": "7514007604109647872",
+      "title": "Celebrating the MegaEdge launch.",
+      "summary": "Charles congratulates the Megadata Health Systems team on the MegaEdge launch and recognizes the people behind its product webinar.",
+      "topic": "Company building",
+      "format": "Team recognition",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514007605485236224",
+      "embed_url": "https://www.linkedin.com/embed/feed/update/urn:li:share:7514007604109647872?collapsed=1",
+      "embed_height": 550,
+      "date": null,
+      "selection": "recent",
+      "source_note": "User-supplied embed inspected in browser on October 9, 2026. Author, visible post text, article relationship, and original activity URL verified. Absolute publication date not established; relative ages are not persisted."
+    },
+    {
+      "id": "7513675414909685761",
+      "title": "Keep the reported number beside the adjusted view.",
+      "summary": "Using a sales-hiring example, Charles explores how ramp costs and departures affect the Magic Number, presenting adjustments as context alongside the all-in result.",
+      "topic": "SaaS metrics",
+      "format": "Commentary",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513697215488401408",
+      "embed_url": "https://www.linkedin.com/embed/feed/update/urn:li:share:7513675414909685761?collapsed=1",
+      "embed_height": 632,
+      "date": null,
+      "selection": "recent",
+      "source_note": "User-supplied embed inspected in browser on October 9, 2026. Author, visible post text, article relationship, and original activity URL verified. Absolute publication date not established; relative ages are not persisted."
+    },
+    {
+      "id": "7513671395856355328",
+      "title": "Magic Number: accounting, timing, and adjustments.",
+      "summary": "Charles introduces Part 3 of his Magic Number series, connecting the accounting and sales-cycle discussion to the use of pro forma adjustments.",
+      "topic": "SaaS metrics",
+      "format": "Article share · Magic Number, Part 3",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513671399207694336",
+      "embed_url": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7513671395856355328?collapsed=1",
+      "embed_height": 618,
+      "date": null,
+      "selection": "recent",
+      "source_note": "User-supplied embed inspected in browser on October 9, 2026. Author, visible post text, article relationship, and original activity URL verified. Absolute publication date not established; relative ages are not persisted.",
+      "article_url": "https://www.linkedin.com/pulse/magic-number-part-3-all-in-truth-pro-forma-story-charles-solomon-hsrqc"
+    },
+    {
+      "id": "7513311314568515584",
+      "title": "Venture funding lessons worth bringing to the team.",
+      "summary": "Charles shares Chris Ellis’s venture-funding lessons, highlighting focus, capital discipline, valuation, and recent performance as useful founder conversations.",
+      "topic": "Capital & founders",
+      "format": "Commentary on Chris Ellis’s post",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513311315382140929",
+      "embed_url": "https://www.linkedin.com/embed/feed/update/urn:li:share:7513311314568515584?collapsed=1",
+      "embed_height": 1322,
+      "date": null,
+      "selection": "recent",
+      "source_note": "User-supplied embed inspected in browser on October 9, 2026. Author, visible post text, article relationship, and original activity URL verified. Absolute publication date not established; relative ages are not persisted."
+    },
     {
       "title": "Growth reflects earlier investment",
       "summary": "Charles connects expansion, product development, and sales capacity to the investments made before the results appear.",
       "topic": "Planning & growth",
       "url": "https://www.linkedin.com/posts/solomoncharles_saas-fractionalcfo-startupfinance-activity-7496236064139800576-Orj4",
-      "date": null
+      "date": null,
+      "selection": "earlier"
     },
     {
       "title": "Welcoming Scott Xu to Centripetal",
       "summary": "Charles introduces Scott and the combination of finance, startup, and programming experience he brings to the team.",
       "topic": "Inside the firm",
       "url": "https://www.linkedin.com/posts/solomoncharles_he-was-quick-to-post-about-joining-our-team-activity-7452427255722672128-CEI7",
-      "date": null
+      "date": null,
+      "selection": "earlier"
     },
     {
       "title": "Four years alongside Adventr",
       "summary": "Charles reflects on the partnership with Adventr, including capital preparation, finance operations, forecasting, and board reporting.",
       "topic": "Founder partnerships",
       "url": "https://www.linkedin.com/posts/solomoncharles_startups-financeops-fractionalcfo-activity-7434602260699090945-2rtx",
-      "date": null
+      "date": null,
+      "selection": "earlier"
     }
   ],
   "media": [
@@ -98,5 +195,6 @@
       "source_note": "YouTube title, channel, September 7, 2026 publication date, 28 min 1 sec player duration and expanded description verified in browser. CSV June appointment date not used as publication date."
     }
   ],
-  "media_import_note": "2026-10-09: sanitized podcast titles, public professional host names and episode URLs from user-supplied Recorded Podcasts CSV. Contact details and tracking notes excluded. Unstuck/Jamie matched existing published entry; Bee Formless/Belinda video added as alternate. Four missing URLs displayed separately, without publication dates or episode claims. What We Need to Grow/Caleb Pedosiuk appears under To Be Recorded and is excluded from public completed appearances pending recording/publication confirmation. User follow-up: Media uses only live linked recordings; awaiting-link listings removed on October 9, 2026."
+  "media_import_note": "2026-10-09: sanitized podcast titles, public professional host names and episode URLs from user-supplied Recorded Podcasts CSV. Contact details and tracking notes excluded. Unstuck/Jamie matched existing published entry; Bee Formless/Belinda video added as alternate. Four missing URLs displayed separately, without publication dates or episode claims. What We Need to Grow/Caleb Pedosiuk appears under To Be Recorded and is excluded from public completed appearances pending recording/publication confirmation. User follow-up: Media uses only live linked recordings; awaiting-link listings removed on October 9, 2026.",
+  "linkedin_import_note": "Seven supplied embeds render publicly, including Charles’s commentary on Chris Ellis. Supplied order retained. Preview headings and summaries are editorial, not verbatim post titles or approved Charles quotes. Existing three selections retained separately. Relative ages and engagement counts omitted."
 }

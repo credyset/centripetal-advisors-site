@@ -1,0 +1,33 @@
+{
+  "recorded": "2026-10-09",
+  "scope": "Hybrid LinkedIn feed; GitHub concept only",
+  "recent_posts": 7,
+  "earlier_selections": 3,
+  "order": "User-supplied sequence; no inferred absolute publication dates",
+  "sources": "All seven supplied embed pages inspected; original activity URLs and three article links established from rendered embed links",
+  "source_and_local_embed_checks": {
+    "7514431254625337344": "Charles visible; Part 5 article share rendered",
+    "7514045524531064832": "Charles visible; commentary rendered",
+    "7514044653751472129": "Charles visible; Part 4 article share rendered",
+    "7514007604109647872": "Charles visible; MegaEdge post rendered",
+    "7513675414909685761": "Charles visible; pro forma commentary rendered",
+    "7513671395856355328": "Charles visible; Part 3 article share rendered",
+    "7513311314568515584": "Charles and Chris Ellis both visible; repost attribution retained"
+  },
+  "rendered_viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "interaction_checks": {
+    "initial_iframes": 0,
+    "keyboard": "Enter opens and closes native summary",
+    "reopen": "First preview reused its one existing iframe",
+    "titles": "All seven iframe titles unique and descriptive",
+    "fallback": "Original post remains linked in each card and expanded panel",
+    "no_horizontal_overflow": true,
+    "console_errors": 0
+  },
+  "mobile_limit": "390×844 requested; actual browser remained 1280×720. Responsive CSS implemented, rendered mobile verification outstanding.",
+  "measurement_limits": "No Lighthouse, Web Vitals, search, or AI-citation gains claimed",
+  "privacy_and_update": "No personal inputs, automatic ingestion, account access, or publishing to LinkedIn. Native frames load after expansion; reopening reuses the existing frame."
+}

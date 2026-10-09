@@ -95,7 +95,11 @@ The role map is a working editorial contract, not evidence that the retained art
 
 ## LinkedIn Posts and Media
 
-The initial LinkedIn subsection is a curated feed with three independently verified public post URLs, editorial summaries identified as summaries, and links to the originals. It is not an automatically synchronized feed. Exact publication dates are omitted where the retrieved public page did not establish them. No private call transcripts, unpublished drafts, comments, contact exports, or engagement counts are republished. The local post corpus informed discovery; the private draft content library was excluded.
+The LinkedIn subsection now uses a hybrid curated feed: seven recent user-supplied posts as branded timeline cards with labeled editorial summaries, verified original activity links, and native LinkedIn previews loaded only when a reader opens the disclosure. Three earlier verified selections remain below with direct links. Three recent article-share cards also link to the corresponding LinkedIn article. The preview headings are editorial summaries, not claimed original titles. Chris Ellis retains attribution inside Charles’s repost/commentary preview.
+
+All seven supplied embed URLs were inspected directly and rendered within the local concept. Original activity URLs were taken from the embeds’ own links, rather than assuming the supplied share/ugcPost identifier equals the activity identifier. Only relative ages were available, so absolute publication dates and persistent relative timestamps are omitted. The supplied order is retained. Reactions and comments are shown only by LinkedIn itself, not copied into native cards.
+
+`assets/linkedin-feed.css` isolates the timeline layout, Home-derived typography/palette, author rail, and narrow-width topic navigation to this page. `assets/linkedin-feed.js` creates an iframe on first expansion, updates the native disclosure label, and reuses the frame on reopening. Each iframe has a unique descriptive title, the supplied height, a responsive width, and a direct original-post alternative. With JavaScript disabled, summaries and original links remain readable; the native preview requires JavaScript. No automatic synchronization, scraping, subscription service, copied external imagery, unpublished post corpus, or account authentication was added. The static source is `tools/resource-library.json`.
 
 Media initially contained two public episode listings: Unstuck Pod (September 17, 2026, 20 minutes) and Bee Formless (May 20, 2026, 31 minutes). Dates, durations, titles, and descriptions come from publisher-supplied platform listings. The Bee Formless Apple page was directly readable; the Unstuck Amazon episode was available through public search but its direct fetch failed. Player functionality was not tested. The podcast-target/transcript prospect corpus is not an appearances list and was excluded.
 
@@ -103,7 +107,7 @@ The supplied Recorded Podcasts CSV adds four linked appearances: Insure the Hori
 
 Six linked appearances are now available. Per the user’s follow-up, Media contains only live linked episodes: the More conversations section and its four awaiting-link listings were removed. Missing episode URLs can be supplied later; those shows are not displayed as live appearances. What We Need to Grow sits beneath “To Be Recorded” in the source list and is held out of completed appearances until confirmed. Private contact details and tracking notes are excluded from the repository and public page.
 
-No automatic scraping, third-party feed subscription, embedded trackers, player requests, or authentication was added. Source records and summaries live in `tools/resource-library.json`; `tools/build_resources.py` rebuilds the collections. The update method for the eventual LinkedIn feed remains a human preference to resolve; the curated concept is independently usable.
+Media remains text and direct platform links, without embedded players. LinkedIn previews make a third-party request when expanded; the feed initially contains no iframes. Source records and summaries live in `tools/resource-library.json`; `tools/build_resources.py` rebuilds the collections. Automatic LinkedIn ingestion remains a separate future decision.
 
 ## Route and template rules
 
