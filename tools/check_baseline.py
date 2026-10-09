@@ -17,7 +17,12 @@ class Inspect(HTMLParser):
 for item in manifest['pages']:
     p=ROOT/item['file'];s=p.read_text();ins=Inspect();ins.feed(s)
     assert ins.robot==['noindex, follow'],p
-    assert any(urlsplit(src).path=='assets/home-baseline.v3.js' for src in ins.local),p
+    if item['file']=='blogs.html' and 'class="ca-native"' in s:
+        # Blog is now a native catalog; the captured Home remains unchanged.
+        assert 'id="main-content"' in s and 'aria-label="Article topics"' in s,p
+        assert any(urlsplit(src).path=='assets/foundations.js' for src in ins.local),p
+    else:
+        assert any(urlsplit(src).path=='assets/home-baseline.v3.js' for src in ins.local),p
     for src in ins.local:assert (p.parent/urlsplit(src).path).exists(),(p,src)
     assert 'googletagmanager.com' not in s,p
     assert 'events.framer.com/script' not in s,p

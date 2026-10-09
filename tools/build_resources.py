@@ -96,9 +96,6 @@ for m in data['media']:
  actions=''.join('<p>'+link(x['url'],('Watch on ' if x['platform']=='YouTube' else 'Listen on ')+x['platform']+' ↗',True)+'</p>' for x in destinations)
  media+=f'<article class="ca-media-item"><div class="ca-media-show"><span>Podcast appearance</span><p>{e(m["show"])}</p></div><div>{metadata}<h3>{e(m["title"])}</h3><p>{e(m["summary"])}</p>{actions}</div></article>'
 body=section('Charles in conversation.','Watch or listen to conversations about finance, founder decisions, and building companies.',media)
-if data.get('media_awaiting_links'):
- pending=grid([f'<article class="ca-card"><p class="ca-eyebrow">Episode link forthcoming</p><h3>{e(m["show"])}</h3><p>With {e(m["host"])}.</p></article>' for m in data['media_awaiting_links']])
- body+=section('More conversations.','Additional appearances from Charles’ podcast list. Episode links will be added as they become available.',pending)
 body+=section('Bring the conversation back to your company.','Explore the firm’s operating approach or the resources connected to your next decision.',link('../about.html','About Centripetal →')+'<p class="ca-footer">'+link('../guides/index.html','Explore practical guides →')+'</p>',True)
 build('resources/media.html','Charles Solomon’s Podcast Appearances','Finance and company building, in conversation.','Podcast appearances featuring Charles Solomon of Centripetal Advisors.',body,'Media',[(m['title'],m['url']) for m in data['media']])
 

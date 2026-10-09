@@ -98,23 +98,5 @@
       "source_note": "YouTube title, channel, September 7, 2026 publication date, 28 min 1 sec player duration and expanded description verified in browser. CSV June appointment date not used as publication date."
     }
   ],
-  "media_awaiting_links": [
-    {
-      "show": "Stratum Path Podcast",
-      "host": "Jarrett Sorensen"
-    },
-    {
-      "show": "Beyond the Agency Podcast",
-      "host": "Ashley Jung"
-    },
-    {
-      "show": "Business Journey Unlocked",
-      "host": "Kevin Anderson"
-    },
-    {
-      "show": "Finance Forward",
-      "host": "Tridib Chakrabarti"
-    }
-  ],
-  "media_import_note": "2026-10-09: sanitized podcast titles, public professional host names and episode URLs from user-supplied Recorded Podcasts CSV. Contact details and tracking notes excluded. Unstuck/Jamie matched existing published entry; Bee Formless/Belinda video added as alternate. Four missing URLs displayed separately, without publication dates or episode claims. What We Need to Grow/Caleb Pedosiuk appears under To Be Recorded and is excluded from public completed appearances pending recording/publication confirmation."
+  "media_import_note": "2026-10-09: sanitized podcast titles, public professional host names and episode URLs from user-supplied Recorded Podcasts CSV. Contact details and tracking notes excluded. Unstuck/Jamie matched existing published entry; Bee Formless/Belinda video added as alternate. Four missing URLs displayed separately, without publication dates or episode claims. What We Need to Grow/Caleb Pedosiuk appears under To Be Recorded and is excluded from public completed appearances pending recording/publication confirmation. User follow-up: Media uses only live linked recordings; awaiting-link listings removed on October 9, 2026."
 }
