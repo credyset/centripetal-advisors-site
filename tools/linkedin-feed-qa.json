@@ -2,7 +2,7 @@
   "recorded": "2026-10-09",
   "scope": "Hybrid LinkedIn feed with always-visible, unboxed previews; GitHub concept only",
   "recent_posts": 7,
-  "earlier_selections": 3,
+  "earlier_selections": 0,
   "order": "User-supplied sequence; no inferred absolute publication dates",
   "sources": "All seven supplied embed pages inspected; original activity URLs and three article links established from rendered embed links",
   "source_and_local_embed_checks": {
@@ -33,5 +33,17 @@
   },
   "mobile_limit": "390×844 requested; actual browser remained 1280×720. Responsive CSS implemented, rendered mobile verification outstanding.",
   "measurement_limits": "No Lighthouse, Web Vitals, search, or AI-citation gains claimed",
-  "privacy_and_update": "No personal inputs, automatic ingestion, account access, or publishing to LinkedIn. Seven always-visible static frames use browser-native lazy loading; requests no longer depend on a disclosure interaction."
+  "privacy_and_update": "No personal inputs, automatic ingestion, account access, or publishing to LinkedIn. Seven always-visible static frames use browser-native lazy loading; requests no longer depend on a disclosure interaction.",
+  "earlier_source_records_retained": 3,
+  "cleanup": "Secondary feed introduction, earlier-selection section and jump link, repeated author/platform row, and per-entry format/editorial-summary labels removed. Topic headings, summaries, original links and native previews retained.",
+  "cleanup_checks": {
+    "removed_sections_and_labels": 0,
+    "earlier_selections_text_present": false,
+    "secondary_feed_heading_present": false,
+    "initial_iframes": 7,
+    "item_list_entries": 7,
+    "first_preview": "Charles visible after cleanup",
+    "desktop_horizontal_overflow": false,
+    "visual_review": "First item begins with topic, title and summary; links flow directly into the visible iframe; Home palette and typography retained"
+  }
 }

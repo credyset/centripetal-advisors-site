@@ -49,7 +49,7 @@ def build(path,title,h1,desc,body,current,items):
  css=soup.new_tag('link',rel='stylesheet',href='../assets/resource-library.css?v=20261009-4');soup.head.append(css)
  if current=='LinkedIn Posts':
   soup.body['class'].append('ca-linkedin-feed')
-  soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/linkedin-feed.css?v=20261009-2'))
+  soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/linkedin-feed.css?v=20261009-3'))
  nav=soup.select_one('.site-nav')
  for a in nav.select('a'):
   if a.get_text(strip=True)=='Resources':a['href']='../resources/index.html';a['aria-current']='page'
@@ -91,7 +91,7 @@ build('resources/tools.html','Finance Tools Library Entry','Find your next guide
 
 def linkedin_card(p,index):
  id=p.get('id',f'earlier-{index}')
- head=f'<p class="ca-linkedin-meta"><span>Charles Solomon</span><span class="ca-linkedin-platform">LinkedIn</span></p><p class="ca-eyebrow">{e(p["topic"])}</p><h3 id="post-title-{id}">{e(p["title"])}</h3><p class="ca-linkedin-summary">{e(p["summary"])}</p><p class="ca-linkedin-source">'+e(p.get('format','Selected post'))+' · Editorial summary</p>'
+ head=f'<p class="ca-eyebrow">{e(p["topic"])}</p><h2 id="post-title-{id}">{e(p["title"])}</h2><p class="ca-linkedin-summary">{e(p["summary"])}</p>'
  actions='<div class="ca-linkedin-actions">'+link(p['url'],'Read original post ↗',True)
  if p.get('article_url'):actions+=link(p['article_url'],'Read LinkedIn article ↗',True)
  actions+='</div>'
@@ -100,12 +100,10 @@ def linkedin_card(p,index):
   embed=f'<div class="ca-linkedin-embed"><iframe src="{e(p["embed_url"])}" title="LinkedIn post by Charles Solomon: {e(p["title"])}" width="504" height="{int(p["embed_height"])}" loading="lazy" referrerpolicy="no-referrer" allowfullscreen=""></iframe></div>'
  return f'<li class="ca-linkedin-entry"><span class="ca-linkedin-position" aria-hidden="true">{index:02d}</span><article class="ca-linkedin-card" id="post-{id}" aria-labelledby="post-title-{id}">'+head+actions+embed+'</article></li>'
 recent=[p for p in data['posts'] if p.get('selection')=='recent']
-earlier=[p for p in data['posts'] if p.get('selection')!='recent']
 rail='<aside class="ca-linkedin-rail" aria-label="About this feed"><div class="ca-linkedin-author"><span class="ca-linkedin-monogram" aria-hidden="true">CS</span><p class="ca-eyebrow">A perspective from the work</p><h3>Charles Solomon</h3><p>CFO · Board Member · Investor</p>'+link(data['linkedin_profile'],'Charles on LinkedIn ↗',True)+'</div><nav aria-label="Explore the selected posts"><p class="ca-eyebrow">In this selection</p><a href="#post-7514431254625337344">SaaS metrics</a><a href="#post-7514007604109647872">Company building</a><a href="#post-7513311314568515584">Capital &amp; founders</a></nav><p class="ca-linkedin-rail-note">Our summaries introduce the idea. Charles’s original posts appear below each introduction.</p></aside>'
-body='<section class="ca-section ca-linkedin-section"><div class="ca-inner"><div class="ca-linkedin-intro"><div><p class="ca-eyebrow">Selected posts · Charles Solomon</p><h2 id="recent-posts" tabindex="-1">What the numbers need to explain.</h2><p class="ca-intro">Perspectives on SaaS metrics, capital, and company building. Read a short introduction alongside each original post.</p></div><a class="ca-link" href="#earlier-posts">Earlier selections ↓</a></div><div class="ca-linkedin-layout">'+rail+'<ol class="ca-linkedin-timeline" aria-label="Recent selected LinkedIn posts">'+''.join(linkedin_card(p,i+1) for i,p in enumerate(recent))+'</ol></div></div></section>'
-body+='<section class="ca-section ca-linkedin-earlier"><div class="ca-inner"><h2 id="earlier-posts" tabindex="-1">Earlier selections.</h2><p class="ca-intro">More perspectives on planning, people, and founder partnerships.</p><div class="ca-grid">'+''.join(card(p['title'],p['summary'],p['url'],'Read on LinkedIn ↗',p['topic'],True) for p in earlier)+'</div></div></section>'
+body='<section class="ca-section ca-linkedin-section" aria-label="Selected LinkedIn posts"><div class="ca-inner"><div class="ca-linkedin-layout">'+rail+'<ol class="ca-linkedin-timeline" aria-label="Recent selected LinkedIn posts">'+''.join(linkedin_card(p,i+1) for i,p in enumerate(recent))+'</ol></div></div></section>'
 body+=section('Put the perspective to work.','Explore the frameworks and finance support connected to your next decision.',link('../guides/index.html','Explore guides and tools →')+'<p class="ca-footer">'+link('../services.html','Explore finance support →')+'</p>',True)
-build('resources/linkedin-posts.html','Charles Solomon’s LinkedIn Posts','A perspective from inside the work.','Selected LinkedIn posts from Charles Solomon on SaaS metrics, capital, and company building—with original-post previews.',body,'LinkedIn Posts',[(p['title'],p['url']) for p in data['posts']])
+build('resources/linkedin-posts.html','Charles Solomon’s LinkedIn Posts','A perspective from inside the work.','Selected LinkedIn posts from Charles Solomon on SaaS metrics, capital, and company building—with original-post previews.',body,'LinkedIn Posts',[(p['title'],p['url']) for p in recent])
 
 media=''
 for m in data['media']:

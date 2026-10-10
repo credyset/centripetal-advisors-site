@@ -1,22 +1,15 @@
 /* An editorial timeline within the existing Home typography and palette. */
 .ca-linkedin-feed .concept-hero{padding-block:64px}
 .ca-linkedin-feed .ca-linkedin-section{background:var(--paper);padding-top:64px}
-.ca-linkedin-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:36px;margin-bottom:48px}
-.ca-linkedin-intro h2{font-size:40px}
-.ca-linkedin-intro .ca-intro{margin-bottom:0;max-width:680px}
-.ca-linkedin-intro>.ca-link{white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
 .ca-linkedin-layout{display:grid;grid-template-columns:minmax(0,760px) minmax(0,1fr);gap:72px;align-items:start}
 .ca-linkedin-feed .ca-linkedin-timeline{grid-column:1;grid-row:1;list-style:none;padding:0;margin:0;position:relative;min-width:0}
 .ca-linkedin-timeline::before{content:'';position:absolute;left:12px;top:44px;bottom:28px;width:1px;background:#bac2b6}
 .ca-linkedin-feed .ca-linkedin-entry{position:relative;padding-left:44px;margin:0 0 64px}
 .ca-linkedin-position{position:absolute;top:0;left:0;background:var(--paper);padding:5px 0;color:var(--sage);font:500 12px/1.5 Roboto,Arial,sans-serif;letter-spacing:1px}
 .ca-linkedin-card{scroll-margin-top:20px;background:transparent;border:0;padding:0;min-width:0}
-.ca-linkedin-feed .ca-linkedin-meta{display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:14px;color:var(--pine);margin-bottom:24px}
-.ca-linkedin-platform{font-size:12px;color:var(--sage);border:1px solid #bac2b6;padding:3px 10px;border-radius:3px}
 .ca-linkedin-card .ca-eyebrow{font-size:11px}
-.ca-linkedin-feed .ca-linkedin-card h3{font-size:32px;line-height:1.3;margin-bottom:18px;scroll-margin-top:20px}
+.ca-linkedin-feed .ca-linkedin-card h2{font-size:32px;line-height:1.3;margin-bottom:18px;scroll-margin-top:20px}
 .ca-linkedin-feed .ca-linkedin-summary{font-size:18px;line-height:1.65;margin-bottom:22px}
-.ca-linkedin-feed .ca-linkedin-source{font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.5}
 .ca-linkedin-actions{display:flex;flex-wrap:wrap;gap:4px 24px;border-top:1px solid #e0e3dc;padding-top:12px}
 .ca-linkedin-feed .ca-linkedin-actions a{display:inline-flex;align-items:center;min-height:44px;font-size:14px}
 /* Native LinkedIn previews sit directly in the timeline, without a second box. */
@@ -31,9 +24,7 @@
 .ca-linkedin-rail nav{margin-top:36px;padding-top:24px;border-top:1px solid #bac2b6}
 .ca-linkedin-rail nav>a{display:block;min-height:44px;padding:8px 0;font-size:15px;color:var(--sage);text-decoration:underline;text-underline-offset:4px}
 .ca-linkedin-feed .ca-linkedin-rail-note{font-size:14px;line-height:1.65;margin-top:28px;color:var(--muted)}
-.ca-linkedin-feed .ca-linkedin-earlier h2{font-size:38px}
-.ca-linkedin-earlier .ca-card h3{font-size:27px}
 @media(max-width:1100px){.ca-linkedin-layout{grid-template-columns:minmax(0,2.5fr) minmax(210px,1fr);gap:40px}}
-@media(max-width:900px){.ca-linkedin-layout{display:block}.ca-linkedin-rail{position:static;margin-bottom:32px}.ca-linkedin-author,.ca-linkedin-feed .ca-linkedin-rail-note{display:none}.ca-linkedin-rail nav{margin:0;padding:16px 0;border-bottom:1px solid #bac2b6;display:flex;flex-wrap:wrap;gap:4px 24px}.ca-linkedin-rail nav .ca-eyebrow{width:100%;margin:0}.ca-linkedin-intro{display:block}.ca-linkedin-intro>.ca-link{margin-top:20px}}
-@media(max-width:600px){.ca-linkedin-feed .concept-hero{padding-block:48px}.ca-linkedin-feed .ca-section{padding-inline:24px}.ca-linkedin-intro h2{font-size:30px}.ca-linkedin-feed .ca-linkedin-entry{padding-left:24px}.ca-linkedin-timeline::before{left:7px}.ca-linkedin-position{font-size:10px;letter-spacing:0}.ca-linkedin-feed .ca-linkedin-card h3{font-size:27px}.ca-linkedin-feed .ca-linkedin-summary{font-size:16px}.ca-linkedin-rail{display:block}.ca-linkedin-feed .ca-linkedin-earlier h2{font-size:30px}}
+@media(max-width:900px){.ca-linkedin-layout{display:block}.ca-linkedin-rail{position:static;margin-bottom:32px}.ca-linkedin-author,.ca-linkedin-feed .ca-linkedin-rail-note{display:none}.ca-linkedin-rail nav{margin:0;padding:16px 0;border-bottom:1px solid #bac2b6;display:flex;flex-wrap:wrap;gap:4px 24px}.ca-linkedin-rail nav .ca-eyebrow{width:100%;margin:0}}
+@media(max-width:600px){.ca-linkedin-feed .concept-hero{padding-block:48px}.ca-linkedin-feed .ca-section{padding-inline:24px}.ca-linkedin-feed .ca-linkedin-entry{padding-left:24px}.ca-linkedin-timeline::before{left:7px}.ca-linkedin-position{font-size:10px;letter-spacing:0}.ca-linkedin-feed .ca-linkedin-card h2{font-size:27px}.ca-linkedin-feed .ca-linkedin-summary{font-size:16px}.ca-linkedin-rail{display:block}}
 @media print{.ca-linkedin-layout{display:block}.ca-linkedin-rail,.ca-linkedin-embed{display:none}.ca-linkedin-card{break-inside:avoid}.ca-linkedin-timeline::before{display:none}.ca-linkedin-feed .ca-linkedin-entry{padding-left:0}.ca-linkedin-position{display:none}}
