@@ -56,3 +56,7 @@
 .ca-preparation-note button{margin-top:16px}
 .ca-preparation-note [role=status]{font-size:14px;min-height:1.5em}
 @media print{.ca-preparation-note{display:none}}
+/* Override the general white accordion inside the dark preparation result. */
+.ca-board-tool-reference .ca-review-panel details{background:transparent;color:var(--stone);border-radius:0;box-shadow:none}
+.ca-board-tool-reference .ca-review-panel details summary,.ca-board-tool-reference .ca-preparation-note label{color:var(--stone)}
+.ca-board-tool-reference .ca-review-panel details summary::after{color:var(--stone)}

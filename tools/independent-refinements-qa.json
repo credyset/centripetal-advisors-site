@@ -458,5 +458,13 @@
       "viewport": 320,
       "overflow": false
     }
+  },
+  "expandedNoteContrast": {
+    "resultBackground": "pine #243221",
+    "accordionBackground": "transparent",
+    "summaryAndLabel": "stone #ddd8cd",
+    "textareaBackground": "paper #f2f2f2",
+    "textareaText": "pine #243221",
+    "publishedVisualIssue": "Shared white accordion background was identified and overridden before final acceptance."
   }
 }

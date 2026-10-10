@@ -62,5 +62,5 @@ body+=section('<p class="ca-eyebrow">Connect the preparation to your company</p>
 soup.main.clear();soup.main.append(BeautifulSoup(body,'html.parser'))
 node=soup.new_tag('script',type='application/json',id='board-builder-data');node.string=json.dumps(DATA,ensure_ascii=False).replace('<','\\u003c');soup.body.append(node)
 script=soup.new_tag('script',src='../../assets/board-builder.js?v=20261009-3',defer='');soup.body.append(script)
-css=soup.new_tag('link',href='../../assets/board-builder.css?v=20261009-5',rel='stylesheet');soup.head.append(css)
+css=soup.new_tag('link',href='../../assets/board-builder.css?v=20261009-6',rel='stylesheet');soup.head.append(css)
 (ROOT/PATH).write_text(str(soup).rstrip()+'\n')
