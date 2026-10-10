@@ -50,7 +50,7 @@
     "monogram_elements": 0,
     "introductory_eyebrow_present": false,
     "email_href": "mailto:charles@centripetaladvisors.com",
-    "contact_layout": "LinkedIn and full email address in one wrapping contact group; email occupies the next line at 1280px viewport",
+    "contact_layout": "Black LinkedIn social icon and full email address share one row at 1280px; flex wrapping retained for narrower widths",
     "desktop_sticky": "Checked via SaaS metrics, Company building, and Capital & founders anchors; sidebar stays at 112px from viewport top after scrolling",
     "last_checked_scroll_y": 6291.5,
     "last_checked_rail_bounds": {
@@ -61,5 +61,27 @@
     "short_window_behavior": "Viewport-limited height with internal scrolling, CSS implemented",
     "mobile_behavior": "Contact information appears above the feed in CSS; actual mobile rendering remains unverified",
     "desktop_horizontal_overflow": false
+  },
+  "button_and_social_checks": {
+    "post_buttons": 7,
+    "article_buttons": 3,
+    "button_height_px": 48,
+    "button_shape": "100px radius, filled pine/stone text primary and outlined pine secondary",
+    "arrow_text_removed_from_post_actions": true,
+    "social_link": "https://www.linkedin.com/in/solomoncharles/",
+    "social_glyph_size_px": 24,
+    "social_link_target_px": 44,
+    "social_image_loaded": true,
+    "accessible_names": "All button links and profile icon identify their destination and new-tab behavior",
+    "keyboard": "Tab from first post reaches article; Tab from profile icon reaches email; both show 3px focus outline",
+    "desktop_horizontal_overflow": false,
+    "motion": "CSS-only 200ms hover lift/color transition; reduced-motion override implemented; hover/reduced-motion visual emulation not performed"
+  },
+  "live_home_design_reference": {
+    "url": "https://centripetaladvisors.com/",
+    "review": "Public homepage inspected in browser this turn",
+    "observed_button": "Stone background rgb(221,216,205), radius 100px, padding 15px 27px",
+    "published_appear_effects": "Opacity 0.001 to 1; another entrance starts y150 and ends y0 with a 2-second spring. Hero character nodes expose opacity/filter/transform styling.",
+    "design_recommendation": "Adapt gentle fade/rise behavior with shorter duration and smaller movement for reading; no new entrance animation added in this batch."
   }
 }

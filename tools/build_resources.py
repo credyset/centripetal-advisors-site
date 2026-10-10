@@ -49,7 +49,7 @@ def build(path,title,h1,desc,body,current,items):
  css=soup.new_tag('link',rel='stylesheet',href='../assets/resource-library.css?v=20261009-4');soup.head.append(css)
  if current=='LinkedIn Posts':
   soup.body['class'].append('ca-linkedin-feed')
-  soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/linkedin-feed.css?v=20261009-4'))
+  soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/linkedin-feed.css?v=20261009-5'))
  nav=soup.select_one('.site-nav')
  for a in nav.select('a'):
   if a.get_text(strip=True)=='Resources':a['href']='../resources/index.html';a['aria-current']='page'
@@ -89,18 +89,23 @@ build('guides/index.html','SaaS Finance Guides & Tools','Guides and tools for th
 body=section('Guides and tools now share one library.','Find each resource once, with a clear label for the reading framework or interactive exercise it offers.',link('../guides/index.html','Explore Guides & Tools →'))
 build('resources/tools.html','Finance Tools Library Entry','Find your next guide or tool.','Centripetal’s finance tools and guides are now collected in one library, with a single page for each resource.',body,'Guides & Tools',[('Guides & Tools','guides/index.html')])
 
+POST_ICON='<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l-3 3V11.5A7.5 7.5 0 0 1 9.5 4h3a7.5 7.5 0 0 1 7.5 7.5Z"/><path d="M7 9h8M7 13h5"/></svg>'
+ARTICLE_ICON='<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v15M12 5C9 3 5 3 2 4v14c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 1Z"/></svg>'
+def linkedin_button(url,label,icon,secondary=False):
+ return f'<a class="ca-linkedin-button'+(' ca-linkedin-button-secondary' if secondary else '')+f'" href="{e(url)}" target="_blank" rel="noopener noreferrer" aria-label="{e(label)} on LinkedIn (opens in a new tab)">'+icon+f'<span>{e(label)}</span></a>'
+
 def linkedin_card(p,index):
  id=p.get('id',f'earlier-{index}')
  head=f'<p class="ca-eyebrow">{e(p["topic"])}</p><h2 id="post-title-{id}">{e(p["title"])}</h2><p class="ca-linkedin-summary">{e(p["summary"])}</p>'
- actions='<div class="ca-linkedin-actions">'+link(p['url'],'Read original post ↗',True)
- if p.get('article_url'):actions+=link(p['article_url'],'Read LinkedIn article ↗',True)
+ actions='<div class="ca-linkedin-actions">'+linkedin_button(p['url'],'Read original post',POST_ICON)
+ if p.get('article_url'):actions+=linkedin_button(p['article_url'],'Read article',ARTICLE_ICON,True)
  actions+='</div>'
  embed=''
  if p.get('embed_url'):
   embed=f'<div class="ca-linkedin-embed"><iframe src="{e(p["embed_url"])}" title="LinkedIn post by Charles Solomon: {e(p["title"])}" width="504" height="{int(p["embed_height"])}" loading="lazy" referrerpolicy="no-referrer" allowfullscreen=""></iframe></div>'
  return f'<li class="ca-linkedin-entry"><span class="ca-linkedin-position" aria-hidden="true">{index:02d}</span><article class="ca-linkedin-card" id="post-{id}" aria-labelledby="post-title-{id}">'+head+actions+embed+'</article></li>'
 recent=[p for p in data['posts'] if p.get('selection')=='recent']
-rail='<aside class="ca-linkedin-rail" aria-label="About this feed"><div class="ca-linkedin-author"><h3>Charles Solomon</h3><p>CFO · Board Member · Investor</p>'+'<div class="ca-linkedin-contacts">'+link(data['linkedin_profile'],'Charles on LinkedIn ↗',True)+link('mailto:charles@centripetaladvisors.com','charles@centripetaladvisors.com')+'</div></div><nav aria-label="Explore the selected posts"><p class="ca-eyebrow">In this selection</p><a href="#post-7514431254625337344">SaaS metrics</a><a href="#post-7514007604109647872">Company building</a><a href="#post-7513311314568515584">Capital &amp; founders</a></nav><p class="ca-linkedin-rail-note">Our summaries introduce the idea. Charles’s original posts appear below each introduction.</p></aside>'
+rail='<aside class="ca-linkedin-rail" aria-label="About this feed"><div class="ca-linkedin-author"><h3>Charles Solomon</h3><p>CFO · Board Member · Investor</p>'+'<div class="ca-linkedin-contacts">'+f'<a class="ca-linkedin-social" href="{e(data["linkedin_profile"])}" target="_blank" rel="noopener noreferrer" aria-label="Charles Solomon on LinkedIn (opens in a new tab)" title="Charles Solomon on LinkedIn"><img src="../assets/linkedin-social.svg" width="24" height="24" alt=""/></a>'+link('mailto:charles@centripetaladvisors.com','charles@centripetaladvisors.com')+'</div></div><nav aria-label="Explore the selected posts"><p class="ca-eyebrow">In this selection</p><a href="#post-7514431254625337344">SaaS metrics</a><a href="#post-7514007604109647872">Company building</a><a href="#post-7513311314568515584">Capital &amp; founders</a></nav><p class="ca-linkedin-rail-note">Our summaries introduce the idea. Charles’s original posts appear below each introduction.</p></aside>'
 body='<section class="ca-section ca-linkedin-section" aria-label="Selected LinkedIn posts"><div class="ca-inner"><div class="ca-linkedin-layout">'+rail+'<ol class="ca-linkedin-timeline" aria-label="Recent selected LinkedIn posts">'+''.join(linkedin_card(p,i+1) for i,p in enumerate(recent))+'</ol></div></div></section>'
 body+=section('Put the perspective to work.','Explore the frameworks and finance support connected to your next decision.',link('../guides/index.html','Explore guides and tools →')+'<p class="ca-footer">'+link('../services.html','Explore finance support →')+'</p>',True)
 build('resources/linkedin-posts.html','Charles Solomon’s LinkedIn Posts','A perspective from inside the work.','Selected LinkedIn posts from Charles Solomon on SaaS metrics, capital, and company building—with original-post previews.',body,'LinkedIn Posts',[(p['title'],p['url']) for p in recent])
