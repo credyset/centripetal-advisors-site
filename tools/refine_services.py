@@ -1,4 +1,4 @@
-"""Build the reviewed service copy into the existing concept page shells."""
+"""Build the service concept copy into the existing concept page shells."""
 from pathlib import Path
 from bs4 import BeautifulSoup
 from html import escape as e
@@ -33,10 +33,14 @@ for slug,c in CONTENT.items():
         li=soup.new_tag('li');a=soup.new_tag('a',href='#'+target);a.string=label;li.append(a);toc.append(li)
     cta=soup.select_one('.home-cta');cta.h2.string=c['cta'];cta.p.string=c['ctaDetail']
     a=cta.select_one('.pill-button');a.string=c['cta'];a['href']=contact_link(c['topic'],'service-'+slug)
+    if slug == 'board-investor-reporting':
+        sidebar=soup.select_one('.service-sidebar')
+        if not sidebar.select_one('a[href*="board-deck-builder"]'):
+            link=soup.new_tag('a',href='../guides/tools/board-deck-builder.html');link.string='Build the board conversation outline →';sidebar.select_one('a').insert_before(link)
     # Correct historical double escaping in the related-service labels.
     for a in soup.select('.service-sidebar a'):
         if a.string:a.string=a.string.replace('&amp;','&')
-    for l in soup.select('link[href*="foundations.css"]'):l['href']='../assets/foundations.css?v=20261009-6'
+    for l in soup.select('link[href*="foundations.css"]'):l['href']='../assets/foundations.css?v=20261009-9'
     path.write_text(str(soup).rstrip()+'\n')
 
 overview=ROOT/'assets/services-detail.inc'
@@ -89,5 +93,5 @@ for slug,(topic,label,body) in guide_map.items():
     # Existing conclusion CTAs lead to the same contextual destination.
     for a in soup.select('main a[href="../contact.html"], .cta-page a[href="../contact.html"]'):
         a['href']=contact_link(topic,'guide-'+slug)
-    for l in soup.select('link[href*="foundations.css"]'):l['href']='../assets/foundations.css?v=20261009-6'
+    for l in soup.select('link[href*="foundations.css"]'):l['href']='../assets/foundations.css?v=20261009-9'
     path.write_text(str(soup).rstrip()+'\n')

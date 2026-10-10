@@ -40,3 +40,5 @@
 @media print{.ca-linkedin-layout{display:block}.ca-linkedin-rail,.ca-linkedin-embed{display:none}.ca-linkedin-card{break-inside:avoid}.ca-linkedin-timeline::before{display:none}.ca-linkedin-feed .ca-linkedin-entry{padding-left:0}.ca-linkedin-position{display:none}}
 
 @media(prefers-reduced-motion:reduce){.ca-linkedin-feed .ca-linkedin-button,.ca-linkedin-social,.ca-linkedin-rail nav>a{transition:none;transform:none!important}}
+/* Give original post previews more room on narrow phones. */
+@media(max-width:400px){.ca-linkedin-feed .ca-section{padding-inline:14px}.ca-linkedin-feed .ca-linkedin-entry{padding-left:0}.ca-linkedin-position,.ca-linkedin-timeline::before{display:none}}

@@ -1,6 +1,6 @@
 # Centripetal resources — reference-page plan and emerging standard
 
-Updated October 9, 2026. The combined Guides & Tools subsection is implemented. The cash-flow guide and Board Deck Builder are the first reference designs, ready for human review. Page templates, visual treatments, and interaction patterns remain provisional until that review and actual narrow-width verification. Live Framer is outside this work. Existing detail URLs remain unchanged.
+Updated October 9, 2026. The combined Guides & Tools subsection is implemented. The cash-flow guide and Board Deck Builder are the first reference designs, ready for human review. Page templates, visual treatments, and interaction patterns remain provisional until human review. Actual narrow-width verification is now recorded. Live Framer is outside this work. Existing detail URLs remain unchanged.
 
 ## The distinction
 
@@ -151,3 +151,11 @@ The local SEO/AI surfaceability overview recommends a focused resource system or
 ## Reference review batch
 
 Review the cash guide and Board Deck Builder together for (1) clarity of the founder task and result, (2) usefulness and accuracy of the evidence/prompt wording, and (3) fit with the Home design language. The approved combined library is implemented independently of the provisional page templates. Remaining guide copy, calculator formulas, and personal attribution still need their own review; the reference design does not approve them.
+
+## Independent refinement checkpoint · October 9
+
+The two reference pages retain their different jobs. The cash guide’s worksheet now includes the review question with each open item. The Board Deck Builder provides a readonly, locally generated preparation note and a Copy action; it does not generate slides, download a file, save inputs, or submit selections. Clipboard failure leaves the note selectable with instructions. The actual copy action passed; the denial fallback was inspected in source, not forced in the browser.
+
+Selective applications: the CFO guide has a practical ownership brief; the Series A guide retains its fourteen questions and twenty-four items and adds an open-item list. The Scorecard’s eight equal-weight categories and numeric bands are retained, while descriptions and interpretations focus on observable practices rather than audit or funding assurances. Its underlying scale still needs firm validation. These are working concepts, not a blanket approval to publish or freeze every template.
+
+Actual rendered layouts at 320, 390, 800, and 1280 pixels passed the recorded overflow checks. Narrow LinkedIn previews now use the additional width already available to Media. The original Home files remain unchanged. Browser checks supplement, rather than replace, future screen-reader and physical-device review.

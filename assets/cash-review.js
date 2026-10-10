@@ -9,7 +9,8 @@
     const rows=areas.map(area=>({
       state:area.querySelector('input:checked').value,
       title:area.dataset.title,
-      target:area.dataset.target
+      target:area.dataset.target,
+      prompt:area.dataset.prompt
     }));
     const count=state=>rows.filter(row=>row.state===state).length;
     review.querySelector('[data-review-status]').textContent=`${count('reviewed')} reviewed · ${count('followup')} for follow-up · ${count('pending')} not reviewed`;
@@ -19,7 +20,8 @@
       const li=document.createElement('li');
       const a=document.createElement('a');a.href='#'+row.target;a.textContent=row.title;
       const note=document.createElement('span');note.textContent=row.state==='followup'?'Follow-up needed':'Not reviewed';
-      li.append(a,note);list.append(li);
+      const prompt=document.createElement('p');prompt.textContent=row.prompt;
+      li.append(a,note,prompt);list.append(li);
     }
     review.querySelector('[data-review-empty]').hidden=open.length!==0;
   };

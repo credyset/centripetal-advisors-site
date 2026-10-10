@@ -13,15 +13,16 @@
   const bandBlocks = document.querySelectorAll('.band-block');
   const resetButton = document.getElementById('reset-scorecard');
   const summary = document.getElementById('score-summary');
+  const announcement = document.getElementById('score-announcement');
   const priorities = document.getElementById('score-priorities');
   const rows = document.getElementById('score-rows');
   const areas = [
-    ['legal', 'Legal', 'Locate missing agreements and approvals, and review the requirements with counsel.', 'series-a-diligence-readiness.html', 'Organize diligence evidence'],
+    ['legal', 'Legal', 'Check for missing agreements and approvals, and review the requirements with counsel.', 'series-a-diligence-readiness.html', 'Organize diligence evidence'],
     ['cap_table', 'Cap Table', 'Reconcile ownership records and the instruments behind your dilution scenarios.', '../services/fundraising-readiness.html', 'Explore fundraising preparation'],
     ['team', 'Team', 'Clarify which finance decisions lack an owner and the scope the team needs.', 'do-i-need-a-fractional-cfo.html', 'Compare finance leadership needs'],
     ['systems', 'Systems', 'Identify where financial information is duplicated, delayed, or difficult to reconcile.', '../services/treasury-finance-operations.html', 'Explore finance operations'],
     ['treasury', 'Treasury & Banking', 'Review account access, payment approvals, and the ownership of cash controls.', 'treasury-hygiene.html', 'Review treasury controls'],
-    ['accounting', 'Accounting', 'Find the reconciliations or close responsibilities that are still unresolved.', '../services/treasury-finance-operations.html', 'Explore finance operations'],
+    ['accounting', 'Accounting', 'Review reconciliations and close responsibilities for unresolved issues.', '../services/treasury-finance-operations.html', 'Explore finance operations'],
     ['finance', 'Finance', 'Connect the forecast assumptions to cash timing and the next operating decision.', '../services/cash-flow-runway-planning.html', 'Explore cash and runway planning'],
     ['investor_faq', 'Investor FAQ Readiness', 'Identify the questions that need a supporting schedule or a clearer explanation.', 'series-a-diligence-readiness.html', 'Work through investor questions']
   ];
@@ -41,7 +42,7 @@
     [...areas].sort((a, b) => scores[a[0]] - scores[b[0]]).slice(0, 3).forEach(([key, name, action, href, linkText]) => {
       const item = document.createElement('li');
       const heading = document.createElement('h3'); heading.textContent = `${name} · ${scores[key]} / 5`;
-      const text = document.createElement('p'); text.textContent = action;
+      const text = document.createElement('p'); text.textContent = scores[key] === 5 ? 'You rated this area at the top of the scale. Confirm the current evidence, owner, and review date; this is a verification prompt rather than an identified deficiency.' : action;
       const link = document.createElement('a'); link.href = href; link.textContent = `${linkText} →`;
       item.append(heading, text, link); priorities.append(item);
     });
@@ -74,6 +75,7 @@
       pendingEl.style.display = 'block';
       bandBlocks.forEach(b => { b.hidden = true; });
     }
+    announcement.textContent = completed === numCategories ? `All eight categories scored. Self-assessment total ${sum} of 40. Review the breakdown and supporting evidence.` : `${completed} of eight categories scored. Complete all eight to see the breakdown.`;
     updateNextSteps();
   }
 

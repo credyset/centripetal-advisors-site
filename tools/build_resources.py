@@ -49,7 +49,7 @@ def build(path,title,h1,desc,body,current,items):
  css=soup.new_tag('link',rel='stylesheet',href='../assets/resource-library.css?v=20261009-4');soup.head.append(css)
  if current=='LinkedIn Posts':
   soup.body['class'].append('ca-linkedin-feed')
-  soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/linkedin-feed.css?v=20261010-1'))
+  soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/linkedin-feed.css?v=20261009-5'))
   motion=soup.new_tag('script',src='../assets/linkedin-feed.js?v=20261010-1');motion['defer']='';soup.body.append(motion)
  if current=='Media':
   soup.body['class'].append('ca-media-feed')

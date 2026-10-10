@@ -31,7 +31,37 @@
       li.append(a, note); list.append(li);
     }
     builder.querySelector('[data-board-empty]').hidden = open.length !== 0;
+    const note = [
+      'BOARD MEETING PREPARATION', 'Focus: ' + focus.label,
+      'Request: ' + (request === 'decision' ? 'Decision on a proposal. Confirm formal approval requirements separately.' : 'Input on a recommendation.'),
+      '', 'Opening: ' + builder.querySelector('[data-board-opening]').textContent, '',
+      ...data.sections.flatMap((section, index) => [
+        `${index + 1}. ${section.title}`, section.body,
+        'Evidence: ' + section.evidence, 'Question: ' + section.question, ''
+      ]),
+      'FOCUS: ' + focus.title, focus.body, 'Evidence: ' + focus.evidence,
+      'Question: ' + focus.question, '', 'EVIDENCE FOLLOW-UPS',
+      ...open.map(row => `${row.title} — ${row.state === 'followup' ? 'Follow-up needed' : 'Not reviewed'}: ${data.sections.find(section => section.id === row.id).evidence}`),
+      ...(open.length ? [] : ['All six areas marked reviewed. This records your review; it does not verify the evidence.']),
+      '', 'Before the meeting: name an evidence owner and next review date for each open area.',
+      'Working concept — editorial framework for firm review. Adapt to your board agenda.'
+    ].join('\n');
+    builder.querySelector('[data-board-note]').value = note;
+    builder.querySelector('[data-copy-status]').textContent = '';
+
   };
+  builder.querySelector('[data-copy-note]').addEventListener('click', async () => {
+    const note = builder.querySelector('[data-board-note]');
+    const status = builder.querySelector('[data-copy-status]');
+    try {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(note.value);
+      status.textContent = 'Preparation note copied.';
+    } catch {
+      note.focus(); note.select();
+      status.textContent = 'The note is selected. Use your device’s Copy command to keep it.';
+    }
+  });
   builder.addEventListener('change', update);
   builder.querySelector('[data-board-reset]').addEventListener('click', () => {
     builder.querySelector('[name="board-focus"][value="operating"]').checked = true;

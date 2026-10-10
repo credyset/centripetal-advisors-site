@@ -1,4 +1,4 @@
-"""Build the separate Blog catalog and article structure; preserve draft copy."""
+"""Build the separate Blog catalog and article structure; build evidence-focused drafts."""
 from pathlib import Path
 from bs4 import BeautifulSoup
 from urllib.parse import urlsplit
@@ -106,7 +106,8 @@ for a in DATA['articles']:
     reading = '<section class="ca-section"><article class="ca-guide-article" data-article-body="">'+str(content)+'</article></section>'
     guide_name = BeautifulSoup((ROOT/a['guide']).read_text(),'html.parser').find('h1').get_text(' ',strip=True)
     service_name = BeautifulSoup((ROOT/a['service']).read_text(),'html.parser').find('h1').get_text(' ',strip=True)
-    next_step = section('Work through the wider question.', 'Continue with the related framework or explore the finance support connected to this topic.', '<div class="ca-grid ca-resource-formats"><article class="ca-card"><p class="ca-eyebrow">Related guide</p><h3>'+escape(guide_name)+'</h3>'+anchor(a['guide'],'Explore the guide →',path)+'</article><article class="ca-card"><p class="ca-eyebrow">Related service</p><h3>'+escape(service_name)+'</h3>'+anchor(a['service'],'Explore the service →',path)+'</article></div>', stone=True)
+    format_label, format_action = ('Preparation tool','Use the builder →') if 'board-deck-builder' in a['guide'] else (('Assessment','Explore the assessment →') if 'scorecard' in a['guide'] else ('Related guide','Explore the guide →'))
+    next_step = section('Work through the wider question.', 'Continue with the related framework or explore the finance support connected to this topic.', '<div class="ca-grid ca-resource-formats"><article class="ca-card"><p class="ca-eyebrow">'+escape(format_label)+'</p><h3>'+escape(guide_name)+'</h3>'+anchor(a['guide'],format_action,path)+'</article><article class="ca-card"><p class="ca-eyebrow">Related service</p><h3>'+escape(service_name)+'</h3>'+anchor(a['service'],'Explore the service →',path)+'</article></div>', stone=True)
     graph = identity() + [{'@type':'WebPage','@id':BASE+path+'#page','name':a['title'],'url':BASE+path,'description':a['question'],'isPartOf':{'@id':BASE+'#website'},'relatedLink':[BASE+a['guide'],BASE+a['service']]} , breadcrumbs(path,a['title'])]
     # No Article publication dates or personal authorship are asserted for unreviewed concepts.
     shell(path,a['title']+' | Centripetal Advisors',a['question'],hero+status+toc+reading+next_step,graph)

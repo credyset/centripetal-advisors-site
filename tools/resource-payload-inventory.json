@@ -1,0 +1,107 @@
+{
+  "scope": "Direct HTML and referenced first-party CSS/JS/images. Excludes CSS imports/backgrounds, font downloads and third-party iframe requests. Not a transfer-size, field-performance or Lighthouse report.",
+  "pages": [
+    {
+      "path": "guides/saas-cash-flow-mistakes.html",
+      "direct_first_party_bytes": 102026,
+      "local_js": [
+        "../assets/foundations.js?v=20261009-1",
+        "../assets/cash-review.js?v=20261009-4"
+      ],
+      "external_styles_or_scripts": [
+        "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
+      ],
+      "iframes": 0,
+      "lazy_iframes": 0
+    },
+    {
+      "path": "guides/tools/board-deck-builder.html",
+      "direct_first_party_bytes": 112849,
+      "local_js": [
+        "../../assets/foundations.js?v=20261009-1",
+        "../../assets/board-builder.js?v=20261009-3"
+      ],
+      "external_styles_or_scripts": [
+        "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
+      ],
+      "iframes": 0,
+      "lazy_iframes": 0
+    },
+    {
+      "path": "guides/saas-finance-scorecard.html",
+      "direct_first_party_bytes": 106332,
+      "local_js": [
+        "../assets/scorecard.js?v=20261009-2",
+        "../assets/foundations.js?v=20261009-1"
+      ],
+      "external_styles_or_scripts": [
+        "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
+      ],
+      "iframes": 0,
+      "lazy_iframes": 0
+    },
+    {
+      "path": "guides/do-i-need-a-fractional-cfo.html",
+      "direct_first_party_bytes": 76630,
+      "local_js": [
+        "../assets/foundations.js?v=20261009-1"
+      ],
+      "external_styles_or_scripts": [
+        "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
+      ],
+      "iframes": 0,
+      "lazy_iframes": 0
+    },
+    {
+      "path": "guides/series-a-diligence-readiness.html",
+      "direct_first_party_bytes": 90926,
+      "local_js": [
+        "../assets/foundations.js?v=20261009-1",
+        "../assets/diligence-review.js?v=20261009-1"
+      ],
+      "external_styles_or_scripts": [
+        "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
+      ],
+      "iframes": 0,
+      "lazy_iframes": 0
+    },
+    {
+      "path": "resources/linkedin-posts.html",
+      "direct_first_party_bytes": 216162,
+      "local_js": [
+        "../assets/foundations.js?v=20261009-1",
+        "../assets/linkedin-feed.js?v=20261010-1"
+      ],
+      "external_styles_or_scripts": [
+        "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
+      ],
+      "iframes": 7,
+      "lazy_iframes": 7
+    },
+    {
+      "path": "resources/media.html",
+      "direct_first_party_bytes": 214302,
+      "local_js": [
+        "../assets/foundations.js?v=20261009-1",
+        "../assets/media-feed.js?v=20261009-1"
+      ],
+      "external_styles_or_scripts": [
+        "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
+      ],
+      "iframes": 6,
+      "lazy_iframes": 6
+    },
+    {
+      "path": "blog/carr-vs-arr.html",
+      "direct_first_party_bytes": 79161,
+      "local_js": [
+        "../assets/foundations.js?v=20261009-1"
+      ],
+      "external_styles_or_scripts": [
+        "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
+      ],
+      "iframes": 0,
+      "lazy_iframes": 0
+    }
+  ]
+}

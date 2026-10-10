@@ -1,0 +1,462 @@
+{
+  "recorded": "2026-10-09",
+  "browser": "Chrome extension, actual DOM widths verified; requested sizes adjusted for browser scaling",
+  "layouts": [
+    {
+      "h1": [
+        "Five cash-flow mistakes that distort SaaS runway."
+      ],
+      "overflow": [],
+      "path": "/guides/saas-cash-flow-mistakes.html",
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "h1": [
+        "Board Deck Structure Builder"
+      ],
+      "overflow": [],
+      "path": "/guides/tools/board-deck-builder.html",
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "h1": [
+        "The SaaS Finance Scorecard"
+      ],
+      "overflow": [],
+      "path": "/guides/saas-finance-scorecard.html",
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "h1": [
+        "Do I Need a Fractional CFO?"
+      ],
+      "overflow": [],
+      "path": "/guides/do-i-need-a-fractional-cfo.html",
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "h1": [
+        "Series A Diligence Readiness"
+      ],
+      "overflow": [],
+      "path": "/guides/series-a-diligence-readiness.html",
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "h1": [
+        "A perspective from inside the work."
+      ],
+      "overflow": [],
+      "path": "/resources/linkedin-posts.html",
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "h1": [
+        "Finance and company building, in conversation."
+      ],
+      "overflow": [],
+      "path": "/resources/media.html",
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "h1": [
+        "CARR vs ARR: When the Definition Matters"
+      ],
+      "overflow": [],
+      "path": "/blog/carr-vs-arr.html",
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "h1": [
+        "Five cash-flow mistakes that distort SaaS runway."
+      ],
+      "overflow": [],
+      "path": "/guides/saas-cash-flow-mistakes.html",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "h1": [
+        "Board Deck Structure Builder"
+      ],
+      "overflow": [],
+      "path": "/guides/tools/board-deck-builder.html",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "h1": [
+        "The SaaS Finance Scorecard"
+      ],
+      "overflow": [],
+      "path": "/guides/saas-finance-scorecard.html",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "h1": [
+        "Do I Need a Fractional CFO?"
+      ],
+      "overflow": [],
+      "path": "/guides/do-i-need-a-fractional-cfo.html",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "h1": [
+        "Series A Diligence Readiness"
+      ],
+      "overflow": [],
+      "path": "/guides/series-a-diligence-readiness.html",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "h1": [
+        "A perspective from inside the work."
+      ],
+      "overflow": [],
+      "path": "/resources/linkedin-posts.html",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "h1": [
+        "Finance and company building, in conversation."
+      ],
+      "overflow": [],
+      "path": "/resources/media.html",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "h1": [
+        "CARR vs ARR: When the Definition Matters"
+      ],
+      "overflow": [],
+      "path": "/blog/carr-vs-arr.html",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "h1": [
+        "Five cash-flow mistakes that distort SaaS runway."
+      ],
+      "overflow": [],
+      "path": "/guides/saas-cash-flow-mistakes.html",
+      "scrollWidth": 800,
+      "width": 800
+    },
+    {
+      "h1": [
+        "Board Deck Structure Builder"
+      ],
+      "overflow": [],
+      "path": "/guides/tools/board-deck-builder.html",
+      "scrollWidth": 800,
+      "width": 800
+    },
+    {
+      "h1": [
+        "The SaaS Finance Scorecard"
+      ],
+      "overflow": [],
+      "path": "/guides/saas-finance-scorecard.html",
+      "scrollWidth": 800,
+      "width": 800
+    },
+    {
+      "h1": [
+        "Do I Need a Fractional CFO?"
+      ],
+      "overflow": [],
+      "path": "/guides/do-i-need-a-fractional-cfo.html",
+      "scrollWidth": 800,
+      "width": 800
+    },
+    {
+      "h1": [
+        "Series A Diligence Readiness"
+      ],
+      "overflow": [],
+      "path": "/guides/series-a-diligence-readiness.html",
+      "scrollWidth": 800,
+      "width": 800
+    },
+    {
+      "h1": [
+        "A perspective from inside the work."
+      ],
+      "overflow": [],
+      "path": "/resources/linkedin-posts.html",
+      "scrollWidth": 800,
+      "width": 800
+    },
+    {
+      "h1": [
+        "Finance and company building, in conversation."
+      ],
+      "overflow": [],
+      "path": "/resources/media.html",
+      "scrollWidth": 800,
+      "width": 800
+    },
+    {
+      "h1": [
+        "CARR vs ARR: When the Definition Matters"
+      ],
+      "overflow": [],
+      "path": "/blog/carr-vs-arr.html",
+      "scrollWidth": 800,
+      "width": 800
+    },
+    {
+      "h1": [
+        "Five cash-flow mistakes that distort SaaS runway."
+      ],
+      "overflow": [],
+      "path": "/guides/saas-cash-flow-mistakes.html",
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "h1": [
+        "Board Deck Structure Builder"
+      ],
+      "overflow": [],
+      "path": "/guides/tools/board-deck-builder.html",
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "h1": [
+        "The SaaS Finance Scorecard"
+      ],
+      "overflow": [],
+      "path": "/guides/saas-finance-scorecard.html",
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "h1": [
+        "Do I Need a Fractional CFO?"
+      ],
+      "overflow": [],
+      "path": "/guides/do-i-need-a-fractional-cfo.html",
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "h1": [
+        "Series A Diligence Readiness"
+      ],
+      "overflow": [],
+      "path": "/guides/series-a-diligence-readiness.html",
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "h1": [
+        "A perspective from inside the work."
+      ],
+      "overflow": [],
+      "path": "/resources/linkedin-posts.html",
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "h1": [
+        "Finance and company building, in conversation."
+      ],
+      "overflow": [],
+      "path": "/resources/media.html",
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "h1": [
+        "CARR vs ARR: When the Definition Matters"
+      ],
+      "overflow": [],
+      "path": "/blog/carr-vs-arr.html",
+      "scrollWidth": 1280,
+      "width": 1280
+    }
+  ],
+  "boardCases": [
+    {
+      "focus": "The trade-off in the operating plan",
+      "linkedItems": 7,
+      "note": 5329,
+      "opening": "Open with the recommendation, the alternatives, and the input you want from the board."
+    },
+    {
+      "focus": "The trade-off in the operating plan",
+      "linkedItems": 7,
+      "note": 5415,
+      "opening": "Open with the proposal, the alternatives, and the specific decision requested. Confirm the formal approval process separately."
+    },
+    {
+      "focus": "The commitment and its cash dependency",
+      "linkedItems": 7,
+      "note": 5381,
+      "opening": "Open with the recommendation, the alternatives, and the input you want from the board."
+    },
+    {
+      "focus": "The commitment and its cash dependency",
+      "linkedItems": 7,
+      "note": 5467,
+      "opening": "Open with the proposal, the alternatives, and the specific decision requested. Confirm the formal approval process separately."
+    },
+    {
+      "focus": "The customer change behind the revenue result",
+      "linkedItems": 7,
+      "note": 5463,
+      "opening": "Open with the recommendation, the alternatives, and the input you want from the board."
+    },
+    {
+      "focus": "The customer change behind the revenue result",
+      "linkedItems": 7,
+      "note": 5549,
+      "opening": "Open with the proposal, the alternatives, and the specific decision requested. Confirm the formal approval process separately."
+    },
+    {
+      "focus": "The capital decision behind the operating plan",
+      "linkedItems": 7,
+      "note": 5449,
+      "opening": "Open with the recommendation, the alternatives, and the input you want from the board."
+    },
+    {
+      "focus": "The capital decision behind the operating plan",
+      "linkedItems": 7,
+      "note": 5535,
+      "opening": "Open with the proposal, the alternatives, and the specific decision requested. Confirm the formal approval process separately."
+    },
+    {
+      "focus": "The issue, what is known, and the response",
+      "linkedItems": 7,
+      "note": 5391,
+      "opening": "Open with the recommendation, the alternatives, and the input you want from the board."
+    },
+    {
+      "focus": "The issue, what is known, and the response",
+      "linkedItems": 7,
+      "note": 5477,
+      "opening": "Open with the proposal, the alternatives, and the specific decision requested. Confirm the formal approval process separately."
+    }
+  ],
+  "boardCopy": "Preparation note copied.",
+  "boardReset": "Operating plan & priorities · Input requested · 0 reviewed · 0 for follow-up · 6 not reviewed",
+  "scorecardBoundaries": [
+    {
+      "band": [
+        "Foundation to review · 8–15 of 40"
+      ],
+      "priorities": "Legal · 1 / 5Locate missing agreements and approvals, and review the requirements with counsel.Organize diligence evidence →Cap Table · 1 / 5Reconcile ownership records and the instruments behind your dilution scenarios.Explore fundraising preparation →Team · 1 / 5Clarify which finance decisions lack an owner and the scope the team needs.Compare finance leadership needs →",
+      "rows": 8,
+      "total": "8"
+    },
+    {
+      "band": [
+        "Foundation to review · 8–15 of 40"
+      ],
+      "priorities": "Team · 1 / 5Clarify which finance decisions lack an owner and the scope the team needs.Compare finance leadership needs →Systems · 1 / 5Identify where financial information is duplicated, delayed, or difficult to reconcile.Explore finance operations →Treasury & Banking · 1 / 5Review account access, payment approvals, and the ownership of cash controls.Review treasury controls →",
+      "rows": 8,
+      "total": "15"
+    },
+    {
+      "band": [
+        "Practices taking shape · 16–23 of 40"
+      ],
+      "priorities": "Team · 1 / 5Clarify which finance decisions lack an owner and the scope the team needs.Compare finance leadership needs →Systems · 1 / 5Identify where financial information is duplicated, delayed, or difficult to reconcile.Explore finance operations →Treasury & Banking · 1 / 5Review account access, payment approvals, and the ownership of cash controls.Review treasury controls →",
+      "rows": 8,
+      "total": "16"
+    },
+    {
+      "band": [
+        "Practices taking shape · 16–23 of 40"
+      ],
+      "priorities": "Treasury & Banking · 1 / 5Review account access, payment approvals, and the ownership of cash controls.Review treasury controls →Accounting · 1 / 5Find the reconciliations or close responsibilities that are still unresolved.Explore finance operations →Finance · 1 / 5Connect the forecast assumptions to cash timing and the next operating decision.Explore cash and runway planning →",
+      "rows": 8,
+      "total": "23"
+    },
+    {
+      "band": [
+        "Established practices reported · 24–31 of 40"
+      ],
+      "priorities": "Treasury & Banking · 1 / 5Review account access, payment approvals, and the ownership of cash controls.Review treasury controls →Accounting · 1 / 5Find the reconciliations or close responsibilities that are still unresolved.Explore finance operations →Finance · 1 / 5Connect the forecast assumptions to cash timing and the next operating decision.Explore cash and runway planning →",
+      "rows": 8,
+      "total": "24"
+    },
+    {
+      "band": [
+        "Established practices reported · 24–31 of 40"
+      ],
+      "priorities": "Finance · 1 / 5Connect the forecast assumptions to cash timing and the next operating decision.Explore cash and runway planning →Investor FAQ Readiness · 1 / 5Identify the questions that need a supporting schedule or a clearer explanation.Work through investor questions →Accounting · 4 / 5Find the reconciliations or close responsibilities that are still unresolved.Explore finance operations →",
+      "rows": 8,
+      "total": "31"
+    },
+    {
+      "band": [
+        "Developed practices reported · 32–40 of 40"
+      ],
+      "priorities": "Finance · 1 / 5Connect the forecast assumptions to cash timing and the next operating decision.Explore cash and runway planning →Investor FAQ Readiness · 1 / 5Identify the questions that need a supporting schedule or a clearer explanation.Work through investor questions →Legal · 5 / 5You rated this area at the top of the scale. Confirm the current evidence, owner, and review date; this is a verification prompt rather than an identified deficiency.Organize diligence evidence →",
+      "rows": 8,
+      "total": "32"
+    },
+    {
+      "band": [
+        "Developed practices reported · 32–40 of 40"
+      ],
+      "priorities": "Legal · 5 / 5You rated this area at the top of the scale. Confirm the current evidence, owner, and review date; this is a verification prompt rather than an identified deficiency.Organize diligence evidence →Cap Table · 5 / 5You rated this area at the top of the scale. Confirm the current evidence, owner, and review date; this is a verification prompt rather than an identified deficiency.Explore fundraising preparation →Team · 5 / 5You rated this area at the top of the scale. Confirm the current evidence, owner, and review date; this is a verification prompt rather than an identified deficiency.Compare finance leadership needs →",
+      "rows": 8,
+      "total": "40"
+    }
+  ],
+  "cash": {
+    "mixed": {
+      "first": "Collection datesFollow-up neededCan the receipts behind this decision be traced to billing milestones, payment behavior, and an exception owner?",
+      "status": "1 reviewed · 1 for follow-up · 3 not reviewed"
+    },
+    "complete": {
+      "completeVisible": true,
+      "open": 0
+    },
+    "reset": "0 reviewed · 0 for follow-up · 5 not reviewed"
+  },
+  "diligence": {
+    "initialOpen": 24,
+    "completeOpen": 0,
+    "completeExplanationVisible": true,
+    "resetOpen": 24
+  },
+  "keyboard": {
+    "mobileMenuOpens": true,
+    "EscapeCloses": true,
+    "focusReturnedToToggle": true,
+    "focusOutline": "solid"
+  },
+  "limits": [
+    "Outer layout and selected keyboard paths checked; not a full screen-reader audit",
+    "Clipboard denial fallback inspected, not forced",
+    "Third-party embed contents/playback not retested at all widths",
+    "No fresh Lighthouse or field performance test",
+    "The historical foundations file remains historical evidence"
+  ],
+  "latestRefinements": {
+    "scorecardHeroFont": "Roboto, Arial, sans-serif",
+    "linkedinPhonePreview": {
+      "width": 292.01171875,
+      "viewport": 320,
+      "overflow": false
+    }
+  }
+}

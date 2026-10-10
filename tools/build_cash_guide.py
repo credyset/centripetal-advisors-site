@@ -10,8 +10,8 @@ e=lambda v:html.escape(v,quote=True)
 soup=BeautifulSoup((ROOT/PATH).read_text(),'html.parser')
 soup.body['class']=['ca-native','ca-cash-guide-reference']
 for node in soup.select('link[href*="cash-guide-reference"],.guide-editorial'):node.decompose()
-css=soup.new_tag('link',rel='stylesheet',href='../assets/cash-guide-reference.css?v=20261009-1');soup.head.append(css)
-for node in soup.select('script[src*="cash-review"]'):node['src']='../assets/cash-review.js?v=20261009-3'
+css=soup.new_tag('link',rel='stylesheet',href='../assets/cash-guide-reference.css?v=20261009-2');soup.head.append(css)
+for node in soup.select('script[src*="cash-review"]'):node['src']='../assets/cash-review.js?v=20261009-4'
 for a in soup.select('.site-nav a'):
  if a.get_text(strip=True)=='Blogs':a.string='Blog'
  if a.get_text(strip=True)=='Resources':a['aria-current']='page'
@@ -44,6 +44,7 @@ review.select_one('[data-review-result]')['tabindex']='-1'
 review.select_one('[data-review-fields]').insert(0,BeautifulSoup('<p class="ca-guide-review-jump"><a class="ca-link" href="#cash-review-list">View your review list →</a></p>','html.parser'))
 review.select_one('[data-review-empty]').string='All five areas are marked reviewed. Keep the evidence, assumption owners, and next review date alongside the forecast. This records your review; it does not verify the forecast.'
 for field in review.select('fieldset'):
+ field['data-prompt']=field.find('p').get_text(' ',strip=True)
  a=BeautifulSoup(f'<a class="ca-link ca-review-reference" href="#{field["data-target"]}">Review the evidence for this area →</a>','html.parser')
  field.append(a)
 body+='<section class="ca-section ca-cash-review ca-guide-worksheet" data-cash-review>'+str(review)+'</section>'

@@ -47,3 +47,12 @@
 @media(max-width:900px){.ca-board-purpose-grid{grid-template-columns:1fr;gap:28px}.ca-board-purpose-grid aside{max-width:760px}.ca-board-tool-reference .ca-board-builder .ca-split{grid-template-columns:1fr;gap:32px}.ca-board-evidence-grid{grid-template-columns:1fr;gap:32px}}
 @media(max-width:600px){.ca-board-tool-reference .concept-hero{padding-block:48px}.ca-board-tool-reference .ca-section{padding-inline:24px}.ca-board-purpose-grid h2{font-size:30px}.ca-board-tool-reference .ca-board-builder h2{font-size:30px}.ca-board-tool-reference .ca-review-panel{padding:24px}.ca-board-evidence-item h3{font-size:23px}.ca-board-utility{gap:4px 20px}}
 @media print{.ca-board-utility,.ca-board-breadcrumb{display:none}.ca-board-purpose-grid,.ca-board-evidence-grid,.ca-board-tool-reference .ca-board-builder .ca-split{display:block}.ca-board-tool-reference .ca-review-panel summary{color:#111}.ca-board-evidence-item{break-inside:avoid}}
+
+/* A reusable local note; no submission or persistent storage. */
+.ca-preparation-note{margin:28px 0;border-top:1px solid #78956e;padding-top:20px}
+.ca-preparation-note label{display:block;font-size:14px;margin:18px 0 10px}
+.ca-preparation-note textarea{display:block;width:100%;max-width:100%;min-height:240px;box-sizing:border-box;padding:16px;background:#f2f2f2;color:#243221;border:1px solid #bac2b6;font:15px/1.6 Roboto,sans-serif;border-radius:0;resize:vertical}
+.ca-preparation-note textarea:focus-visible{outline:3px solid #ddd8cd;outline-offset:3px}
+.ca-preparation-note button{margin-top:16px}
+.ca-preparation-note [role=status]{font-size:14px;min-height:1.5em}
+@media print{.ca-preparation-note{display:none}}

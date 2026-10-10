@@ -77,3 +77,5 @@
  .ca-guide-chapter{padding:18px 0}
  .ca-guide-timing>div{background:white;border:1px solid #777}
 }
+
+.ca-guide-worksheet [data-review-list] li p{font-size:15px;line-height:1.65;margin:10px 0 20px;color:#ddd8cd}
