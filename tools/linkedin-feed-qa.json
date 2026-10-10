@@ -45,5 +45,21 @@
     "first_preview": "Charles visible after cleanup",
     "desktop_horizontal_overflow": false,
     "visual_review": "First item begins with topic, title and summary; links flow directly into the visible iframe; Home palette and typography retained"
+  },
+  "sidebar_checks": {
+    "monogram_elements": 0,
+    "introductory_eyebrow_present": false,
+    "email_href": "mailto:charles@centripetaladvisors.com",
+    "contact_layout": "LinkedIn and full email address in one wrapping contact group; email occupies the next line at 1280px viewport",
+    "desktop_sticky": "Checked via SaaS metrics, Company building, and Capital & founders anchors; sidebar stays at 112px from viewport top after scrolling",
+    "last_checked_scroll_y": 6291.5,
+    "last_checked_rail_bounds": {
+      "left": 892,
+      "top": 112,
+      "bottom": 655.234375
+    },
+    "short_window_behavior": "Viewport-limited height with internal scrolling, CSS implemented",
+    "mobile_behavior": "Contact information appears above the feed in CSS; actual mobile rendering remains unverified",
+    "desktop_horizontal_overflow": false
   }
 }
