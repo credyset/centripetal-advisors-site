@@ -52,11 +52,11 @@
     "email_href": "mailto:charles@centripetaladvisors.com",
     "contact_layout": "Black LinkedIn social icon and full email address share one row at 1280px; flex wrapping retained for narrower widths",
     "desktop_sticky": "Checked via SaaS metrics, Company building, and Capital & founders anchors; sidebar stays at 112px from viewport top after scrolling",
-    "last_checked_scroll_y": 6291.5,
+    "last_checked_scroll_y": 6534.5,
     "last_checked_rail_bounds": {
-      "left": 892,
+      "left": 790,
       "top": 112,
-      "bottom": 655.234375
+      "bottom": 611.234375
     },
     "short_window_behavior": "Viewport-limited height with internal scrolling, CSS implemented",
     "mobile_behavior": "Contact information appears above the feed in CSS; actual mobile rendering remains unverified",
@@ -82,6 +82,19 @@
     "review": "Public homepage inspected in browser this turn",
     "observed_button": "Stone background rgb(221,216,205), radius 100px, padding 15px 27px",
     "published_appear_effects": "Opacity 0.001 to 1; another entrance starts y150 and ends y0 with a 2-second spring. Hero character nodes expose opacity/filter/transform styling.",
-    "design_recommendation": "Adapt gentle fade/rise behavior with shorter duration and smaller movement for reading; no new entrance animation added in this batch."
+    "design_recommendation": "Implemented one-time 440ms fade/rise (12px) on editorial introductions only. Home orbital PNG reused in the hero; no continuous motion added."
+  },
+  "reader_refinement_checks": {
+    "reading_width_px": 504,
+    "alignment": "All seven introduction/frame pairs have matching width and left edge at the 1280px viewport",
+    "hero_artwork": "Existing Home orbital PNG, 1269×1208 original dimensions; local 118653-byte copy; 240px decorative display at desktop width",
+    "topic_navigation": "Each of SaaS metrics, Company building and Capital & founders checked after anchor scrolling; exactly one active topic with aria-current=location",
+    "desktop_sticky": "Rail stayed at 112px below navigation at Company building and Capital & founders",
+    "motion_browser": "Current browser reported reduced motion; visible introductions had opacity 1 and transform none",
+    "motion_logic": "Isolated runtime checks passed: once-only entrance, reduced-motion skip, finishing active motion after preference changes, observer fallback, topic updates and clearing below feed",
+    "normal_motion_limit": "Normal-motion animation logic checked in isolated runtime; visual playback not observed because browser has reduced motion enabled",
+    "no_javascript_fallback": "Static HTML retains all seven introductions, links, and iframe sources; no hidden state applied by CSS",
+    "desktop_horizontal_overflow": false,
+    "console_errors": 0
   }
 }
