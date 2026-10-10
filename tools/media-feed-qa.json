@@ -1,0 +1,32 @@
+{
+  "recorded": "2026-10-09",
+  "scope": "Media reader refinement; GitHub concept only",
+  "live_appearances": 6,
+  "platform_links": 7,
+  "source_preservation": "Exact source order, show names, titles, summaries, publisher dates, known durations, and all destinations checked against tools/resource-library.json. Unknown Founder Wisdom duration remains omitted. No pending episodes restored.",
+  "layout": "Centered 504px reading column with unboxed numbered entries. Home Lora/Roboto, pine/sage/stone palette, existing Home orbit in hero.",
+  "actions": "48px rounded Watch/Listen buttons; filled pine primary and outlined alternate platform. Decorative play/headphones icons, accessible names and new-tab announcements.",
+  "desktop_review": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "horizontal_overflow": false,
+    "console_errors": 0,
+    "navigation": "All six anchors and active episode highlights checked. Sidebar sticks at 112px until constrained by the list bottom. Highlight clears below list.",
+    "keyboard": "Tab from Apple Podcasts button reaches YouTube companion with visible 3px outline.",
+    "contacts": "LinkedIn social logo and email; no monogram or redundant introductory label."
+  },
+  "motion": "Browser reports reduced motion; every introduction remains opacity 1 / transform none. Isolated runtime checks passed once-only full-motion entrance, reduced-motion skip, finishing active motion after preference change, observer fallback, selection changes and clearing below list. Full-motion visual playback was not observed.",
+  "mobile_limit": "Requested 390\u00d7844 via browser viewport capability, including fresh tab; actual viewport remained 1280\u00d7720. Override reset. Responsive CSS implemented; rendered narrow-width review remains outstanding.",
+  "fallback": "Six appearances and platform links are static readable HTML; no JavaScript required to read or leave the page. No embedded players or new third-party page requests.",
+  "checks": [
+    "check_site.py: 45 pages / 1988 URLs / 24 sitemap entries pass",
+    "check_baseline.py: frozen Home retained",
+    "check_foundations.py: historical geometry and runtime imports pass",
+    "node --check assets/media-feed.js",
+    "git diff --check",
+    "deterministic resource rebuild; LinkedIn and Home output unchanged"
+  ],
+  "measurement_limits": "No new platform reachability, player functionality, mobile rendering, performance, SEO or AI-citation outcomes claimed."
+}

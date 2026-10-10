@@ -51,6 +51,10 @@ def build(path,title,h1,desc,body,current,items):
   soup.body['class'].append('ca-linkedin-feed')
   soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/linkedin-feed.css?v=20261010-1'))
   motion=soup.new_tag('script',src='../assets/linkedin-feed.js?v=20261010-1');motion['defer']='';soup.body.append(motion)
+ if current=='Media':
+  soup.body['class'].append('ca-media-feed')
+  soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/media-feed.css?v=20261009-1'))
+  motion=soup.new_tag('script',src='../assets/media-feed.js?v=20261009-1');motion['defer']='';soup.body.append(motion)
  nav=soup.select_one('.site-nav')
  for a in nav.select('a'):
   if a.get_text(strip=True)=='Resources':a['href']='../resources/index.html';a['aria-current']='page'
@@ -61,6 +65,9 @@ def build(path,title,h1,desc,body,current,items):
  main.append(BeautifulSoup(f'<header class="concept-hero"><div class="concept-hero-inner"><p class="eyebrow">Founder resources · Centripetal Advisors</p><h1>{e(h1)}</h1><p>{e(desc)}</p></div></header>'+subnav(current)+body,'html.parser'))
  if current=='LinkedIn Posts':
   orbit=soup.new_tag('img',src='../assets/reference/home-orbit.png',width='1269',height='1208',alt='',**{'class':'ca-linkedin-hero-orbit','aria-hidden':'true'})
+  soup.select_one('.concept-hero-inner').append(orbit)
+ if current=='Media':
+  orbit=soup.new_tag('img',src='../assets/reference/home-orbit.png',width='1269',height='1208',alt='',**{'class':'ca-media-hero-orbit','aria-hidden':'true'})
   soup.select_one('.concept-hero-inner').append(orbit)
  for a in soup.select('.ca-resource-nav a'):
   if path.startswith('guides/'):
@@ -115,16 +122,29 @@ body='<section class="ca-section ca-linkedin-section" aria-label="Selected Linke
 body+=section('Put the perspective to work.','Explore the frameworks and finance support connected to your next decision.',link('../guides/index.html','Explore guides and tools →')+'<p class="ca-footer">'+link('../services.html','Explore finance support →')+'</p>',True)
 build('resources/linkedin-posts.html','Charles Solomon’s LinkedIn Posts','A perspective from inside the work.','Selected LinkedIn posts from Charles Solomon on SaaS metrics, capital, and company building—with original-post previews.',body,'LinkedIn Posts',[(p['title'],p['url']) for p in recent])
 
+PLAY_ICON='<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4Z"/></svg>'
+LISTEN_ICON='<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="12" width="4" height="8" rx="2"/><rect x="17" y="12" width="4" height="8" rx="2"/></svg>'
+
+def media_button(destination,secondary=False):
+ platform=destination['platform']
+ watching=platform=='YouTube'
+ label=('Watch on ' if watching else 'Listen on ')+platform
+ return f'<a class="ca-media-button'+(' ca-media-button-secondary' if secondary else '')+f'" href="{e(destination["url"])}" target="_blank" rel="noopener noreferrer" aria-label="{e(label)} (opens in a new tab)">'+(PLAY_ICON if watching else LISTEN_ICON)+f'<span>{e(label)}</span></a>'
+
 media=''
-for m in data['media']:
+media_navigation=''
+for i,m in enumerate(data['media'],1):
+ episode=f'episode-{i:02d}'
  metadata=[]
  if m.get('date'):metadata.append(f'<time datetime="{e(m["date"])}">{e(m["date_label"])}</time>')
  if m.get('duration'):metadata.append(e(m['duration']))
- metadata=f'<p class="ca-eyebrow">{" · ".join(metadata)}</p>' if metadata else ''
+ metadata=f'<p class="ca-media-metadata">{" · ".join(metadata)}</p>' if metadata else ''
  destinations=[{'url':m['url'],'platform':m['platform']}]+m.get('alternate_links',[])
- actions=''.join('<p>'+link(x['url'],('Watch on ' if x['platform']=='YouTube' else 'Listen on ')+x['platform']+' ↗',True)+'</p>' for x in destinations)
- media+=f'<article class="ca-media-item"><div class="ca-media-show"><span>Podcast appearance</span><p>{e(m["show"])}</p></div><div>{metadata}<h3>{e(m["title"])}</h3><p>{e(m["summary"])}</p>{actions}</div></article>'
-body=section('Charles in conversation.','Watch or listen to conversations about finance, founder decisions, and building companies.',media)
+ actions='<div class="ca-media-actions">'+''.join(media_button(x,j>0) for j,x in enumerate(destinations))+'</div>'
+ media+=f'<li class="ca-media-entry"><span class="ca-media-position" aria-hidden="true">{i:02d}</span><article class="ca-media-card" id="{episode}" aria-labelledby="{episode}-title" data-episode="{episode}"><div class="ca-media-introduction"><p class="ca-eyebrow">{e(m["show"])}</p>{metadata}<h2 id="{episode}-title">{e(m["title"])}</h2><p class="ca-media-summary">{e(m["summary"])}</p>{actions}</div></article></li>'
+ media_navigation+=f'<a data-episode="{episode}" href="#{episode}">{e(m["show"])}</a>'
+media_rail='<aside class="ca-media-rail" aria-label="About these appearances"><div class="ca-media-author"><h3>Charles Solomon</h3><p>CFO · Board Member · Investor</p><div class="ca-media-contacts">'+f'<a class="ca-media-social" href="{e(data["linkedin_profile"])}" target="_blank" rel="noopener noreferrer" aria-label="Charles Solomon on LinkedIn (opens in a new tab)" title="Charles Solomon on LinkedIn"><img src="../assets/linkedin-social.svg" width="24" height="24" alt=""/></a>'+link('mailto:charles@centripetaladvisors.com','charles@centripetaladvisors.com')+'</div></div><nav aria-label="Explore podcast appearances"><p class="ca-eyebrow">In this selection</p>'+media_navigation+'</nav></aside>'
+body='<section class="ca-section ca-media-section" aria-label="Podcast appearances"><div class="ca-inner"><div class="ca-media-layout">'+media_rail+'<ol class="ca-media-timeline" aria-label="Selected podcast appearances">'+media+'</ol></div></div></section>'
 body+=section('Bring the conversation back to your company.','Explore the firm’s operating approach or the resources connected to your next decision.',link('../about.html','About Centripetal →')+'<p class="ca-footer">'+link('../guides/index.html','Explore guides and tools →')+'</p>',True)
 build('resources/media.html','Charles Solomon’s Podcast Appearances','Finance and company building, in conversation.','Podcast appearances featuring Charles Solomon of Centripetal Advisors.',body,'Media',[(m['title'],m['url']) for m in data['media']])
 
