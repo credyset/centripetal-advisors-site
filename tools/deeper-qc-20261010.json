@@ -1218,5 +1218,161 @@
     "width": 320
   },
   "clipboardFailureTests": "Actual handler tested in isolated fixture via tools/test_board_clipboard.mjs; browser permissions unchanged.",
-  "print": "Treasury native print preview rendered five pages and was cancelled; later paired-label spacing is a source refinement."
+  "print": "Treasury native print preview rendered five pages and was cancelled; later paired-label spacing is a source refinement.",
+  "publicVerification": {
+    "commit": "0b1373ec245059f39e768d864b5509f7e579f1f2",
+    "pagesRun": 38072763220,
+    "conclusion": "success",
+    "corePages": [
+      {
+        "path": "index.html",
+        "docWidth": 319,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Strategic CFO Services"
+        ],
+        "width": 319
+      },
+      {
+        "path": "services.html",
+        "docWidth": 319,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Fractional Leadership, Long-term Impact"
+        ],
+        "width": 319
+      },
+      {
+        "path": "contact.html",
+        "docWidth": 319,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Start a conversation"
+        ],
+        "width": 319
+      },
+      {
+        "path": "privacy-policy.html",
+        "docWidth": 319,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Privacy Policy"
+        ],
+        "width": 319
+      },
+      {
+        "path": "index.html",
+        "docWidth": 799,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Strategic CFO Services"
+        ],
+        "width": 799
+      },
+      {
+        "path": "services.html",
+        "docWidth": 799,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Fractional Leadership, Long-term Impact"
+        ],
+        "width": 799
+      },
+      {
+        "path": "contact.html",
+        "docWidth": 799,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Start a conversation"
+        ],
+        "width": 799
+      },
+      {
+        "path": "privacy-policy.html",
+        "docWidth": 799,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Privacy Policy"
+        ],
+        "width": 799
+      },
+      {
+        "path": "index.html",
+        "docWidth": 1279,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Strategic CFO Services"
+        ],
+        "width": 1279
+      },
+      {
+        "path": "services.html",
+        "docWidth": 1279,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Fractional Leadership, Long-term Impact"
+        ],
+        "width": 1279
+      },
+      {
+        "path": "contact.html",
+        "docWidth": 1279,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Contact Us"
+        ],
+        "width": 1279
+      },
+      {
+        "path": "privacy-policy.html",
+        "docWidth": 1279,
+        "robots": "noindex, follow",
+        "visibleH1": [
+          "Privacy Policy"
+        ],
+        "width": 1279
+      }
+    ],
+    "resourceCorrections": [
+      {
+        "path": "guides/saas-finance-scorecard.html",
+        "badGeneratedLinks": 0,
+        "bands": 0,
+        "css": "../assets/foundations.css?v=20261010-1",
+        "financialInputs": 0,
+        "method": "Adapted from Centripetal’s client diagnostic: eight categories, each scored 1–5 and summed out of 40. The descriptions here are simplified self-review prompts. The full diagnostic uses more than 100 questions and a discussion of the underlying evidence; this page is a starting point for that conversation.",
+        "robots": "noindex, follow",
+        "title": "The SaaS Finance Scorecard"
+      },
+      {
+        "path": "guides/venture-debt-readiness.html",
+        "badGeneratedLinks": 0,
+        "bands": 0,
+        "css": "../assets/foundations.css?v=20261010-1",
+        "financialInputs": 0,
+        "openItems": 17,
+        "robots": "noindex, follow",
+        "title": "Venture Debt Readiness"
+      },
+      {
+        "path": "guides/tools/runway-modeler.html",
+        "badGeneratedLinks": 0,
+        "bands": 0,
+        "css": "../../assets/foundations.css?v=20261010-1",
+        "financialInputs": 0,
+        "robots": "noindex, follow",
+        "title": "Start with the assumptions behind your cash plan."
+      },
+      {
+        "path": "guides/treasury-hygiene.html",
+        "badGeneratedLinks": 0,
+        "bands": 0,
+        "brief": "Bring the evidence, then assign the responsibility.",
+        "css": "../assets/foundations.css?v=20261010-1",
+        "financialInputs": 0,
+        "robots": "noindex, follow",
+        "title": "Treasury Hygiene for SaaS Founders"
+      }
+    ]
+  }
 }

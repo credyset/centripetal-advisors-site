@@ -20,7 +20,7 @@ October 10, 2026. GitHub concept only. The May audit and August overview remain 
 
 ## Evidence
 
-`tools/deeper-qc-20261010.json` records current browser observations. All 41 native pages were checked at actual widths of 320, 800 and 1280 pixels: 123 layout observations. No outer overflow, duplicate IDs, missing loaded first-party images, multiple main H1s, or invalid generated diligence anchors were observed. Changed expanded states were checked separately.
+`tools/deeper-qc-20261010.json` records current browser observations. All 41 native pages were checked at actual widths of 320, 800 and 1280 pixels: 123 layout observations. No outer overflow, duplicate IDs, missing loaded first-party images, multiple main H1s, or invalid generated diligence anchors were observed. Changed expanded states were checked separately. After deployment, the four captured core pages also passed visible-H1, noindex, and overflow checks at actual widths of 319, 799 and 1279 pixels. The deployed Scorecard, debt list, legacy model entry, and treasury brief were verified against commit 0b1373e.
 
 Browser checks cover Scorecard ties, all-low/all-high outcomes and reset; Venture Debt partial/completed/reset behavior; Series A reset; contact-topic prompts, draft preservation through responsive changes and preview-only submission; copied mobile keyboard navigation. The existing ten builder combinations and successful browser Copy check remain recorded in the earlier QA file. `tools/test_board_clipboard.mjs` runs the actual Copy handler against denied, unavailable and successful clipboard APIs in an isolated DOM fixture. This is failure-path evidence, not a browser permission-denial test.
 
