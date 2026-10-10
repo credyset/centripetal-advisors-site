@@ -58,6 +58,7 @@
   };
   // The native additions are authored outside the copied React root, then placed
   // after its commit. They remain readable at the end of the page without JS.
+  let returnNavFocus=false;
   const enhance = () => {
     const main=document.getElementById('main');
     if(!main)return;
@@ -79,12 +80,39 @@
     });
     main.querySelectorAll('nav.framer-xzdiZ').forEach(nav=>{
       nav.setAttribute('aria-label','Primary navigation');
+      nav.querySelectorAll('a[href]').forEach(anchor=>{
+        if(anchor.href===new URL('index.html',root).href && !anchor.textContent.trim())anchor.setAttribute('aria-label','Centripetal Advisors home');
+      });
       if(!nav.dataset.framerName?.startsWith('Phone'))return;
+      if(!nav.dataset.caEscape){
+        nav.dataset.caEscape='true';
+        nav.addEventListener('keydown',event=>{
+          if(event.key==='Escape' && nav.dataset.framerName==='Phone Open'){
+            const close=nav.querySelector('[aria-label="Close navigation"]');
+            if(close){event.preventDefault();returnNavFocus=true;close.click();}
+          }
+        });
+      }
       nav.querySelectorAll('[data-highlight]:not([data-framer-name="Top"])').forEach(icon=>{
         icon.setAttribute('role','button');
+        icon.setAttribute('tabindex','0');
         icon.setAttribute('aria-label',nav.dataset.framerName==='Phone Open'?'Close navigation':'Open navigation');
         icon.setAttribute('aria-expanded',String(nav.dataset.framerName==='Phone Open'));
+        if(!icon.dataset.caKeyboard){
+          icon.dataset.caKeyboard='true';
+          icon.addEventListener('keydown',event=>{
+            if(event.key==='Enter' || event.key===' '){event.preventDefault();icon.click();}
+          });
+        }
       });
+    });
+    if(returnNavFocus){
+      const open=[...main.querySelectorAll('[aria-label="Open navigation"]')].find(node=>node.getBoundingClientRect().height>0);
+      if(open){open.focus();returnNavFocus=false;}
+    }
+    main.querySelectorAll('a[href="https://www.linkedin.com/company/centripetal-advisors/"]').forEach(anchor=>{
+      if(!anchor.textContent.trim())anchor.setAttribute('aria-label','Centripetal Advisors on LinkedIn');
+      anchor.closest('nav')?.setAttribute('aria-label','Footer links');
     });
     const about=[...main.querySelectorAll('[data-framer-name="About Us"]')].find(node=>node.getBoundingClientRect().height>0);
     if(about && about.id!=='about-us')about.id='about-us';

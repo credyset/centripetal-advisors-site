@@ -21,7 +21,10 @@ if(expected && checklist.length===expected){
   const status=document.createElement('span');status.setAttribute('role','status');
   const reset=document.createElement('button');reset.type='button';reset.textContent='Reset checklist';
   const update=()=>{status.textContent=`${[...checklist].filter(input=>input.checked).length} of ${expected} diligence items checked · selections are not saved or submitted`;};
-  reset.addEventListener('click',()=>{checklist.forEach(input=>input.checked=false);update();});
+  reset.addEventListener('click',()=>{
+    checklist.forEach(input=>input.checked=false);update();
+    document.dispatchEvent(new Event('ca:checklist-reset'));
+  });
   checklist.forEach(input=>input.addEventListener('change',update));
   bar.append(status,reset);document.querySelector('header.concept-hero').after(bar);update();
 }

@@ -41,8 +41,8 @@ A typical path is article or public post → relevant guide/exercise → specifi
 `tools/content-architecture.csv` inventories the 45 current HTML pages by section, topic, role, and review state. It is a routing/content inventory, not a factual sign-off on legacy drafts.
 
 - Seven curated guides retain their original destinations and distinct framework roles.
-- The combined library lists eight resources once, distinguishing guides, embedded checklists/worksheets, assessment, and builder. Four older calculator/tool prototypes remain unpromoted.
-- The Finance Diagnostic overlaps the Scorecard; Fundraise Readiness overlaps Series A diligence; CFO Fit Calculator overlaps the CFO decision guide. Decide whether each has a distinct job before promoting it.
+- The combined library lists eight resources once, distinguishing guides, embedded checklists/worksheets, assessment, and builder. Four older tool URLs now serve as entry pages to the consolidated resources; the earlier prototypes are preserved locally.
+- The Finance Diagnostic overlaps the Scorecard; Fundraise Readiness overlaps Series A diligence; CFO Fit Calculator overlaps the CFO decision guide. Each now leads to that existing resource, with no duplicate assessment or checklist.
 - Runway Modeler requires assumption, formula, boundary, and interpretation review. Board Deck Builder now has a distinct board-meeting preparation role: decision, recommendation, evidence, assumptions, ownership, and follow-up. Its wording remains a concept for firm review.
 - Fifteen existing article concepts now have one catalog at `blogs.html`, grouped under the same six topics as Resources. The Scorecard is represented as a guide/tool rather than a Blog listing. `blog/index.html` is a legacy entry path linking to the canonical catalog, without a second article list. All existing detail URLs remain stable.
 - CFO timing, CFO-versus-VP, and bookkeeper/controller/CFO articles overlap the decision guide. Assign a narrow question to each or consolidate. Cash forecast articles overlap the cash guide; separate explanation from the working review. The board-reporting article links to the refined Board Deck Builder; the investor-pitch article continues to link to Series A diligence.
@@ -138,3 +138,7 @@ The May audit's architecture and internal-linking recommendations and the August
 ## Independent refinement checkpoint · October 9
 
 The cash guide and Board Deck Builder now produce useful preparation prompts and a reusable local outline. The CFO guide adds a work-ownership comparison and brief; Series A adds a live open-item list. The Scorecard retains eight equal-weight categories and the numeric bands, with descriptions and result language revised to avoid assurance claims. All fifteen article drafts have received an evidence-focused pass. Actual Chrome layouts at 320, 390, 800, and 1280 pixels were checked on the five refined resources, LinkedIn, Media, and one article. See `INDEPENDENT_REFINEMENTS_REVIEW.md` for human decisions and measurement limits. Templates remain provisional until that review.
+
+## Deeper QC closeout · October 10, 2026
+
+The actual 2024 client diagnostic confirms the Scorecard’s eight categories and cumulative 1–5 scoring. Its workbook does not define the four public readiness bands, so those classifications have been removed. The self-review preserves category scores and exposes all ties at the third-lowest cutoff. The four legacy tool entry pages point to the current resources; the runway model is withheld while its assumptions remain unvalidated. Prototypes are recoverable from repository history and the local research archive. See `INDEPENDENT_REFINEMENTS_REVIEW.md` and `tools/deeper-qc-20261010.json` for current evidence and remaining limits.

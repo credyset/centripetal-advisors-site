@@ -52,7 +52,7 @@ def shell(path, title, description, body, graph, canonical=None):
             item['aria-current'] = 'page'
     footer = soup.select_one('.footer-col:nth-of-type(2)')
     footer.clear()
-    footer.append(BeautifulSoup('<h4>Explore</h4>' + ''.join(anchor(dest,label,path) for dest,label in [('blogs.html','Blog'),('resources/index.html','Resources'),('guides/index.html','Guides & Tools'),('resources/linkedin-posts.html','LinkedIn Posts'),('resources/media.html','Media')]), 'html.parser'))
+    footer.append(BeautifulSoup('<h2>Explore</h2>' + ''.join(anchor(dest,label,path) for dest,label in [('blogs.html','Blog'),('resources/index.html','Resources'),('guides/index.html','Guides & Tools'),('resources/linkedin-posts.html','LinkedIn Posts'),('resources/media.html','Media')]), 'html.parser'))
     (ROOT / path).write_text(str(soup).rstrip() + '\n')
 
 def identity():

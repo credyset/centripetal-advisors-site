@@ -178,3 +178,15 @@
   .ca-native .ca-score-summary th,.ca-native .ca-score-summary td,.ca-native .ca-score-summary li{border-color:#777}
   .ca-native .guide-editorial{background:#fff!important;padding:16px 0}
 }
+
+/* Offline operating briefs remain readable and printable on narrow screens. */
+.ca-operating-brief dl{margin:28px 0}
+.ca-operating-brief dt{font-weight:600;color:#243221;border-top:1px solid #bac2b6;padding-top:20px;margin-top:20px}
+.ca-operating-brief dd{margin:8px 0 0;max-width:72ch}
+.ca-native .score-grid input:focus-visible+span{outline:none}
+.ca-native .score-option:has(input:focus-visible){outline:3px solid #243221;outline-offset:4px}
+
+.ca-native .result-of{opacity:.85}
+.ca-native .site-footer .footer-col a{color:#bdcbb5}
+
+@media print{.ca-brief-row{break-inside:avoid}.ca-operating-brief{background:#fff!important;border:1px solid #777;padding:20px}}

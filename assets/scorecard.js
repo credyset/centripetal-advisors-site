@@ -1,8 +1,6 @@
 
 (function() {
   const numCategories = 8;
-  const totalMin = 8;
-  const totalMax = 40;
   const scores = {};
 
   const progressBar = document.getElementById('progress-bar');
@@ -10,7 +8,6 @@
   const runningTotalEl = document.getElementById('running-total');
   const totalScoreEl = document.getElementById('total-score');
   const pendingEl = document.getElementById('result-pending');
-  const bandBlocks = document.querySelectorAll('.band-block');
   const resetButton = document.getElementById('reset-scorecard');
   const summary = document.getElementById('score-summary');
   const announcement = document.getElementById('score-announcement');
@@ -39,7 +36,9 @@
       const score = document.createElement('td'); score.textContent = `${scores[key]} / 5`;
       row.append(label, score); rows.append(row);
     });
-    [...areas].sort((a, b) => scores[a[0]] - scores[b[0]]).slice(0, 3).forEach(([key, name, action, href, linkText]) => {
+    const sorted = [...areas].sort((a, b) => scores[a[0]] - scores[b[0]]);
+    const cutoff = scores[sorted[2][0]];
+    sorted.filter(area => scores[area[0]] <= cutoff).forEach(([key, name, action, href, linkText]) => {
       const item = document.createElement('li');
       const heading = document.createElement('h3'); heading.textContent = `${name} · ${scores[key]} / 5`;
       const text = document.createElement('p'); text.textContent = scores[key] === 5 ? 'You rated this area at the top of the scale. Confirm the current evidence, owner, and review date; this is a verification prompt rather than an identified deficiency.' : action;
@@ -66,14 +65,8 @@
 
     if (completed === numCategories) {
       pendingEl.style.display = 'none';
-      bandBlocks.forEach(b => {
-        const min = parseInt(b.dataset.min, 10);
-        const max = parseInt(b.dataset.max, 10);
-        b.hidden = !(sum >= min && sum <= max);
-      });
     } else {
       pendingEl.style.display = 'block';
-      bandBlocks.forEach(b => { b.hidden = true; });
     }
     announcement.textContent = completed === numCategories ? `All eight categories scored. Self-assessment total ${sum} of 40. Review the breakdown and supporting evidence.` : `${completed} of eight categories scored. Complete all eight to see the breakdown.`;
     updateNextSteps();

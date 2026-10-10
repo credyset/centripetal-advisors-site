@@ -17,7 +17,7 @@
     output.querySelector('[data-diligence-complete]').hidden = open.length !== 0;
   };
   document.addEventListener('change', update);
-  // The existing reset button is created by foundations.js before this script.
-  document.querySelector('.ca-check-progress button')?.addEventListener('click', update);
+  // The reset signal works regardless of which script initializes first.
+  document.addEventListener('ca:checklist-reset', update);
   output.hidden = false; update();
 })();

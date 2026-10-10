@@ -1,4 +1,4 @@
-"""Validate recorded browser geometry and the concept runtime import graph."""
+"""Validate historical Home geometry and the concept runtime import graph. Current resource interactions are recorded separately."""
 from pathlib import Path
 import json, re
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,12 +15,8 @@ for entry in qa['home']:
         assert section['h'] == original['h'], (entry['width'], section['name'])
         assert abs(section['y'] - original['y'] - shift) <= 1, (entry['width'], section['name'])
     assert entry['resource']['y'] == old['Why Centripetal']['y']
-expected = {8:'Foundation gaps',15:'Foundation gaps',16:'Building',23:'Building',24:'Solid',31:'Solid',32:'Investor-ready',40:'Investor-ready'}
-assert {int(case['total']) for case in qa['scorecard']} == set(expected)
-for case in qa['scorecard']:
-    assert case['count'] == '8' and case['bands'][0].startswith(expected[int(case['total'])])
 runtime = ROOT / 'assets/runtime-foundations'
 for module in runtime.glob('*.mjs'):
     for name in re.findall(r'["\'`]\./([^"\'`]+\.mjs)["\'`]', module.read_text()):
         assert (runtime / name).exists(), (module.name, name)
-print('PASS: six recorded Home widths preserve original geometry, eight Scorecard boundaries pass, and all concept runtime imports resolve.')
+print('PASS: six historical Home width records preserve original geometry and all concept runtime imports resolve. Current resource checks are recorded separately.')

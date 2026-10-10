@@ -74,7 +74,7 @@ def build(path,title,h1,desc,body,current,items):
    if a['href']!='../guides/index.html':a['href']='../resources/'+a['href']
  footer=soup.select_one('.footer-col:nth-of-type(2)')
  footer.clear()
- footer.append(BeautifulSoup('<h4>Explore</h4><a href="../resources/index.html">Resources</a><a href="../guides/index.html">Guides &amp; Tools</a><a href="../resources/linkedin-posts.html">LinkedIn Posts</a><a href="../resources/media.html">Media</a><a href="../blogs.html">Blog</a>','html.parser'))
+ footer.append(BeautifulSoup('<h2>Explore</h2><a href="../resources/index.html">Resources</a><a href="../guides/index.html">Guides &amp; Tools</a><a href="../resources/linkedin-posts.html">LinkedIn Posts</a><a href="../resources/media.html">Media</a><a href="../blogs.html">Blog</a>','html.parser'))
  (ROOT/path).write_text(str(soup).rstrip()+'\n')
 
 formats=[('Guides & Tools','Read a framework, work through a checklist, or build a preparation outline.','../guides/index.html','Explore guides and tools →'),('LinkedIn Posts','Selected public posts from Charles on finance, founders, and the firm.','linkedin-posts.html','Read Charles’ posts →'),('Media','Podcast conversations with Charles about finance and company building.','media.html','Explore podcast appearances →')]
@@ -161,7 +161,7 @@ import re,os
 for path in list(ROOT.rglob('*.html'))+list((ROOT/'assets').glob('*.inc')):
  if 'assets/baseline' in str(path.relative_to(ROOT)):continue
  text=path.read_text()
- if 'ca-native' in text and path.suffix=='.html':text=re.sub(r'foundations.css\?v=20261009-\d+', 'foundations.css?v=20261009-9', text)
+ if 'ca-native' in text and path.suffix=='.html':text=re.sub(r'foundations.css\?v=20261009-\d+', 'foundations.css?v=20261010-1', text)
  def update_anchor(match):
   raw=match.group(0)
   label=BeautifulSoup(raw,'html.parser').get_text(' ',strip=True).lower()

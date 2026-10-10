@@ -1,0 +1,1222 @@
+{
+  "date": "2026-10-10",
+  "scope": "Local Chrome DOM/layout observations; no field performance or full screen-reader claim.",
+  "layout": [
+    {
+      "path": "about.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/13-week-cash-flow-forecast.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/ai-in-founder-finance.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/board-reporting-seed-series-a.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/bookkeeper-controller-cfo.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/capital-structure-after-equity-raise.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/carr-vs-arr.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/cash-flow-signals-lenders-probe.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/customer-concentration.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/fractional-cfo-vp-finance-complexity.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/index.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/series-a-data-room.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/treasury-controls-saas.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/vertical-saas-cac-advantage-half-life.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/what-investors-probe-after-slide-12.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/when-to-hire-fractional-cfo.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blog/why-investors-dont-trust-your-forecast.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "blogs.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/do-i-need-a-fractional-cfo.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/first-90-days-after-raise.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/index.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/saas-cash-flow-mistakes.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/saas-finance-scorecard.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/series-a-diligence-readiness.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/tools/board-deck-builder.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/tools/cfo-fit-calculator.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/tools/finance-diagnostic.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/tools/fundraise-readiness.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/tools/runway-modeler.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/treasury-hygiene.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "guides/venture-debt-readiness.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "resources/index.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "resources/linkedin-posts.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "resources/media.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "resources/tools.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "services/board-investor-reporting.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "services/cash-flow-runway-planning.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "services/fractional-cfo-for-saas.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "services/fundraising-readiness.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "services/treasury-finance-operations.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "services/venture-debt-readiness.html",
+      "docWidth": 320,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 320
+    },
+    {
+      "path": "about.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/13-week-cash-flow-forecast.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/ai-in-founder-finance.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/board-reporting-seed-series-a.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/bookkeeper-controller-cfo.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/capital-structure-after-equity-raise.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/carr-vs-arr.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/cash-flow-signals-lenders-probe.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/customer-concentration.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/fractional-cfo-vp-finance-complexity.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/index.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/series-a-data-room.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/treasury-controls-saas.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/vertical-saas-cac-advantage-half-life.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/what-investors-probe-after-slide-12.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/when-to-hire-fractional-cfo.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blog/why-investors-dont-trust-your-forecast.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "blogs.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/do-i-need-a-fractional-cfo.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/first-90-days-after-raise.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/index.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/saas-cash-flow-mistakes.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/saas-finance-scorecard.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/series-a-diligence-readiness.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/tools/board-deck-builder.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/tools/cfo-fit-calculator.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/tools/finance-diagnostic.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/tools/fundraise-readiness.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/tools/runway-modeler.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/treasury-hygiene.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "guides/venture-debt-readiness.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "resources/index.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "resources/linkedin-posts.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "resources/media.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "resources/tools.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "services/board-investor-reporting.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "services/cash-flow-runway-planning.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "services/fractional-cfo-for-saas.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "services/fundraising-readiness.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "services/treasury-finance-operations.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "services/venture-debt-readiness.html",
+      "docWidth": 800,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 800
+    },
+    {
+      "path": "about.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/13-week-cash-flow-forecast.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/ai-in-founder-finance.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/board-reporting-seed-series-a.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/bookkeeper-controller-cfo.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/capital-structure-after-equity-raise.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/carr-vs-arr.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/cash-flow-signals-lenders-probe.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/customer-concentration.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/fractional-cfo-vp-finance-complexity.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/index.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/series-a-data-room.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/treasury-controls-saas.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/vertical-saas-cac-advantage-half-life.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/what-investors-probe-after-slide-12.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/when-to-hire-fractional-cfo.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blog/why-investors-dont-trust-your-forecast.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "blogs.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/do-i-need-a-fractional-cfo.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/first-90-days-after-raise.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/index.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/saas-cash-flow-mistakes.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/saas-finance-scorecard.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/series-a-diligence-readiness.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/tools/board-deck-builder.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/tools/cfo-fit-calculator.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/tools/finance-diagnostic.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/tools/fundraise-readiness.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/tools/runway-modeler.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/treasury-hygiene.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "guides/venture-debt-readiness.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "resources/index.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "resources/linkedin-posts.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "resources/media.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "resources/tools.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "services/board-investor-reporting.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "services/cash-flow-runway-planning.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "services/fractional-cfo-for-saas.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "services/fundraising-readiness.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "services/treasury-finance-operations.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    },
+    {
+      "path": "services/venture-debt-readiness.html",
+      "docWidth": 1280,
+      "duplicateIds": [],
+      "dynamicBadLinks": [],
+      "h1": 1,
+      "missingImages": [],
+      "width": 1280
+    }
+  ],
+  "scoreTieCases": [
+    {
+      "docWidth": 320,
+      "noBands": 0,
+      "priorities": 4,
+      "rows": 8,
+      "total": "24",
+      "verification": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "visible": true,
+      "width": 320
+    },
+    {
+      "docWidth": 320,
+      "noBands": 0,
+      "priorities": 8,
+      "rows": 8,
+      "total": "40",
+      "verification": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "visible": true,
+      "width": 320
+    },
+    {
+      "docWidth": 320,
+      "noBands": 0,
+      "priorities": 8,
+      "rows": 8,
+      "total": "8",
+      "verification": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "visible": true,
+      "width": 320
+    }
+  ],
+  "scoreResetQc": {
+    "count": 0,
+    "summaryHidden": true,
+    "total": "—"
+  },
+  "scoreKeyboardQc": {
+    "focus": "2",
+    "outline": "rgb(36, 50, 33) solid 2.5px",
+    "score": "2"
+  },
+  "scoreContrastFinal": {
+    "css": [
+      "../assets/site-system.css?v=20261009-3",
+      "../assets/foundations.css?v=20261010-1",
+      "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
+    ],
+    "footerColor": "rgb(189, 203, 181)",
+    "noBands": 0,
+    "resultOpacity": "0.85"
+  },
+  "debtCompleteQc": {
+    "checked": 17,
+    "completeVisible": true,
+    "listHidden": true,
+    "status": "0 items still to locate and review. Assign an owner and next action for each; confirm the actual diligence scope separately."
+  },
+  "debtResetQc": {
+    "checked": 0,
+    "linksValid": true,
+    "remaining": 17
+  },
+  "seriesResetQc": {
+    "checked": 0,
+    "linksValid": true,
+    "openItems": 24
+  },
+  "copiedMenuQc": {
+    "focused": "Open navigation",
+    "open": false
+  },
+  "contactResizeQc": {
+    "docWidth": 320,
+    "forms": [
+      {
+        "message": "Concept QC test. No message should be sent.\n\nDiscuss your next board conversation\n\nWhen is the next board meeting or investor update?\n\nWhat decision or variance needs discussion?\n\nWhat do the current materials leave unclear?\n",
+        "name": "QC Review",
+        "previewButton": "button"
+      }
+    ],
+    "topic": "board-reporting",
+    "width": 320
+  },
+  "clipboardFailureTests": "Actual handler tested in isolated fixture via tools/test_board_clipboard.mjs; browser permissions unchanged.",
+  "print": "Treasury native print preview rendered five pages and was cancelled; later paired-label spacing is a source refinement."
+}

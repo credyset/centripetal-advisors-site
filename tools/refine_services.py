@@ -40,7 +40,7 @@ for slug,c in CONTENT.items():
     # Correct historical double escaping in the related-service labels.
     for a in soup.select('.service-sidebar a'):
         if a.string:a.string=a.string.replace('&amp;','&')
-    for l in soup.select('link[href*="foundations.css"]'):l['href']='../assets/foundations.css?v=20261009-9'
+    for l in soup.select('link[href*="foundations.css"]'):l['href']='../assets/foundations.css?v=20261010-1'
     path.write_text(str(soup).rstrip()+'\n')
 
 overview=ROOT/'assets/services-detail.inc'
@@ -93,5 +93,5 @@ for slug,(topic,label,body) in guide_map.items():
     # Existing conclusion CTAs lead to the same contextual destination.
     for a in soup.select('main a[href="../contact.html"], .cta-page a[href="../contact.html"]'):
         a['href']=contact_link(topic,'guide-'+slug)
-    for l in soup.select('link[href*="foundations.css"]'):l['href']='../assets/foundations.css?v=20261009-9'
+    for l in soup.select('link[href*="foundations.css"]'):l['href']='../assets/foundations.css?v=20261010-1'
     path.write_text(str(soup).rstrip()+'\n')

@@ -3,9 +3,9 @@
   "pages": [
     {
       "path": "guides/saas-cash-flow-mistakes.html",
-      "direct_first_party_bytes": 102026,
+      "direct_first_party_bytes": 102769,
       "local_js": [
-        "../assets/foundations.js?v=20261009-1",
+        "../assets/foundations.js?v=20261009-2",
         "../assets/cash-review.js?v=20261009-4"
       ],
       "external_styles_or_scripts": [
@@ -16,9 +16,9 @@
     },
     {
       "path": "guides/tools/board-deck-builder.html",
-      "direct_first_party_bytes": 112849,
+      "direct_first_party_bytes": 114009,
       "local_js": [
-        "../../assets/foundations.js?v=20261009-1",
+        "../../assets/foundations.js?v=20261009-2",
         "../../assets/board-builder.js?v=20261009-3"
       ],
       "external_styles_or_scripts": [
@@ -29,10 +29,10 @@
     },
     {
       "path": "guides/saas-finance-scorecard.html",
-      "direct_first_party_bytes": 106332,
+      "direct_first_party_bytes": 105561,
       "local_js": [
-        "../assets/scorecard.js?v=20261009-2",
-        "../assets/foundations.js?v=20261009-1"
+        "../assets/scorecard.js?v=20261009-5",
+        "../assets/foundations.js?v=20261009-2"
       ],
       "external_styles_or_scripts": [
         "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
@@ -42,9 +42,9 @@
     },
     {
       "path": "guides/do-i-need-a-fractional-cfo.html",
-      "direct_first_party_bytes": 76630,
+      "direct_first_party_bytes": 77373,
       "local_js": [
-        "../assets/foundations.js?v=20261009-1"
+        "../assets/foundations.js?v=20261009-2"
       ],
       "external_styles_or_scripts": [
         "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
@@ -54,10 +54,10 @@
     },
     {
       "path": "guides/series-a-diligence-readiness.html",
-      "direct_first_party_bytes": 90926,
+      "direct_first_party_bytes": 93072,
       "local_js": [
-        "../assets/foundations.js?v=20261009-1",
-        "../assets/diligence-review.js?v=20261009-1"
+        "../assets/foundations.js?v=20261009-2",
+        "../assets/diligence-review.js?v=20261009-2"
       ],
       "external_styles_or_scripts": [
         "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
@@ -67,9 +67,9 @@
     },
     {
       "path": "resources/linkedin-posts.html",
-      "direct_first_party_bytes": 216162,
+      "direct_first_party_bytes": 216905,
       "local_js": [
-        "../assets/foundations.js?v=20261009-1",
+        "../assets/foundations.js?v=20261009-2",
         "../assets/linkedin-feed.js?v=20261010-1"
       ],
       "external_styles_or_scripts": [
@@ -80,9 +80,9 @@
     },
     {
       "path": "resources/media.html",
-      "direct_first_party_bytes": 214302,
+      "direct_first_party_bytes": 215045,
       "local_js": [
-        "../assets/foundations.js?v=20261009-1",
+        "../assets/foundations.js?v=20261009-2",
         "../assets/media-feed.js?v=20261009-1"
       ],
       "external_styles_or_scripts": [
@@ -93,9 +93,9 @@
     },
     {
       "path": "blog/carr-vs-arr.html",
-      "direct_first_party_bytes": 79161,
+      "direct_first_party_bytes": 79904,
       "local_js": [
-        "../assets/foundations.js?v=20261009-1"
+        "../assets/foundations.js?v=20261009-2"
       ],
       "external_styles_or_scripts": [
         "https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;600;700&display=swap"
@@ -103,5 +103,6 @@
       "iframes": 0,
       "lazy_iframes": 0
     }
-  ]
+  ],
+  "updated": "2026-10-10"
 }
