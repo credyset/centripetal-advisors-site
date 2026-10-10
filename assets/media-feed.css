@@ -38,3 +38,10 @@
 @media print{.ca-media-layout{display:block}.ca-media-rail{display:none}.ca-media-card{break-inside:avoid}.ca-media-timeline::before{display:none}.ca-media-feed .ca-media-entry{padding-left:0}.ca-media-position{display:none}}
 
 @media(prefers-reduced-motion:reduce){.ca-media-feed .ca-media-button,.ca-media-social,.ca-media-rail nav>a{transition:none;transform:none!important}}
+
+/* Always-visible native players, directly below each editorial introduction. */
+.ca-media-embed{margin-top:24px;padding:0;border:0;background:transparent;max-width:504px}
+.ca-media-embed iframe{display:block;width:100%;max-width:504px;border:0;background:transparent}
+.ca-media-embed-video iframe{aspect-ratio:16/9;height:auto}
+@media(max-width:400px){.ca-media-feed .ca-section{padding-inline:14px}.ca-media-feed .ca-media-entry{padding-left:0}.ca-media-position,.ca-media-timeline::before{display:none}}
+@media print{.ca-media-embed{display:none}}

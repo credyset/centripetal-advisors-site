@@ -132,7 +132,20 @@
       "summary": "Charles joins Jamie Schneiderman to discuss the evolution of Centripetal and the role of technology in startup finance.",
       "url": "https://music.amazon.co.uk/podcasts/7ae57f5a-0404-40f7-a82d-2cd65c556850/episodes/7015d23a-6c25-4e56-93f3-d011783f4dc7/unstuck-pod-ai-first-finance-firm-charles-solomon-and-jamie-schneiderman",
       "platform": "Amazon Music",
-      "source_note": "Publisher-supplied episode description available in public Amazon Music search result; direct page fetch unavailable."
+      "source_note": "Publisher-supplied episode description available in public Amazon Music search result; direct page fetch unavailable.",
+      "embed": {
+        "platform": "Apple Podcasts",
+        "url": "https://embed.podcasts.apple.com/us/podcast/ai-first-finance-firm-charles-solomon-and-jamie/id1895185454?i=1000790354078",
+        "kind": "audio",
+        "height": 175,
+        "source_note": "Verified exact episode title, publisher, September 17 date and 20-minute duration in Apple listing; embed src obtained from Apple Embed Episode dialog. Amazon share panel provided only a link."
+      },
+      "alternate_links": [
+        {
+          "platform": "Apple Podcasts",
+          "url": "https://podcasts.apple.com/us/podcast/ai-first-finance-firm-charles-solomon-and-jamie/id1895185454?i=1000790354078"
+        }
+      ]
     },
     {
       "show": "Bee Formless™ Flow Driven CEO",
@@ -149,7 +162,13 @@
           "platform": "YouTube",
           "url": "https://www.youtube.com/watch?v=qeRhoaw1p5g"
         }
-      ]
+      ],
+      "embed": {
+        "platform": "Apple Podcasts",
+        "url": "https://embed.podcasts.apple.com/ca/podcast/narrative-numbers-scaling-staying-calm-through-complexity/id1872247807?i=1000768680927",
+        "kind": "audio",
+        "height": 175
+      }
     },
     {
       "show": "Insure the Horizon",
@@ -160,7 +179,13 @@
       "summary": "Charles joins Karolyn Boyd to discuss fractional CFO support, long-term client partnerships, and technology in finance operations.",
       "url": "https://www.youtube.com/watch?v=53B_82PcOW4",
       "platform": "YouTube",
-      "source_note": "YouTube title, channel, expanded description and November 4, 2025 publication date verified in browser. CSV topic differs from published title; scheduling date not used as publication date."
+      "source_note": "YouTube title, channel, expanded description and November 4, 2025 publication date verified in browser. CSV topic differs from published title; scheduling date not used as publication date.",
+      "embed": {
+        "platform": "YouTube",
+        "url": "https://www.youtube-nocookie.com/embed/53B_82PcOW4",
+        "kind": "video",
+        "height": 284
+      }
     },
     {
       "show": "The Capital Multiplier",
@@ -171,7 +196,13 @@
       "summary": "A conversation with Alex Jaso about venture debt, founder finance mistakes, and the role of a fractional CFO in capital planning.",
       "url": "https://open.spotify.com/episode/7HzUVdoZd4QfwQTHULc4p3",
       "platform": "Spotify",
-      "source_note": "Spotify episode title, show, October 22, 2025 date, 20 min 27 sec duration and description verified in browser. Duration displayed rounded to whole minutes."
+      "source_note": "Spotify episode title, show, October 22, 2025 date, 20 min 27 sec duration and description verified in browser. Duration displayed rounded to whole minutes.",
+      "embed": {
+        "platform": "Spotify",
+        "url": "https://open.spotify.com/embed/episode/7HzUVdoZd4QfwQTHULc4p3",
+        "kind": "audio",
+        "height": 152
+      }
     },
     {
       "show": "Founder Wisdom Podcast",
@@ -181,7 +212,13 @@
       "summary": "Charles Solomon in conversation with podcast host Charles Cormier.",
       "url": "https://www.youtube.com/watch?v=CNyPe0BuyiY",
       "platform": "YouTube",
-      "source_note": "CSV calls show VC Wisdom Podcast. Current YouTube channel is Charles Cormier - Founder Wisdom Podcast. Episode title and streamed-live date verified in expanded description; duration not established (player showed an advertisement). No inferred topic summary."
+      "source_note": "CSV calls show VC Wisdom Podcast. Current YouTube channel is Charles Cormier - Founder Wisdom Podcast. Episode title and streamed-live date verified in expanded description; duration not established (player showed an advertisement). No inferred topic summary.",
+      "embed": {
+        "platform": "YouTube",
+        "url": "https://www.youtube-nocookie.com/embed/CNyPe0BuyiY",
+        "kind": "video",
+        "height": 284
+      }
     },
     {
       "show": "Analytics and Automation Solutions",
@@ -192,7 +229,13 @@
       "summary": "Charles joins Neil to discuss delegation, AI in finance workflows, startup metrics, and preparing for investor conversations.",
       "url": "https://www.youtube.com/watch?v=C4qU68AyovY",
       "platform": "YouTube",
-      "source_note": "YouTube title, channel, September 7, 2026 publication date, 28 min 1 sec player duration and expanded description verified in browser. CSV June appointment date not used as publication date."
+      "source_note": "YouTube title, channel, September 7, 2026 publication date, 28 min 1 sec player duration and expanded description verified in browser. CSV June appointment date not used as publication date.",
+      "embed": {
+        "platform": "YouTube",
+        "url": "https://www.youtube-nocookie.com/embed/C4qU68AyovY",
+        "kind": "video",
+        "height": 284
+      }
     }
   ],
   "media_import_note": "2026-10-09: sanitized podcast titles, public professional host names and episode URLs from user-supplied Recorded Podcasts CSV. Contact details and tracking notes excluded. Unstuck/Jamie matched existing published entry; Bee Formless/Belinda video added as alternate. Four missing URLs displayed separately, without publication dates or episode claims. What We Need to Grow/Caleb Pedosiuk appears under To Be Recorded and is excluded from public completed appearances pending recording/publication confirmation. User follow-up: Media uses only live linked recordings; awaiting-link listings removed on October 9, 2026.",

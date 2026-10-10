@@ -2,7 +2,7 @@
   "recorded": "2026-10-09",
   "scope": "Media reader refinement; GitHub concept only",
   "live_appearances": 6,
-  "platform_links": 7,
+  "platform_links": 8,
   "source_preservation": "Exact source order, show names, titles, summaries, publisher dates, known durations, and all destinations checked against tools/resource-library.json. Unknown Founder Wisdom duration remains omitted. No pending episodes restored.",
   "layout": "Centered 504px reading column with unboxed numbered entries. Home Lora/Roboto, pine/sage/stone palette, existing Home orbit in hero.",
   "actions": "48px rounded Watch/Listen buttons; filled pine primary and outlined alternate platform. Decorative play/headphones icons, accessible names and new-tab announcements.",
@@ -19,14 +19,30 @@
   },
   "motion": "Browser reports reduced motion; every introduction remains opacity 1 / transform none. Isolated runtime checks passed once-only full-motion entrance, reduced-motion skip, finishing active motion after preference change, observer fallback, selection changes and clearing below list. Full-motion visual playback was not observed.",
   "mobile_limit": "Requested 390\u00d7844 via browser viewport capability, including fresh tab; actual viewport remained 1280\u00d7720. Override reset. Responsive CSS implemented; rendered narrow-width review remains outstanding.",
-  "fallback": "Six appearances and platform links are static readable HTML; no JavaScript required to read or leave the page. No embedded players or new third-party page requests.",
+  "fallback": "All six introductions and eight direct destination links remain readable static HTML. Six always-visible, native-lazy-loading players make third-party requests as the browser loads them; playback and availability depend on their platforms.",
   "checks": [
-    "check_site.py: 45 pages / 1988 URLs / 24 sitemap entries pass",
+    "check_site.py: 45 pages / 1989 URLs / 24 sitemap entries pass",
     "check_baseline.py: frozen Home retained",
     "check_foundations.py: historical geometry and runtime imports pass",
     "node --check assets/media-feed.js",
     "git diff --check",
     "deterministic resource rebuild; LinkedIn and Home output unchanged"
   ],
-  "measurement_limits": "No new platform reachability, player functionality, mobile rendering, performance, SEO or AI-citation outcomes claimed."
+  "measurement_limits": "No mobile rendering, performance, SEO or AI-citation outcomes claimed. Representative playback checks do not establish availability for every visitor or full-episode playback.",
+  "embedded_player_checks": {
+    "frames": 6,
+    "types": {
+      "Apple Podcasts": 2,
+      "Spotify": 1,
+      "YouTube": 3
+    },
+    "layout": "All six iframe left edges and widths match the 504px reading column at 1280\u00d7720; no outer box, disclosure or horizontal overflow.",
+    "rendered": "All six exact episode titles rendered in native frames; three YouTube preview/player controls, two Apple previews, one Spotify preview.",
+    "playback": "Unstuck and Bee Formless Apple players reached Pause state and were paused; Spotify elapsed time advanced and Pause control text was present, then paused; Insure the Horizon YouTube reached Pause video state and displayed captions, test tab closed afterward. The other two YouTube previews rendered; their playback was not separately tested.",
+    "autoplay": "No autoplay query flag is requested. Audio iframe autoplay permission enables host playback after interaction; permission alone does not start playback.",
+    "accessibility": "Six unique descriptive iframe titles; native host controls; direct fallback links retained.",
+    "new_source": "Unstuck Apple episode 1000790354078 verified directly against exact title, host, September 17 release, and 20-minute duration; official Embed Episode dialog supplied player src.",
+    "console_errors_in_final_local_audio_check": 0,
+    "mobile": "Responsive video aspect ratio and player widths implemented. At widths \u2264400px timeline gutter is removed and 14px page padding keeps Apple player width \u2265290px at a 320px viewport; rendered mobile review remains outstanding."
+  }
 }

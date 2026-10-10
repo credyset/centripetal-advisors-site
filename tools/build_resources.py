@@ -53,7 +53,7 @@ def build(path,title,h1,desc,body,current,items):
   motion=soup.new_tag('script',src='../assets/linkedin-feed.js?v=20261010-1');motion['defer']='';soup.body.append(motion)
  if current=='Media':
   soup.body['class'].append('ca-media-feed')
-  soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/media-feed.css?v=20261009-1'))
+  soup.head.append(soup.new_tag('link',rel='stylesheet',href='../assets/media-feed.css?v=20261009-2'))
   motion=soup.new_tag('script',src='../assets/media-feed.js?v=20261009-1');motion['defer']='';soup.body.append(motion)
  nav=soup.select_one('.site-nav')
  for a in nav.select('a'):
@@ -131,6 +131,14 @@ def media_button(destination,secondary=False):
  label=('Watch on ' if watching else 'Listen on ')+platform
  return f'<a class="ca-media-button'+(' ca-media-button-secondary' if secondary else '')+f'" href="{e(destination["url"])}" target="_blank" rel="noopener noreferrer" aria-label="{e(label)} (opens in a new tab)">'+(PLAY_ICON if watching else LISTEN_ICON)+f'<span>{e(label)}</span></a>'
 
+def media_embed(m):
+ embed=m['embed']
+ # Native players stay stable; only the editorial introduction receives motion.
+ allow='encrypted-media; fullscreen; picture-in-picture'
+ if embed['kind']=='audio':allow+='; autoplay'
+ if embed['platform']=='YouTube':allow+='; accelerometer; gyroscope; web-share'
+ return f'<div class="ca-media-embed ca-media-embed-{e(embed["kind"])}"><iframe src="{e(embed["url"])}" title="{e(embed["platform"])} player: {e(m["title"])}" width="504" height="{int(embed["height"])}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="{allow}" allowfullscreen=""></iframe></div>'
+
 media=''
 media_navigation=''
 for i,m in enumerate(data['media'],1):
@@ -141,7 +149,7 @@ for i,m in enumerate(data['media'],1):
  metadata=f'<p class="ca-media-metadata">{" · ".join(metadata)}</p>' if metadata else ''
  destinations=[{'url':m['url'],'platform':m['platform']}]+m.get('alternate_links',[])
  actions='<div class="ca-media-actions">'+''.join(media_button(x,j>0) for j,x in enumerate(destinations))+'</div>'
- media+=f'<li class="ca-media-entry"><span class="ca-media-position" aria-hidden="true">{i:02d}</span><article class="ca-media-card" id="{episode}" aria-labelledby="{episode}-title" data-episode="{episode}"><div class="ca-media-introduction"><p class="ca-eyebrow">{e(m["show"])}</p>{metadata}<h2 id="{episode}-title">{e(m["title"])}</h2><p class="ca-media-summary">{e(m["summary"])}</p>{actions}</div></article></li>'
+ media+=f'<li class="ca-media-entry"><span class="ca-media-position" aria-hidden="true">{i:02d}</span><article class="ca-media-card" id="{episode}" aria-labelledby="{episode}-title" data-episode="{episode}"><div class="ca-media-introduction"><p class="ca-eyebrow">{e(m["show"])}</p>{metadata}<h2 id="{episode}-title">{e(m["title"])}</h2><p class="ca-media-summary">{e(m["summary"])}</p>{actions}</div>{media_embed(m)}</article></li>'
  media_navigation+=f'<a data-episode="{episode}" href="#{episode}">{e(m["show"])}</a>'
 media_rail='<aside class="ca-media-rail" aria-label="About these appearances"><div class="ca-media-author"><h3>Charles Solomon</h3><p>CFO · Board Member · Investor</p><div class="ca-media-contacts">'+f'<a class="ca-media-social" href="{e(data["linkedin_profile"])}" target="_blank" rel="noopener noreferrer" aria-label="Charles Solomon on LinkedIn (opens in a new tab)" title="Charles Solomon on LinkedIn"><img src="../assets/linkedin-social.svg" width="24" height="24" alt=""/></a>'+link('mailto:charles@centripetaladvisors.com','charles@centripetaladvisors.com')+'</div></div><nav aria-label="Explore podcast appearances"><p class="ca-eyebrow">In this selection</p>'+media_navigation+'</nav></aside>'
 body='<section class="ca-section ca-media-section" aria-label="Podcast appearances"><div class="ca-inner"><div class="ca-media-layout">'+media_rail+'<ol class="ca-media-timeline" aria-label="Selected podcast appearances">'+media+'</ol></div></div></section>'
